@@ -1,0 +1,56 @@
+Damit ich nicht jedes mal den Sourcecode durchwühlen muss um zu schauen, welche Tags und welche Begrenzungen es jeweils gibt, hab ich diese Datei gemacht. Ich versuche sie ständig auf den aktuellen Stand zu halten.
+
+Grobaufbau:
+  <?xml version="1.0" encoding="iso-8859-1" ?>
+- <Moras version="1.0">
++ <servers>
++ <attributes>
++ <groups>
++ <bonuses>
++ <races>
++ <classes>
++ <itemslots>
++ <extensions>
+  </Moras>
+
+Diese Reihenfolge ist dabei möglichst einzuhalten, weil einige Verbindungen zwischen den Gruppen existieren.
+Das encoding der xml-Datei ist "iso-8859-1", damit deutsche Umlaute möglich sind.
+Nun zu den einzelnen Gruppen:
+<servers> - Hier werden alle aktuellen Spieleserver aufgeführt, die in der Auswahl erscheinen sollen.
+Jeder Server hat dabei nur einen Eintrag, in folgender Form:
+<server type="LANGUAGE">SERVER_NAME</server> - LANGUAGE ist dabei die Sprachversion des Servers. Gültig sind hier german, english und french.
+
+<attributes> - Alle Einträge in dieser Gruppe beschreiben die möglichen Attribut-Felder(Statuswerte, Fertigkeiten, Resistenzen) eines Charakters.
+Jedes einzelne Attribut wird dabei durch einen <attribute>-tag beschrieben.
+<attribute id="ATTRIBUTE_ID"> ATTRIBUTE_ID sollte dabei am besten die englische Beschreibung in Grossbuchstaben sein, also z.B. STRENGTH, STEALTH.
+weitere Child-Tags:
+<name> - Dieser Tag legt den angezeigten Namen des Attributes fest. In der deutschen Version steht hier als z.B. Stärke, Schleichen.
+<displayid> (optional) - Dieser Tag legt fest, ein welchem Anzeigefeld der Wert angezeigt werden soll. Ein Wert von 0 ist dabei das erste Feld, welches normal mit "Stärke" belegt ist. Dieser Tag fehlt bei Fertigkeiten, da sie in keinem festen Feld angezeigt werden.
+<capadd> und
+<capmult> - mit Hilfe dieser Werte werden die entsprechenden Caps berechnet. Die Formel dazu ist Cap = (Level + CAPADD) * CAPMULT. Die Defaultwerte sind CAPADD = 5, CAPMULT = 0.2. Sie entsprechen den Werten für Fertigkeiten, für die deshalb diese beiden Tags fehlen können.
+
+<groups> - Die Einträge hier legen die verschiedenen Kategorien fest, unter denen die Effekte einsortiert sind.
+<group id="GROUPID"> - GROUPID ist dabei ein identifier
+Die child-Tags sind:
+<name> - Der Name der Gruppe
+<gemvalue level="LEVEL"> - Gibt jeweils an, wie stark der Bonus im jeweiligen Gemlevel ist
+
+<bonuses> - Hier sind alle Boni aufgeführt, welche ein Gegenstand haben kann. Diese Gruppe muss unbedingt nach den Gruppen attributes & groups sein, da sich einige Einträge auf diese beiden Gruppen beziehen.
+<bonus id="NAME"> - Start-Tag eines Eintrags. Der Name dient dabei als ID und sollte der englischen Bezeichnung entsprechen, wie STRENGTH, STEALTH.
+Sub-Tags:
+<name> - Der angezeigte Name, also z.B. Stärke, Schleichen.
+<group> - In welcher Gruppe soll der Boni einsortiert werden? Zu benutzen ist hier die GROUPID einer Gruppenbezeichnung.
+<oldid> - Die alte id eines stats von früheren Mora's Versionen. Ist nötig, um ältere Dateien wieder einladen zu können. Der Wert ist bei neu definierten Boni ab DAoC Version 1.96 nicht nötig.
+<realm> - Legt fest, für welches Reich der Eintrag angezeigt wird. Wenn der Eintrag fehlt, ist er für alle Reiche gültig.
+<effect type="TYPE"> - Hier wird festgelegt, welche attribute der Bonus beeinflusst. Im Moment sind hier bis zu 10 Einträge möglich. Zu benutzen ist die ATTRIBUT_ID. Die option TYPE legt dabei fest, ob der Wert (VALUE) oder das Cap (CAP) erhöht wird. Fehlt dieser Wert, wird angenommen, das das Attribut mit der gleichen ID erhöht werden soll.
+<gemvalue level="LEVEL"> - Gibt jeweils an, wie stark der Bonus im jeweiligen Gemlevel ist. Der Wert muss hier nur angegeben werden, wenn er von den WErten in der Gruppendefinition abweicht.
+
+<itemslots> - Definiert verschiedene Bezeichnungen für die Itemslots.
+<slot id="NUMBER"> - id geht hier von 1 - 18
+Sub-Tags:
+<slot_name> - Der Name, der unter dem Slot angezeigt wird.
+
+<extensions> - Listet alle eingetragenen Erweiterungen.
+Sub-Tags:
+<extension id="NAME> - Enthalt als Wert den Kompletten namen der Erweiterung. Das Attribut ID gibt den kürzel zur verwendung mit den Items an.
+Aktuelle Werte für ID: CLASSIC, SI, TOA, CATA, DR

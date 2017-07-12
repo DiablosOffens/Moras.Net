@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<moras>
+	<attributes>
+		<attribute id="AXE"></attribute>
+		<attribute id="LEFT_AXE"></attribute>
+		<attribute id="HAMMER"></attribute>
+		<attribute id="HAND2HAND"></attribute>
+		<attribute id="SWORD"></attribute>
+		<attribute id="SPEAR"></attribute>
+		<attribute id="COMPOSITE_BOW"></attribute>
+		<attribute id="THROWN_WEAPONS"></attribute>
+		<attribute id="SAVAGERY"></attribute>
+		<attribute id="AUGMENTATION"></attribute>
+		<attribute id="BONE_ARMY"></attribute>
+		<attribute id="DARKNESS"></attribute>
+		<attribute id="MENDING"></attribute>
+		<attribute id="PACIFICATION"></attribute>
+		<attribute id="RUNECARVING"></attribute>
+		<attribute id="SUBTERRANEAN"></attribute>
+		<attribute id="SUMMONING"></attribute>
+		<attribute id="SUPPRESSION"></attribute>
+		<attribute id="STORMCALLING"></attribute>
+		<attribute id="BATTLESONGS"></attribute>
+		<attribute id="BEASTCRAFT"></attribute>
+		<attribute id="ODINS_WILL"></attribute>
+		<attribute id="WITCHCRAFT"></attribute>
+		<attribute id="CURSING"></attribute>
+		<attribute id="HEXING"></attribute>
+
+		<attribute id="FIST_WRAPS_MID"></attribute>
+		<attribute id="MAULER_STAFF_MID"></attribute>
+		<attribute id="MAGNETISM_MID"></attribute>
+		<attribute id="POWER_STRIKES_MID"></attribute>
+		<attribute id="AURA_MANIPULATION_MID"></attribute>
+
+		<attribute id="BONE_ARMY_FOCUS">
+			<skill>BONE_ARMY</skill>
+			<capadd>0</capadd>
+			<capmult>1</capmult>
+		</attribute>
+		<attribute id="CURSING_FOCUS">
+			<skill>CURSING</skill>
+			<capadd>0</capadd>
+			<capmult>1</capmult>
+		</attribute>
+		<attribute id="HEXING_FOCUS">
+			<skill>CURSING</skill>
+			<capadd>0</capadd>
+			<capmult>1</capmult>
+		</attribute>
+		<attribute id="WITCHCRAFT_FOCUS">
+			<skill>CURSING</skill>
+			<capadd>0</capadd>
+			<capmult>1</capmult>
+		</attribute>
+		<attribute id="DARKNESS_FOCUS">
+			<skill>DARKNESS</skill>
+			<capadd>0</capadd>
+			<capmult>1</capmult>
+		</attribute>
+		<attribute id="RUNECARVING_FOCUS">
+			<skill>RUNECARVING</skill>
+			<capadd>0</capadd>
+			<capmult>1</capmult>
+		</attribute>
+		<attribute id="SUMMONING_FOCUS">
+			<skill>SUMMONING</skill>
+			<capadd>0</capadd>
+			<capmult>1</capmult>
+		</attribute>
+		<attribute id="SUPPRESSION_FOCUS">
+			<skill>SUPPRESSION</skill>
+			<capadd>0</capadd>
+			<capmult>1</capmult>
+		</attribute>
+	</attributes>
+</moras>

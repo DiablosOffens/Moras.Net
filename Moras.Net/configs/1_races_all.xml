@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<moras>
+	<races>
+		<race id="MINOTAUR">
+			<resist type="CRUSH">4</resist>
+			<resist type="COLD">3</resist>
+			<resist type="HEAT">3</resist>
+		</race>
+	</races>
+</moras>

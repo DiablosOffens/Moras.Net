@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<moras>
+	<damagetypes>
+		<!-- Die Reihenfolge von Schnitt/Stich und Schlag nicht ändern -->
+		<damagetype id="SLASH"></damagetype>
+		<damagetype id="THRUST"></damagetype>
+		<damagetype id="CRUSH"></damagetype>
+	</damagetypes>
+</moras>

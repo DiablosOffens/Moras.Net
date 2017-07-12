@@ -1,0 +1,1274 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: moras\n"
+"POT-Creation-Date: 2005-12-22 17:09\n"
+"PO-Revision-Date: 2007-07-01 15:47+0100\n"
+"Last-Translator: McKenna <mckenna@gmx.de>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: dxgettext 1.2.1\n"
+"Language-Team: \n"
+
+# ####################################################################
+# FILE: mainframe.cpp
+# ####################################################################
+msgid "Moras Ausrüstungsplaner "
+msgstr "Moras Equipment Planer "
+
+msgid "Schliessen"
+msgstr "Close"
+
+msgid "&Schliessen"
+msgstr "&Close"
+
+msgid "Abbrechen"
+msgstr "Cancel"
+
+msgid "&Abbrechen"
+msgstr "&Cancel"
+
+msgid "Abbruch"
+msgstr "Cancel"
+
+msgid "Übernehmen"
+msgstr "Accept"
+
+msgid "&Übernehmen"
+msgstr "&Accept"
+
+msgid "&Datei"
+msgstr "&File"
+
+msgid "&Neuer Spieler"
+msgstr "&New Player"
+
+msgid "Neuer Account"
+msgstr "New Account"
+
+msgid "&Öffnen..."
+msgstr "&Open..."
+
+msgid "&Speichern"
+msgstr "&Save"
+
+msgid "Speichern &Unter..."
+msgstr "Save &as..."
+
+msgid "&Beenden"
+msgstr "&Exit"
+
+msgid "Daten&bank"
+msgstr "Data&base"
+
+msgid "Verwalten..."
+msgstr "Manage..."
+
+msgid "&Einstellungen"
+msgstr "&Settings"
+
+msgid "&Optionen..."
+msgstr "&Options..."
+
+msgid "Feste Fenstergröße"
+msgstr "Fix Windowsize"
+
+msgid "&Hilfe"
+msgstr "&Help"
+
+msgid "Wiki - Hauptseite"
+msgstr "Wiki - Mainpage"
+
+msgid "Wiki - Bannzauberer"
+msgstr "Wiki - Spellcrafter"
+
+msgid "Wiki - Besondere Rüstungen"
+msgstr "Wiki - Specialty Armor"
+
+msgid "Hilfe zu Moras"
+msgstr "Help about Moras"
+
+msgid "Bannzauberer"
+msgstr "Spellcraft"
+
+msgid "Besondere_R%C3%BCstungen"
+msgstr "Specialty_Armor"
+
+msgid "Was ist neu?"
+msgstr "What's new?"
+
+msgid "Bekannte Probleme"
+msgstr "Known Bugs"
+
+msgid "Auf neue Version prüfen..."
+msgstr "Check for new version..."
+
+msgid "Im Internet"
+msgstr "The Internet"
+
+msgid "&Über..."
+msgstr "&About..."
+
+msgid "Spieler"
+msgstr "Player"
+
+msgid "&Reich:"
+msgstr "&Realm:"
+
+msgid "&Klasse:"
+msgstr "&Class:"
+
+msgid "Rasse:"
+msgstr "Race:"
+
+msgid "Stufe:"
+msgstr "Level:"
+
+msgid "Rüstung erstellen"
+msgstr "Create Armor"
+
+msgid "Wichtungen"
+msgstr "Weight"
+
+msgid "Attribute"
+msgstr "Attributes"
+
+msgid "Resistenzen"
+msgstr "Resists"
+
+msgid "Fertigkeiten"
+msgstr "Skills"
+
+msgid "Sonstige Werte"
+msgstr "Other Values"
+
+msgid "Gewählter Gegenstand"
+msgstr "Selected Item"
+
+msgid "Drop-Gegenstand"
+msgstr "Drop-Item"
+
+msgid "Einzigartiger Gegenstand"
+msgstr "Unique-Item"
+
+msgid "Hergestellter Gegenstand"
+msgstr "Crafted-Item"
+
+msgid "Nutzen:"
+msgstr "Utility:"
+
+msgid "Speichern"
+msgstr "Save"
+
+msgid "Suchen..."
+msgstr "Search..."
+
+msgid "Position löschen"
+msgstr "Delete Position"
+
+msgid "Effekte löschen"
+msgstr "Delete Effects"
+
+msgid "Charakter"
+msgstr "Character"
+
+msgid "Inventar"
+msgstr "Inventory"
+
+msgid "Schatzkiste"
+msgstr "Treasury"
+
+msgid "Gesamtnutzen:"
+msgstr "Total Utility:"
+
+msgid "&Allgemein"
+msgstr "&Generic"
+
+msgid "&Boni"
+msgstr "&Bonuses"
+
+msgid "Beschreibung"
+msgstr "Description"
+
+msgid "Herstellen"
+msgstr "Craft"
+
+msgid "Herstellen..."
+msgstr "Craft..."
+
+msgid "Bannzaubern - Preise"
+msgstr "Spellcraft - Prices"
+
+msgid "<keiner>"
+msgstr "<none>"
+
+msgid "<keine>"
+msgstr "<none>"
+
+msgid "<freie Eingabe>"
+msgstr "<free input>"
+
+msgid "Gegenstand"
+msgstr "Item"
+
+msgid "nicht nötig"
+msgstr "unnecessary"
+
+msgid "unmöglich"
+msgstr "impossible"
+
+msgid "Inventar "
+msgstr "Inventory "
+
+msgid "Schatzkiste "
+msgstr "Treasury "
+
+msgid "Orginalname:"
+msgstr "Real Name:"
+
+msgid "Kosten:"
+msgstr "Cost:"
+
+msgid "Preis:"
+msgstr "Price:"
+
+msgid "Qualität:"
+msgstr "Quality:"
+
+msgid "Gesch:"
+msgstr "Speed:"
+
+msgid "Schadensart:"
+msgstr "Damagetype:"
+
+msgid "Waffenart:"
+msgstr "Weapontype:"
+
+msgid "Rüstungsart:"
+msgstr "Armortype:"
+
+msgid "Fundort/ Herkunft:"
+msgstr "Origin:"
+
+msgid "Effektart:"
+msgstr "Effecttype:"
+
+msgid "Effekt:"
+msgstr "Effect:"
+
+msgid "Wert:"
+msgstr "Value:"
+
+msgid "Wdhl.:"
+msgstr "Tries:"
+
+msgid "Bannzauberjuwel:"
+msgstr "Spellcraft Gem:"
+
+msgid "fertig"
+msgstr "finish"
+
+msgid "Effekt &1:"
+msgstr "Effect &1:"
+
+msgid "Effekt &2:"
+msgstr "Effect &2:"
+
+msgid "Effekt &3:"
+msgstr "Effect &3:"
+
+msgid "Effekt &4:"
+msgstr "Effect &4:"
+
+msgid "Effekt &5:"
+msgstr "Effect &5:"
+
+msgid "Effekt &6:"
+msgstr "Effect &6:"
+
+msgid "Effekt &7:"
+msgstr "Effect &7:"
+
+msgid "Effekt &8:"
+msgstr "Effect &8:"
+
+msgid "Effekt &9:"
+msgstr "Effect &9:"
+
+msgid "Effekt 1&0"
+msgstr "Effect 1&0"
+
+msgid "Überladen:"
+msgstr "Overload:"
+
+msgid "Imbue-Punkte:"
+msgstr "Imbue-Points:"
+
+msgid "von"
+msgstr "of"
+
+msgid "Ideale IP bei Überladung von"
+msgstr "Best IP for overload of"
+
+msgid "Aktivierungsstufe:"
+msgstr "Activationlevel:"
+
+msgid "maximaler Itemlevel: (Artefakt)"
+msgstr "maximum Itemlevel: (Artifact)"
+
+msgid "aktueller Itemlevel:"
+msgstr "actual Itemlevel:"
+
+msgid "Alle Reiche?"
+msgstr "All Realms?"
+
+msgid "Klassenbeschränkung:"
+msgstr "Classrestriction:"
+
+msgid "Gegenstand suchen..."
+msgstr "Search for Item..."
+
+msgid "Position Freimachen"
+msgstr "Delete Position"
+
+msgid "Effekte Löschen"
+msgstr "Delete Effects"
+
+msgid "Juwele tauschen mit"
+msgstr "Change jewels with"
+
+msgid "Es ist ein Fehler beim speichern der Datei '"
+msgstr "While saving file '"
+
+msgid "' aufgetreten!"
+msgstr "' an error occours!"
+
+msgid "Beim laden der Datei '"
+msgstr "While loading file '"
+
+msgid "' ist ein Fehler aufgetreten!"
+msgstr "' an error occours!"
+
+msgid "Dropgegenstände benötigen einen Namen!"
+msgstr "Drop Items need a name!"
+
+msgid "Gegenstand speichern"
+msgstr "Save Item"
+
+msgid "Der Charakter wurde geändert und noch nicht gespeichert. Möchtest du Ihn jetzt speichern?"
+msgstr "Your character changes are not saved until now. Do you want to save changes now?"
+
+msgid "Speichern?"
+msgstr "Save?"
+
+msgid "Aufpreis pro Teil (%):"
+msgstr "Addition per part (%):"
+
+msgid "Aufpreis pro Neuversuch (%):"
+msgstr "Addition per try (%):"
+
+msgid "Anzahl Neuversuche:"
+msgstr "Count of retries:"
+
+msgid "Materialpreis:"
+msgstr "Material price:"
+
+msgid "Gesamtpreis:"
+msgstr "Total cost:"
+
+msgid "Optimieren"
+msgstr "Optimize"
+
+msgid "Optimieren..."
+msgstr "Optimize..."
+
+# Meldungen
+msgid "Lade Konfigurationsdateien..."
+msgstr "Loading Configuration File..."
+
+msgid "Lade Optionsdateien..."
+msgstr "Loading Option Files..."
+
+msgid "Lade Itemdatenbank..."
+msgstr "Loading Item-Database..."
+
+msgid "Lade Charaktere..."
+msgstr "Loading Characters..."
+
+msgid "Initialisiere..."
+msgstr "Initializing..."
+
+msgid "Vergiften im Waffenslot '"
+msgstr "Envenom on weaponslot '"
+
+msgid "' ist nicht sinnvoll!"
+msgstr "' is not recommended!"
+
+msgid "Effekt '"
+msgstr "Effect '"
+
+msgid "' mehrfach in Position '"
+msgstr "' multiple at position '"
+
+msgid "Prüfe auf neue Version..."
+msgstr "Checking for new version..."
+
+msgid "Es gibt eine neue Version, möchtest du auf die Homepage um sie zu installieren?"
+msgstr "New version available, do you want to visit the homepage to install the new version?"
+
+msgid "Neue Version"
+msgstr "New Version"
+
+msgid "Im Moment gibt es keine neue Version."
+msgstr "There is no new version available."
+
+msgid "Keine neue Version"
+msgstr "No new version"
+
+msgid "Keine Angabe"
+msgstr "Not specified"
+
+msgid "Items.xml importieren?"
+msgstr "Import Items.xml?"
+
+msgid "Eine neue Datenbank wurde erstellt. Soll die vorhandene Items.xml importiert werden?"
+msgstr "A new database has been created. Import existing Items.xml?"
+
+msgid "Moras Character (*.mox; *.mpx)|*.mox;*.mpx|Alte Mora's (*.cfg)|*.cfg|Alle Formate|*.mox;*.cfg"
+msgstr "Moras Character (*.mox; *.mpx)|*.mox;*.mpx|Old Moras (*.cfg)|*.cfg|All Formats|*.mox;*.cfg"
+
+msgid "Update Itemdatenbank..."
+msgstr "Update Itemdatabase..."
+
+msgid "Datenbank-Update"
+msgstr "Database Update"
+
+msgid "Fehler beim Datenbank-Update:"
+msgstr "Error on database update:"
+
+msgid "Optimieren ergebnis"
+msgstr "Optimize result"
+
+msgid "Das Optimieren der Datenbank hat folgenden Speicher wieder freigegeben: "
+msgstr "Optimizing your database has freed the following amoung of space: "
+
+######################################################################
+# FILE: armorslotframe.cpp
+######################################################################
+msgid "Bitte die Rüstungsposition angeben..."
+msgstr "Please choose the armor position..."
+
+msgid "Rüstungsposition"
+msgstr "Armor position"
+
+msgid "Hände/Handschuhe"
+msgstr "Hands"
+
+msgid "Kopf/Helm"
+msgstr "Head"
+
+msgid "Füsse/Stiefel"
+msgstr "Feet"
+
+msgid "Beine/Beinlinge"
+msgstr "Legs"
+
+msgid "Arme/Armlinge"
+msgstr "Arms"
+
+msgid "Körper/Brustpanzer"
+msgstr "Chest"
+
+######################################################################
+# FILE: craftframe.cpp
+######################################################################
+msgid "Juwele"
+msgstr "Jewels"
+
+msgid "Fertig:"
+msgstr "Finish:"
+
+msgid "Wdhlg.:"
+msgstr "Tries:"
+
+msgid "Zeit (m):"
+msgstr "Time (m):"
+
+msgid "Material (erwartet)"
+msgstr "Material (expected)"
+
+msgid "Material (verbraucht)"
+msgstr "Material (used)"
+
+msgid "erwartete Versuche:"
+msgstr "expected tries:"
+
+msgid "Gesamt:"
+msgstr "Total:"
+
+msgid "Bannzaubern"
+msgstr "Spellcraft"
+
+msgid " Juwel 1:"
+msgstr " Jewel 1:"
+
+msgid " Juwel 2:"
+msgstr " Jewel 2:"
+
+msgid " Juwel 3:"
+msgstr " Jewel 3:"
+
+msgid " Juwel 4:"
+msgstr " Jewel 4:"
+
+######################################################################
+# FILE: database.cpp
+######################################################################
+msgid "Lade Itemdatenbank.. ("
+msgstr "Loading Item-Database.. ("
+
+msgid " geladen)"
+msgstr " loaded)"
+
+msgid "Datenbank wird gespeichert..."
+msgstr "Saving Database..."
+
+msgid "Suche Gegenstände..."
+msgstr "Searching for Items..."
+
+msgid " Gegenstände gefunden."
+msgstr " Items found."
+
+msgid "Schmuck"
+msgstr "Jewel"
+
+msgid "Ja"
+msgstr "Yes"
+
+msgid "Nein"
+msgstr "No"
+
+msgid "Suche Gegenstand"
+msgstr "Search for Item"
+
+msgid "Daten"
+msgstr "Data"
+
+msgid "Gesamt"
+msgstr "Total"
+
+######################################################################
+# FILE: createarmor.cpp
+######################################################################
+msgid "Erstelle Rüstung..."
+msgstr "Create Armor..."
+
+msgid "Werte"
+msgstr "Values"
+
+######################################################################
+# FILE: importframe.cpp
+######################################################################
+msgid "Importiere Gegenstände..."
+msgstr "Importing Items..."
+
+msgid "Datenbank"
+msgstr "Database"
+
+msgid "Gegenstände in der Datenbank:"
+msgstr "Items in Database:"
+
+msgid "Gegenstände im Update:"
+msgstr "Items in Update:"
+
+msgid "Neu eingetragene Gegenstände:"
+msgstr "New imported Items:"
+
+msgid "Aktualisierte Gegenstände:"
+msgstr "Updated Items:"
+
+msgid "Update von:"
+msgstr "Update from:"
+
+msgid "Öffne Verbindung..."
+msgstr "Open Connection..."
+
+msgid "Fehler: "
+msgstr "Error: "
+
+msgid "&Nicht speichern"
+msgstr "&Don't Save"
+
+msgid "Fertig."
+msgstr "Finished."
+
+msgid "Abgebrochen."
+msgstr "Canceled."
+
+msgid "Empfangen Update..."
+msgstr "Receiving Update..."
+
+msgid "Verbindung hergestellt. Suche Updates..."
+msgstr "Connected. Searching for Updates..."
+
+msgid "Update empfangen. Werte aus..."
+msgstr "Update received. Applying..."
+
+msgid "Keine Gegenstandsdaten in der Datei!"
+msgstr "No Items found in file!"
+
+msgid "Die gewählte Datei enthält keine Gegenstandsdaten."
+msgstr "The chosen file contains no Itemdata."
+
+msgid "Fehler"
+msgstr "Error"
+
+msgid "Entschuldigung, diese alte Dateiversion wird leider nicht mehr unterstützt."
+msgstr "Sorry, this old file version is no longer supported."
+
+msgid "Datei '"
+msgstr "File '"
+
+msgid "' enthält keine Gegenstandsdaten."
+msgstr "' contains no Itemdata."
+
+msgid "Moras Itemdatei (*.xml)|*.xml"
+msgstr "Moras Item file (*.xml)|*.xml"
+
+######################################################################
+# FILE: item.cpp
+######################################################################
+msgid "Einzigartig"
+msgstr "Unique"
+
+msgid "Spieler-Hergestellt"
+msgstr "Crafted by Player"
+
+msgid "Letzte Änderung: "
+msgstr "Last Update: "
+
+msgid "(Artefakt)"
+msgstr "(Artifact)"
+
+msgid "Effekte:"
+msgstr "Effects:"
+
+msgid "Klassen:"
+msgstr "Classes:"
+
+msgid "Alle Reiche"
+msgstr "All Realms"
+
+msgid "Alle Klassen ("
+msgstr "All Classes ("
+
+msgid "Fundort/Herkunft:"
+msgstr "Origin:"
+
+######################################################################
+# FILE: jewelslotframe.cpp
+######################################################################
+msgid "Bitte die Art des Schmuckstücks angeben..."
+msgstr "Please choose a Jeweltype..."
+
+msgid "Schmuckart"
+msgstr "Jeweltype"
+
+msgid "Hals/Halskette"
+msgstr "Neck"
+
+msgid "Umhang"
+msgstr "Cloak"
+
+msgid "Juwel"
+msgstr "Jewel"
+
+msgid "Taille/Gürtel"
+msgstr "Belt"
+
+msgid "Ring"
+msgstr "Ring"
+
+msgid "Handgelenk/Armreif"
+msgstr "Wrist"
+
+######################################################################
+# FILE: newnameframe.cpp
+######################################################################
+msgid "Einen Namen eingeben..."
+msgstr "Enter a Name..."
+
+######################################################################
+# FILE: optionsframe.cpp
+######################################################################
+msgid "Optionen"
+msgstr "Options"
+
+msgid "Allgemein"
+msgstr "Generic"
+
+msgid "Bannzauber-Preise"
+msgstr "Spellcraft-Prices"
+
+msgid "Erweiterungen"
+msgstr "Extensions"
+
+msgid "Stufe des Bannzauberers:"
+msgstr "Level of Spellcrafter"
+
+msgid "Zeige halbe Imbue-Punkte"
+msgstr "Show half Imbue-Points"
+
+msgid "Leladia && Kort Dateien als englische Namen importieren"
+msgstr "Import Leladia && Kort files with english names"
+
+msgid "Ignoriere Rassenboni"
+msgstr "Ignore Race bonuses"
+
+msgid "Preismodell:"
+msgstr "Price Model:"
+
+msgid "Neues Modell"
+msgstr "New Model"
+
+msgid "Preis pro"
+msgstr "Price per"
+
+msgid "Auftrag:"
+msgstr "Task:"
+
+msgid "Qualitätszuschlag"
+msgstr "Quality additon"
+
+msgid "Zuschlag(%):"
+msgstr "Addition(%):"
+
+msgid "Qualität(%):"
+msgstr "Quality(%):"
+
+msgid "Inklusiv?"
+msgstr "Inklusive?"
+
+msgid "Preis pro Stufe/Punkt"
+msgstr "Price per Level/Point"
+
+msgid "Stufe"
+msgstr "Level"
+
+msgid "Imbue-Punkt"
+msgstr "Imbue-Point"
+
+msgid "Überl.-Punkt"
+msgstr "Overl.-Point"
+
+msgid "Allgemeinzuschlag"
+msgstr "Generic addition"
+
+msgid "Preis nach Juwelenstufe"
+msgstr "Price by Jewellevel"
+
+msgid "pro Stunde"
+msgstr "per Hour"
+
+msgid "Kosten in den Preis einrechnen?"
+msgstr "Count costs to price?"
+
+msgid "(Kosten + X)"
+msgstr "(Cost + X)"
+
+msgid "(Kosten+(Kosten*X%))"
+msgstr "(Cost+(Cost*X%))"
+
+msgid "Download Optionen"
+msgstr "Download Options"
+
+msgid "Nur Änderungen seit dem letzten Update herunterladen"
+msgstr "Download only changes till last update"
+
+msgid "Immer alles herunterladen"
+msgstr "Always download all"
+
+msgid "Nachfragen was herunter geladen werden soll"
+msgstr "Ask what to download"
+
+msgid ""
+"Wähle hier die Erweiterungen von denen du die Items in der Auswahl sehen möchtest.\n"
+"\n"
+"Hinweis: Funktioniert nur wenn bei den Items die Herkunft angegeben ist."
+msgstr ""
+"Choose the extensions you want to display there Items.\n"
+"\n"
+"Advice: Works only if the Items have the Flag."
+
+msgid "Verfügbare Erweiterungen"
+msgstr "Available Extensions"
+
+msgid "Automatisch alle aktualisierten Items überschreiben"
+msgstr "Automaticaly overwrite updated items"
+
+msgid "Proxy Einstellungen"
+msgstr "Proxy Settings"
+
+msgid "Proxy-Server benutzen"
+msgstr "Use Proxy-Server"
+
+msgid "Alternative Anmeldung verwenden"
+msgstr "Use Alternate Login"
+
+msgid "Benutzer"
+msgstr "User"
+
+msgid "Passwort"
+msgstr "Password"
+
+msgid "Nutze IP-Workaround für Stoff sachen"
+msgstr "Use cloth IP-Workaround"
+
+msgid "Berechne Gesamtnutzen in der Liste"
+msgstr "Calculate total utility in lists"
+
+msgid "Änderungs Vorschau der Items anzeigen"
+msgstr "Show item preview on change"
+
+msgid "DAoC-Pedia integration benutzen (Moras muss neu gestartet werden)"
+msgstr "Use DAoC-Pedia integration (Moras needs a restart)"
+
+msgid "Charaktere im Chars Ordner laden"
+msgstr "Load characters in chars folder"
+
+msgid "Beim Start auf neue Version prüfen"
+msgstr "Check for new version on startup"
+
+msgid "Prozesspriorität senken (Moras muss neu gestartet werden)"
+msgstr "Lower process priority (Moras needs a restart)"
+
+msgid "Update-Intervall"
+msgstr "Update interval"
+
+msgid "Täglich"
+msgstr "Daily"
+
+msgid "Wöchentlich"
+msgstr "Weekly"
+
+msgid "Monatlich"
+msgstr "Monthly"
+
+######################################################################
+# FILE: overwriteframe.cpp
+######################################################################
+msgid "Gegenstand überschreiben?"
+msgstr "Overwrite Item?"
+
+msgid "Ein Gegenstand mit gleichem Namen/gleichen Daten ist bereits in der Datenbank. Was soll mit dem neuen Gegenstand getan werden?"
+msgstr "A Item with the same Name is already in the database. Should it be overwritten or saved as a new one?"
+
+msgid "Gegenstand in Datenbank"
+msgstr "Item in Database"
+
+msgid "zu speichernder Gegenstand"
+msgstr "Item to be saved"
+
+msgid "Über&schreiben"
+msgstr "&Overwrite"
+
+msgid "&Neu Speichern"
+msgstr "Save as &new"
+
+msgid "&Ignorieren"
+msgstr "&Ignore"
+
+msgid "Für Alle"
+msgstr "For All"
+
+msgid "Alle Überschreiben"
+msgstr "Overwrite all"
+
+msgid "Alle als neu Speichern"
+msgstr "Save all as new"
+
+msgid "Alle ignorieren"
+msgstr "Ignore all"
+
+######################################################################
+# FILE: reportframe.cpp
+######################################################################
+msgid "Langer Bericht"
+msgstr "Long Report"
+
+msgid "Kurzer Bericht"
+msgstr "Short Report"
+
+msgid "Händlerbericht"
+msgstr "Merchant Report"
+
+msgid "Materialliste"
+msgstr "Materiallist"
+
+msgid "Art"
+msgstr "Type"
+
+msgid "&Drucken"
+msgstr "&Print"
+
+msgid "&in Zwischenablage"
+msgstr "to &Clipboard"
+
+msgid "Leer"
+msgstr "empty"
+
+msgid "Konfigurations-Report"
+msgstr "Configuration-Report"
+
+msgid "Speichere Report unter..."
+msgstr "Save report as..."
+
+msgid "Textdateien (*.txt)|*.txt"
+msgstr "Text files (*.txt)|*.txt"
+
+######################################################################
+# FILE: statusframe.cpp
+######################################################################
+msgid "Status der Datenbank"
+msgstr "Database Status"
+
+msgid "Artefakte:"
+msgstr "Artifacts:"
+
+msgid "Grösse:"
+msgstr "Size:"
+
+msgid "Sprache:"
+msgstr "Lang:"
+
+######################################################################
+# FILE: updatemode.cpp
+######################################################################
+msgid "Nur neue und geänderte Items herunterladen"
+msgstr "Download only new and updated Items"
+
+msgid "Alle Items herunterladen"
+msgstr "Download all Items"
+
+######################################################################
+# FILE: weaponslotframe.cpp
+######################################################################
+msgid "Bitte die Waffenart angeben..."
+msgstr "Please choose a weapontype..."
+
+######################################################################
+# FILE: weightsframe.cpp
+######################################################################
+msgid "Wichtungen der Werte"
+msgstr "Weights for the Attributes"
+
+msgid "Alles 0"
+msgstr "All 0"
+
+msgid "Alles 100"
+msgstr "All 100"
+
+msgid "Caperhöhungen"
+msgstr "Cap increases"
+
+msgid "Aktuelle Seite auf 0"
+msgstr "Actual Page to 0"
+
+msgid "Aktuelle Seite auf 100"
+msgstr "Actual Page to 100"
+
+msgid "Vorlagenname"
+msgstr "Templatename"
+
+msgid "Bitte gib der Vorlage einen Namen."
+msgstr "Please enter a template name."
+
+msgid "Vorlage löschen?"
+msgstr "Delete template?"
+
+msgid "Soll die Vorlage '%s' wirklich gelöscht werden?"
+msgstr "Do you really want to delete the template '%s'?"
+
+msgid "Wichtungen:"
+msgstr "Weights:"
+
+msgid "Wichtungsvorlagen:"
+msgstr "Weight templates:"
+
+msgid "Wichtungsgruppen:"
+msgstr "Weight groups:"
+
+msgid "Wichtungsgruppen"
+msgstr "Weight groups"
+
+msgid "Aktuelle Seite auf diesen Wert setzen"
+msgstr "Set actual page to this value"
+
+msgid "Alle Seiten auf diesen Wert setzen"
+msgstr "Set all pages to this value"
+
+######################################################################
+# FILE: managedb.cpp
+######################################################################
+msgid "<Alle>"
+msgstr "<Any>"
+
+msgid "Datenbank verwalten"
+msgstr "Manage Database"
+
+msgid "Reich"
+msgstr "Realm"
+
+msgid "Klasse"
+msgstr "Class"
+
+msgid "Position"
+msgstr "Position"
+
+msgid "min. Nutzen"
+msgstr "min. Utility"
+
+msgid "max. Nutzen"
+msgstr "max. Utility"
+
+msgid "Suchen"
+msgstr "Search"
+
+msgid "Löschen"
+msgstr "Delete"
+
+msgid "Exportieren"
+msgstr "Export"
+
+msgid "Nutzen"
+msgstr "Utility"
+
+msgid "Artefakt"
+msgstr "Artifact"
+
+msgid "Letzte Änderung"
+msgstr "Last Update"
+
+msgid "Benutzerdefiniert 1"
+msgstr "User Defined 1"
+
+msgid "Benutzerdefiniert 2"
+msgstr "User Defined 2"
+
+msgid "Benutzerdefiniert 3"
+msgstr "User Defined 3"
+
+msgid "Erweiterung"
+msgstr "Extension"
+
+msgid "In welche Datei soll exportiert werden?"
+msgstr "Export to which file?"
+
+msgid "XML-Dateien (*.xml)|*.xml"
+msgstr "XML files (*.xml)|*.xml"
+
+######################################################################
+# FILE: splashscreen.cpp
+######################################################################
+msgid "Fehler beim Laden der Resource für das Splash-Bild!"
+msgstr "Error while loading the splash picture resource!"
+
+msgid "Resourcen Fehler!"
+msgstr "Error in Resource!"
+
+######################################################################
+# FILE: player.cpp
+######################################################################
+msgid "Es ist eine Unstimmigkeit mit der Konfigurationsdatei vorhanden. Bitte informiere uns über diesen Fehler."
+msgstr "The is a difference in your config attributes and file attributes. Please inform us about this error."
+
+msgid "Konfiguration-Fehler"
+msgstr "Configuration-Error"
+
+msgid ""
+"Attribut '%s' ist nicht mehr gültig.\n"
+"Bitte Wichtungen überprüfen."
+msgstr ""
+"Attribute '%s' no longer exists.\n"
+"Please check your weights."
+
+msgid "Unbekannte Wichtung"
+msgstr "Unknown weight"
+
+msgid "Konnte die Datei nicht öffnen oder sie ist eine zu alte Version."
+msgstr "Couldn't open the file or it is an old version."
+
+######################################################################
+# FILE: xml_config.cpp
+######################################################################
+msgid "XML-Fehler in Datei 'config.xml'"
+msgstr "XML-Error in file 'config.xml'"
+
+msgid ""
+"Unbekannte Resistenz '%s' in Zeile %d:\n"
+"%s"
+msgstr ""
+"Unknown resistence '%s' at line %d:\n"
+"%s"
+
+msgid ""
+"Unbekanntes Reich '%s' in Zeile %d:\n"
+"%s"
+msgstr ""
+"Unknown realm '%s' at line %d:\n"
+"%s"
+
+msgid ""
+"Unbekannte Rüstungsart '%s' in Zeile %d:\n"
+"%s"
+msgstr ""
+"Unknown amortype '%s' at line %d:\n"
+"%s"
+
+msgid ""
+"Unbekannte Magieart '%s' in Zeile %d:\n"
+"%s"
+msgstr ""
+"Unknown magictype '%s' at line %d:\n"
+"%s"
+
+msgid ""
+"Unbekannter Skill '%s' in Zeile %d:\n"
+"%s"
+msgstr ""
+"Unknown skill '%s' at line %d:\n"
+"%s"
+
+msgid ""
+"Warnung!\n"
+"Der Bonus '%s' hat kein zugeordnetes Attribut!\n"
+"Zeile %d:\n"
+"%s"
+msgstr ""
+"Warning!\n"
+"The bonus '%s' has no assigned attributes!\n"
+"Line %d:\n"
+"%s"
+
+msgid ""
+"Zu viele Namen für Bonus '%s' in Zeile %d:\n"
+"%s"
+msgstr ""
+"To much names for bonus '%s' at line %d:\n"
+"%s"
+
+msgid ""
+"Unbekannter Staub '%s' in Zeile %d:\n"
+"%s"
+msgstr ""
+"Unknown dust '%s' at line %d:\n"
+"%s"
+
+msgid ""
+"Zu viele Flüssigkeiten für Bonus '%s' in Zeile %d:\n"
+"%s"
+msgstr ""
+"To much liquids for bonus '%s' at line %d:\n"
+"%s"
+
+msgid ""
+"Unbekannte Flüssigkeit '%s' in Zeile %d:\n"
+"%s"
+msgstr ""
+"Unknown liquid '%s' at line %d:\n"
+"%s"
+
+msgid ""
+"Unbekannte Gruppe '%s' in Zeile %d:\n"
+"%s"
+msgstr ""
+"Unknown group '%s' at line %d:\n"
+"%s"
+
+msgid ""
+"Unbekannter Effekt '%s' in Zeile %d:\n"
+"%s"
+msgstr ""
+"Unknown effect '%s' at line %d:\n"
+"%s"
+
+msgid ""
+"Unbekanntes oder fehlendes type-Attribut in Zeile %d:\n"
+"%s"
+msgstr ""
+"Unknown or missing type-attribute at line %d:\n"
+"%s"
+
+######################################################################
+# FILE: context help
+######################################################################
+msgid "Klassen"
+msgstr "Classes"
+
+msgid "Rasse"
+msgstr "Race"
+
+msgid "Rüstung"
+msgstr "Armour"
+
+msgid "Qualität"
+msgstr "Quality"
+
+msgid "Geschwindigkeit"
+msgstr "Speed"
+
+msgid "Schadensart"
+msgstr "Damagetype"
+
+msgid "Waffenart"
+msgstr "Weapontype"
+
+msgid "Schatztruhen"
+msgstr "Treasury"
+
+######################################################################
+# FILE: componenten
+######################################################################
+msgid "(Stufe)"
+msgstr "(Level)"
+
+msgid "(Ausrüstung)"
+msgstr "(Items)"
+
+msgid "(Rassenboni)"
+msgstr "(Race Bonus)"
+
+msgid "Wert"
+msgstr "Value"
+
+######################################################################
+# FILE: playerweights.cpp
+######################################################################
+
+msgid "Neue Gewichtung"
+msgstr "New weight"
+
+msgid "Datei: %s\n\n"
+msgstr "File: %s\n\n"
+
+msgid "Attribut '%s' ist nicht mehr gültig.\n"
+msgstr "Attribut '%s' is not supported.\n"
+
+msgid "\nBitte Wichtungen überprüfen."
+msgstr "\nPlease check your weights."
+
+msgid "Fehler beim Laden einer Wichtungsdatei. Dateiendung '.wgt' erwartet!"
+msgstr "Error while loading a weights file. The extension should be '.wgt'!"
+
+msgid "Ungültige Dateiendung"
+msgstr "Invalid filename extensionUnknown weight"
+
+######################################################################
+# FILE: playerattributes.cpp
+######################################################################
+

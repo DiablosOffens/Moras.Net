@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<moras>
+	<attributes>
+		<attribute id="STRENGTH">
+			<displayid>0</displayid>
+			<capadd>0</capadd>
+			<capmult>1.5</capmult>
+		</attribute>
+		<attribute id="CONSTITUTION">
+			<displayid>1</displayid>
+			<capadd>0</capadd>
+			<capmult>1.5</capmult>
+		</attribute>
+		<attribute id="DEXTERITY">
+			<displayid>2</displayid>
+			<capadd>0</capadd>
+			<capmult>1.5</capmult>
+		</attribute>
+		<attribute id="QUICKNESS">
+			<displayid>3</displayid>
+			<capadd>0</capadd>
+			<capmult>1.5</capmult>
+		</attribute>
+		<attribute id="INTELLIGENCE">
+			<displayid>4</displayid>
+			<capadd>0</capadd>
+			<capmult>1.5</capmult>
+		</attribute>
+		<attribute id="PIETY">
+			<displayid>4</displayid>
+			<capadd>0</capadd>
+			<capmult>1.5</capmult>
+		</attribute>
+		<attribute id="CHARISMA">
+			<displayid>4</displayid>
+			<capadd>0</capadd>
+			<capmult>1.5</capmult>
+		</attribute>
+		<attribute id="EMPATHY">
+			<displayid>4</displayid>
+			<capadd>0</capadd>
+			<capmult>1.5</capmult>
+		</attribute>
+		<attribute id="RES_CRUSH">
+			<displayid>8</displayid>
+			<capadd>2</capadd>
+			<capmult>0.5</capmult>
+		</attribute>
+		<attribute id="RES_SLASH">
+			<displayid>9</displayid>
+			<capadd>2</capadd>
+			<capmult>0.5</capmult>
+		</attribute>
+		<attribute id="RES_THRUST">
+			<displayid>10</displayid>
+			<capadd>2</capadd>
+			<capmult>0.5</capmult>
+		</attribute>
+		<attribute id="RES_HEAT">
+			<displayid>11</displayid>
+			<capadd>2</capadd>
+			<capmult>0.5</capmult>
+		</attribute>
+		<attribute id="RES_COLD">
+			<displayid>12</displayid>
+			<capadd>2</capadd>
+			<capmult>0.5</capmult>
+		</attribute>
+		<attribute id="RES_MATTER">
+			<displayid>13</displayid>
+			<capadd>2</capadd>
+			<capmult>0.5</capmult>
+		</attribute>
+		<attribute id="RES_BODY">
+			<displayid>14</displayid>
+			<capadd>2</capadd>
+			<capmult>0.5</capmult>
+		</attribute>
+		<attribute id="RES_SPIRIT">
+			<displayid>15</displayid>
+			<capadd>2</capadd>
+			<capmult>0.5</capmult>
+		</attribute>
+		<attribute id="RES_ENERGY">
+			<displayid>16</displayid>
+			<capadd>2</capadd>
+			<capmult>0.5</capmult>
+		</attribute>
+		<attribute id="HITPOINTS">
+			<displayid>5</displayid>
+			<capadd>0</capadd>
+			<capmult>4</capmult>
+			<capcapadd>0</capcapadd>
+			<capcapmult>4</capcapmult>
+		</attribute>
+		<attribute id="POWER">
+			<displayid>6</displayid>
+			<capadd>2</capadd>
+			<capmult>0.5</capmult>
+			<capcapadd>2</capcapadd>
+			<capcapmult>0.5</capcapmult>
+		</attribute>
+		<attribute id="PARRY"></attribute>
+		<attribute id="SHIELD"></attribute>
+		<attribute id="DUAL_WIELD"></attribute>
+		<attribute id="STEALTH"></attribute>
+		<attribute id="CRITICAL_STRIKE"></attribute>
+		<attribute id="ENVENOM"></attribute>
+
+	</attributes>
+</moras>

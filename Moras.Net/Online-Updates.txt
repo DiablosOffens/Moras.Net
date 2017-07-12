@@ -1,0 +1,29 @@
+Hallo,
+ich hab in der nun fertigen Version 1.61 mal experimentell eine Funktion zum Online-Update eingebaut. Sie wird über eine extra xml-Datei freigeschaltet, so das ihr erstmal selber probieren könnt ob es geht. Hier mal die angehängte Bespiel-xml-Datei, mit der ich getestet hab (Hoffe das stört dich nicht Varna :)
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<Moras version="1.0">
+<option group="Online-Update" noradio="true">Varna's Update</option>
+[Online-Update ist der Menüpunkt, unter dem das Update angezeigt wird]
+[Da wo Varna's Update steht, das ist der Menüpunkt selbst, den man zum start des Updates auswählen muß]
+<item_update>
+    <update_url>www.ultimaonline.de/rheas/daoc/maps/www/spellcraft/6376-aktuell.xml</update_url>
+[in update_url steht die url, die zum Update aufgerufen wird. Hier gehen leider keine cgi's, welche nur eine umleitung machen, also wie das shotgun.cgi bei der Varna-Seite]
+    <registry>Varna</registry>
+[Dieser Eintrag ist nur bei bestimmten Update-Modi notwendig. Dazu später mehr]
+    <website>
+        <name>Varna's Itemupdates</name>
+        <url>http://www.ultimaonline.de/rheas/daoc/maps/www/spellcraft</url>
+[Name und url sind ein Link, der beim Updatevorgang angezeigt wird]
+    </website>
+</item_update>
+</Moras>
+
+Ich hab mir bisher 4 Update-Modi einfallen lassen. Diese werden durch bestimmte Zeichenketten in der update_url ausgelöst.
+1. Feste Url: Das ist wie angezeigt ohne extras. Registry ist nicht nötig.
+2. Aufruf mit Versionsnummer: Dazu wird in die url ein [version] geschrieben, mit den eckigen Klammern. [version] wird dabei durch der aktuellen Programmversion ersetzt. Kein Registry nötig.
+3. Zählung: Der string ist hier [counter]. Er wird durch eine laufende Nummer ersetzt, welche bei jedem erfolgreichen update um eins erhöht wird. Hier ist registry nötig.
+4. Zeitstempel: [timestamp] wird durch den dezimalen Unix-Zeitstempel ersetzt, der beim letzten erfolgreichen update der neuste aller upgedateden Items war. Ist nur sinnvoll, wenn hier eine Datenbank per php-Skript dahinter steht. Registry wird benötigt.
+
+So, dann mal fröhliches testen.
+
+Mora

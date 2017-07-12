@@ -1,0 +1,664 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{23F96F8D-BE65-4D16-8B48-FCE261E5FC53}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Moras.Net</RootNamespace>
+    <AssemblyName>Moras.Net</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ProductName>Moras Ausrüstungsplaner</ProductName>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;MAIN_PROJEKT</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;MAIN_PROJEKT</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>key.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>mainicon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Indy.Sockets, Version=10.1.5.33678, Culture=neutral, PublicKeyToken=05173a852504317f">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libs\Indy.Sockets.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="ObjectListView, Version=2.9.2.0, Culture=neutral, PublicKeyToken=b1c5bf581481bcd4, processorArchitecture=MSIL">
+      <HintPath>..\packages\ObjectListView.ClientProfile.2.9.5\lib\net40-Client\ObjectListView.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite">
+      <HintPath>..\Libs\System.Data.SQLite.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Account.cs" />
+    <Compile Include="CChatLog.cs" />
+    <Compile Include="CItem.cs" />
+    <Compile Include="CMDataBase.cs" />
+    <Compile Include="Compression\LZMA\TLZMADecoder.cs" />
+    <Compile Include="Compression\LZMA\TLZMAEncoder.cs" />
+    <Compile Include="Compression\LZMA\ULZMABase.cs" />
+    <Compile Include="Compression\LZMA\ULZMACommon.cs" />
+    <Compile Include="Compression\LZ\TLZBinTree.cs" />
+    <Compile Include="Compression\LZ\TLZInWindow.cs" />
+    <Compile Include="Compression\LZ\TLZOutWindow.cs" />
+    <Compile Include="Compression\RangeCoder\TBitTreeDecoder.cs" />
+    <Compile Include="Compression\RangeCoder\TBitTreeEncoder.cs" />
+    <Compile Include="Compression\RangeCoder\TRangeDecoder.cs" />
+    <Compile Include="Compression\RangeCoder\TRangeEncoder.cs" />
+    <Compile Include="Compression\TBufferedFS.cs" />
+    <Compile Include="Config.cs" />
+    <Compile Include="CPlayer.cs" />
+    <Compile Include="CPlayerAttributes.cs" />
+    <Compile Include="CPlayerWeights.cs" />
+    <Compile Include="CRaces.cs" />
+    <Compile Include="CXml.cs" />
+    <Compile Include="FontExtensions.cs" />
+    <Compile Include="IndyCustom\ClassMethodHelper.cs" />
+    <Compile Include="IndyCustom\StringStreamWrapper.cs" />
+    <Compile Include="IndyCustom\TIdAntiFreeze.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="IndyCustom\TIdHTTP.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="md5.cs" />
+    <Compile Include="NativeMethods.cs" />
+    <Compile Include="ReferenceHelper.cs" />
+    <Compile Include="TfoDownload.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TfoDownload.Designer.cs">
+      <DependentUpon>TfoDownload.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TfrmAboutBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TfrmAboutBox.Designer.cs">
+      <DependentUpon>TfrmAboutBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TfrmArmorSlot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TfrmArmorSlot.Designer.cs">
+      <DependentUpon>TfrmArmorSlot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TfrmCraft.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TfrmCraft.Designer.cs">
+      <DependentUpon>TfrmCraft.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TfrmDBStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TfrmDBStatus.Designer.cs">
+      <DependentUpon>TfrmDBStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TfrmImport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TfrmImport.Designer.cs">
+      <DependentUpon>TfrmImport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TfrmJewelrySlot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TfrmJewelrySlot.Designer.cs">
+      <DependentUpon>TfrmJewelrySlot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TfrmInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TfrmInfo.Designer.cs">
+      <DependentUpon>TfrmInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TfrmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TfrmMain.Designer.cs">
+      <DependentUpon>TfrmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TfrmManageDB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TfrmManageDB.Designer.cs">
+      <DependentUpon>TfrmManageDB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TfrmNewName.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TfrmNewName.Designer.cs">
+      <DependentUpon>TfrmNewName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TfrmOptimize.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TfrmOptimize.Designer.cs">
+      <DependentUpon>TfrmOptimize.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TfrmOptions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TfrmOptions.Designer.cs">
+      <DependentUpon>TfrmOptions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TfrmProgress.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TfrmProgress.Designer.cs">
+      <DependentUpon>TfrmProgress.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TfrmReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TfrmReport.Designer.cs">
+      <DependentUpon>TfrmReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TfrmRTFEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TfrmRTFEditor.Designer.cs">
+      <DependentUpon>TfrmRTFEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TfrmOverWrite.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TfrmOverWrite.Designer.cs">
+      <DependentUpon>TfrmOverWrite.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TfrmSetArmor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TfrmSetArmor.Designer.cs">
+      <DependentUpon>TfrmSetArmor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TfrmSplash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TfrmSplash.Designer.cs">
+      <DependentUpon>TfrmSplash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TfrmWeaponSlot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TfrmWeaponSlot.Designer.cs">
+      <DependentUpon>TfrmWeaponSlot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FStreamWrapper.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SQLite.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TfrmUpdateMode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TfrmUpdateMode.Designer.cs">
+      <DependentUpon>TfrmUpdateMode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TfrmWeights.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TfrmWeights.Designer.cs">
+      <DependentUpon>TfrmWeights.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TVirtualStringTree.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Utils.cs" />
+    <Compile Include="Wikihelp.cs" />
+    <Content Include="..\Libs\x64\SQLite.Interop.dll">
+      <Link>x64\SQLite.Interop.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Libs\x64\sqlite3.dll">
+      <Link>x64\sqlite3.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Libs\x86\SQLite.Interop.dll">
+      <Link>x86\SQLite.Interop.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Libs\x86\sqlite3.dll">
+      <Link>x86\sqlite3.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="mainicon.ico" />
+    <Content Include="options\language_english.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="options\language_german.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="options\sc_beispiel_Festpreis.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="options\sc_std.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="options\update_autobestiary.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="options\update_autobestiary_alb.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="options\update_autobestiary_hib.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="options\update_autobestiary_mid.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="options\update_bdc.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="options\update_bdc_alb.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="options\update_bdc_hib.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="options\update_bdc_mid.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="options\update_dvi.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="options\update_dvi_alb.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="options\update_dvi_hib.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="options\update_dvi_mid.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="options\update_lokis_wiedersacher.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="options\update_nontoa_bdc.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="options\update_nontoa_bdc_alb.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="options\update_nontoa_bdc_hib.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="options\update_nontoa_bdc_mid.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="options\update_nontoa_dvi.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="options\update_nontoa_dvi_alb.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="options\update_nontoa_dvi_hib.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="options\update_nontoa_dvi_mid.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="weights\dummy.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <EmbeddedResource Include="TfrmCraft.resx">
+      <DependentUpon>TfrmCraft.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TfrmDBStatus.resx">
+      <DependentUpon>TfrmDBStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TfrmJewelrySlot.resx">
+      <DependentUpon>TfrmJewelrySlot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TfrmNewName.resx">
+      <DependentUpon>TfrmNewName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TfrmOptimize.resx">
+      <DependentUpon>TfrmOptimize.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TfrmOptions.resx">
+      <DependentUpon>TfrmOptions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TfrmReport.resx">
+      <DependentUpon>TfrmReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TfrmSetArmor.resx">
+      <DependentUpon>TfrmSetArmor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TfrmWeaponSlot.resx">
+      <DependentUpon>TfrmWeaponSlot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TfrmArmorSlot.resx">
+      <DependentUpon>TfrmArmorSlot.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TfrmInfo.resx">
+      <DependentUpon>TfrmInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TfrmManageDB.resx">
+      <DependentUpon>TfrmManageDB.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TfrmOverWrite.resx">
+      <DependentUpon>TfrmOverWrite.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TfrmProgress.resx">
+      <DependentUpon>TfrmProgress.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TfrmUpdateMode.resx">
+      <DependentUpon>TfrmUpdateMode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TfrmWeights.resx">
+      <DependentUpon>TfrmWeights.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="images\splash.bmp" />
+    <Content Include="configs\1_damagetypes.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="configs\1_dusts.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="configs\1_extensions.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="configs\1_groups.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="configs\1_groups_dragon.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="configs\1_liquids.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="configs\1_materials.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="configs\1_races_alb.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="configs\1_races_all.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="configs\1_races_hib.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="configs\1_races_mid.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="configs\1_server.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="configs\21_attributes_all.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="configs\22_attributes_alb.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="configs\22_attributes_hib.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="configs\22_attributes_mid.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="configs\23_attributes_toa.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="configs\24_attributes_lotm.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="configs\31_bonuses_all.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="configs\32_bonuses_alb.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="configs\32_bonuses_hib.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="configs\32_bonuses_mid.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="configs\33_bonuses_toa.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="configs\34_bonuses_lotm.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="configs\35_bonuses_dragon.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="configs\4_itemslots.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="configs\51_itemclasses_all.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="configs\52_itemclasses_alb.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="configs\52_itemclasses_hib.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="configs\52_itemclasses_mid.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="configs\6_classes_alb.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="configs\6_classes_hib.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="configs\6_classes_mid.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <EmbeddedResource Include="TfoDownload.resx">
+      <DependentUpon>TfoDownload.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TfrmAboutBox.resx">
+      <DependentUpon>TfrmAboutBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TfrmImport.resx">
+      <DependentUpon>TfrmImport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TfrmMain.resx">
+      <DependentUpon>TfrmMain.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TfrmRTFEditor.resx">
+      <DependentUpon>TfrmRTFEditor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TfrmSplash.resx">
+      <DependentUpon>TfrmSplash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="key.snk" />
+    <None Include="locale\en\LC_MESSAGES\default.po" />
+    <Content Include="moras.ini">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Content Include="reports\Configreport_de.rpt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="reports\Configreport_en.rpt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="reports\Crafterreport_de.rpt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="reports\Crafterreport_en.rpt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="reports\Materiallist_de.rpt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="reports\Materiallist_en.rpt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="reports\Shortreport_de.rpt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="reports\Shortreport_en.rpt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.VisualBasic.PowerPacks.10.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft Visual Basic PowerPacks 10.0</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DelphiClasses\DelphiClasses.csproj">
+      <Project>{F8D46586-D74C-4889-9731-F818A6E8DB4C}</Project>
+      <Name>DelphiClasses</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\dxgettext\dxgettext.csproj">
+      <Project>{323E00FE-C280-4A85-9B62-8D7537C40874}</Project>
+      <Name>dxgettext</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Moras.Net.Components\Moras.Net.Components.csproj">
+      <Project>{720FBF09-3485-4290-80B5-D0B8C223C84D}</Project>
+      <Name>Moras.Net.Components</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>mkdir "$(TargetDir)locale\en\LC_MESSAGES"
+"$(SolutionDir)packages\Gettext.Tools.0.19.8.1\tools\bin\msgfmt.exe" --output-file="$(TargetDir)locale\en\LC_MESSAGES\default.mo" "$(ProjectDir)\locale\en\LC_MESSAGES\default.po"</PreBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

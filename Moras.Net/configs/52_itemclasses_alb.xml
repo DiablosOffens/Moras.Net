@@ -1,0 +1,1879 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<moras>
+	<itemclasses>
+		<itemclass id="ALB_CLOTH" oldid="0">
+			<material>CLOTH</material>
+			<slot_type>armor</slot_type>
+			<realm>albion</realm>
+			<position>HANDS</position>
+			<position>HEAD</position>
+			<position>FEET</position>
+			<position>LEGS</position>
+			<position>ARMS</position>
+			<position>CHEST</position>
+			<subclass id="QUILTED">
+				<af level="1">2</af>
+				<af level="2">5</af>
+				<af level="3">10</af>
+				<af level="4">15</af>
+				<af level="5">20</af>
+				<af level="6">25</af>
+				<af level="7">30</af>
+				<af level="8">35</af>
+				<af level="9">40</af>
+				<af level="10">45</af>
+			</subclass>
+			<subclass id="DOUBLE_STICHED">
+				<af level="5">26</af>
+				<af level="6">31</af>
+				<af level="7">36</af>
+				<af level="8">41</af>
+				<af level="9">46</af>
+				<af level="10">51</af>
+			</subclass>
+		</itemclass>
+		<itemclass id="ALB_LEATHER" oldid="1">
+			<material>LEATHER</material>
+			<slot_type>armor</slot_type>
+			<realm>albion</realm>
+			<position>HANDS</position>
+			<position>HEAD</position>
+			<position>FEET</position>
+			<position>LEGS</position>
+			<position>ARMS</position>
+			<position>CHEST</position>
+			<subclass id="ROMAN">
+				<af level="1">4</af>
+				<af level="2">10</af>
+				<af level="3">20</af>
+				<af level="4">30</af>
+				<af level="5">40</af>
+				<af level="6">50</af>
+				<af level="7">60</af>
+				<af level="8">70</af>
+				<af level="9">80</af>
+				<af level="10">90</af>
+			</subclass>
+			<subclass id="CYMRIC">
+				<af level="1">6</af>
+				<af level="2">12</af>
+				<af level="3">22</af>
+				<af level="4">32</af>
+				<af level="5">42</af>
+				<af level="6">52</af>
+				<af level="7">62</af>
+				<af level="8">72</af>
+				<af level="9">82</af>
+				<af level="10">92</af>
+			</subclass>
+			<subclass id="SILURIC">
+				<af level="1">10</af>
+				<af level="2">16</af>
+				<af level="3">26</af>
+				<af level="4">36</af>
+				<af level="5">46</af>
+				<af level="6">56</af>
+				<af level="7">66</af>
+				<af level="8">76</af>
+				<af level="9">86</af>
+				<af level="10">96</af>
+			</subclass>
+			<subclass id="PADDED_LEATHER">
+				<af level="5">52</af>
+				<af level="6">62</af>
+				<af level="7">72</af>
+				<af level="8">82</af>
+				<af level="9">92</af>
+				<af level="10">102</af>
+			</subclass>
+		</itemclass>
+		<itemclass id="ALB_STUDDED" oldid="2">
+			<material>METAL</material>
+			<slot_type>armor</slot_type>
+			<realm>Albion</realm>
+			<position>HANDS</position>
+			<position>HEAD</position>
+			<position>FEET</position>
+			<position>LEGS</position>
+			<position>ARMS</position>
+			<position>CHEST</position>
+			<subclass id="STUDDED">
+				<af level="1">4</af>
+				<af level="2">10</af>
+				<af level="3">20</af>
+				<af level="4">30</af>
+				<af level="5">40</af>
+				<af level="6">50</af>
+				<af level="7">60</af>
+				<af level="8">70</af>
+				<af level="9">80</af>
+				<af level="10">90</af>
+			</subclass>
+			<subclass id="BONNED">
+				<af level="1">6</af>
+				<af level="2">12</af>
+				<af level="3">22</af>
+				<af level="4">32</af>
+				<af level="5">42</af>
+				<af level="6">52</af>
+				<af level="7">62</af>
+				<af level="8">72</af>
+				<af level="9">82</af>
+				<af level="10">92</af>
+			</subclass>
+			<subclass id="LAMELLAR">
+				<af level="1">10</af>
+				<af level="2">16</af>
+				<af level="3">26</af>
+				<af level="4">36</af>
+				<af level="5">46</af>
+				<af level="6">56</af>
+				<af level="7">66</af>
+				<af level="8">76</af>
+				<af level="9">86</af>
+				<af level="10">96</af>
+			</subclass>
+			<subclass id="REINFORCED_LAMELLAR">
+				<af level="5">52</af>
+				<af level="6">62</af>
+				<af level="7">72</af>
+				<af level="8">82</af>
+				<af level="9">92</af>
+				<af level="10">102</af>
+			</subclass>
+		</itemclass>
+		<itemclass id="ALB_CHAIN" oldid="3">
+			<material>METAL</material>
+			<slot_type>armor</slot_type>
+			<realm>Albion</realm>
+			<position>HANDS</position>
+			<position>HEAD</position>
+			<position>FEET</position>
+			<position>LEGS</position>
+			<position>ARMS</position>
+			<position>CHEST</position>
+			<subclass id="CHAIN">
+				<af level="1">4</af>
+				<af level="2">10</af>
+				<af level="3">20</af>
+				<af level="4">30</af>
+				<af level="5">40</af>
+				<af level="6">50</af>
+				<af level="7">60</af>
+				<af level="8">70</af>
+				<af level="9">80</af>
+				<af level="10">90</af>
+			</subclass>
+			<subclass id="MAIL">
+				<af level="1">8</af>
+				<af level="2">14</af>
+				<af level="3">24</af>
+				<af level="4">34</af>
+				<af level="5">44</af>
+				<af level="6">54</af>
+				<af level="7">64</af>
+				<af level="8">74</af>
+				<af level="9">84</af>
+				<af level="10">94</af>
+			</subclass>
+			<subclass id="IMPROVED_MAIL">
+				<af level="5">52</af>
+				<af level="6">62</af>
+				<af level="7">72</af>
+				<af level="8">82</af>
+				<af level="9">92</af>
+				<af level="10">102</af>
+			</subclass>
+		</itemclass>
+		<itemclass id="ALB_PLATE" oldid="4">
+			<material>METAL</material>
+			<slot_type>armor</slot_type>
+			<realm>Albion</realm>
+			<position>HANDS</position>
+			<position>HEAD</position>
+			<position>FEET</position>
+			<position>LEGS</position>
+			<position>ARMS</position>
+			<position>CHEST</position>
+			<subclass id="PLATE">
+				<af level="1">4</af>
+				<af level="2">10</af>
+				<af level="3">20</af>
+				<af level="4">30</af>
+				<af level="5">40</af>
+				<af level="6">50</af>
+				<af level="7">60</af>
+				<af level="8">70</af>
+				<af level="9">80</af>
+				<af level="10">90</af>
+			</subclass>
+			<subclass id="SCALED">
+				<af level="1">8</af>
+				<af level="2">14</af>
+				<af level="3">24</af>
+				<af level="4">34</af>
+				<af level="5">44</af>
+				<af level="6">54</af>
+				<af level="7">64</af>
+				<af level="8">74</af>
+				<af level="9">84</af>
+				<af level="10">94</af>
+			</subclass>
+			<subclass id="FLUTED">
+				<af level="5">48</af>
+				<af level="6">58</af>
+				<af level="7">68</af>
+				<af level="8">78</af>
+				<af level="9">88</af>
+				<af level="10">98</af>
+			</subclass>
+			<subclass id="FULL">
+				<af level="5">52</af>
+				<af level="6">62</af>
+				<af level="7">72</af>
+				<af level="8">82</af>
+				<af level="9">92</af>
+				<af level="10">102</af>
+			</subclass>
+		</itemclass>
+		<itemclass id="SLASH" oldid="1">
+			<material>METAL</material>
+			<slot_type>weapon</slot_type>
+			<realm>Albion</realm>
+			<skill>SLASH</skill>
+			<damage>SLASH</damage>
+			<position>R_HAND</position>
+			<position>2_HAND</position>
+			<subclass id="BROADSWORD">
+				<speed>3,0</speed>
+				<material metal="20" wood="1" leather="1"/>
+				<dps level="1">1,7</dps>
+				<dps level="2">3,2</dps>
+				<dps level="3">4,7</dps>
+				<dps level="4">6,2</dps>
+				<dps level="5">7,7</dps>
+				<dps level="6">9,2</dps>
+				<dps level="7">10,7</dps>
+				<dps level="8">12,2</dps>
+				<dps level="9">13,7</dps>
+				<dps level="10">15,2</dps>
+			</subclass>
+			<subclass id="SCIMITAR">
+				<speed>3,2</speed>
+				<material metal="22" wood="1" leather="1"/>
+				<dps level="1">2,1</dps>
+				<dps level="2">3,6</dps>
+				<dps level="3">5,1</dps>
+				<dps level="4">6,6</dps>
+				<dps level="5">8,1</dps>
+				<dps level="6">9,6</dps>
+				<dps level="7">11,1</dps>
+				<dps level="8">12,6</dps>
+				<dps level="9">14,1</dps>
+				<dps level="10">15,6</dps>
+			</subclass>
+			<subclass id="LONG_SWORD">
+				<speed>3,5</speed>
+				<material metal="27" wood="1" leather="2"/>
+				<dps level="1">2,3</dps>
+				<dps level="2">3,8</dps>
+				<dps level="3">5,3</dps>
+				<dps level="4">6,8</dps>
+				<dps level="5">8,3</dps>
+				<dps level="6">9,8</dps>
+				<dps level="7">11,3</dps>
+				<dps level="8">12,8</dps>
+				<dps level="9">14,3</dps>
+				<dps level="10">15,8</dps>
+			</subclass>
+			<subclass id="BASTARD_SWORD">
+				<speed>3,9</speed>
+				<material metal="33" wood="1" leather="1"/>
+				<dps level="1">2,7</dps>
+				<dps level="2">4,2</dps>
+				<dps level="3">5,7</dps>
+				<dps level="4">7,2</dps>
+				<dps level="5">8,7</dps>
+				<dps level="6">10,2</dps>
+				<dps level="7">11,7</dps>
+				<dps level="8">13,2</dps>
+				<dps level="9">14,7</dps>
+				<dps level="10">16,2</dps>
+			</subclass>
+			<subclass id="SABRE">
+				<speed>3,6</speed>
+				<material metal="40" wood="1" leather="1"/>
+				<dps level="5">9,0</dps>
+				<dps level="6">10,5</dps>
+				<dps level="7">12,0</dps>
+				<dps level="8">13,5</dps>
+				<dps level="9">15,0</dps>
+				<dps level="10">16,5</dps>
+			</subclass>
+			<subclass id="FORTIFIED_LONG_SWORD">
+				<speed>3,2</speed>
+				<material metal="40" wood="1" leather="1"/>
+				<dps level="5">9,0</dps>
+				<dps level="6">10,5</dps>
+				<dps level="7">12,0</dps>
+				<dps level="8">13,5</dps>
+				<dps level="9">15,0</dps>
+				<dps level="10">16,5</dps>
+			</subclass>
+			<subclass id="EXCEPTIONAL_LONG_SWORD">
+				<speed>4,0</speed>
+				<material metal="40" wood="1" leather="1"/>
+				<dps level="5">9,0</dps>
+				<dps level="6">10,5</dps>
+				<dps level="7">12,0</dps>
+				<dps level="8">13,5</dps>
+				<dps level="9">15,0</dps>
+				<dps level="10">16,5</dps>
+			</subclass>
+		</itemclass>
+		<itemclass id="SLASH_LEFT" oldid="31">
+			<material>METAL</material>
+			<slot_type>weapon</slot_type>
+			<realm>Albion</realm>
+			<skill>SLASH</skill>
+			<damage>SLASH</damage>
+			<dualwield/>
+			<position>R_HAND</position>
+			<position>L_HAND</position>
+			<position>2_HAND</position>
+			<subclass id="DAGGER">
+				<speed>2,4</speed>
+				<material metal="8" wood="1" leather="2"/>
+				<dps level="1">1,5</dps>
+				<dps level="2">3,0</dps>
+				<dps level="3">4,5</dps>
+				<dps level="4">6,0</dps>
+				<dps level="5">7,5</dps>
+				<dps level="6">9,0</dps>
+				<dps level="7">10,5</dps>
+				<dps level="8">12,0</dps>
+				<dps level="9">13,5</dps>
+				<dps level="10">15,0</dps>
+			</subclass>
+			<subclass id="SHORT_SWORD">
+				<speed>2,8</speed>
+				<material metal="10" wood="1" leather="2"/>
+				<dps level="1">1,5</dps>
+				<dps level="2">3,0</dps>
+				<dps level="3">4,5</dps>
+				<dps level="4">6,0</dps>
+				<dps level="5">7,5</dps>
+				<dps level="6">9,0</dps>
+				<dps level="7">10,5</dps>
+				<dps level="8">12,0</dps>
+				<dps level="9">13,5</dps>
+				<dps level="10">15,0</dps>
+			</subclass>
+			<subclass id="HAND_AXE">
+				<speed>2,7</speed>
+				<material metal="14" wood="2"/>
+				<dps level="1">1,8</dps>
+				<dps level="2">3,3</dps>
+				<dps level="3">4,8</dps>
+				<dps level="4">6,3</dps>
+				<dps level="5">7,8</dps>
+				<dps level="6">9,3</dps>
+				<dps level="7">10,8</dps>
+				<dps level="8">12,3</dps>
+				<dps level="9">13,8</dps>
+				<dps level="10">15,3</dps>
+			</subclass>
+			<subclass id="JAMBIYA">
+				<speed>2,6</speed>
+				<material metal="40" wood="1" leather="1"/>
+				<dps level="5">9,0</dps>
+				<dps level="6">10,5</dps>
+				<dps level="7">12,0</dps>
+				<dps level="8">13,5</dps>
+				<dps level="9">15,0</dps>
+				<dps level="10">16,5</dps>
+			</subclass>
+			<subclass id="FORTIFIED_SHORT_SWORD">
+				<speed>2,8</speed>
+				<material metal="40" wood="1" leather="1"/>
+				<dps level="5">9,0</dps>
+				<dps level="6">10,5</dps>
+				<dps level="7">12,0</dps>
+				<dps level="8">13,5</dps>
+				<dps level="9">15,0</dps>
+				<dps level="10">16,5</dps>
+			</subclass>
+			<subclass id="EXCEPTIONAL_SHORT_SWORD">
+				<speed>3,2</speed>
+				<material metal="40" wood="1" leather="1"/>
+				<dps level="5">9,0</dps>
+				<dps level="6">10,5</dps>
+				<dps level="7">12,0</dps>
+				<dps level="8">13,5</dps>
+				<dps level="9">15,0</dps>
+				<dps level="10">16,5</dps>
+			</subclass>
+		</itemclass>
+		<itemclass id="CRUSH" oldid="3">
+			<material>METAL</material>
+			<slot_type>weapon</slot_type>
+			<realm>Albion</realm>
+			<skill>CRUSH</skill>
+			<damage>CRUSH</damage>
+			<position>R_HAND</position>
+			<position>2_HAND</position>
+			<subclass id="FLANGED_MACE">
+				<speed>3,4</speed>
+				<material metal="19" wood="3" leather="1"/>
+				<dps level="1">2,1</dps>
+				<dps level="2">3,6</dps>
+				<dps level="3">5,1</dps>
+				<dps level="4">6,6</dps>
+				<dps level="5">8,1</dps>
+				<dps level="6">9,6</dps>
+				<dps level="7">11,1</dps>
+				<dps level="8">12,6</dps>
+				<dps level="9">14,1</dps>
+				<dps level="10">15,6</dps>
+			</subclass>
+			<subclass id="SPIKED_MACE">
+				<speed>3,7</speed>
+				<material metal="23" wood="4"/>
+				<dps level="1">2,4</dps>
+				<dps level="2">3,9</dps>
+				<dps level="3">5,4</dps>
+				<dps level="4">6,9</dps>
+				<dps level="5">8,4</dps>
+				<dps level="6">9,9</dps>
+				<dps level="7">11,4</dps>
+				<dps level="8">12,9</dps>
+				<dps level="9">14,4</dps>
+				<dps level="10">15,9</dps>
+			</subclass>
+			<subclass id="WAR_HAMMER">
+				<speed>4,2</speed>
+				<material metal="30" wood="5"/>
+				<dps level="1">2,7</dps>
+				<dps level="2">4,2</dps>
+				<dps level="3">5,7</dps>
+				<dps level="4">7,2</dps>
+				<dps level="5">8,7</dps>
+				<dps level="6">10,2</dps>
+				<dps level="7">11,7</dps>
+				<dps level="8">13,2</dps>
+				<dps level="9">14,7</dps>
+				<dps level="10">16,2</dps>
+			</subclass>
+			<subclass id="NEEDLE_MACE">
+				<speed>3,4</speed>
+				<material metal="36" wood="6"/>
+				<dps level="5">9,0</dps>
+				<dps level="6">10,5</dps>
+				<dps level="7">12,0</dps>
+				<dps level="8">13,5</dps>
+				<dps level="9">15,0</dps>
+				<dps level="10">16,5</dps>
+			</subclass>
+			<subclass id="FORTIFIED_MACE">
+				<speed>3,0</speed>
+				<material metal="36" wood="6"/>
+				<dps level="5">9,0</dps>
+				<dps level="6">10,5</dps>
+				<dps level="7">12,0</dps>
+				<dps level="8">13,5</dps>
+				<dps level="9">15,0</dps>
+				<dps level="10">16,5</dps>
+			</subclass>
+			<subclass id="EXPECTIONAL_MACE">
+				<speed>3,8</speed>
+				<material metal="36" wood="6"/>
+				<dps level="5">9,0</dps>
+				<dps level="6">10,5</dps>
+				<dps level="7">12,0</dps>
+				<dps level="8">13,5</dps>
+				<dps level="9">15,0</dps>
+				<dps level="10">16,5</dps>
+			</subclass>
+		</itemclass>
+		<itemclass id="CRUSH_LEFT" oldid="33">
+			<material>METAL</material>
+			<slot_type>weapon</slot_type>
+			<realm>Albion</realm>
+			<skill>CRUSH</skill>
+			<damage>CRUSH</damage>
+			<dualwield/>
+			<position>R_HAND</position>
+			<position>L_HAND</position>
+			<position>2_HAND</position>
+			<subclass id="HAMMER">
+				<speed>3,0</speed>
+				<material metal="10" wood="2" leather="1"/>
+				<dps level="1">1,5</dps>
+				<dps level="2">3,0</dps>
+				<dps level="3">4,5</dps>
+				<dps level="4">6,0</dps>
+				<dps level="5">7,5</dps>
+				<dps level="6">9,0</dps>
+				<dps level="7">10,5</dps>
+				<dps level="8">12,0</dps>
+				<dps level="9">13,5</dps>
+				<dps level="10">15,0</dps>
+			</subclass>
+			<subclass id="MACE">
+				<speed>3,3</speed>
+				<material metal="16" wood="3"/>
+				<dps level="1">1,7</dps>
+				<dps level="2">3,2</dps>
+				<dps level="3">4,7</dps>
+				<dps level="4">6,2</dps>
+				<dps level="5">7,7</dps>
+				<dps level="6">9,2</dps>
+				<dps level="7">10,7</dps>
+				<dps level="8">12,2</dps>
+				<dps level="9">13,7</dps>
+				<dps level="10">15,2</dps>
+			</subclass>
+			<subclass id="WAR_MACE">
+				<speed>3,0</speed>
+				<material metal="36" wood="6"/>
+				<dps level="5">9,0</dps>
+				<dps level="6">10,5</dps>
+				<dps level="7">12,0</dps>
+				<dps level="8">13,5</dps>
+				<dps level="9">15,0</dps>
+				<dps level="10">16,5</dps>
+			</subclass>
+			<subclass id="FORTIFIED_HAMMER">
+				<speed>2,5</speed>
+				<material metal="36" wood="6"/>
+				<dps level="5">9,0</dps>
+				<dps level="6">10,5</dps>
+				<dps level="7">12,0</dps>
+				<dps level="8">13,5</dps>
+				<dps level="9">15,0</dps>
+				<dps level="10">16,5</dps>
+			</subclass>
+			<subclass id="EXCEPTIONAL_HAMMER">
+				<speed>3,4</speed>
+				<material metal="36" wood="6"/>
+				<dps level="5">9,0</dps>
+				<dps level="6">10,5</dps>
+				<dps level="7">12,0</dps>
+				<dps level="8">13,5</dps>
+				<dps level="9">15,0</dps>
+				<dps level="10">16,5</dps>
+			</subclass>
+		</itemclass>
+		<itemclass id="THRUST" oldid="2">
+			<material>METAL</material>
+			<slot_type>weapon</slot_type>
+			<realm>Albion</realm>
+			<skill>THRUST</skill>
+			<damage>THRUST</damage>
+			<position>R_HAND</position>
+			<position>2_HAND</position>
+			<subclass id="RAPIER">
+				<speed>3,2</speed>
+				<material metal="24" wood="1" leather="1"/>
+				<dps level="1">2,3</dps>
+				<dps level="2">3,8</dps>
+				<dps level="3">5,3</dps>
+				<dps level="4">6,8</dps>
+				<dps level="5">8,3</dps>
+				<dps level="6">9,8</dps>
+				<dps level="7">11,3</dps>
+				<dps level="8">12,8</dps>
+				<dps level="9">14,3</dps>
+				<dps level="10">15,8</dps>
+			</subclass>
+			<subclass id="GLADIUS">
+				<speed>3,7</speed>
+				<material metal="31" wood="1" leather="1"/>
+				<dps level="1">2,6</dps>
+				<dps level="2">4,1</dps>
+				<dps level="3">5,6</dps>
+				<dps level="4">7,1</dps>
+				<dps level="5">8,6</dps>
+				<dps level="6">10,1</dps>
+				<dps level="7">11,6</dps>
+				<dps level="8">13,1</dps>
+				<dps level="9">14,6</dps>
+				<dps level="10">16,1</dps>
+			</subclass>
+			<subclass id="GUARDED_RAPIER">
+				<speed>3,5</speed>
+				<material metal="38" wood="1" leather="1"/>
+				<dps level="5">9,0</dps>
+				<dps level="6">10,5</dps>
+				<dps level="7">12,0</dps>
+				<dps level="8">13,5</dps>
+				<dps level="9">15,0</dps>
+				<dps level="10">16,5</dps>
+			</subclass>
+			<subclass id="FORTIFIED_RAPIER">
+				<speed>3,1</speed>
+				<material metal="38" wood="1" leather="1"/>
+				<dps level="5">9,0</dps>
+				<dps level="6">10,5</dps>
+				<dps level="7">12,0</dps>
+				<dps level="8">13,5</dps>
+				<dps level="9">15,0</dps>
+				<dps level="10">16,5</dps>
+			</subclass>
+			<subclass id="EXCEPTIONAL_RAPIER">
+				<speed>3,9</speed>
+				<material metal="38" wood="1" leather="1"/>
+				<dps level="5">9,0</dps>
+				<dps level="6">10,5</dps>
+				<dps level="7">12,0</dps>
+				<dps level="8">13,5</dps>
+				<dps level="9">15,0</dps>
+				<dps level="10">16,5</dps>
+			</subclass>
+		</itemclass>
+		<itemclass id="THRUST_LEFT" oldid="32">
+			<material>METAL</material>
+			<slot_type>weapon</slot_type>
+			<realm>Albion</realm>
+			<skill>THRUST</skill>
+			<damage>THRUST</damage>
+			<dualwield/>
+			<position>R_HAND</position>
+			<position>L_HAND</position>
+			<position>2_HAND</position>
+			<subclass id="DIRK">
+				<speed>2,2</speed>
+				<material metal="8" wood="1" leather="2"/>
+				<dps level="1">1,5</dps>
+				<dps level="2">3,0</dps>
+				<dps level="3">4,5</dps>
+				<dps level="4">6,0</dps>
+				<dps level="5">7,5</dps>
+				<dps level="6">9,0</dps>
+				<dps level="7">10,5</dps>
+				<dps level="8">12,0</dps>
+				<dps level="9">13,5</dps>
+				<dps level="10">15,0</dps>
+			</subclass>
+			<subclass id="STILLETTO">
+				<speed>2,5</speed>
+				<material metal="12" wood="1" leather="2"/>
+				<dps level="1">1,7</dps>
+				<dps level="2">3,2</dps>
+				<dps level="3">4,7</dps>
+				<dps level="4">6,2</dps>
+				<dps level="5">7,7</dps>
+				<dps level="6">9,2</dps>
+				<dps level="7">10,7</dps>
+				<dps level="8">12,2</dps>
+				<dps level="9">13,7</dps>
+				<dps level="10">15,2</dps>
+			</subclass>
+			<subclass id="MAIN_GAUCHE">
+				<speed>2,8</speed>
+				<material metal="20" wood="1" leather="1"/>
+				<dps level="1">2,0</dps>
+				<dps level="2">3,5</dps>
+				<dps level="3">5,0</dps>
+				<dps level="4">6,5</dps>
+				<dps level="5">8,0</dps>
+				<dps level="6">9,5</dps>
+				<dps level="7">11,0</dps>
+				<dps level="8">12,5</dps>
+				<dps level="9">14,0</dps>
+				<dps level="10">15,5</dps>
+			</subclass>
+			<subclass id="LONG_DIRK">
+				<speed>2,9</speed>
+				<material metal="40" wood="1" leather="1"/>
+				<dps level="5">9,0</dps>
+				<dps level="6">10,5</dps>
+				<dps level="7">12,0</dps>
+				<dps level="8">13,5</dps>
+				<dps level="9">15,0</dps>
+				<dps level="10">16,5</dps>
+			</subclass>
+			<subclass id="FORTIFIED_STILLETTO">
+				<speed>2,4</speed>
+				<material metal="40" wood="1" leather="1"/>
+				<dps level="5">9,0</dps>
+				<dps level="6">10,5</dps>
+				<dps level="7">12,0</dps>
+				<dps level="8">13,5</dps>
+				<dps level="9">15,0</dps>
+				<dps level="10">16,5</dps>
+			</subclass>
+			<subclass id="EXCEPTIONAL_STILLETTO">
+				<speed>3,3</speed>
+				<material metal="40" wood="1" leather="1"/>
+				<dps level="5">9,0</dps>
+				<dps level="6">10,5</dps>
+				<dps level="7">12,0</dps>
+				<dps level="8">13,5</dps>
+				<dps level="9">15,0</dps>
+				<dps level="10">16,5</dps>
+			</subclass>
+		</itemclass>
+		<itemclass id="POLEARM" oldid="5">
+			<material>METAL</material>
+			<slot_type>weapon</slot_type>
+			<realm>Albion</realm>
+			<skill>POLEARM</skill>
+			<position>2_HAND</position>
+			<subclass id="PIKE">
+				<speed>4,4</speed>
+				<damage>THRUST</damage>
+				<material metal="9" wood="14"/>
+				<dps level="1">1,5</dps>
+				<dps level="2">3,0</dps>
+				<dps level="3">4,5</dps>
+				<dps level="4">6,0</dps>
+				<dps level="5">7,5</dps>
+				<dps level="6">9,0</dps>
+				<dps level="7">10,5</dps>
+				<dps level="8">12,0</dps>
+				<dps level="9">13,5</dps>
+				<dps level="10">15,0</dps>
+			</subclass>
+			<subclass id="LOCHABER_AXE">
+				<speed>4,8</speed>
+				<damage>SLASH</damage>
+				<material metal="14" wood="12"/>
+				<dps level="1">1,7</dps>
+				<dps level="2">3,2</dps>
+				<dps level="3">4,7</dps>
+				<dps level="4">6,2</dps>
+				<dps level="5">7,7</dps>
+				<dps level="6">9,2</dps>
+				<dps level="7">10,7</dps>
+				<dps level="8">12,2</dps>
+				<dps level="9">13,7</dps>
+				<dps level="10">15,2</dps>
+			</subclass>
+			<subclass id="BILL">
+				<speed>5,2</speed>
+				<damage>THRUST</damage>
+				<material metal="17" wood="13"/>
+				<dps level="1">2,0</dps>
+				<dps level="2">3,5</dps>
+				<dps level="3">5,0</dps>
+				<dps level="4">6,5</dps>
+				<dps level="5">8,0</dps>
+				<dps level="6">9,5</dps>
+				<dps level="7">11,0</dps>
+				<dps level="8">12,5</dps>
+				<dps level="9">14,0</dps>
+				<dps level="10">15,5</dps>
+			</subclass>
+			<subclass id="LUCERNE_HAMMER">
+				<speed>5,6</speed>
+				<damage>CRUSH</damage>
+				<material metal="29" wood="12"/>
+				<dps level="1">2,4</dps>
+				<dps level="2">3,9</dps>
+				<dps level="3">5,4</dps>
+				<dps level="4">6,9</dps>
+				<dps level="5">8,4</dps>
+				<dps level="6">9,9</dps>
+				<dps level="7">11,4</dps>
+				<dps level="8">12,9</dps>
+				<dps level="9">14,4</dps>
+				<dps level="10">15,9</dps>
+			</subclass>
+			<subclass id="HALBERD">
+				<speed>6,0</speed>
+				<damage>SLASH</damage>
+				<material metal="33" wood="12"/>
+				<dps level="1">2,7</dps>
+				<dps level="2">4,2</dps>
+				<dps level="3">5,7</dps>
+				<dps level="4">7,2</dps>
+				<dps level="5">8,7</dps>
+				<dps level="6">10,2</dps>
+				<dps level="7">11,7</dps>
+				<dps level="8">13,2</dps>
+				<dps level="9">14,7</dps>
+				<dps level="10">16,2</dps>
+			</subclass>
+			<subclass id="FORTIFIED_LUCERNE_HAMMER">
+				<speed>5,3</speed>
+				<damage>CRUSH</damage>
+				<material metal="43" wood="6"/>
+				<dps level="5">9,0</dps>
+				<dps level="6">10,5</dps>
+				<dps level="7">12,0</dps>
+				<dps level="8">13,5</dps>
+				<dps level="9">15,0</dps>
+				<dps level="10">16,5</dps>
+			</subclass>
+			<subclass id="EXCEPTIONAL_LUCERNE_HAMMER">
+				<speed>5,6</speed>
+				<damage>CRUSH</damage>
+				<material metal="43" wood="6"/>
+				<dps level="5">9,0</dps>
+				<dps level="6">10,5</dps>
+				<dps level="7">12,0</dps>
+				<dps level="8">13,5</dps>
+				<dps level="9">15,0</dps>
+				<dps level="10">16,5</dps>
+			</subclass>
+			<subclass id="SPIKED_HAMMER">
+				<speed>5,9</speed>
+				<damage>CRUSH</damage>
+				<material metal="43" wood="6"/>
+				<dps level="5">8,9</dps>
+				<dps level="6">10,4</dps>
+				<dps level="7">11,9</dps>
+				<dps level="8">13,4</dps>
+				<dps level="9">14,9</dps>
+				<dps level="10">16,4</dps>
+			</subclass>
+			<subclass id="EXCEPTIONAL_BARDICHE">
+				<speed>5,2</speed>
+				<damage>SLASH</damage>
+				<material metal="43" wood="6"/>
+				<dps level="5">9,0</dps>
+				<dps level="6">10,5</dps>
+				<dps level="7">12,0</dps>
+				<dps level="8">13,5</dps>
+				<dps level="9">15,0</dps>
+				<dps level="10">16,5</dps>
+			</subclass>
+			<subclass id="BARDICHE">
+				<speed>5,5</speed>
+				<damage>SLASH</damage>
+				<material metal="43" wood="6"/>
+				<dps level="5">9,0</dps>
+				<dps level="6">10,5</dps>
+				<dps level="7">12,0</dps>
+				<dps level="8">13,5</dps>
+				<dps level="9">15,0</dps>
+				<dps level="10">16,5</dps>
+			</subclass>
+			<subclass id="POLEAXE">
+				<speed>5,8</speed>
+				<damage>SLASH</damage>
+				<material metal="43" wood="6"/>
+				<dps level="5">8,9</dps>
+				<dps level="6">10,4</dps>
+				<dps level="7">11,9</dps>
+				<dps level="8">13,4</dps>
+				<dps level="9">14,9</dps>
+				<dps level="10">16,4</dps>
+			</subclass>
+			<subclass id="FORTIFIED_PARTISAN">
+				<speed>5,1</speed>
+				<damage>THRUST</damage>
+				<material metal="43" wood="6"/>
+				<dps level="5">9,0</dps>
+				<dps level="6">10,5</dps>
+				<dps level="7">12,0</dps>
+				<dps level="8">13,5</dps>
+				<dps level="9">15,0</dps>
+				<dps level="10">16,5</dps>
+			</subclass>
+			<subclass id="PARTISAN">
+				<speed>5,5</speed>
+				<damage>THRUST</damage>
+				<material metal="43" wood="6"/>
+				<dps level="5">9,0</dps>
+				<dps level="6">10,5</dps>
+				<dps level="7">12,0</dps>
+				<dps level="8">13,5</dps>
+				<dps level="9">15,0</dps>
+				<dps level="10">16,5</dps>
+			</subclass>
+			<subclass id="EXCEPTIONAL_PARTISAN">
+				<speed>5,7</speed>
+				<damage>THRUST</damage>
+				<material metal="43" wood="6"/>
+				<dps level="5">9,0</dps>
+				<dps level="6">10,5</dps>
+				<dps level="7">12,0</dps>
+				<dps level="8">13,5</dps>
+				<dps level="9">15,0</dps>
+				<dps level="10">16,5</dps>
+			</subclass>
+		</itemclass>
+		<itemclass id="FLEXIBLE" oldid="28">
+			<material>METAL</material>
+			<slot_type>weapon</slot_type>
+			<realm>Albion</realm>
+			<skill>FLEXIBLE</skill>
+			<position>R_HAND</position>
+			<position>2_HAND</position>
+			<subclass id="BARBED_CHAIN">
+				<speed>3,6</speed>
+				<damage>SLASH</damage>
+				<material metal="11" wood="2" leather="3"/>
+				<dps level="1">1,5</dps>
+				<dps level="2">3,0</dps>
+				<dps level="3">4,5</dps>
+				<dps level="4">6,0</dps>
+				<dps level="5">7,5</dps>
+				<dps level="6">9,0</dps>
+				<dps level="7">10,5</dps>
+				<dps level="8">12,0</dps>
+				<dps level="9">13,5</dps>
+				<dps level="10">15,0</dps>
+			</subclass>
+			<subclass id="CHAIN">
+				<speed>3,5</speed>
+				<damage>CRUSH</damage>
+				<material metal="11" wood="2" leather="3"/>
+				<dps level="1">1,5</dps>
+				<dps level="2">3,0</dps>
+				<dps level="3">4,5</dps>
+				<dps level="4">6,0</dps>
+				<dps level="5">7,5</dps>
+				<dps level="6">9,0</dps>
+				<dps level="7">10,5</dps>
+				<dps level="8">12,0</dps>
+				<dps level="9">13,5</dps>
+				<dps level="10">15,0</dps>
+			</subclass>
+			<subclass id="MORNING_STAR">
+				<speed>3,3</speed>
+				<damage>CRUSH</damage>
+				<material metal="16" wood="6" leather="5"/>
+				<dps level="1">2,0</dps>
+				<dps level="2">3,5</dps>
+				<dps level="3">5,0</dps>
+				<dps level="4">6,5</dps>
+				<dps level="5">8,0</dps>
+				<dps level="6">9,5</dps>
+				<dps level="7">11,0</dps>
+				<dps level="8">12,5</dps>
+				<dps level="9">14,0</dps>
+				<dps level="10">15,5</dps>
+			</subclass>
+			<subclass id="TIPPED_WHIP">
+				<speed>3,2</speed>
+				<damage>SLASH</damage>
+				<material metal="9" wood="6" leather="21"/>
+				<dps level="1">2,0</dps>
+				<dps level="2">3,5</dps>
+				<dps level="3">5,0</dps>
+				<dps level="4">6,5</dps>
+				<dps level="5">8,0</dps>
+				<dps level="6">9,5</dps>
+				<dps level="7">11,0</dps>
+				<dps level="8">12,5</dps>
+				<dps level="9">14,0</dps>
+				<dps level="10">15,5</dps>
+			</subclass>
+			<subclass id="WAR_CHAIN">
+				<speed>4,0</speed>
+				<damage>CRUSH</damage>
+				<material metal="19" wood="6" leather="7"/>
+				<dps level="1">2,4</dps>
+				<dps level="2">3,9</dps>
+				<dps level="3">5,4</dps>
+				<dps level="4">6,9</dps>
+				<dps level="5">8,4</dps>
+				<dps level="6">9,9</dps>
+				<dps level="7">11,4</dps>
+				<dps level="8">12,9</dps>
+				<dps level="9">14,4</dps>
+				<dps level="10">15,9</dps>
+			</subclass>
+			<subclass id="BLADE_TIPPED_WHIP">
+				<speed>3,7</speed>
+				<damage>SLASH</damage>
+				<material metal="12" wood="4" leather="25"/>
+				<dps level="1">2,3</dps>
+				<dps level="2">3,8</dps>
+				<dps level="3">5,3</dps>
+				<dps level="4">6,8</dps>
+				<dps level="5">8,3</dps>
+				<dps level="6">9,8</dps>
+				<dps level="7">11,3</dps>
+				<dps level="8">12,8</dps>
+				<dps level="9">14,3</dps>
+				<dps level="10">15,8</dps>
+			</subclass>
+			<subclass id="FLAIL">
+				<speed>3,7</speed>
+				<damage>CRUSH</damage>
+				<material metal="21" wood="6" leather="8"/>
+				<dps level="1">2,6</dps>
+				<dps level="2">4,1</dps>
+				<dps level="3">5,6</dps>
+				<dps level="4">7,1</dps>
+				<dps level="5">8,6</dps>
+				<dps level="6">10,1</dps>
+				<dps level="7">11,6</dps>
+				<dps level="8">13,1</dps>
+				<dps level="9">14,6</dps>
+				<dps level="10">16,1</dps>
+			</subclass>
+			<subclass id="BARBED_WHIP">
+				<speed>3,5</speed>
+				<damage>SLASH</damage>
+				<material metal="15" wood="6" leather="25"/>
+				<dps level="1">2,6</dps>
+				<dps level="2">4,1</dps>
+				<dps level="3">5,6</dps>
+				<dps level="4">7,1</dps>
+				<dps level="5">8,6</dps>
+				<dps level="6">10,1</dps>
+				<dps level="7">11,6</dps>
+				<dps level="8">13,1</dps>
+				<dps level="9">14,6</dps>
+				<dps level="10">16,1</dps>
+			</subclass>
+			<subclass id="FORTIFIED_CHAIN">
+				<speed>3,6</speed>
+				<damage>CRUSH</damage>
+				<material metal="27" wood="11" leather="6"/>
+				<dps level="5">9,0</dps>
+				<dps level="6">10,5</dps>
+				<dps level="7">12,0</dps>
+				<dps level="8">13,5</dps>
+				<dps level="9">15,0</dps>
+				<dps level="10">16,5</dps>
+			</subclass>
+			<subclass id="EXCEPTIONAL_CHAIN">
+				<speed>3,9</speed>
+				<damage>CRUSH</damage>
+				<material metal="27" wood="11" leather="6"/>
+				<dps level="5">9,0</dps>
+				<dps level="6">10,5</dps>
+				<dps level="7">12,0</dps>
+				<dps level="8">13,5</dps>
+				<dps level="9">15,0</dps>
+				<dps level="10">16,5</dps>
+			</subclass>
+			<subclass id="WEIGHTED_FLAIL">
+				<speed>4,2</speed>
+				<damage>CRUSH</damage>
+				<material metal="27" wood="11" leather="6"/>
+				<dps level="5">9,0</dps>
+				<dps level="6">10,5</dps>
+				<dps level="7">12,0</dps>
+				<dps level="8">13,5</dps>
+				<dps level="9">15,0</dps>
+				<dps level="10">16,5</dps>
+			</subclass>
+			<subclass id="FORTIFIED_WHIP">
+				<speed>3,0</speed>
+				<damage>SLASH</damage>
+				<material metal="17" wood="11" leather="29"/>
+				<dps level="5">9,0</dps>
+				<dps level="6">10,5</dps>
+				<dps level="7">12,0</dps>
+				<dps level="8">13,5</dps>
+				<dps level="9">15,0</dps>
+				<dps level="10">16,5</dps>
+			</subclass>
+			<subclass id="THICK_BARBED_WHIP">
+				<speed>3,3</speed>
+				<damage>SLASH</damage>
+				<material metal="17" wood="11" leather="29"/>
+				<dps level="5">9,0</dps>
+				<dps level="6">10,5</dps>
+				<dps level="7">12,0</dps>
+				<dps level="8">13,5</dps>
+				<dps level="9">15,0</dps>
+				<dps level="10">16,5</dps>
+			</subclass>
+			<subclass id="EXCEPTIONAL_WHIP">
+				<speed>3,6</speed>
+				<damage>SLASH</damage>
+				<material metal="17" wood="11" leather="29"/>
+				<dps level="5">9,0</dps>
+				<dps level="6">10,5</dps>
+				<dps level="7">12,0</dps>
+				<dps level="8">13,5</dps>
+				<dps level="9">15,0</dps>
+				<dps level="10">16,5</dps>
+			</subclass>
+		</itemclass>
+		<itemclass id="TWO_HAND" oldid="6">
+			<material>METAL</material>
+			<slot_type>weapon</slot_type>
+			<realm>Albion</realm>
+			<skill>TWO_HANDED</skill>
+			<position>2_HAND</position>
+			<subclass id="WAR_MATTOCK">
+				<speed>3,8</speed>
+				<damage>THRUST</damage>
+				<material metal="13" wood="9"/>
+				<dps level="1">1,5</dps>
+				<dps level="2">3,0</dps>
+				<dps level="3">4,5</dps>
+				<dps level="4">6,0</dps>
+				<dps level="5">7,5</dps>
+				<dps level="6">9,0</dps>
+				<dps level="7">10,5</dps>
+				<dps level="8">12,0</dps>
+				<dps level="9">13,5</dps>
+				<dps level="10">15,0</dps>
+			</subclass>
+			<subclass id="TWO_HANDED_SWORD">
+				<speed>4,3</speed>
+				<damage>SLASH</damage>
+				<material metal="20" wood="1" leather="1"/>
+				<dps level="1">1,8</dps>
+				<dps level="2">3,3</dps>
+				<dps level="3">4,8</dps>
+				<dps level="4">6,3</dps>
+				<dps level="5">7,8</dps>
+				<dps level="6">9,3</dps>
+				<dps level="7">10,8</dps>
+				<dps level="8">12,3</dps>
+				<dps level="9">13,8</dps>
+				<dps level="10">15,3</dps>
+			</subclass>
+			<subclass id="GREAT_HAMMER">
+				<speed>4,8</speed>
+				<damage>CRUSH</damage>
+				<material metal="23" wood="8"/>
+				<dps level="1">2,0</dps>
+				<dps level="2">3,5</dps>
+				<dps level="3">5,0</dps>
+				<dps level="4">6,5</dps>
+				<dps level="5">8,0</dps>
+				<dps level="6">9,5</dps>
+				<dps level="7">11,0</dps>
+				<dps level="8">12,5</dps>
+				<dps level="9">14,0</dps>
+				<dps level="10">15,5</dps>
+			</subclass>
+			<subclass id="WAR_AXE">
+				<speed>4,4</speed>
+				<damage>SLASH</damage>
+				<material metal="21" wood="9"/>
+				<dps level="1">2,0</dps>
+				<dps level="2">3,5</dps>
+				<dps level="3">5,0</dps>
+				<dps level="4">6,5</dps>
+				<dps level="5">8,0</dps>
+				<dps level="6">9,5</dps>
+				<dps level="7">11,0</dps>
+				<dps level="8">12,5</dps>
+				<dps level="9">14,0</dps>
+				<dps level="10">15,5</dps>
+			</subclass>
+			<subclass id="BATTLE_AXE">
+				<speed>4,5</speed>
+				<damage>SLASH</damage>
+				<material metal="29" wood="8"/>
+				<dps level="1">2,3</dps>
+				<dps level="2">3,8</dps>
+				<dps level="3">5,3</dps>
+				<dps level="4">6,8</dps>
+				<dps level="5">8,3</dps>
+				<dps level="6">9,8</dps>
+				<dps level="7">11,3</dps>
+				<dps level="8">12,8</dps>
+				<dps level="9">14,3</dps>
+				<dps level="10">15,8</dps>
+			</subclass>
+			<subclass id="GREAT_SWORD">
+				<speed>5,1</speed>
+				<damage>SLASH</damage>
+				<material metal="35" wood="1" leather="2"/>
+				<dps level="1">2,4</dps>
+				<dps level="2">3,9</dps>
+				<dps level="3">5,4</dps>
+				<dps level="4">6,9</dps>
+				<dps level="5">8,4</dps>
+				<dps level="6">9,9</dps>
+				<dps level="7">11,4</dps>
+				<dps level="8">12,9</dps>
+				<dps level="9">14,4</dps>
+				<dps level="10">15,9</dps>
+			</subclass>
+			<subclass id="GREAT_AXE">
+				<speed>5,1</speed>
+				<damage>SLASH</damage>
+				<material metal="36" wood="8"/>
+				<dps level="1">2,7</dps>
+				<dps level="2">4,2</dps>
+				<dps level="3">5,7</dps>
+				<dps level="4">7,2</dps>
+				<dps level="5">8,7</dps>
+				<dps level="6">10,2</dps>
+				<dps level="7">11,7</dps>
+				<dps level="8">13,2</dps>
+				<dps level="9">14,7</dps>
+				<dps level="10">16,2</dps>
+			</subclass>
+			<subclass id="FORTIFIED_GREAT_SWORD">
+				<speed>4,5</speed>
+				<damage>SLASH</damage>
+				<material metal="46" wood="2" leather="2"/>
+				<dps level="5">9,0</dps>
+				<dps level="6">10,5</dps>
+				<dps level="7">12,0</dps>
+				<dps level="8">13,5</dps>
+				<dps level="9">15,0</dps>
+				<dps level="10">16,5</dps>
+			</subclass>
+			<subclass id="GREAT_SCIMITAR">
+				<speed>4,8</speed>
+				<damage>SLASH</damage>
+				<material metal="46" wood="2" leather="2"/>
+				<dps level="5">9,0</dps>
+				<dps level="6">10,5</dps>
+				<dps level="7">12,0</dps>
+				<dps level="8">13,5</dps>
+				<dps level="9">15,0</dps>
+				<dps level="10">16,5</dps>
+			</subclass>
+			<subclass id="EXCEPTIONAL_GREAT_SWORD">
+				<speed>5,1</speed>
+				<damage>SLASH</damage>
+				<material metal="46" wood="2" leather="2"/>
+				<dps level="5">9,0</dps>
+				<dps level="6">10,5</dps>
+				<dps level="7">12,0</dps>
+				<dps level="8">13,5</dps>
+				<dps level="9">15,0</dps>
+				<dps level="10">16,5</dps>
+			</subclass>
+			<subclass id="FORTIFIED_GREAT_HAMMER">
+				<speed>4,7</speed>
+				<damage>CRUSH</damage>
+				<material metal="45" wood="6"/>
+				<dps level="5">9,0</dps>
+				<dps level="6">10,5</dps>
+				<dps level="7">12,0</dps>
+				<dps level="8">13,5</dps>
+				<dps level="9">15,0</dps>
+				<dps level="10">16,5</dps>
+			</subclass>
+			<subclass id="ARCHMACE">
+				<speed>5,1</speed>
+				<damage>CRUSH</damage>
+				<material metal="45" wood="6"/>
+				<dps level="5">9,0</dps>
+				<dps level="6">10,5</dps>
+				<dps level="7">12,0</dps>
+				<dps level="8">13,5</dps>
+				<dps level="9">15,0</dps>
+				<dps level="10">16,5</dps>
+			</subclass>
+			<subclass id="EXCEPTIONAL_GREAT_HAMMER">
+				<speed>5,5</speed>
+				<damage>CRUSH</damage>
+				<material metal="45" wood="6"/>
+				<dps level="5">9,0</dps>
+				<dps level="6">10,5</dps>
+				<dps level="7">12,0</dps>
+				<dps level="8">13,5</dps>
+				<dps level="9">15,0</dps>
+				<dps level="10">16,5</dps>
+			</subclass>
+			<subclass id="FORTIFIED_WAR_PICK">
+				<speed>4,6</speed>
+				<damage>THRUST</damage>
+				<material metal="46" wood="4"/>
+				<dps level="5">9,0</dps>
+				<dps level="6">10,5</dps>
+				<dps level="7">12,0</dps>
+				<dps level="8">13,5</dps>
+				<dps level="9">15,0</dps>
+				<dps level="10">16,5</dps>
+			</subclass>
+			<subclass id="WAR_PICK">
+				<speed>5,0</speed>
+				<damage>THRUST</damage>
+				<material metal="46" wood="4"/>
+				<dps level="5">9,0</dps>
+				<dps level="6">10,5</dps>
+				<dps level="7">12,0</dps>
+				<dps level="8">13,5</dps>
+				<dps level="9">15,0</dps>
+				<dps level="10">16,5</dps>
+			</subclass>
+			<subclass id="EXCEPTIONAL_WAR_PICK">
+				<speed>5,3</speed>
+				<damage>THRUST</damage>
+				<material metal="46" wood="4"/>
+				<dps level="5">9,0</dps>
+				<dps level="6">10,5</dps>
+				<dps level="7">12,0</dps>
+				<dps level="8">13,5</dps>
+				<dps level="9">15,0</dps>
+				<dps level="10">16,5</dps>
+			</subclass>
+		</itemclass>
+		<itemclass id="LONGBOW" oldid="8">
+			<material>WOOD</material>
+			<slot_type>weapon</slot_type>
+			<realm>Albion</realm>
+			<skill>LONGBOW</skill>
+			<position>RANGED</position>
+			<subclass id="HUNTING_BOW">
+				<speed>4,0</speed>
+				<material wood="24" thread="4"/>
+				<dps level="1">2,6</dps>
+				<dps level="2">4,1</dps>
+				<dps level="3">5,6</dps>
+				<dps level="4">7,1</dps>
+				<dps level="5">8,6</dps>
+				<dps level="6">10,1</dps>
+				<dps level="7">11,6</dps>
+				<dps level="8">13,1</dps>
+				<dps level="9">14,6</dps>
+				<dps level="10">16,1</dps>
+			</subclass>
+			<subclass id="BOW">
+				<speed>4,7</speed>
+				<material wood="32" thread="6"/>
+				<dps level="1">2,6</dps>
+				<dps level="2">4,1</dps>
+				<dps level="3">5,6</dps>
+				<dps level="4">7,1</dps>
+				<dps level="5">8,6</dps>
+				<dps level="6">10,1</dps>
+				<dps level="7">11,6</dps>
+				<dps level="8">13,1</dps>
+				<dps level="9">14,6</dps>
+				<dps level="10">16,1</dps>
+			</subclass>
+			<subclass id="LONGBOW">
+				<speed>5,4</speed>
+				<material wood="44" thread="8"/>
+				<dps level="1">2,7</dps>
+				<dps level="2">4,2</dps>
+				<dps level="3">5,7</dps>
+				<dps level="4">7,2</dps>
+				<dps level="5">8,7</dps>
+				<dps level="6">10,2</dps>
+				<dps level="7">11,7</dps>
+				<dps level="8">13,2</dps>
+				<dps level="9">14,7</dps>
+				<dps level="10">16,2</dps>
+			</subclass>
+			<subclass id="FORTIFIED_LONGBOW">
+				<speed>4,4</speed>
+				<material wood="49" thread="15"/>
+				<dps level="5">9,0</dps>
+				<dps level="6">10,5</dps>
+				<dps level="7">12,0</dps>
+				<dps level="8">13,5</dps>
+				<dps level="9">15,0</dps>
+				<dps level="10">16,5</dps>
+			</subclass>
+			<subclass id="EXCEPTIONAL_LONGBOW">
+				<speed>5,2</speed>
+				<material wood="49" thread="15"/>
+				<dps level="5">9,0</dps>
+				<dps level="6">10,5</dps>
+				<dps level="7">12,0</dps>
+				<dps level="8">13,5</dps>
+				<dps level="9">15,0</dps>
+				<dps level="10">16,5</dps>
+			</subclass>
+			<subclass id="HEAVY_LONGBOW">
+				<speed>5,5</speed>
+				<material wood="49" thread="15"/>
+				<dps level="5">9,0</dps>
+				<dps level="6">10,5</dps>
+				<dps level="7">12,0</dps>
+				<dps level="8">13,5</dps>
+				<dps level="9">15,0</dps>
+				<dps level="10">16,5</dps>
+			</subclass>
+		</itemclass>
+		<itemclass id="SHORT_BOW" oldid="7">
+			<material>WOOD</material>
+			<slot_type>weapon</slot_type>
+			<realm>Albion</realm>
+			<skill>SHORT_BOW</skill>
+			<position>RANGED</position>
+			<subclass id="SHORT_BOW">
+				<speed>4,0</speed>
+				<material wood="16" thread="3"/>
+				<dps level="1">1,4</dps>
+				<dps level="2">2,9</dps>
+				<dps level="3">4,4</dps>
+				<dps level="4">5,9</dps>
+				<dps level="5">7,4</dps>
+				<dps level="6">8,9</dps>
+				<dps level="7">10,4</dps>
+				<dps level="8">11,9</dps>
+				<dps level="9">13,4</dps>
+				<dps level="10">14,9</dps>
+			</subclass>
+			<subclass id="FORTIFIED_SHORT_BOW">
+				<speed>4,2</speed>
+				<material wood="18" thread="5"/>
+				<dps level="5">9,0</dps>
+				<dps level="6">10,5</dps>
+				<dps level="7">12,0</dps>
+				<dps level="8">13,5</dps>
+				<dps level="9">15,0</dps>
+				<dps level="10">16,5</dps>
+			</subclass>
+			<subclass id="EXCEPTIONAL_SHORT_BOW">
+				<speed>4,4</speed>
+				<material wood="18" thread="5"/>
+				<dps level="5">9,0</dps>
+				<dps level="6">10,5</dps>
+				<dps level="7">12,0</dps>
+				<dps level="8">13,5</dps>
+				<dps level="9">15,0</dps>
+				<dps level="10">16,5</dps>
+			</subclass>
+			<subclass id="HEAVY_SHORT_BOW">
+				<speed>4,6</speed>
+				<material wood="18" thread="5"/>
+				<dps level="5">9,0</dps>
+				<dps level="6">10,5</dps>
+				<dps level="7">12,0</dps>
+				<dps level="8">13,5</dps>
+				<dps level="9">15,0</dps>
+				<dps level="10">16,5</dps>
+			</subclass>
+		</itemclass>
+		<itemclass id="CROSSBOW" oldid="9">
+			<material>WOOD</material>
+			<slot_type>weapon</slot_type>
+			<realm>Albion</realm>
+			<skill>CROSSBOW</skill>
+			<position>RANGED</position>
+			<subclass id="CROSSBOW">
+				<speed>5,0</speed>
+				<material metal="4" wood="32" thread="5"/>
+				<dps level="1">1,5</dps>
+				<dps level="2">3,0</dps>
+				<dps level="3">4,5</dps>
+				<dps level="4">6,0</dps>
+				<dps level="5">7,5</dps>
+				<dps level="6">9,0</dps>
+				<dps level="7">10,5</dps>
+				<dps level="8">12,0</dps>
+				<dps level="9">13,5</dps>
+				<dps level="10">15,0</dps>
+			</subclass>
+			<subclass id="FORTIFIED_CROSSBOW">
+				<speed>3,8</speed>
+				<material metal="5" wood="34" thread="15"/>
+				<dps level="5">9,0</dps>
+				<dps level="6">10,5</dps>
+				<dps level="7">12,0</dps>
+				<dps level="8">13,5</dps>
+				<dps level="9">15,0</dps>
+				<dps level="10">16,5</dps>
+			</subclass>
+			<subclass id="LIGHT_CROSSBOW">
+				<speed>4,0</speed>
+				<material metal="5" wood="34" thread="15"/>
+				<dps level="5">9,0</dps>
+				<dps level="6">10,5</dps>
+				<dps level="7">12,0</dps>
+				<dps level="8">13,5</dps>
+				<dps level="9">15,0</dps>
+				<dps level="10">16,5</dps>
+			</subclass>
+			<subclass id="EXCEPTIONAL_CROSSBOW">
+				<speed>4,2</speed>
+				<material metal="5" wood="34" thread="15"/>
+				<dps level="5">9,0</dps>
+				<dps level="6">10,5</dps>
+				<dps level="7">12,0</dps>
+				<dps level="8">13,5</dps>
+				<dps level="9">15,0</dps>
+				<dps level="10">16,5</dps>
+			</subclass>
+		</itemclass>
+		<itemclass id="QUARTERSTAFF" oldid="4">
+			<material>WOOD</material>
+			<slot_type>weapon</slot_type>
+			<realm>Albion</realm>
+			<skill>STAFF</skill>
+			<damage>CRUSH</damage>
+			<position>2_HAND</position>
+			<subclass id="QUARTERSTAFF">
+				<speed>3,0</speed>
+				<material metal="4" wood="25" leather="1"/>
+				<dps level="1">1,5</dps>
+				<dps level="2">3,0</dps>
+				<dps level="3">4,5</dps>
+				<dps level="4">6,0</dps>
+				<dps level="5">7,5</dps>
+				<dps level="6">9,0</dps>
+				<dps level="7">10,5</dps>
+				<dps level="8">12,0</dps>
+				<dps level="9">13,5</dps>
+				<dps level="10">15,0</dps>
+			</subclass>
+			<subclass id="SHOD_QUARTERSTAFF">
+				<speed>4,2</speed>
+				<material metal="14" wood="24" leather="1"/>
+				<dps level="1">2,0</dps>
+				<dps level="2">3,5</dps>
+				<dps level="3">5,0</dps>
+				<dps level="4">6,5</dps>
+				<dps level="5">8,0</dps>
+				<dps level="6">9,5</dps>
+				<dps level="7">11,0</dps>
+				<dps level="8">12,5</dps>
+				<dps level="9">14,0</dps>
+				<dps level="10">15,5</dps>
+			</subclass>
+			<subclass id="EXCEPTIONAL_QUARTERSTAFF">
+				<speed>4,2</speed>
+				<material metal="9" wood="32" leather="5"/>
+				<dps level="5">9,0</dps>
+				<dps level="6">10,5</dps>
+				<dps level="7">12,0</dps>
+				<dps level="8">13,5</dps>
+				<dps level="9">15,0</dps>
+				<dps level="10">16,5</dps>
+			</subclass>
+			<subclass id="HEAVY_SHOD_QUARTERSTAFF">
+				<speed>5,0</speed>
+				<material metal="10" wood="40" leather="5"/>
+				<dps level="5">9,0</dps>
+				<dps level="6">10,5</dps>
+				<dps level="7">12,0</dps>
+				<dps level="8">13,5</dps>
+				<dps level="9">15,0</dps>
+				<dps level="10">16,5</dps>
+			</subclass>
+		</itemclass>
+		<itemclass id="INSTRUMENT_FLUTE" oldid="13">
+			<material>WOOD</material>
+			<slot_type>weapon</slot_type>
+			<realm>Albion</realm>
+			<skill>INSTRUMENTS</skill>
+			<position>2_HAND</position>
+			<position>RANGED</position>
+			<no_stats/>
+			<subclass id="FLUTE">
+				<material wood="18" leather="6" thread="4"/>
+				<level level="1">4</level>
+				<level level="2">11</level>
+				<level level="3">16</level>
+				<level level="4">21</level>
+				<level level="5">26</level>
+				<level level="6">31</level>
+				<level level="7">36</level>
+				<level level="8">41</level>
+				<level level="9">46</level>
+				<level level="10">51</level>
+			</subclass>
+		</itemclass>
+		<itemclass id="INSTRUMENT_DRUM" oldid="14">
+			<material>WOOD</material>
+			<slot_type>weapon</slot_type>
+			<realm>Albion</realm>
+			<skill>INSTRUMENTS</skill>
+			<position>2_HAND</position>
+			<position>RANGED</position>
+			<no_stats/>
+			<subclass id="DRUM">
+				<material wood="18" leather="6" thread="4"/>
+				<level level="1">4</level>
+				<level level="2">11</level>
+				<level level="3">16</level>
+				<level level="4">21</level>
+				<level level="5">26</level>
+				<level level="6">31</level>
+				<level level="7">36</level>
+				<level level="8">41</level>
+				<level level="9">46</level>
+				<level level="10">51</level>
+			</subclass>
+		</itemclass>
+		<itemclass id="INSTRUMENT_LUTE" oldid="15">
+			<material>WOOD</material>
+			<slot_type>weapon</slot_type>
+			<realm>Albion</realm>
+			<skill>INSTRUMENTS</skill>
+			<position>2_HAND</position>
+			<position>RANGED</position>
+			<no_stats/>
+			<subclass id="LUTE">
+				<material wood="18" leather="6" thread="4"/>
+				<level level="1">4</level>
+				<level level="2">11</level>
+				<level level="3">16</level>
+				<level level="4">21</level>
+				<level level="5">26</level>
+				<level level="6">31</level>
+				<level level="7">36</level>
+				<level level="8">41</level>
+				<level level="9">46</level>
+				<level level="10">51</level>
+			</subclass>
+		</itemclass>
+		<itemclass id="INSTRUMENT_HARP" oldid="45">
+			<material>WOOD</material>
+			<slot_type>weapon</slot_type>
+			<realm>Albion</realm>
+			<skill>INSTRUMENTS</skill>
+			<position>2_HAND</position>
+			<position>RANGED</position>
+			<no_stats/>
+			<subclass id="HARP">
+				<material wood="18" leather="8" thread="12"/>
+				<level level="5">26</level>
+				<level level="6">31</level>
+				<level level="7">36</level>
+				<level level="8">41</level>
+				<level level="9">46</level>
+				<level level="10">51</level>
+			</subclass>
+		</itemclass>
+		<itemclass id="FIST_WRAPS_ALB">
+			<material>METAL</material>
+			<slot_type>weapon</slot_type>
+			<realm>Albion</realm>
+			<skill>FIST_WRAPS_ALB</skill>
+			<position>R_HAND</position>
+			<position>2_HAND</position>
+			<damage>CRUSH</damage>
+			<subclass id="FIST_WRAP_ALB">
+				<speed>2,9</speed>
+				<material metal="15" leather="14"/>
+				<dps level="1">1,5</dps>
+				<dps level="2">3,0</dps>
+				<dps level="3">4,5</dps>
+				<dps level="4">6,0</dps>
+				<dps level="5">7,5</dps>
+				<dps level="6">9,0</dps>
+				<dps level="7">10,5</dps>
+				<dps level="8">12,0</dps>
+				<dps level="9">13,5</dps>
+				<dps level="10">15,0</dps>
+			</subclass>
+			<subclass id="STUDDED_FIST_WRAP_ALB">
+				<speed>3,3</speed>
+				<material metal="18" leather="16"/>
+				<dps level="1">2,1</dps>
+				<dps level="2">3,6</dps>
+				<dps level="3">5,1</dps>
+				<dps level="4">6,6</dps>
+				<dps level="5">8,1</dps>
+				<dps level="6">9,6</dps>
+				<dps level="7">10,8</dps>
+				<dps level="8">12,3</dps>
+				<dps level="9">13,8</dps>
+				<dps level="10">15,3</dps>
+			</subclass>
+			<subclass id="SPIKED_FIST_WRAP_ALB">
+				<speed>3,7</speed>
+				<material metal="21" leather="18"/>
+				<dps level="1">2,7</dps>
+				<dps level="2">4,2</dps>
+				<dps level="3">5,7</dps>
+				<dps level="4">7,2</dps>
+				<dps level="5">8,7</dps>
+				<dps level="6">10,2</dps>
+				<dps level="7">11,7</dps>
+				<dps level="8">13,2</dps>
+				<dps level="9">14,7</dps>
+				<dps level="10">16,2</dps>
+			</subclass>
+			<subclass id="HEAVY_BANDED_FIST_WRAP_ALB">
+				<speed>4,1</speed>
+				<material metal="23" leather="22"/>
+				<dps level="5">8,7</dps>
+				<dps level="6">10,2</dps>
+				<dps level="7">11,7</dps>
+				<dps level="8">13,2</dps>
+				<dps level="9">14,7</dps>
+				<dps level="10">16,2</dps>
+			</subclass>
+			<subclass id="EXCEPTIONAL_FIST_WRAP_ALB">
+				<speed>4,5</speed>
+				<material metal="23" leather="22"/>
+				<dps level="5">8,7</dps>
+				<dps level="6">10,2</dps>
+				<dps level="7">11,7</dps>
+				<dps level="8">13,2</dps>
+				<dps level="9">14,7</dps>
+				<dps level="10">16,2</dps>
+			</subclass>
+			<subclass id="FORTIFIED_FIST_WRAP_ALB">
+				<speed>4,9</speed>
+				<material metal="23" leather="22"/>
+				<dps level="5">8,7</dps>
+				<dps level="6">10,2</dps>
+				<dps level="7">11,7</dps>
+				<dps level="8">13,2</dps>
+				<dps level="9">14,7</dps>
+				<dps level="10">16,2</dps>
+			</subclass>
+		</itemclass>
+		<itemclass id="HAND_WRAPS_ALB">
+			<material>METAL</material>
+			<slot_type>weapon</slot_type>
+			<realm>Albion</realm>
+			<skill>FIST_WRAPS_ALB</skill>
+			<dualwield/>
+			<position>R_HAND</position>
+			<position>L_HAND</position>
+			<position>2_HAND</position>
+			<damage>CRUSH</damage>
+			<subclass id="HAND_WRAP_ALB">
+				<speed>2,8</speed>
+				<material metal="14" leather="12"/>
+				<dps level="1">1,5</dps>
+				<dps level="2">3,0</dps>
+				<dps level="3">4,5</dps>
+				<dps level="4">6,0</dps>
+				<dps level="5">7,5</dps>
+				<dps level="6">9,0</dps>
+				<dps level="7">10,5</dps>
+				<dps level="8">12,0</dps>
+				<dps level="9">13,5</dps>
+				<dps level="10">15,0</dps>
+			</subclass>
+			<subclass id="RIVETED_HAND_WRAP_ALB">
+				<speed>3,1</speed>
+				<material metal="17" leather="14"/>
+				<dps level="1">2,1</dps>
+				<dps level="2">3,6</dps>
+				<dps level="3">5,1</dps>
+				<dps level="4">6,6</dps>
+				<dps level="5">8,1</dps>
+				<dps level="6">9,6</dps>
+				<dps level="7">10,8</dps>
+				<dps level="8">12,3</dps>
+				<dps level="9">13,8</dps>
+				<dps level="10">15,3</dps>
+			</subclass>
+			<subclass id="RAZORED_HAND_WRAP_ALB">
+				<speed>3,4</speed>
+				<material metal="20" leather="16"/>
+				<dps level="1">2,7</dps>
+				<dps level="2">4,2</dps>
+				<dps level="3">5,7</dps>
+				<dps level="4">7,2</dps>
+				<dps level="5">8,7</dps>
+				<dps level="6">10,2</dps>
+				<dps level="7">11,7</dps>
+				<dps level="8">13,2</dps>
+				<dps level="9">14,7</dps>
+				<dps level="10">16,2</dps>
+			</subclass>
+			<subclass id="TOUGHENED_HAND_WRAP_ALB">
+				<speed>3,7</speed>
+				<material metal="23" leather="22"/>
+				<dps level="5">8,7</dps>
+				<dps level="6">10,2</dps>
+				<dps level="7">11,7</dps>
+				<dps level="8">13,2</dps>
+				<dps level="9">14,7</dps>
+				<dps level="10">16,2</dps>
+			</subclass>
+			<subclass id="EXCEPTIONAL_HAND_WRAP_ALB">
+				<speed>4,0</speed>
+				<material metal="23" leather="22"/>
+				<dps level="5">8,7</dps>
+				<dps level="6">10,2</dps>
+				<dps level="7">11,7</dps>
+				<dps level="8">13,2</dps>
+				<dps level="9">14,7</dps>
+				<dps level="10">16,2</dps>
+			</subclass>
+			<subclass id="FORTIFIED_HAND_WRAP_ALB">
+				<speed>4,3</speed>
+				<material metal="23" leather="22"/>
+				<dps level="5">8,7</dps>
+				<dps level="6">10,2</dps>
+				<dps level="7">11,7</dps>
+				<dps level="8">13,2</dps>
+				<dps level="9">14,7</dps>
+				<dps level="10">16,2</dps>
+			</subclass>
+		</itemclass>
+		<itemclass id="MAULER_STAFFS_ALB">
+			<material>WOOD</material>
+			<slot_type>weapon</slot_type>
+			<realm>Albion</realm>
+			<skill>MAULER_STAFF_ALB</skill>
+			<position>2_HAND</position>
+			<damage>CRUSH</damage>
+			<subclass id="MAULER_STAFF_ALB">
+				<speed>4,0</speed>
+				<material metal="9" wood="18" leather="1"/>
+				<dps level="1">1,5</dps>
+				<dps level="2">3,0</dps>
+				<dps level="3">4,5</dps>
+				<dps level="4">6,0</dps>
+				<dps level="5">7,5</dps>
+				<dps level="6">9,0</dps>
+				<dps level="7">10,5</dps>
+				<dps level="8">12,0</dps>
+				<dps level="9">13,5</dps>
+				<dps level="10">15,0</dps>
+			</subclass>
+			<subclass id="MAULER_SHOD_QUARTERSTAFF_ALB">
+				<speed>4,5</speed>
+				<material metal="8" wood="29" leather="1"/>
+				<dps level="1">2,1</dps>
+				<dps level="2">3,6</dps>
+				<dps level="3">5,1</dps>
+				<dps level="4">6,6</dps>
+				<dps level="5">8,1</dps>
+				<dps level="6">9,6</dps>
+				<dps level="7">10,8</dps>
+				<dps level="8">12,3</dps>
+				<dps level="9">13,8</dps>
+				<dps level="10">15,3</dps>
+			</subclass>
+			<subclass id="MAULER_SHOD_STAFF_ALB">
+				<speed>5,0</speed>
+				<material metal="10" wood="35" leather="1"/>
+				<dps level="1">2,7</dps>
+				<dps level="2">4,2</dps>
+				<dps level="3">5,7</dps>
+				<dps level="4">7,2</dps>
+				<dps level="5">8,7</dps>
+				<dps level="6">10,2</dps>
+				<dps level="7">11,7</dps>
+				<dps level="8">13,2</dps>
+				<dps level="9">14,7</dps>
+				<dps level="10">16,2</dps>
+			</subclass>
+			<subclass id="HEAVY_MAULER_STAFF_ALB">
+				<speed>4,4</speed>
+				<material metal="9" wood="32" leather="5"/>
+				<dps level="5">9,0</dps>
+				<dps level="6">10,5</dps>
+				<dps level="7">12,0</dps>
+				<dps level="8">13,5</dps>
+				<dps level="9">15,0</dps>
+				<dps level="10">16,5</dps>
+			</subclass>
+			<subclass id="HEAVY_MAULER_SHOD_STAFF_ALB">
+				<speed>5,2</speed>
+				<material metal="10" wood="40" leather="5"/>
+				<dps level="5">9,0</dps>
+				<dps level="6">10,5</dps>
+				<dps level="7">12,0</dps>
+				<dps level="8">13,5</dps>
+				<dps level="9">15,0</dps>
+				<dps level="10">16,5</dps>
+			</subclass>
+			<subclass id="EXCEPTIONAL_MAULER_STAFF_ALB">
+				<speed>4,6</speed>
+				<material metal="9" wood="32" leather="5"/>
+				<dps level="5">9,0</dps>
+				<dps level="6">10,5</dps>
+				<dps level="7">12,0</dps>
+				<dps level="8">13,5</dps>
+				<dps level="9">15,0</dps>
+				<dps level="10">16,5</dps>
+			</subclass>
+			<subclass id="EXCEPTIONAL_MAULER_SHOD_STAFF_ALB">
+				<speed>5,3</speed>
+				<material metal="9" wood="32" leather="5"/>
+				<dps level="5">9,0</dps>
+				<dps level="6">10,5</dps>
+				<dps level="7">12,0</dps>
+				<dps level="8">13,5</dps>
+				<dps level="9">15,0</dps>
+				<dps level="10">16,5</dps>
+			</subclass>
+		</itemclass>
+	</itemclasses>
+</moras>

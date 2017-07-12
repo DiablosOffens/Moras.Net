@@ -1,0 +1,51 @@
+Damit ich nicht jedes mal den Sourcecode durchwühlen muss um zu schauen, welche Tags und welche 
+Begrenzungen es jeweils gibt, hab ich diese Datei gemacht. Ich versuche sie ständig auf den 
+aktuellen Stand zu halten.
+
+Grobaufbau:
+  <?xml version="1.0" encoding="iso-8859-1" ?> 
+- <player>
++ <verschiedene Spielerdaten>
++ <98 item>-Tags (18 Für das Template, 40 für Inventar und 40 für Schatzkiste)
+  </player>
+
+Konventionen:
+(opt.) - Ein optionaler Tag
+|<tag>| - Dieser Tag kann beliebig oft vorkommen
+
+Diese Reihenfolge ist dabei möglichst einzuhalten, weil einige Verbindungen zwischen den Gruppen existieren.
+Das encoding der xml-Datei ist "iso-8859-1", damit deutsche Umlaute möglich sind.
+Nun zu den einzelnen Gruppen:
+- <verschiedene Spielerdaten> - Hier werden verschiedene Daten zum spieler abgelegt.
+Die Tags im einzelnen:
+<name> - Der Name des Spielers
+<level> - Der Spieler-Level
+<account> (opt.) - Der Name, unter dem der Account läuft
+<realm> - Das Reich. Gültig sind hier im Moment (Albion|Hibernia|Midgard)
+<server> (opt.) - Auf welchem Server ist der Spieler
+<class> - Die Charakterklasse. Gültig sind hier die englischen Klassennamen, jeweils in Großschrift, als z.B. ARMSMAN, FRIAR, WARRIOR. Die gültigen werte sind in der config.xml unter dem <classes>-Tag zu finden.
+<race> (opt.) - Die Rasse des Spielers. Auch hier wieder die englischen Rassenbezeichnungen und Großschrift.  Die gültigen werte sind in der config.xml unter dem <races>-Tag zu finden.
+|<weight attribute="ATTRIBUTE_NAME">| - Die vom Spieler eingestellten Wichtungen des Utility-Wertes.
+
+Danach folgen noch die 98 <item>-Tags. Der Aufbau dieses Tags ist in der Datei "Aufbau der items.xml" beschrieben
+Wichtig ist hier noch die Reihenfolge der Items zu erwähnen (Auch wenn das teilweise aus dem Item-Tag abzuleiten geht)
+- Handschuhe
+- Kopf
+- Füsse
+- Beine
+- Arme
+- Körper
+- Rechte Hand
+- Linke Hand
+- Zweihänder
+- Fernwaffen
+- Hals
+- Umhang
+- Juwel
+- Taille/Gürtel
+- Linker Ring
+- Rechter Ring
+- Linker Armreif
+- Rechter Armreif
+- 40 mal Inventar
+- 40 mal Schatzkiste

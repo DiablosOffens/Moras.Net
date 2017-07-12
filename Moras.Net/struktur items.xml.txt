@@ -1,0 +1,82 @@
+Damit ich nicht jedes mal den Sourcecode durchwühlen muss um zu schauen, welche Tags und welche
+Begrenzungen es jeweils gibt, hab ich diese Datei gemacht. Ich versuche sie ständig auf den
+aktuellen Stand zu halten.
+
+Grobaufbau:
+  <?xml version="1.0" encoding="iso-8859-1" ?>
+- <daoc_items>
++ <message> (mehrfach, opt.)
++ <item> (mehrfach)
++ <message> (mehrfach, opt.)
+  </daoc_items>
+
+Konventionen:
+(opt.<X>) - Ein optionaler Tag. Wert in der Klammer gibt einen defaultwert an, wenn er vorhanden ist.
+|<tag>| - Dieser Tag kann beliebig oft vorkommen
+
+Diese Reihenfolge ist dabei möglichst einzuhalten, weil einige Verbindungen zwischen den Gruppen existieren.
+Das encoding der xml-Datei ist "iso-8859-1", damit deutsche Umlaute möglich sind.
+
+Nun zu den einzelnen Gruppen:
+<message> - Dieser Tag gibt eine Nachricht für den Nutzer aus. Als Symbol ist standard das Informationszeichen.
+Mit dem Attribut "type" hat man folgende Optionen:
+"warning" - Als Symbol wird das Warndreieck angezeigt.
+"error" - Als Symbol wird das eckige rote Fehlersymbol angezeigt.
+Hinweis: Das message Tag kann beliebig oft vorkommen. Um den Nutzer jedoch nicht mit Meldungen zu nerven, sollte man diese Option nicht zu sehr nutzen.
+Um nur eine Meldung zu zeigen, um dem Nutzer zb zu signalisieren das die Datenbank gerade gewartet wird oä., langt es einfach ein message Tag innerhalb
+des daoc_items Tag zu nutzen. Das item Tag ist dann Optional und muss nicht enthalten sein.
+
+<item> - Hier werden verschiedene Daten zum Gegenstand abgelegt. Das selbe Format hier ist auch in den template-Dateien gültig.
+Die Tags im einzelnen:
+
+<uid> - Eine eindeutige Item-ID. Sie wird nur von einer speziellen Programm-Version erzeugt.
+
+<name> - Der Name des Gegenstandes.
+
+<name_org> - Der englische Name des Gegenstandes. <name> oder <name_org> muss in einem <item>-Tag vorkommen, wenn es ein Dropgegenstand ist!
+
+<origin> - Kleine Textbeschreibung, wo der Gegenstand herkommt. Der Text muss xml-kodiert sein!
+
+<description> - Längere Beschreibung zum Gegenstand. Text muss hier auch xml-kodiert sein!
+
+<position> (opt.) - An welcher Position wird der Gegenstand getragen. Gültige Werte sind in der config.xml unter <itemslots> beim unter-tag <pos_class> zu finden. Wenn nicht angegeben wird der Benutzer gefragt.
+
+<equipped/> - Leerer tag. Ist in der items.xml nicht zu finden. Gibt in Template-Dateien an, ob der Gegenstand ausgerüstet ist.
+
+<lastupdate> - Datum der letzten Änderung an dem Gegenstand. Format ist "dd.mm.yyyy hh:mm:ss".
+
+<unique/> - Wenn vorhanden, dann ist Gegenstand ein einzigartiger Gegenstand. Nicht in der items.xml anzutreffen.
+
+<crafted/> - Wenn vorhanden, dann ist Gegenstand von einem Spieler hergestellt. Nicht in der items.xml anzutreffen.
+
+<realm> - Reich des Gegenstandes. Wenn nicht vorhanden, dann in allen Reichen gültig.
+
+<level> (opt.<0>) - Stufe des Gegenstandes.
+
+<quality> (opt.<0>) - Qualität.
+
+<bonus> (opt.<0>) - Der Bonuswert.
+
+<artifact_levels> (opt.<0>) - So viele Artefaktstufen hat ein Gegenstand. Ist praktisch bisher 0=kein Artefakt oder 10=Artefakt.
+
+<artifact_level> (opt.<0>) - Aktuelle Stufe des artefakts. Nicht in der items.xml vorhanden.
+
+<armor af="AF-Wert"> - Vorhanden, wenn es eine Rüstung ist. Gültige Werte sind die Rüstungsklassen aus der config.xml. (CLOTH|LEATHER|STUDDED...). Aufbau ist etwas komplexer, wenn in einer template-Datei
+
+<weapon damage="SCHADENSART" dps="DPS" speed="WAFFENDELAY"> - Bei Waffen vorhanden. Gültige Werte sind in der config.xml unter itemclasses zu finden.
+
+|<class_restriction>| - Klassenbeschränkungen. Gültige Werte in config.xml unter dem classes-tag.
+
+|<effect id="EFFECT_ID">| - Effekts. Werte für EFFECT_ID sind in der config.xml unter dem <bonuses>-tag.
+Zum <effect>-tag gibt es noch verschiedene attribute, welche wären:
+* level - Ab welcher Artefaktstufe ist effekt gültig
+Der Rest ist nur in template-Dateien, und auch nur in Playercraftet items möglich
+* quality - Qualität des eingesetzten Gems (-94)
+* remakes - Wie oft wurde Gem neu gemacht
+* time - Wie lange dauerte die Herstellung (in sekunden)
+* done="true" - Ist vorhanden, wenn Gem als fertig-markiert wurde.
+
+<online_url> (opt.) - Enthält eine gültige URL in der man per Browser das Item sehen kann. Somit weiss man auch von welcher Online-Datenbank man das Item hat.
+
+<extension> (opt.) - Gibt die Erweiterung an in der man das Item finden kann. Nach dieser Option kann in der Verwaltung und der Suche gefiltert werden.
+Aktuelle Werte bitte der config.xml entnehmen.

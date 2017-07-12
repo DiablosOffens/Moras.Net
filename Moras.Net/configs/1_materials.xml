@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<moras>
+	<materials>
+		<material id="METAL">
+			<level number="1">
+				<price>9</price>
+			</level>
+			<level number="2">
+				<price>140</price>
+			</level>
+			<level number="3">
+				<price>560</price>
+			</level>
+			<level number="4">
+				<price>1680</price>
+			</level>
+			<level number="5">
+				<price>5040</price>
+			</level>
+			<level number="6">
+				<price>10080</price>
+			</level>
+			<level number="7">
+				<price>15120</price>
+			</level>
+			<level number="8">
+				<price>22680</price>
+			</level>
+			<level number="9">
+				<price>34020</price>
+			</level>
+			<level number="10">
+				<price>51030</price>
+			</level>
+		</material>
+		<material id="ORE">
+			<level number="1">
+				<price>9</price>
+			</level>
+			<level number="2">
+				<price>140</price>
+			</level>
+			<level number="3">
+				<price>560</price>
+			</level>
+			<level number="4">
+				<price>1680</price>
+			</level>
+			<level number="5">
+				<price>5040</price>
+			</level>
+			<level number="6">
+				<price>10080</price>
+			</level>
+			<level number="7">
+				<price>15120</price>
+			</level>
+			<level number="8">
+				<price>22680</price>
+			</level>
+			<level number="9">
+				<price>34020</price>
+			</level>
+			<level number="10">
+				<price>51030</price>
+			</level>
+		</material>
+		<material id="WOOD">
+			<level number="1">
+				<price>4</price>
+			</level>
+			<level number="2">
+				<price>60</price>
+			</level>
+			<level number="3">
+				<price>240</price>
+			</level>
+			<level number="4">
+				<price>720</price>
+			</level>
+			<level number="5">
+				<price>2160</price>
+			</level>
+			<level number="6">
+				<price>4320</price>
+			</level>
+			<level number="7">
+				<price>6480</price>
+			</level>
+			<level number="8">
+				<price>9720</price>
+			</level>
+			<level number="9">
+				<price>14580</price>
+			</level>
+			<level number="10">
+				<price>21870</price>
+			</level>
+		</material>
+		<material id="LEATHER">
+			<level number="1">
+				<price>4</price>
+			</level>
+			<level number="2">
+				<price>60</price>
+			</level>
+			<level number="3">
+				<price>240</price>
+			</level>
+			<level number="4">
+				<price>720</price>
+			</level>
+			<level number="5">
+				<price>2160</price>
+			</level>
+			<level number="6">
+				<price>4320</price>
+			</level>
+			<level number="7">
+				<price>6480</price>
+			</level>
+			<level number="8">
+				<price>9720</price>
+			</level>
+			<level number="9">
+				<price>14580</price>
+			</level>
+			<level number="10">
+				<price>21870</price>
+			</level>
+		</material>
+		<material id="CLOTH">
+			<level number="1">
+				<price>3</price>
+			</level>
+			<level number="2">
+				<price>40</price>
+			</level>
+			<level number="3">
+				<price>160</price>
+			</level>
+			<level number="4">
+				<price>480</price>
+			</level>
+			<level number="5">
+				<price>1440</price>
+			</level>
+			<level number="6">
+				<price>2880</price>
+			</level>
+			<level number="7">
+				<price>4320</price>
+			</level>
+			<level number="8">
+				<price>6480</price>
+			</level>
+			<level number="9">
+				<price>9745</price>
+			</level>
+			<level number="10">
+				<price>14580</price>
+			</level>
+		</material>
+		<material id="THREAD">
+			<level number="1">
+				<price>2</price>
+			</level>
+			<level number="2">
+				<price>36</price>
+			</level>
+			<level number="3">
+				<price>144</price>
+			</level>
+			<level number="4">
+				<price>432</price>
+			</level>
+			<level number="5">
+				<price>1296</price>
+			</level>
+			<level number="6">
+				<price>2592</price>
+			</level>
+			<level number="7">
+				<price>3888</price>
+			</level>
+			<level number="8">
+				<price>5832</price>
+			</level>
+			<level number="9">
+				<price>8748</price>
+			</level>
+			<level number="10">
+				<price>13122</price>
+			</level>
+		</material>
+		<material id="STRIPS">
+			<level number="1">
+				<price>9</price>
+			</level>
+			<level number="2">
+				<price>140</price>
+			</level>
+			<level number="3">
+				<price>560</price>
+			</level>
+			<level number="4">
+				<price>1680</price>
+			</level>
+			<level number="5">
+				<price>5040</price>
+			</level>
+			<level number="6">
+				<price>10080</price>
+			</level>
+			<level number="7">
+				<price>15120</price>
+			</level>
+			<level number="8">
+				<price>22680</price>
+			</level>
+			<level number="9">
+				<price>34020</price>
+			</level>
+			<level number="10">
+				<price>51030</price>
+			</level>
+		</material>
+		<material id="GEMS">
+			<level number="1">
+				<price>60</price>
+			</level>
+			<level number="2">
+				<price>540</price>
+			</level>
+			<level number="3">
+				<price>3240</price>
+			</level>
+			<level number="4">
+				<price>12960</price>
+			</level>
+			<level number="5">
+				<price>38880</price>
+			</level>
+			<level number="6">
+				<price>87480</price>
+			</level>
+			<level number="7">
+				<price>131220</price>
+			</level>
+			<level number="8">
+				<price>196860</price>
+			</level>
+			<level number="9">
+				<price>255900</price>
+			</level>
+			<level number="10">
+				<price>294240</price>
+			</level>
+		</material>
+	</materials>
+</moras>

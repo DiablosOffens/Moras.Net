@@ -1,0 +1,194 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F8D46586-D74C-4889-9731-F818A6E8DB4C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DelphiClasses</RootNamespace>
+    <AssemblyName>DelphiClasses</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>key.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accessibility">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BitSet.cs" />
+    <Compile Include="DelphiHelpProvider.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DynamicArray.cs" />
+    <Compile Include="Extensions.cs" />
+    <Compile Include="HelpIntfs\IHelpSystem2.cs" />
+    <Compile Include="HelpIntfs\IHelpSystem3.cs" />
+    <Compile Include="HelpIntfs\ISetActiveControl.cs" />
+    <Compile Include="HelpIntfs\Unit.cs" />
+    <Compile Include="HLSColor.cs" />
+    <Compile Include="IconUtils.cs" />
+    <Compile Include="HelpIntfs\ICustomHelpViewer.cs" />
+    <Compile Include="HelpIntfs\IExtendedHelpViewer.cs" />
+    <Compile Include="HelpIntfs\IHelpManager.cs" />
+    <Compile Include="HelpIntfs\IHelpSelector.cs" />
+    <Compile Include="HelpIntfs\IHelpSystem.cs" />
+    <Compile Include="IInterfaceList.cs" />
+    <Compile Include="IndexerProperty.cs" />
+    <Compile Include="HelpIntfs\ISpecialWinHelpViewer.cs" />
+    <Compile Include="IWinHelpTester.cs" />
+    <Compile Include="NestedPropertiesTypeConverter.cs" />
+    <Compile Include="PrintManager.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TAction.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TActionLink.cs" />
+    <Compile Include="TActionList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TApplication.cs" />
+    <Compile Include="TBasicAction.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TBasicActionLink.cs" />
+    <Compile Include="TComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TCommonDialogAction.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TContainedAction.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TContainedActionCollection.cs" />
+    <Compile Include="TControlActionLink.cs" />
+    <Compile Include="TCustomAction.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TCustomForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TFileAction.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TFileExit.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TFileOpen.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TFileOpenWith.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TFileSaveAs.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TFrame.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TGroupBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TIniFile.cs" />
+    <Compile Include="TInterfaceList.cs" />
+    <Compile Include="TJvRichEdit.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TMainMenu.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TMenuActionLink.cs" />
+    <Compile Include="TOwnedCollection.cs" />
+    <Compile Include="TPageControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TRadioButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TRadioGroup.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TScrollBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TShortCutList.cs" />
+    <Compile Include="TSpeedButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TStringList.cs" />
+    <Compile Include="TTBXDock.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TTBXDockablePanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TTBXSpinEditItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TToolBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TToolButtonActionLink.cs" />
+    <Compile Include="TToolControlActionLink.cs" />
+    <Compile Include="TToolItemActionLink.cs" />
+    <Compile Include="TUpDown.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TXMLDocument.cs">
+      <SubType>Component</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="key.snk" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

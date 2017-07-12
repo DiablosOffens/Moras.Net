@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<Moras version="1.0">
+<option group="Online-Update" noradio="true">DAoC Validated Items - Nur Hibernia</option>
+<item_update>
+    <update_url>http://www.daocs-validated-items.de/export.php?realm=2&zip=0&uts=[timestamp]</update_url>
+    <registry>Validated_hib</registry>
+    <website>
+        <name>DAoC Validated Items (deutsch)</name>
+        <url>http://www.daocs-validated-items.de</url>
+    </website>
+</item_update>
+</Moras>

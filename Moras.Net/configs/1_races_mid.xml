@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<moras>
+	<races>
+		<race id="DWARF">
+			<resist type="SLASH">2</resist>
+			<resist type="THRUST">3</resist>
+			<resist type="BODY">5</resist>
+		</race>
+		<race id="FROSTALF">
+			<resist type="SLASH">2</resist>
+			<resist type="THRUST">3</resist>
+			<resist type="SPIRIT">5</resist>
+		</race>
+		<race id="KOBOLD">
+			<resist type="CRUSH">5</resist>
+			<resist type="ENERGY">5</resist>
+		</race>
+		<race id="TROLL">
+			<resist type="SLASH">3</resist>
+			<resist type="THRUST">2</resist>
+			<resist type="MATTER">5</resist>
+		</race>
+		<race id="NORSEMAN">
+			<resist type="CRUSH">2</resist>
+			<resist type="SLASH">3</resist>
+			<resist type="COLD">5</resist>
+		</race>
+		<race id="VALKYN">
+			<resist type="SLASH">3</resist>
+			<resist type="THRUST">2</resist>
+			<resist type="COLD">5</resist>
+			<resist type="BODY">5</resist>
+		</race>
+	</races>
+</moras>

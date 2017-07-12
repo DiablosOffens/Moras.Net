@@ -1,0 +1,436 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<moras>
+	<bonuses>
+		<bonus id="ARBOREAL_FOCUS" oldid="5020" kortid="Arboreal Path Focus">
+			<group>FOCUS</group>
+			<realm>hibernia</realm>
+			<gem id="STEAMING_FOCUS_STONE">
+				<dust>GROUND_DRACONIC_SCALES</dust>
+				<liquid>SWAMP_FOG</liquid>
+			</gem>
+		</bonus>
+		<bonus id="CREEPING_PATH_FOCUS" oldid="5021" kortid="Creeping Path Focus">
+			<group>FOCUS</group>
+			<realm>hibernia</realm>
+			<gem id="OOZING_FOCUS_STONE">
+				<dust>GROUND_DRACONIC_SCALES</dust>
+				<liquid>TREANT_BLOOD</liquid>
+			</gem>
+		</bonus>
+		<bonus id="ENCHANTMENTS_FOCUS" oldid="5011" kortid="Enchantments Focus">
+			<group>FOCUS</group>
+			<realm>hibernia</realm>
+			<gem id="VAPOR_FOCUS_STONE">
+				<dust>GROUND_DRACONIC_SCALES</dust>
+				<liquid>SWAMP_FOG</liquid>
+			</gem>
+		</bonus>
+		<bonus id="ETHEREAL_SHRIEK_FOCUS">
+			<group>FOCUS</group>
+			<realm>hibernia</realm>
+			<gem id="ETHEREAL_FOCUS_STONE">
+				<dust>GROUND_DRACONIC_SCALES</dust>
+				<liquid>SWAMP_FOG</liquid>
+			</gem>
+		</bonus>
+		<bonus id="LIGHT_FOCUS" oldid="5009" kortid="Light Focus">
+			<group>FOCUS</group>
+			<realm>hibernia</realm>
+			<gem id="FIERY_FOCUS_STONE">
+				<dust>GROUND_DRACONIC_SCALES</dust>
+				<liquid>DRACONIC_FIRE</liquid>
+			</gem>
+		</bonus>
+		<bonus id="MANA_FOCUS" oldid="5008" kortid="Mana Focus">
+			<group>FOCUS</group>
+			<realm>hibernia</realm>
+			<gem id="WATER_FOCUS_STONE">
+				<dust>GROUND_DRACONIC_SCALES</dust>
+				<liquid>LEVIATHAN_BLOOD</liquid>
+			</gem>
+		</bonus>
+		<bonus id="MENTALISM_FOCUS" oldid="5012" kortid="Mentalism Focus">
+			<group>FOCUS</group>
+			<realm>hibernia</realm>
+			<gem id="EARTHEN_FOCUS_STONE">
+				<dust>GROUND_DRACONIC_SCALES</dust>
+				<liquid>TREANT_BLOOD</liquid>
+			</gem>
+		</bonus>
+		<bonus id="PHANTASMAL_WAIL_FOCUS">
+			<group>FOCUS</group>
+			<realm>hibernia</realm>
+			<gem id="PHANTASMAL_FOCUS_STONE">
+				<dust>GROUND_DRACONIC_SCALES</dust>
+				<liquid>LEVIATHAN_BLOOD</liquid>
+			</gem>
+		</bonus>
+		<bonus id="SPECTRAL_GUARD_FOCUS">
+			<group>FOCUS</group>
+			<realm>hibernia</realm>
+			<gem id="SPECTRAL_FOCUS_STONE">
+				<dust>GROUND_DRACONIC_SCALES</dust>
+				<liquid>DRACONIC_FIRE</liquid>
+			</gem>
+		</bonus>
+		<bonus id="VERDANT_PATH_FOCUS" oldid="5022" kortid="Verdant Path Focus">
+			<group>FOCUS</group>
+			<realm>hibernia</realm>
+			<gem id="MINERAL_ENCRUSTED_FOCUS_STONE">
+				<dust>GROUND_DRACONIC_SCALES</dust>
+				<liquid>HEAT_FROM_AN_UNEARTHLY_PYRE</liquid>
+			</gem>
+		</bonus>
+		<bonus id="VOID_FOCUS" oldid="5010" kortid="Void Focus">
+			<group>FOCUS</group>
+			<realm>hibernia</realm>
+			<gem id="ICY_FOCUS_STONE">
+				<dust>GROUND_DRACONIC_SCALES</dust>
+				<liquid>FROST_FROM_A_WASTELAND</liquid>
+			</gem>
+		</bonus>
+		<bonus id="HIB_MAGIC_FOCUS">
+			<group>FOCUS</group>
+			<realm>hibernia</realm>
+			<craftonly/>
+			<gem id="BRILLIANT_SPELL_STONE">
+				<dust>GROUND_DRACONIC_SCALES</dust>
+				<liquid>DRACONIC_FIRE</liquid>
+				<liquid>MYSTIC_ENERGY</liquid>
+				<liquid>TREANT_BLOOD</liquid>
+			</gem>
+			<gemlevel bonus="5" dust="1" liquid="2" gems="3">1</gemlevel>
+			<gemlevel bonus="10" dust="6" liquid="8" gems="3">2</gemlevel>
+			<gemlevel bonus="15" dust="11" liquid="14" gems="3">3</gemlevel>
+			<gemlevel bonus="20" dust="16" liquid="20" gems="3">4</gemlevel>
+			<gemlevel bonus="25" dust="21" liquid="26" gems="3">5</gemlevel>
+			<gemlevel bonus="30" dust="26" liquid="32" gems="3">6</gemlevel>
+			<gemlevel bonus="35" dust="31" liquid="38" gems="3">7</gemlevel>
+			<gemlevel bonus="40" dust="36" liquid="44" gems="3">8</gemlevel>
+			<gemlevel bonus="45" dust="41" liquid="52" gems="3">9</gemlevel>
+			<gemlevel bonus="50" dust="46" liquid="60" gems="3">10</gemlevel>
+			<effect type="VALUE">ARBOREAL_FOCUS</effect>
+			<effect type="VALUE">CREEPING_PATH_FOCUS</effect>
+			<effect type="VALUE">ENCHANTMENTS_FOCUS</effect>
+			<effect type="VALUE">ETHEREAL_SHRIEK_FOCUS</effect>
+			<effect type="VALUE">LIGHT_FOCUS</effect>
+			<effect type="VALUE">MANA_FOCUS</effect>
+			<effect type="VALUE">MENTALISM_FOCUS</effect>
+			<effect type="VALUE">PHANTASMAL_WAIL_FOCUS</effect>
+			<effect type="VALUE">SPECTRAL_GUARD_FOCUS</effect>
+			<effect type="VALUE">VERDANT_PATH_FOCUS</effect>
+			<effect type="VALUE">VOID_FOCUS</effect>
+		</bonus>
+		<bonus id="BLADES" oldid="6026" kortid="Blades">
+			<group>SKILL</group>
+			<realm>hibernia</realm>
+			<gem id="WATERY_WAR_SPELL_STONE">
+				<dust>UNSEELIE_DUST</dust>
+				<liquid>LEVIATHAN_BLOOD</liquid>
+			</gem>
+		</bonus>
+		<bonus id="BLUNT" oldid="6027" kortid="Blunt">
+			<group>SKILL</group>
+			<realm>hibernia</realm>
+			<gem id="FIERY_WAR_SPELL_STONE">
+				<dust>UNSEELIE_DUST</dust>
+				<liquid>DRACONIC_FIRE</liquid>
+			</gem>
+		</bonus>
+		<bonus id="PIERCING" oldid="6029" kortid="Piercing">
+			<group>SKILL</group>
+			<realm>hibernia</realm>
+			<gem id="DUSTY_WAR_SPELL_STONE">
+				<dust>UNSEELIE_DUST</dust>
+				<liquid>UNDEAD_ASH_AND_HOLY_WATER</liquid>
+			</gem>
+		</bonus>
+		<bonus id="CELTIC_SPEAR" oldid="6032" kortid="Celtic Spear">
+			<group>SKILL</group>
+			<realm>hibernia</realm>
+			<gem id="EARTHEN_WAR_SPELL_STONE">
+				<dust>UNSEELIE_DUST</dust>
+				<liquid>TREANT_BLOOD</liquid>
+			</gem>
+		</bonus>
+		<bonus id="CELTIC_DUAL" oldid="6028" kortid="Celtic Dual">
+			<group>SKILL</group>
+			<realm>hibernia</realm>
+			<gem id="ICY_WAR_SPELL_STONE">
+				<dust>UNSEELIE_DUST</dust>
+				<liquid>FROST_FROM_A_WASTELAND</liquid>
+			</gem>
+		</bonus>
+		<bonus id="LARGE_WEAPONRY" oldid="6030" kortid="Large Weaponry">
+			<group>SKILL</group>
+			<realm>hibernia</realm>
+			<gem id="HEATED_WAR_SPELL_STONE">
+				<dust>UNSEELIE_DUST</dust>
+				<liquid>HEAT_FROM_AN_UNEARTHLY_PYRE</liquid>
+			</gem>
+		</bonus>
+		<bonus id="RECURVE_BOW" oldid="6042" kortid="Recurve Bow">
+			<group>SKILL</group>
+			<realm>hibernia</realm>
+			<gem id="AIRY_WAR_SPELL_STONE">
+				<dust>UNSEELIE_DUST</dust>
+				<liquid>AIR_ELEMENTAL_ESSENCE</liquid>
+			</gem>
+		</bonus>
+		<bonus id="SCYTHE" oldid="6068" kortid="Scythe">
+			<group>SKILL</group>
+			<realm>hibernia</realm>
+			<gem id="LIGHT_WAR_SPELL_STONE">
+				<dust>UNSEELIE_DUST</dust>
+				<liquid>SUN_LIGHT</liquid>
+			</gem>
+		</bonus>
+		<bonus id="ARBOREAL_PATH" oldid="6069" kortid="Arboreal Path">
+			<group>SKILL</group>
+			<realm>hibernia</realm>
+			<gem id="STEAMING_NATURE_SPELL_STONE">
+				<dust>FAIRY_DUST</dust>
+				<liquid>SWAMP_FOG</liquid>
+			</gem>
+		</bonus>
+		<bonus id="CREEPING_PATH" oldid="6070" kortid="Creeping Path">
+			<group>SKILL</group>
+			<realm>hibernia</realm>
+			<gem id="OOZING_NATURE_SPELL_STONE">
+				<dust>FAIRY_DUST</dust>
+				<liquid>SWAMP_FOG</liquid>
+			</gem>
+		</bonus>
+		<bonus id="MUSIC" oldid="6040" kortid="Music">
+			<group>SKILL</group>
+			<realm>hibernia</realm>
+			<gem id="AIRY_NATURE_SPELL_STONE">
+				<dust>FAIRY_DUST</dust>
+				<liquid>AIR_ELEMENTAL_ESSENCE</liquid>
+			</gem>
+		</bonus>
+		<bonus id="NATURE" oldid="6041" kortid="Nature">
+			<group>SKILL</group>
+			<realm>hibernia</realm>
+			<gem id="EARTHEN_NATURE_SPELL_STONE">
+				<dust>FAIRY_DUST</dust>
+				<liquid>TREANT_BLOOD</liquid>
+			</gem>
+		</bonus>
+		<bonus id="NURTURE" oldid="6038" kortid="Nurture">
+			<group>SKILL</group>
+			<realm>hibernia</realm>
+			<gem id="FIERY_NATURE_SPELL_STONE">
+				<dust>FAIRY_DUST</dust>
+				<liquid>DRACONIC_FIRE</liquid>
+			</gem>
+		</bonus>
+		<bonus id="REGROWTH" oldid="6039" kortid="Regrowth">
+			<group>SKILL</group>
+			<realm>hibernia</realm>
+			<gem id="WATERY_NATURE_SPELL_STONE">
+				<dust>FAIRY_DUST</dust>
+				<liquid>LEVIATHAN_BLOOD</liquid>
+			</gem>
+		</bonus>
+		<bonus id="VERDANT_PATH" oldid="6071" kortid="Verdant Path">
+			<group>SKILL</group>
+			<realm>hibernia</realm>
+			<gem id="MINERAL_ENCRUSTED_NATURE_SPELL_STONE">
+				<dust>FAIRY_DUST</dust>
+				<liquid>HEAT_FROM_AN_UNEARTHLY_PYRE</liquid>
+			</gem>
+		</bonus>
+		<bonus id="ENCHANTMENTS" oldid="6036" kortid="Enchantments">
+			<group>SKILL</group>
+			<realm>hibernia</realm>
+			<gem id="VAPOR_ARCANE_SPELL_STONE">
+				<dust>OTHERWORLDLY_DUST</dust>
+				<liquid>LEVIATHAN_BLOOD</liquid>
+			</gem>
+		</bonus>
+		<bonus id="LIGHT" oldid="6034" kortid="Light">
+			<group>SKILL</group>
+			<realm>hibernia</realm>
+			<gem id="FIERY_ARCANE_SPELL_STONE">
+				<dust>OTHERWORLDLY_DUST</dust>
+				<liquid>DRACONIC_FIRE</liquid>
+			</gem>
+		</bonus>
+		<bonus id="MANA" oldid="6033" kortid="Mana">
+			<group>SKILL</group>
+			<realm>hibernia</realm>
+			<gem id="WATERY_ARCANE_SPELL_STONE">
+				<dust>OTHERWORLDLY_DUST</dust>
+				<liquid>LEVIATHAN_BLOOD</liquid>
+			</gem>
+		</bonus>
+		<bonus id="MENTALISM" oldid="6037" kortid="Mentalism">
+			<group>SKILL</group>
+			<realm>hibernia</realm>
+			<gem id="EARTHEN_ARCANE_SPELL_STONE">
+				<dust>OTHERWORLDLY_DUST</dust>
+				<liquid>TREANT_BLOOD</liquid>
+			</gem>
+		</bonus>
+		<bonus id="VALOR" oldid="6031" kortid="Valor">
+			<group>SKILL</group>
+			<realm>hibernia</realm>
+			<gem id="AIRY_ARCANE_SPELL_STONE">
+				<dust>OTHERWORLDLY_DUST</dust>
+				<liquid>AIR_ELEMENTAL_ESSENCE</liquid>
+			</gem>
+		</bonus>
+		<bonus id="VOID" oldid="6035" kortid="Void">
+			<group>SKILL</group>
+			<realm>hibernia</realm>
+			<gem id="ICY_ARCANE_SPELL_STONE">
+				<dust>OTHERWORLDLY_DUST</dust>
+				<liquid>FROST_FROM_A_WASTELAND</liquid>
+			</gem>
+		</bonus>
+		<bonus id="PHANTASMAL_WAIL">
+			<group>SKILL</group>
+			<realm>hibernia</realm>
+			<gem id="PHANTASMAL_ARCANE_SPELL_STONE">
+				<dust>OTHERWORLDLY_DUST</dust>
+				<liquid>DRACONIC_FIRE</liquid>
+			</gem>
+		</bonus>
+		<bonus id="ETHEREAL_SHRIEK">
+			<group>SKILL</group>
+			<realm>hibernia</realm>
+			<gem id="ETHEREAL_ARCANE_SPELL_STONE">
+				<dust>OTHERWORLDLY_DUST</dust>
+				<liquid>LEVIATHAN_BLOOD</liquid>
+			</gem>
+		</bonus>
+		<bonus id="SPECTRAL_GUARD">
+			<group>SKILL</group>
+			<realm>hibernia</realm>
+			<gem id="SPECTRAL_ARCANE_SPELL_STONE">
+				<dust>OTHERWORLDLY_DUST</dust>
+				<liquid>AIR_ELEMENTAL_ESSENCE</liquid>
+			</gem>
+		</bonus>
+		<bonus id="SHADOW_MASTERY">
+			<group>SKILL</group>
+			<realm>hibernia</realm>
+			<gem id="SHADOWY_ARCANE_SPELL_STONE">
+				<dust>OTHERWORLDLY_DUST</dust>
+				<liquid>SWAMP_FOG</liquid>
+			</gem>
+		</bonus>
+		<bonus id="VAMPIIRIC_EMBRACE">
+			<group>SKILL</group>
+			<realm>hibernia</realm>
+			<gem id="EMBRACING_ARCANE_SPELL_STONE">
+				<dust>OTHERWORLDLY_DUST</dust>
+				<liquid>FROST_FROM_A_WASTELAND</liquid>
+			</gem>
+		</bonus>
+		<bonus id="DEMENTIA">
+			<group>SKILL</group>
+			<realm>hibernia</realm>
+			<gem id="ABERRANT_ARCANE_SPELL_STONE">
+				<dust>OTHERWORLDLY_DUST</dust>
+				<liquid>TREANT_BLOOD</liquid>
+			</gem>
+		</bonus>
+		<bonus id="FIST_WRAPS_HIB">
+			<group>SKILL</group>
+			<realm>Hibernia</realm>
+			<gem id="GLACIER_WAR_SPELL_STONE">
+				<dust>UNSEELIE_DUST</dust>
+				<liquid>FROST_FROM_A_WASTELAND</liquid>
+			</gem>
+		</bonus>
+		<bonus id="MAULER_STAFF_HIB">
+			<group>SKILL</group>
+			<realm>Hibernia</realm>
+			<gem id="CINDER_WAR_SPELL_STONE">
+				<dust>UNSEELIE_DUST</dust>
+				<liquid>DRACONIC_FIRE</liquid>
+			</gem>
+		</bonus>
+		<bonus id="POWER_STRIKES_HIB">
+			<group>SKILL</group>
+			<realm>Hibernia</realm>
+			<gem id="CLOUT_NATURE_SPELL_STONE">
+				<dust>FAIRY_DUST</dust>
+				<liquid>GIANTS_BLOOD</liquid>
+			</gem>
+		</bonus>
+		<bonus id="MAGNETISM_HIB">
+			<group>SKILL</group>
+			<realm>Hibernia</realm>
+			<gem id="MAGNETIC_NATURE_SPELL_STONE">
+				<dust>FAIRY_DUST</dust>
+				<liquid>MYSTIC_ENERGY</liquid>
+			</gem>
+		</bonus>
+		<bonus id="AURA_MANIPULATION_HIB">
+			<group>SKILL</group>
+			<realm>Hibernia</realm>
+			<gem id="RADIANT_NATURE_SPELL_STONE">
+				<dust>FAIRY_DUST</dust>
+				<liquid>SUN_LIGHT</liquid>
+			</gem>
+		</bonus>
+		<bonus id="HIB_MELEE_BONUS">
+			<group>SKILL</group>
+			<realm>hibernia</realm>
+			<gem id="FINESSE_WAR_SPELL_STONE">
+				<dust>UNSEELIE_DUST</dust>
+				<liquid>DRACONIC_FIRE</liquid>
+				<liquid>MYSTIC_ENERGY</liquid>
+				<liquid>TREANT_BLOOD</liquid>
+			</gem>
+			<gemlevel bonus="1" dust="1" liquid="2">1</gemlevel>
+			<craftonly/>
+			<effect type="VALUE">BLADES</effect>
+			<effect type="VALUE">BLUNT</effect>
+			<effect type="VALUE">PIERCING</effect>
+			<effect type="VALUE">CELTIC_SPEAR</effect>
+			<effect type="VALUE">LARGE_WEAPONRY</effect>
+			<effect type="VALUE">SCYTHE</effect>
+			<effect type="VALUE">FIST_WRAPS_HIB</effect>
+			<effect type="VALUE">MAULER_STAFF_HIB</effect>
+		</bonus>
+		<bonus id="HIB_MAGIC_BONUS">
+			<group>SKILL</group>
+			<realm>hibernia</realm>
+			<gem id="FINESSE_NATURE_SPELL_STONE">
+				<dust>FAIRY_DUST</dust>
+				<liquid>DRACONIC_FIRE</liquid>
+				<liquid>MYSTIC_ENERGY</liquid>
+				<liquid>TREANT_BLOOD</liquid>
+			</gem>
+			<gemlevel bonus="1" dust="1" liquid="2">1</gemlevel>
+			<craftonly/>
+			<effect type="VALUE">ARBOREAL_PATH</effect>
+			<effect type="VALUE">CREEPING_PATH</effect>
+			<effect type="VALUE">DEMENTIA</effect>
+			<effect type="VALUE">MUSIC</effect>
+			<effect type="VALUE">NATURE</effect>
+			<effect type="VALUE">NURTURE</effect>
+			<effect type="VALUE">REGROWTH</effect>
+			<effect type="VALUE">VERDANT_PATH</effect>
+			<effect type="VALUE">ENCHANTMENTS</effect>
+			<effect type="VALUE">ETHEREAL_SHRIEK</effect>
+			<effect type="VALUE">LIGHT</effect>
+			<effect type="VALUE">MANA</effect>
+			<effect type="VALUE">MENTALISM</effect>
+			<effect type="VALUE">PHANTASMAL_WAIL</effect>
+			<effect type="VALUE">SHADOW_MASTERY</effect>
+			<effect type="VALUE">SPECTRAL_GUARD</effect>
+			<effect type="VALUE">VALOR</effect>
+			<effect type="VALUE">VAMPIIRIC_EMBRACE</effect>
+			<effect type="VALUE">VOID</effect>
+
+			<effect type="VALUE">MAGNETISM_HIB</effect>
+			<effect type="VALUE">POWER_STRIKES_HIB</effect>
+			<effect type="VALUE">AURA_MANIPULATION_HIB</effect>
+		</bonus>
+	</bonuses>
+</moras>

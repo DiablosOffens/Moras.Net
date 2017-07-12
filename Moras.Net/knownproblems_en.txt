@@ -1,0 +1,3 @@
+- On huge resolution with a spezial setting active the moras controls can be moved out of visible space.
+
+Resolution: Display Properties->Settings->Advanced->Common, the DPI Setting should be set to normal (Windows restart needed). It is wrong to enhance the readability with this setting. Better increase the fontsize in another dialog.

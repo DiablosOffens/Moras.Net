@@ -1,0 +1,264 @@
+Moras Ausrüstungsplaner
+http://moras.sourceforge.net
+
+Konfiguration Kurzreport für <name>
+
+Statuswerte:
+Stärke: <str 3>  Intelligenz: <int 3>  Trefferpunkte: <hits 4>
+Konst.: <con 3>  Frömmigkeit: <pie 3>  Magiekraft   : <power 4>
+Gesch.: <dex 3>  Charisma   : <cha 3>
+Schne.: <qui 3>  Emphatie   : <emp 3>
+
+Resistenzen:
+Schlag : <crush 3>  Hitze  : <heat 3>  Körper : <body 3>
+Schnitt: <slash 3>  Kälte  : <cold 3>  Geist  : <spirit 3>
+Stoß   : <thrust 3>  Materie: <matter 3>  Energie: <energy 3>
+
+Fertigkeiten:
+<skills>
+
+Fokus:
+<focus1>
+<focus2>
+<focus3>
+<focus4>
+
+Cap-Erhöhungen:
+<capbonuses>
+
+Andere Boni:
+<otherbonuses>
+
+<if chest notempty>
+<if chest pcmade>
+Körper:
+Imbue Punkte: <chest usedpoints> von <chest availablepoints> (<chest quality> Qual)
+Effekte: <chest effects>
+Nutzen: <chest utility>
+
+<else>
+Körper: <chest name>
+Stufe: <chest level 2>  Qualität: <chest quality>
+AF:   <chest af 3>  Bonus: <chest bonus>
+Herkunft: <chest fundort>
+<chest effects>
+Nutzen: <chest utility>
+
+<endif>
+<endif>
+<if arms notempty>
+<if arms pcmade>
+Arme:
+Imbue Punkte: <arms usedpoints> von <arms availablepoints> (<arms quality> Qual)
+Effekte: <arms effects>
+Nutzen: <arms utility>
+
+<else>
+Arme: <arms name>
+Stufe: <arms level 2>  Qualität: <arms quality>
+AF:   <arms af 3>  Bonus: <arms bonus>
+Herkunft: <arms fundort>
+<arms effects>
+Nutzen: <arms utility>
+
+<endif>
+<endif>
+<if head notempty>
+<if head pcmade>
+Kopf:
+Imbue Punkte: <head usedpoints> von <head availablepoints> (<head quality> Qual)
+Effekte: <head effects>
+Nutzen: <head utility>
+
+<else>
+Kopf: <head name>
+Stufe: <head level 2>  Qualität: <head quality>
+AF:   <head af 3>  Bonus: <head bonus>
+Herkunft: <head fundort>
+<head effects>
+Nutzen: <head utility>
+
+<endif>
+<endif>
+<if legs notempty>
+<if legs pcmade>
+Beine:
+Imbue Punkte: <legs usedpoints> von <legs availablepoints> (<legs quality> Qual)
+Effekte: <legs effects>
+Nutzen: <legs utility>
+
+<else>
+Beine: <legs name>
+Stufe: <legs level 2>  Qualität: <legs quality>
+AF:   <legs af 3>  Bonus: <legs bonus>
+Herkunft: <legs fundort>
+<legs effects>
+Nutzen: <legs utility>
+
+<endif>
+<endif>
+<if hands notempty>
+<if hands pcmade>
+Hände:
+Imbue Punkte: <hands usedpoints> von <hands availablepoints> (<hands quality> Qual)
+Effekte: <hands effects>
+Nutzen: <hands utility>
+
+<else>
+Hände: <hands name>
+Stufe: <hands level 2>  Qualität: <hands quality>
+AF:   <hands af 3>  Bonus: <hands bonus>
+Herkunft: <hands fundort>
+<hands effects>
+Nutzen: <hands utility>
+
+<endif>
+<endif>
+<if feet notempty>
+<if feet pcmade>
+Füsse:
+Imbue Punkte: <feet usedpoints> von <feet availablepoints> (<feet quality> Qual)
+Effekte: <feet effects>
+Nutzen: <feet utility>
+
+<else>
+Füsse: <feet name>
+Stufe: <feet level 2>  Qualität: <feet quality>
+AF:   <feet af 3>  Bonus: <feet bonus>
+Herkunft: <feet fundort>
+<feet effects>
+Nutzen: <feet utility>
+
+<endif>
+<endif>
+<if rweapon notempty>
+<if rweapon pcmade>
+Rechte Hand:
+Imbue Punkte: <rweapon usedpoints> von <rweapon availablepoints> (<rweapon quality> Qual)
+Effekte: <rweapon effects>
+Nutzen: <rweapon utility>
+
+<else>
+Rechte Hand: <rweapon name>
+Stufe: <rweapon level 2>  Qualität: <rweapon quality>
+DPS:  <rweapon af 3>  Bonus: <rweapon bonus>
+Herkunft: <rweapon fundort>
+<rweapon effects>
+Nutzen: <rweapon utility>
+
+<endif>
+<endif>
+<if lweapon notempty>
+<if lweapon pcmade>
+Linke Hand:
+Imbue Punkte: <lweapon usedpoints> von <lweapon availablepoints> (<lweapon quality> Qual)
+Effekte: <lweapon effects>
+Nutzen: <lweapon utility>
+
+<else>
+Linke Hand: <lweapon name>
+Stufe: <lweapon level 2>  Qualität: <lweapon quality>
+DPS:  <lweapon af 3>  Bonus: <lweapon bonus>
+Herkunft: <lweapon fundort>
+<lweapon effects>
+Nutzen: <lweapon utility>
+
+<endif>
+<endif>
+<if 2handed notempty>
+<if 2handed pcmade>
+Zweihand:
+Imbue Punkte: <2handed usedpoints> von <2handed availablepoints> (<2handed quality> Qual)
+Effekte: <2handed effects>
+Nutzen: <2handed utility>
+
+<else>
+Zweihand: <2handed name>
+Stufe: <2handed level 2>  Qualität: <2handed quality>
+DPS:  <2handed af 3>  Bonus: <2handed bonus>
+Herkunft: <2handed fundort>
+<2handed effects>
+Nutzen: <2handed utility>
+
+<endif>
+<endif>
+<if ranged notempty>
+<if ranged pcmade>
+Fernwaffe:
+Imbue Punkte: <ranged usedpoints> von <ranged availablepoints> (<ranged quality> Qual)
+Effekte: <ranged effects>
+Nutzen: <ranged utility>
+
+<else>
+Fernwaffe: <ranged name>
+Stufe: <ranged level 2>  Qualität: <ranged quality>
+DPS:  <ranged af 3>  Bonus: <ranged bonus>
+Herkunft: <ranged fundort>
+<ranged effects>
+Nutzen: <ranged utility>
+
+<endif>
+<endif>
+<if neck notempty>
+Hals: <neck name>
+Stufe: <neck level 2>  Qualität: <neck quality> Bonus: <neck bonus 2>
+Herkunft: <neck fundort>
+<neck effects>
+Nutzen: <neck utility>
+
+<endif>
+<if cloak notempty>
+Umhang: <cloak name>
+Stufe: <cloak level 2>  Qualität: <cloak quality> Bonus: <cloak bonus 2>
+Herkunft: <cloak fundort>
+<cloak effects>
+Nutzen: <cloak utility>
+
+<endif>
+<if jewel notempty>
+Juwel: <jewel name>
+Stufe: <jewel level 2>  Qualität: <jewel quality> Bonus: <jewel bonus 2>
+Herkunft: <jewel fundort>
+<jewel effects>
+Nutzen: <jewel utility>
+
+<endif>
+<if belt notempty>
+Taille: <belt name>
+Stufe: <belt level 2>  Qualität: <belt quality> Bonus: <belt bonus 2>
+Herkunft: <belt fundort>
+<belt effects>
+Nutzen: <belt utility>
+
+<endif>
+<if rring notempty>
+Rechter Ring: <rring name>
+Stufe: <rring level 2>  Qualität: <rring quality> Bonus: <rring bonus 2>
+Herkunft: <rring fundort>
+<rring effects>
+Nutzen: <rring utility>
+
+<endif>
+<if lring notempty>
+Linker Ring: <lring name>
+Stufe: <lring level 2>  Qualität: <lring quality> Bonus: <lring bonus 2>
+Herkunft: <lring fundort>
+<lring effects>
+Nutzen: <lring utility>
+
+<endif>
+<if rwrist notempty>
+Rechtes Handgelenk: <rwrist name>
+Stufe: <rwrist level 2>  Qualität: <rwrist quality> Bonus: <rwrist bonus 2>
+Herkunft: <rwrist fundort>
+<rwrist effects>
+Nutzen: <rwrist utility>
+
+<endif>
+<if lwrist notempty>
+Linkes Handgelenk: <lwrist name>
+Stufe: <lwrist level 2>  Qualität: <lwrist quality> Bonus: <lwrist bonus 2>
+Herkunft: <lwrist fundort>
+<lwrist effects>
+Nutzen: <lwrist utility>
+<endif>
