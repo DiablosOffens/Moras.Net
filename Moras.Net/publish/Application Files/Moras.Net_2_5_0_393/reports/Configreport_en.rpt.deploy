@@ -1,0 +1,807 @@
+Moras Equipmentplaner
+http://moras.sourceforge.net
+
+Configuration Report for <name>
+
+Attributes:
+Strength:     <str 3>  Intelligence: <int 3>  Hitpoints: <hits 4>
+Constitution: <con 3>  Piety:        <pie 3>  Power:     <power 4>
+Dexterity:    <dex 3>  Charisma:     <cha 3>
+Quickness:    <qui 3>  Empathy:      <emp 3>
+
+Resists:
+Crush : <crush 3>  Heat:   <heat 3>  Body:   <body 3>
+Slash:  <slash 3>  Cold:   <cold 3>  Spirit: <spirit 3>
+Thrust: <thrust 3>  Matter: <matter 3>  Energy: <energy 3>
+
+Skills:
+<skills>
+
+Focus:
+<focus1>
+<focus2>
+<focus3>
+<focus4>
+
+Cap-Increases:
+<capbonuses>
+
+Other Bonuses:
+<otherbonuses>
+
+<if chest notempty>
+Chest:
+<if chest pcmade>
+Imbue Points: <chest usedpoints> of <chest availablepoints> (<chest quality> Qual) Overcharge: <chest overcharge>
+Jewel 1: <chest gem1 amount 2> <chest gem1 effect> - <chest gem1 quality> <chest gem1 name>
+Jewel 2: <chest gem2 amount 2> <chest gem2 effect> - <chest gem2 quality> <chest gem2 name>
+Jewel 3: <chest gem3 amount 2> <chest gem3 effect> - <chest gem3 quality> <chest gem3 name>
+Jewel 4: <chest gem4 amount 2> <chest gem4 effect> - <chest gem4 quality> <chest gem4 name>
+Bonus 5: <chest gem5 amount 2> <chest gem5 effect>
+Utility: <chest utility>
+
+<else>
+Name: <chest name>
+Level: <chest level 2>  Quality: <chest quality>
+AF:   <chest af 3>  Bonus: <chest bonus>
+Origin: <chest fundort>
+Effekt 1: <chest gem1 amount 3> <chest gem1 effect>
+<if chest gem2 notempty>
+Effekt 2: <chest gem2 amount 3> <chest gem2 effect>
+<endif>
+<if chest gem3 notempty>
+Effekt 3: <chest gem3 amount 3> <chest gem3 effect>
+<endif>
+<if chest gem4 notempty>
+Effekt 4: <chest gem4 amount 3> <chest gem4 effect>
+<endif>
+<if chest gem5 notempty>
+Effekt 5: <chest gem5 amount 3> <chest gem5 effect>
+<endif>
+<if chest gem6 notempty>
+Effekt 6: <chest gem6 amount 3> <chest gem6 effect>
+<endif>
+<if chest gem7 notempty>
+Effekt 7: <chest gem7 amount 3> <chest gem7 effect>
+<endif>
+<if chest gem8 notempty>
+Effekt 8: <chest gem8 amount 3> <chest gem8 effect>
+<endif>
+<if chest gem9 notempty>
+Effekt 9: <chest gem9 amount 3> <chest gem9 effect>
+<endif>
+<if chest gem10 notempty>
+Effekt10: <chest gem10 amount 3> <chest gem10 effect>
+<endif>
+Utility: <chest utility>
+
+<endif>
+<endif>
+<if arms notempty>
+Arms:
+<if arms pcmade>
+Imbue Points: <arms usedpoints> of <arms availablepoints> (<arms quality> Qual) Overcharge: <arms overcharge>
+Jewel 1: <arms gem1 amount 2> <arms gem1 effect> - <arms gem1 quality> <arms gem1 name>
+Jewel 2: <arms gem2 amount 2> <arms gem2 effect> - <arms gem2 quality> <arms gem2 name>
+Jewel 3: <arms gem3 amount 2> <arms gem3 effect> - <arms gem3 quality> <arms gem3 name>
+Jewel 4: <arms gem4 amount 2> <arms gem4 effect> - <arms gem4 quality> <arms gem4 name>
+Bonus 5: <arms gem5 amount 2> <arms gem5 effect>
+Utility: <arms utility>
+
+<else>
+Name: <arms name>
+Level: <arms level 2>  Quality: <arms quality>
+AF:   <arms af 3>  Bonus: <arms bonus>
+Origin: <arms fundort>
+Effekt 1: <arms gem1 amount 3> <arms gem1 effect>
+<if arms gem2 notempty>
+Effekt 2: <arms gem2 amount 3> <arms gem2 effect>
+<endif>
+<if arms gem3 notempty>
+Effekt 3: <arms gem3 amount 3> <arms gem3 effect>
+<endif>
+<if arms gem4 notempty>
+Effekt 4: <arms gem4 amount 3> <arms gem4 effect>
+<endif>
+<if arms gem5 notempty>
+Effekt 5: <arms gem5 amount 3> <arms gem5 effect>
+<endif>
+<if arms gem6 notempty>
+Effekt 6: <arms gem6 amount 3> <arms gem6 effect>
+<endif>
+<if arms gem7 notempty>
+Effekt 7: <arms gem7 amount 3> <arms gem7 effect>
+<endif>
+<if arms gem8 notempty>
+Effekt 8: <arms gem8 amount 3> <arms gem8 effect>
+<endif>
+<if arms gem9 notempty>
+Effekt 9: <arms gem9 amount 3> <arms gem9 effect>
+<endif>
+<if arms gem10 notempty>
+Effekt10: <arms gem10 amount 3> <arms gem10 effect>
+<endif>
+Utility: <arms utility>
+
+<endif>
+<endif>
+<if head notempty>
+Head:
+<if head pcmade>
+Imbue Points: <head usedpoints> of <head availablepoints> (<head quality> Qual) Overcharge: <head overcharge>
+Jewel 1: <head gem1 amount 2> <head gem1 effect> - <head gem1 quality> <head gem1 name>
+Jewel 2: <head gem2 amount 2> <head gem2 effect> - <head gem2 quality> <head gem2 name>
+Jewel 3: <head gem3 amount 2> <head gem3 effect> - <head gem3 quality> <head gem3 name>
+Jewel 4: <head gem4 amount 2> <head gem4 effect> - <head gem4 quality> <head gem4 name>
+Bonus 5: <head gem5 amount 2> <head gem5 effect>
+Utility: <head utility>
+
+<else>
+Name: <head name>
+Level: <head level 2>  Quality: <head quality>
+AF:   <head af 3>  Bonus: <head bonus>
+Origin: <head fundort>
+Effekt 1: <head gem1 amount 3> <head gem1 effect>
+<if head gem2 notempty>
+Effekt 2: <head gem2 amount 3> <head gem2 effect>
+<endif>
+<if head gem3 notempty>
+Effekt 3: <head gem3 amount 3> <head gem3 effect>
+<endif>
+<if head gem4 notempty>
+Effekt 4: <head gem4 amount 3> <head gem4 effect>
+<endif>
+<if head gem5 notempty>
+Effekt 5: <head gem5 amount 3> <head gem5 effect>
+<endif>
+<if head gem6 notempty>
+Effekt 6: <head gem6 amount 3> <head gem6 effect>
+<endif>
+<if head gem7 notempty>
+Effekt 7: <head gem7 amount 3> <head gem7 effect>
+<endif>
+<if head gem8 notempty>
+Effekt 8: <head gem8 amount 3> <head gem8 effect>
+<endif>
+<if head gem9 notempty>
+Effekt 9: <head gem9 amount 3> <head gem9 effect>
+<endif>
+<if head gem10 notempty>
+Effekt10: <head gem10 amount 3> <head gem10 effect>
+<endif>
+Utility: <head utility>
+
+<endif>
+<endif>
+<if legs notempty>
+Legs:
+<if legs pcmade>
+Imbue Points: <legs usedpoints> of <legs availablepoints> (<legs quality> Qual) Overcharge: <legs overcharge>
+Jewel 1: <legs gem1 amount 2> <legs gem1 effect> - <legs gem1 quality> <legs gem1 name>
+Jewel 2: <legs gem2 amount 2> <legs gem2 effect> - <legs gem2 quality> <legs gem2 name>
+Jewel 3: <legs gem3 amount 2> <legs gem3 effect> - <legs gem3 quality> <legs gem3 name>
+Jewel 4: <legs gem4 amount 2> <legs gem4 effect> - <legs gem4 quality> <legs gem4 name>
+Bonus 5: <legs gem5 amount 2> <legs gem5 effect>
+Utility: <legs utility>
+
+<else>
+Name: <legs name>
+Level: <legs level 2>  Quality: <legs quality>
+AF:   <legs af 3>  Bonus: <legs bonus>
+Origin: <legs fundort>
+Effekt 1: <legs gem1 amount 3> <legs gem1 effect>
+<if legs gem2 notempty>
+Effekt 2: <legs gem2 amount 3> <legs gem2 effect>
+<endif>
+<if legs gem3 notempty>
+Effekt 3: <legs gem3 amount 3> <legs gem3 effect>
+<endif>
+<if legs gem4 notempty>
+Effekt 4: <legs gem4 amount 3> <legs gem4 effect>
+<endif>
+<if legs gem5 notempty>
+Effekt 5: <legs gem5 amount 3> <legs gem5 effect>
+<endif>
+<if legs gem6 notempty>
+Effekt 6: <legs gem6 amount 3> <legs gem6 effect>
+<endif>
+<if legs gem7 notempty>
+Effekt 7: <legs gem7 amount 3> <legs gem7 effect>
+<endif>
+<if legs gem8 notempty>
+Effekt 8: <legs gem8 amount 3> <legs gem8 effect>
+<endif>
+<if legs gem9 notempty>
+Effekt 9: <legs gem9 amount 3> <legs gem9 effect>
+<endif>
+<if legs gem10 notempty>
+Effekt10: <legs gem10 amount 3> <legs gem10 effect>
+<endif>
+Utility: <legs utility>
+
+<endif>
+<endif>
+<if hands notempty>
+Hands:
+<if hands pcmade>
+Imbue Points: <hands usedpoints> of <hands availablepoints> (<hands quality> Qual) Overcharge: <hands overcharge>
+Jewel 1: <hands gem1 amount 2> <hands gem1 effect> - <hands gem1 quality> <hands gem1 name>
+Jewel 2: <hands gem2 amount 2> <hands gem2 effect> - <hands gem2 quality> <hands gem2 name>
+Jewel 3: <hands gem3 amount 2> <hands gem3 effect> - <hands gem3 quality> <hands gem3 name>
+Jewel 4: <hands gem4 amount 2> <hands gem4 effect> - <hands gem4 quality> <hands gem4 name>
+Bonus 5: <hands gem5 amount 2> <hands gem5 effect>
+Utility: <hands utility>
+
+<else>
+Name: <hands name>
+Level: <hands level 2>  Quality: <hands quality>
+AF:   <hands af 3>  Bonus: <hands bonus>
+Origin: <hands fundort>
+Effekt 1: <hands gem1 amount 3> <hands gem1 effect>
+<if hands gem2 notempty>
+Effekt 2: <hands gem2 amount 3> <hands gem2 effect>
+<endif>
+<if hands gem3 notempty>
+Effekt 3: <hands gem3 amount 3> <hands gem3 effect>
+<endif>
+<if hands gem4 notempty>
+Effekt 4: <hands gem4 amount 3> <hands gem4 effect>
+<endif>
+<if hands gem5 notempty>
+Effekt 5: <hands gem5 amount 3> <hands gem5 effect>
+<endif>
+<if hands gem6 notempty>
+Effekt 6: <hands gem6 amount 3> <hands gem6 effect>
+<endif>
+<if hands gem7 notempty>
+Effekt 7: <hands gem7 amount 3> <hands gem7 effect>
+<endif>
+<if hands gem8 notempty>
+Effekt 8: <hands gem8 amount 3> <hands gem8 effect>
+<endif>
+<if hands gem9 notempty>
+Effekt 9: <hands gem9 amount 3> <hands gem9 effect>
+<endif>
+<if hands gem10 notempty>
+Effekt10: <hands gem10 amount 3> <hands gem10 effect>
+<endif>
+Utility: <hands utility>
+
+<endif>
+<endif>
+<if feet notempty>
+Feet:
+<if feet pcmade>
+Imbue Points: <feet usedpoints> of <feet availablepoints> (<feet quality> Qual) Overcharge: <feet overcharge>
+Jewel 1: <feet gem1 amount 2> <feet gem1 effect> - <feet gem1 quality> <feet gem1 name>
+Jewel 2: <feet gem2 amount 2> <feet gem2 effect> - <feet gem2 quality> <feet gem2 name>
+Jewel 3: <feet gem3 amount 2> <feet gem3 effect> - <feet gem3 quality> <feet gem3 name>
+Jewel 4: <feet gem4 amount 2> <feet gem4 effect> - <feet gem4 quality> <feet gem4 name>
+Bonus 5: <feet gem5 amount 2> <feet gem5 effect>
+Utility: <feet utility>
+
+<else>
+Name: <feet name>
+Level: <feet level 2>  Quality: <feet quality>
+AF:   <feet af 3>  Bonus: <feet bonus>
+Origin: <feet fundort>
+Effekt 1: <feet gem1 amount 3> <feet gem1 effect>
+<if feet gem2 notempty>
+Effekt 2: <feet gem2 amount 3> <feet gem2 effect>
+<endif>
+<if feet gem3 notempty>
+Effekt 3: <feet gem3 amount 3> <feet gem3 effect>
+<endif>
+<if feet gem4 notempty>
+Effekt 4: <feet gem4 amount 3> <feet gem4 effect>
+<endif>
+<if feet gem5 notempty>
+Effekt 5: <feet gem5 amount 3> <feet gem5 effect>
+<endif>
+<if feet gem6 notempty>
+Effekt 6: <feet gem6 amount 3> <feet gem6 effect>
+<endif>
+<if feet gem7 notempty>
+Effekt 7: <feet gem7 amount 3> <feet gem7 effect>
+<endif>
+<if feet gem8 notempty>
+Effekt 8: <feet gem8 amount 3> <feet gem8 effect>
+<endif>
+<if feet gem9 notempty>
+Effekt 9: <feet gem9 amount 3> <feet gem9 effect>
+<endif>
+<if feet gem10 notempty>
+Effekt10: <feet gem10 amount 3> <feet gem10 effect>
+<endif>
+Utility: <feet utility>
+
+<endif>
+<endif>
+<if rweapon notempty>
+Right Hand:
+<if rweapon pcmade>
+Imbue Points: <rweapon usedpoints> of <rweapon availablepoints> (<rweapon quality> Qual) Overcharge: <rweapon overcharge>
+Jewel 1: <rweapon gem1 amount 2> <rweapon gem1 effect> - <rweapon gem1 quality> <rweapon gem1 name>
+Jewel 2: <rweapon gem2 amount 2> <rweapon gem2 effect> - <rweapon gem2 quality> <rweapon gem2 name>
+Jewel 3: <rweapon gem3 amount 2> <rweapon gem3 effect> - <rweapon gem3 quality> <rweapon gem3 name>
+Jewel 4: <rweapon gem4 amount 2> <rweapon gem4 effect> - <rweapon gem4 quality> <rweapon gem4 name>
+Bonus 5: <rweapon gem5 amount 2> <rweapon gem5 effect>
+Utility: <rweapon utility>
+
+<else>
+Name: <rweapon name>
+Level: <rweapon level 2>  Quality: <rweapon quality>
+DPS:  <rweapon af 3>  Bonus: <rweapon bonus>
+Origin: <rweapon fundort>
+Effekt 1: <rweapon gem1 amount 3> <rweapon gem1 effect>
+<if rweapon gem2 notempty>
+Effekt 2: <rweapon gem2 amount 3> <rweapon gem2 effect>
+<endif>
+<if rweapon gem3 notempty>
+Effekt 3: <rweapon gem3 amount 3> <rweapon gem3 effect>
+<endif>
+<if rweapon gem4 notempty>
+Effekt 4: <rweapon gem4 amount 3> <rweapon gem4 effect>
+<endif>
+<if rweapon gem5 notempty>
+Effekt 5: <rweapon gem5 amount 3> <rweapon gem5 effect>
+<endif>
+<if rweapon gem6 notempty>
+Effekt 6: <rweapon gem6 amount 3> <rweapon gem6 effect>
+<endif>
+<if rweapon gem7 notempty>
+Effekt 7: <rweapon gem7 amount 3> <rweapon gem7 effect>
+<endif>
+<if rweapon gem8 notempty>
+Effekt 8: <rweapon gem8 amount 3> <rweapon gem8 effect>
+<endif>
+<if rweapon gem9 notempty>
+Effekt 9: <rweapon gem9 amount 3> <rweapon gem9 effect>
+<endif>
+<if rweapon gem10 notempty>
+Effekt10: <rweapon gem10 amount 3> <rweapon gem10 effect>
+<endif>
+Utility: <rweapon utility>
+
+<endif>
+<endif>
+<if lweapon notempty>
+Left Hand:
+<if lweapon pcmade>
+Imbue Points: <lweapon usedpoints> of <lweapon availablepoints> (<lweapon quality> Qual) Overcharge: <lweapon overcharge>
+Jewel 1: <lweapon gem1 amount 2> <lweapon gem1 effect> - <lweapon gem1 quality> <lweapon gem1 name>
+Jewel 2: <lweapon gem2 amount 2> <lweapon gem2 effect> - <lweapon gem2 quality> <lweapon gem2 name>
+Jewel 3: <lweapon gem3 amount 2> <lweapon gem3 effect> - <lweapon gem3 quality> <lweapon gem3 name>
+Jewel 4: <lweapon gem4 amount 2> <lweapon gem4 effect> - <lweapon gem4 quality> <lweapon gem4 name>
+Bonus 5: <lweapon gem5 amount 2> <lweapon gem5 effect>
+Utility: <lweapon utility>
+
+<else>
+Name: <lweapon name>
+Level: <lweapon level 2>  Quality: <lweapon quality>
+DPS:  <lweapon af 3>  Bonus: <lweapon bonus>
+Origin: <lweapon fundort>
+Effekt 1: <lweapon gem1 amount 3> <lweapon gem1 effect>
+<if lweapon gem2 notempty>
+Effekt 2: <lweapon gem2 amount 3> <lweapon gem2 effect>
+<endif>
+<if lweapon gem3 notempty>
+Effekt 3: <lweapon gem3 amount 3> <lweapon gem3 effect>
+<endif>
+<if lweapon gem4 notempty>
+Effekt 4: <lweapon gem4 amount 3> <lweapon gem4 effect>
+<endif>
+<if lweapon gem5 notempty>
+Effekt 5: <lweapon gem5 amount 3> <lweapon gem5 effect>
+<endif>
+<if lweapon gem6 notempty>
+Effekt 6: <lweapon gem6 amount 3> <lweapon gem6 effect>
+<endif>
+<if lweapon gem7 notempty>
+Effekt 7: <lweapon gem7 amount 3> <lweapon gem7 effect>
+<endif>
+<if lweapon gem8 notempty>
+Effekt 8: <lweapon gem8 amount 3> <lweapon gem8 effect>
+<endif>
+<if lweapon gem9 notempty>
+Effekt 9: <lweapon gem9 amount 3> <lweapon gem9 effect>
+<endif>
+<if lweapon gem10 notempty>
+Effekt10: <lweapon gem10 amount 3> <lweapon gem10 effect>
+<endif>
+Utility: <lweapon utility>
+
+<endif>
+<endif>
+<if 2handed notempty>
+Twohand:
+<if 2handed pcmade>
+Imbue Points: <2handed usedpoints> of <2handed availablepoints> (<2handed quality> Qual) Overcharge: <2handed overcharge>
+Jewel 1: <2handed gem1 amount 2> <2handed gem1 effect> - <2handed gem1 quality> <2handed gem1 name>
+Jewel 2: <2handed gem2 amount 2> <2handed gem2 effect> - <2handed gem2 quality> <2handed gem2 name>
+Jewel 3: <2handed gem3 amount 2> <2handed gem3 effect> - <2handed gem3 quality> <2handed gem3 name>
+Jewel 4: <2handed gem4 amount 2> <2handed gem4 effect> - <2handed gem4 quality> <2handed gem4 name>
+Bonus 5: <2handed gem5 amount 2> <2handed gem5 effect>
+Utility: <2handed utility>
+
+<else>
+Name: <2handed name>
+Level: <2handed level 2>  Quality: <2handed quality>
+DPS:  <2handed af 3>  Bonus: <2handed bonus>
+Origin: <2handed fundort>
+Effekt 1: <2handed gem1 amount 3> <2handed gem1 effect>
+<if 2handed gem2 notempty>
+Effekt 2: <2handed gem2 amount 3> <2handed gem2 effect>
+<endif>
+<if 2handed gem3 notempty>
+Effekt 3: <2handed gem3 amount 3> <2handed gem3 effect>
+<endif>
+<if 2handed gem4 notempty>
+Effekt 4: <2handed gem4 amount 3> <2handed gem4 effect>
+<endif>
+<if 2handed gem5 notempty>
+Effekt 5: <2handed gem5 amount 3> <2handed gem5 effect>
+<endif>
+<if 2handed gem6 notempty>
+Effekt 6: <2handed gem6 amount 3> <2handed gem6 effect>
+<endif>
+<if 2handed gem7 notempty>
+Effekt 7: <2handed gem7 amount 3> <2handed gem7 effect>
+<endif>
+<if 2handed gem8 notempty>
+Effekt 8: <2handed gem8 amount 3> <2handed gem8 effect>
+<endif>
+<if 2handed gem9 notempty>
+Effekt 9: <2handed gem9 amount 3> <2handed gem9 effect>
+<endif>
+<if 2handed gem10 notempty>
+Effekt10: <2handed gem10 amount 3> <2handed gem10 effect>
+<endif>
+Utility: <2handed utility>
+
+<endif>
+<endif>
+<if ranged notempty>
+Ranged:
+<if ranged pcmade>
+Imbue Points: <ranged usedpoints> of <ranged availablepoints> (<ranged quality> Qual) Overcharge: <ranged overcharge>
+Jewel 1: <ranged gem1 amount 2> <ranged gem1 effect> - <ranged gem1 quality> <ranged gem1 name>
+Jewel 2: <ranged gem2 amount 2> <ranged gem2 effect> - <ranged gem2 quality> <ranged gem2 name>
+Jewel 3: <ranged gem3 amount 2> <ranged gem3 effect> - <ranged gem3 quality> <ranged gem3 name>
+Jewel 4: <ranged gem4 amount 2> <ranged gem4 effect> - <ranged gem4 quality> <ranged gem4 name>
+Bonus 5: <ranged gem5 amount 2> <ranged gem5 effect>
+Utility: <ranged utility>
+
+<else>
+Name: <ranged name>
+Level: <ranged level 2>  Quality: <ranged quality>
+DPS:  <ranged af 3>  Bonus: <ranged bonus>
+Origin: <ranged fundort>
+Effekt 1: <ranged gem1 amount 3> <ranged gem1 effect>
+<if ranged gem2 notempty>
+Effekt 2: <ranged gem2 amount 3> <ranged gem2 effect>
+<endif>
+<if ranged gem3 notempty>
+Effekt 3: <ranged gem3 amount 3> <ranged gem3 effect>
+<endif>
+<if ranged gem4 notempty>
+Effekt 4: <ranged gem4 amount 3> <ranged gem4 effect>
+<endif>
+<if ranged gem5 notempty>
+Effekt 5: <ranged gem5 amount 3> <ranged gem5 effect>
+<endif>
+<if ranged gem6 notempty>
+Effekt 6: <ranged gem6 amount 3> <ranged gem6 effect>
+<endif>
+<if ranged gem7 notempty>
+Effekt 7: <ranged gem7 amount 3> <ranged gem7 effect>
+<endif>
+<if ranged gem8 notempty>
+Effekt 8: <ranged gem8 amount 3> <ranged gem8 effect>
+<endif>
+<if ranged gem9 notempty>
+Effekt 9: <ranged gem9 amount 3> <ranged gem9 effect>
+<endif>
+<if ranged gem10 notempty>
+Effekt10: <ranged gem10 amount 3> <ranged gem10 effect>
+<endif>
+Utility: <ranged utility>
+
+<endif>
+<endif>
+<if neck notempty>
+Neck:
+Name: <neck name>
+Level: <neck level 2>  Quality: <neck quality>
+Bonus: <neck bonus 2>
+Origin: <neck fundort>
+Effekt 1: <neck gem1 amount 3> <neck gem1 effect>
+<if neck gem2 notempty>
+Effekt 2: <neck gem2 amount 3> <neck gem2 effect>
+<endif>
+<if neck gem3 notempty>
+Effekt 3: <neck gem3 amount 3> <neck gem3 effect>
+<endif>
+<if neck gem4 notempty>
+Effekt 4: <neck gem4 amount 3> <neck gem4 effect>
+<endif>
+<if neck gem5 notempty>
+Effekt 5: <neck gem5 amount 3> <neck gem5 effect>
+<endif>
+<if neck gem6 notempty>
+Effekt 6: <neck gem6 amount 3> <neck gem6 effect>
+<endif>
+<if neck gem7 notempty>
+Effekt 7: <neck gem7 amount 3> <neck gem7 effect>
+<endif>
+<if neck gem8 notempty>
+Effekt 8: <neck gem8 amount 3> <neck gem8 effect>
+<endif>
+<if neck gem9 notempty>
+Effekt 9: <neck gem9 amount 3> <neck gem9 effect>
+<endif>
+<if neck gem10 notempty>
+Effekt10: <neck gem10 amount 3> <neck gem10 effect>
+<endif>
+Utility: <neck utility>
+
+<endif>
+<if cloak notempty>
+Cloak:
+Name: <cloak name>
+Level: <cloak level 2>  Quality: <cloak quality>
+Bonus: <cloak bonus 2>
+Origin: <cloak fundort>
+Effekt 1: <cloak gem1 amount 3> <cloak gem1 effect>
+<if cloak gem2 notempty>
+Effekt 2: <cloak gem2 amount 3> <cloak gem2 effect>
+<endif>
+<if cloak gem3 notempty>
+Effekt 3: <cloak gem3 amount 3> <cloak gem3 effect>
+<endif>
+<if cloak gem4 notempty>
+Effekt 4: <cloak gem4 amount 3> <cloak gem4 effect>
+<endif>
+<if cloak gem5 notempty>
+Effekt 5: <cloak gem5 amount 3> <cloak gem5 effect>
+<endif>
+<if cloak gem6 notempty>
+Effekt 6: <cloak gem6 amount 3> <cloak gem6 effect>
+<endif>
+<if cloak gem7 notempty>
+Effekt 7: <cloak gem7 amount 3> <cloak gem7 effect>
+<endif>
+<if cloak gem8 notempty>
+Effekt 8: <cloak gem8 amount 3> <cloak gem8 effect>
+<endif>
+<if cloak gem9 notempty>
+Effekt 9: <cloak gem9 amount 3> <cloak gem9 effect>
+<endif>
+<if cloak gem10 notempty>
+Effekt10: <cloak gem10 amount 3> <cloak gem10 effect>
+<endif>
+Utility: <cloak utility>
+
+<endif>
+<if jewel notempty>
+Jewel:
+Name: <jewel name>
+Level: <jewel level 2>  Quality: <jewel quality>
+Bonus: <jewel bonus 2>
+Origin: <jewel fundort>
+Effekt 1: <jewel gem1 amount 3> <jewel gem1 effect>
+<if jewel gem2 notempty>
+Effekt 2: <jewel gem2 amount 3> <jewel gem2 effect>
+<endif>
+<if jewel gem3 notempty>
+Effekt 3: <jewel gem3 amount 3> <jewel gem3 effect>
+<endif>
+<if jewel gem4 notempty>
+Effekt 4: <jewel gem4 amount 3> <jewel gem4 effect>
+<endif>
+<if jewel gem5 notempty>
+Effekt 5: <jewel gem5 amount 3> <jewel gem5 effect>
+<endif>
+<if jewel gem6 notempty>
+Effekt 6: <jewel gem6 amount 3> <jewel gem6 effect>
+<endif>
+<if jewel gem7 notempty>
+Effekt 7: <jewel gem7 amount 3> <jewel gem7 effect>
+<endif>
+<if jewel gem8 notempty>
+Effekt 8: <jewel gem8 amount 3> <jewel gem8 effect>
+<endif>
+<if jewel gem9 notempty>
+Effekt 9: <jewel gem9 amount 3> <jewel gem9 effect>
+<endif>
+<if jewel gem10 notempty>
+Effekt10: <jewel gem10 amount 3> <jewel gem10 effect>
+<endif>
+Utility: <jewel utility>
+
+<endif>
+<if belt notempty>
+Belt:
+Name: <belt name>
+Level: <belt level 2>  Quality: <belt quality>
+Bonus: <belt bonus 2>
+Origin: <belt fundort>
+Effekt 1: <belt gem1 amount 3> <belt gem1 effect>
+<if belt gem2 notempty>
+Effekt 2: <belt gem2 amount 3> <belt gem2 effect>
+<endif>
+<if belt gem3 notempty>
+Effekt 3: <belt gem3 amount 3> <belt gem3 effect>
+<endif>
+<if belt gem4 notempty>
+Effekt 4: <belt gem4 amount 3> <belt gem4 effect>
+<endif>
+<if belt gem5 notempty>
+Effekt 5: <belt gem5 amount 3> <belt gem5 effect>
+<endif>
+<if belt gem6 notempty>
+Effekt 6: <belt gem6 amount 3> <belt gem6 effect>
+<endif>
+<if belt gem7 notempty>
+Effekt 7: <belt gem7 amount 3> <belt gem7 effect>
+<endif>
+<if belt gem8 notempty>
+Effekt 8: <belt gem8 amount 3> <belt gem8 effect>
+<endif>
+<if belt gem9 notempty>
+Effekt 9: <belt gem9 amount 3> <belt gem9 effect>
+<endif>
+<if belt gem10 notempty>
+Effekt10: <belt gem10 amount 3> <belt gem10 effect>
+<endif>
+Utility: <belt utility>
+
+<endif>
+<if rring notempty>
+Right Ring:
+Name: <rring name>
+Level: <rring level 2>  Quality: <rring quality>
+Bonus: <rring bonus 2>
+Origin: <rring fundort>
+Effekt 1: <rring gem1 amount 3> <rring gem1 effect>
+<if rring gem2 notempty>
+Effekt 2: <rring gem2 amount 3> <rring gem2 effect>
+<endif>
+<if rring gem3 notempty>
+Effekt 3: <rring gem3 amount 3> <rring gem3 effect>
+<endif>
+<if rring gem4 notempty>
+Effekt 4: <rring gem4 amount 3> <rring gem4 effect>
+<endif>
+<if rring gem5 notempty>
+Effekt 5: <rring gem5 amount 3> <rring gem5 effect>
+<endif>
+<if rring gem6 notempty>
+Effekt 6: <rring gem6 amount 3> <rring gem6 effect>
+<endif>
+<if rring gem7 notempty>
+Effekt 7: <rring gem7 amount 3> <rring gem7 effect>
+<endif>
+<if rring gem8 notempty>
+Effekt 8: <rring gem8 amount 3> <rring gem8 effect>
+<endif>
+<if rring gem9 notempty>
+Effekt 9: <rring gem9 amount 3> <rring gem9 effect>
+<endif>
+<if rring gem10 notempty>
+Effekt10: <rring gem10 amount 3> <rring gem10 effect>
+<endif>
+Utility: <rring utility>
+
+<endif>
+<if lring notempty>
+Left Ring:
+Name: <lring name>
+Level: <lring level 2>  Quality: <lring quality>
+Bonus: <lring bonus 2>
+Origin: <lring fundort>
+Effekt 1: <lring gem1 amount 3> <lring gem1 effect>
+<if lring gem2 notempty>
+Effekt 2: <lring gem2 amount 3> <lring gem2 effect>
+<endif>
+<if lring gem3 notempty>
+Effekt 3: <lring gem3 amount 3> <lring gem3 effect>
+<endif>
+<if lring gem4 notempty>
+Effekt 4: <lring gem4 amount 3> <lring gem4 effect>
+<endif>
+<if lring gem5 notempty>
+Effekt 5: <lring gem5 amount 3> <lring gem5 effect>
+<endif>
+<if lring gem6 notempty>
+Effekt 6: <lring gem6 amount 3> <lring gem6 effect>
+<endif>
+<if lring gem7 notempty>
+Effekt 7: <lring gem7 amount 3> <lring gem7 effect>
+<endif>
+<if lring gem8 notempty>
+Effekt 8: <lring gem8 amount 3> <lring gem8 effect>
+<endif>
+<if lring gem9 notempty>
+Effekt 9: <lring gem9 amount 3> <lring gem9 effect>
+<endif>
+<if lring gem10 notempty>
+Effekt10: <lring gem10 amount 3> <lring gem10 effect>
+<endif>
+Utility: <lring utility>
+
+<endif>
+<if rwrist notempty>
+Right Wrist:
+Name: <rwrist name>
+Level: <rwrist level 2>  Quality: <rwrist quality>
+Bonus: <rwrist bonus 2>
+Origin: <rwrist fundort>
+Effekt 1: <rwrist gem1 amount 3> <rwrist gem1 effect>
+<if rwrist gem2 notempty>
+Effekt 2: <rwrist gem2 amount 3> <rwrist gem2 effect>
+<endif>
+<if rwrist gem3 notempty>
+Effekt 3: <rwrist gem3 amount 3> <rwrist gem3 effect>
+<endif>
+<if rwrist gem4 notempty>
+Effekt 4: <rwrist gem4 amount 3> <rwrist gem4 effect>
+<endif>
+<if rwrist gem5 notempty>
+Effekt 5: <rwrist gem5 amount 3> <rwrist gem5 effect>
+<endif>
+<if rwrist gem6 notempty>
+Effekt 6: <rwrist gem6 amount 3> <rwrist gem6 effect>
+<endif>
+<if rwrist gem7 notempty>
+Effekt 7: <rwrist gem7 amount 3> <rwrist gem7 effect>
+<endif>
+<if rwrist gem8 notempty>
+Effekt 8: <rwrist gem8 amount 3> <rwrist gem8 effect>
+<endif>
+<if rwrist gem9 notempty>
+Effekt 9: <rwrist gem9 amount 3> <rwrist gem9 effect>
+<endif>
+<if rwrist gem10 notempty>
+Effekt10: <rwrist gem10 amount 3> <rwrist gem10 effect>
+<endif>
+Utility: <rwrist utility>
+
+<endif>
+<if lwrist notempty>
+Left Wrist:
+Name: <lwrist name>
+Level: <lwrist level 2>  Quality: <lwrist quality>
+Bonus: <lwrist bonus 2>
+Origin: <lwrist fundort>
+Effekt 1: <lwrist gem1 amount 3> <lwrist gem1 effect>
+<if lwrist gem2 notempty>
+Effekt 2: <lwrist gem2 amount 3> <lwrist gem2 effect>
+<endif>
+<if lwrist gem3 notempty>
+Effekt 3: <lwrist gem3 amount 3> <lwrist gem3 effect>
+<endif>
+<if lwrist gem4 notempty>
+Effekt 4: <lwrist gem4 amount 3> <lwrist gem4 effect>
+<endif>
+<if lwrist gem5 notempty>
+Effekt 5: <lwrist gem5 amount 3> <lwrist gem5 effect>
+<endif>
+<if lwrist gem6 notempty>
+Effekt 6: <lwrist gem6 amount 3> <lwrist gem6 effect>
+<endif>
+<if lwrist gem7 notempty>
+Effekt 7: <lwrist gem7 amount 3> <lwrist gem7 effect>
+<endif>
+<if lwrist gem8 notempty>
+Effekt 8: <lwrist gem8 amount 3> <lwrist gem8 effect>
+<endif>
+<if lwrist gem9 notempty>
+Effekt 9: <lwrist gem9 amount 3> <lwrist gem9 effect>
+<endif>
+<if lwrist gem10 notempty>
+Effekt10: <lwrist gem10 amount 3> <lwrist gem10 effect>
+<endif>
+Utility: <lwrist utility>
+
+<endif>
