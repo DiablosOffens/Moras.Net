@@ -1119,7 +1119,7 @@ namespace dxgettext
               // todo: Check whether this should be
               //   if sl is TStringList then
               // instead.
-              if (sl.GetType() != typeof(TStringList)
+              if (sl.GetType() != typeof(TStringList))
                 for (int I = 0;I< sl.Count;I++)
                   sl.Objects[I] = null;
 
