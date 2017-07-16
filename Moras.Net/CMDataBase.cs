@@ -29,6 +29,7 @@ using System.Data.SQLite;
 using DelphiClasses;
 using System.Windows.Forms;
 using System.IO;
+using System.Deployment.Application;
 using dxgettext;
 
 namespace Moras.Net
@@ -47,7 +48,11 @@ namespace Moras.Net
 
         public CMDataBase()	// Konstruktor
         {	// Dateinamen sind schonmal voreingestellt
-            string sPath = Utils.IncludeTrailingPathDelimiter(Path.GetDirectoryName(Application.ExecutablePath));
+            string sPath;
+            if (ApplicationDeployment.IsNetworkDeployed)
+                sPath = Utils.IncludeTrailingPathDelimiter(ApplicationDeployment.CurrentDeployment.DataDirectory);
+            else
+                sPath = Utils.IncludeTrailingPathDelimiter(Path.GetDirectoryName(Application.ExecutablePath));
             sFileNameDrops = sPath + "Items.xml";
             sFileNameOthers = sPath + "Items.xml";
             nItems = 0;

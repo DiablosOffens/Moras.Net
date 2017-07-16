@@ -27,11 +27,12 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using System.Deployment.Application;
+using System.Diagnostics;
+using System.IO;
 using DelphiClasses;
 using dxgettext;
-using System.Diagnostics;
 using Moras.Net.Components;
-using System.IO;
 using Microsoft.VisualBasic.PowerPacks;
 
 namespace Moras.Net
@@ -377,7 +378,12 @@ namespace Moras.Net
                 Unit.xml_config.arMenuItems.Array[idx].bPricing = true;
                 Unit.xml_config.arMenuItems.Array[idx].Name = Unit.frmNewName.tbName.Text;
                 Unit.xml_config.arMenuItems.Array[idx].Group = CraftMenu.Name;
-                Unit.xml_config.arMenuItems.Array[idx].FileName = Utils.IncludeTrailingPathDelimiter(Path.GetDirectoryName(Application.ExecutablePath)) + "options\\sc_" + Unit.frmNewName.tbName.Text + ".xml";
+                string dataPath;
+                if (ApplicationDeployment.IsNetworkDeployed)
+                    dataPath = Utils.IncludeTrailingPathDelimiter(ApplicationDeployment.CurrentDeployment.DataDirectory);
+                else
+                    dataPath = Utils.IncludeTrailingPathDelimiter(Path.GetDirectoryName(Application.ExecutablePath));
+                Unit.xml_config.arMenuItems.Array[idx].FileName = dataPath + "options\\sc_" + Unit.frmNewName.tbName.Text + ".xml";
                 TMainMenu.TTBXItem NewItem = new TMainMenu.TTBXItem();
                 Debug.Assert(NewItem != null);
                 NewItem.Text = Unit.frmNewName.tbName.Text;

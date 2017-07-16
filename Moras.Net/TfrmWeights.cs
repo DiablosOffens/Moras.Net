@@ -467,9 +467,9 @@ namespace Moras.Net
         //---------------------------------------------------------------------------
         private void InitTemplates()
         {
-            if (Directory.Exists(Unit.frmMain.FilePath + "weights\\"))
+            if (Directory.Exists(Unit.frmMain.DataPath + "weights\\"))
             {
-                foreach (string wgtFile in Directory.EnumerateFiles(Unit.frmMain.FilePath + "weights\\", "*.wgt"))
+                foreach (string wgtFile in Directory.EnumerateFiles(Unit.frmMain.DataPath + "weights\\", "*.wgt"))
                 {
                     CPlayerWeights pWeight = new CPlayerWeights();
                     Debug.Assert(pWeight != null);
@@ -533,7 +533,7 @@ namespace Moras.Net
                 {
                     CPlayerWeights pWeight = new CPlayerWeights();
                     AssignToWeight(pWeight);
-                    wgtFile = Unit.frmMain.FilePath + "weights\\" + CbVorlage.Text + ".wgt";
+                    wgtFile = Unit.frmMain.DataPath + "weights\\" + CbVorlage.Text + ".wgt";
                     pWeight.FileName = wgtFile;
                     pWeight.Name = CbVorlage.Text;
                     pWeight.Save();

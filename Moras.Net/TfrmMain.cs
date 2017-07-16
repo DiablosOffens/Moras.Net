@@ -37,11 +37,12 @@ namespace Moras.Net
     using System.Drawing.Design;
     using System.Diagnostics;
     using System.Runtime.InteropServices;
-    using DelphiClasses;
-    using Moras.Net.Components;
     using System.Reflection;
     using System.Runtime.Serialization.Formatters.Binary;
     using System.Runtime.Serialization;
+    using System.Deployment.Application;
+    using DelphiClasses;
+    using Moras.Net.Components;
     using System.Data.SQLite;
     using dxgettext;
 
@@ -83,7 +84,8 @@ namespace Moras.Net
         public int iMajor;                                  // Versionsnummer
         public int iMinor;                                  // Versionsnummer Subversion
         public String Version;                              // Versionsnummer als String
-        public String FilePath;                             // Das ist das Programverzeichnis
+        public String AppPath;                             // Das ist das Programverzeichnis
+        public string DataPath;                             // Verzeichnis für veränderbare Daten
         public String CheckUpdateMD5;                       // MD5 prüfsumme der neuen version auf dem server
         public String CaptionBackup;                        // Speichern des Fenstertitels um Dateiname mit anzuzeigen
         public bool NewDatabase;                            // Flag ob die Datenbank neu angelegt wurde
@@ -152,7 +154,11 @@ namespace Moras.Net
             iLastPlayer = 0;
             toolTip1.AutoPopDelay = 40000;	// Zeige ein Hint-Popup für 30 Sekunden an
             toolTip1.ReshowDelay = 100;
-            FilePath = Utils.IncludeTrailingPathDelimiter(Path.GetDirectoryName(Application.ExecutablePath));
+            AppPath = Utils.IncludeTrailingPathDelimiter(Path.GetDirectoryName(Application.ExecutablePath));
+            if (ApplicationDeployment.IsNetworkDeployed)
+                DataPath = Utils.IncludeTrailingPathDelimiter(ApplicationDeployment.CurrentDeployment.DataDirectory);
+            else
+                DataPath = AppPath;
             // Bestimme die Programmversion
             {
                 FileVersionInfo info = FileVersionInfo.GetVersionInfo(Application.ExecutablePath);
@@ -312,9 +318,9 @@ namespace Moras.Net
                 Utils.DebugPrint("Configfiles\n----------------------------------------------------");
 
             TStringList cfgFiles = new TStringList();
-            if (Directory.Exists(FilePath + "configs\\"))
+            if (Directory.Exists(DataPath + "configs\\"))
             {
-                foreach (string cfgFile in Directory.EnumerateFiles(FilePath + "configs\\", "*.xml"))
+                foreach (string cfgFile in Directory.EnumerateFiles(DataPath + "configs\\", "*.xml"))
                 {
 
                     cfgFiles.Add(cfgFile);
@@ -340,9 +346,9 @@ namespace Moras.Net
             int FirstUserOption = 0;
             int UserOptions = 0;
 
-            if (Directory.Exists(FilePath + "options\\"))
+            if (Directory.Exists(DataPath + "options\\"))
             {
-                foreach (string optFile in Directory.EnumerateFiles(FilePath + "options\\", "*.xml"))
+                foreach (string optFile in Directory.EnumerateFiles(DataPath + "options\\", "*.xml"))
                 {
                     CXml tXml = new CXml();
 
@@ -403,10 +409,10 @@ namespace Moras.Net
                 Utils.DebugPrint("Update Itemdatenbank\n----------------------------------------------------");
             if (Unit.xml_config.bDebugStartup && Unit.xml_config.bDebugSQL)
             {
-                string tmpstr = "Wähle Database '" + FilePath + "items.db3'";
+                string tmpstr = "Wähle Database '" + DataPath + "items.db3'";
                 Utils.DebugPrint(tmpstr);
             }
-            ZConnection.SetDataSource(FilePath + "items.db3");
+            ZConnection.SetDataSource(DataPath + "items.db3");
             if (Unit.xml_config.bDebugStartup && Unit.xml_config.bDebugSQL)
                 Utils.DebugPrint("Öffne Database");
             ZConnection.Open();
@@ -459,9 +465,9 @@ namespace Moras.Net
                 Unit.frmSplash.SetCaption(_("Lade Charaktere..."));
                 if (Unit.xml_config.bDebugStartup)
                     Utils.DebugPrint("Lade Charaktere\n----------------------------------------------------");
-                if (Directory.Exists(FilePath + "chars\\"))
+                if (Directory.Exists(DataPath + "chars\\"))
                 {
-                    foreach (var charFile in Directory.EnumerateFiles(FilePath + "chars\\", "*.mox"))
+                    foreach (var charFile in Directory.EnumerateFiles(DataPath + "chars\\", "*.mox"))
                     {
                         try
                         {
@@ -1031,7 +1037,7 @@ namespace Moras.Net
             acFileSaveAs.Dialog.InitialDirectory = Utils.GetRegistryString("LastCharDir", "");
             if (acFileSaveAs.Dialog.InitialDirectory == "")
             {
-                acFileSaveAs.Dialog.InitialDirectory = FilePath + "Chars";
+                acFileSaveAs.Dialog.InitialDirectory = DataPath + "Chars";
             }
             if ((Unit.player.FileName == "") && (Unit.player.Name.IndexOf("<") == -1))
             {
@@ -1056,7 +1062,7 @@ namespace Moras.Net
             acFileOpen.Dialog.InitialDirectory = Utils.GetRegistryString("LastCharDir", "");
             if (acFileOpen.Dialog.InitialDirectory == "")
             {
-                acFileOpen.Dialog.InitialDirectory = FilePath + "Chars";
+                acFileOpen.Dialog.InitialDirectory = DataPath + "Chars";
             }
         }
         //---------------------------------------------------------------------------
@@ -2984,7 +2990,7 @@ namespace Moras.Net
             curlang = curlang.Substring(0, 2);
 
             TApplication.Instance.CreateForm(out Unit.frmInfo);
-            Unit.frmInfo.Memo.Lines = Extensions.LoadFromFile(FilePath + "history_" + curlang + ".txt");
+            Unit.frmInfo.Memo.Lines = Extensions.LoadFromFile(AppPath + "history_" + curlang + ".txt");
             Unit.frmInfo.Text = _("Was ist neu?");
             Unit.frmInfo.ShowDialog();
             Unit.frmInfo.Dispose();
@@ -3003,7 +3009,7 @@ namespace Moras.Net
             curlang = curlang.Substring(0, 2);
 
             TApplication.Instance.CreateForm(out Unit.frmInfo);
-            Unit.frmInfo.Memo.Lines = Extensions.LoadFromFile(FilePath + "knownproblems_" + curlang + ".txt");
+            Unit.frmInfo.Memo.Lines = Extensions.LoadFromFile(AppPath + "knownproblems_" + curlang + ".txt");
             Unit.frmInfo.Text = _("Bekannte Probleme");
             Unit.frmInfo.ShowDialog();
             Unit.frmInfo.Dispose();
@@ -3099,25 +3105,111 @@ namespace Moras.Net
         {
             string msg;
             string title;
-            TIniFile MorasIni = new TIniFile(FilePath + "moras.ini");
-            string RegMD5 = MorasIni.ReadString("Update", "VersionMD5", "");
-            MorasIni.Dispose();
-
-            if (RegMD5 != "")
+            if (ApplicationDeployment.IsNetworkDeployed)
             {
-                CheckUpdateMD5 = Mougdl.Unit.CheckForUpdates("http://moras.sourceforge.net/onlineupdates/equipmentplaner");
-                if (CheckUpdateMD5 != "" && CheckUpdateMD5 != RegMD5)
+                ApplicationDeployment ad = ApplicationDeployment.CurrentDeployment;
+                UpdateCheckInfo info = null;
+
+                try
                 {
-                    msg = _("Es gibt eine neue Version, möchtest du auf die Homepage um sie zu installieren?");
-                    title = _("Neue Version");
-                    if (MessageBox.Show(msg, title, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                        Extensions.ShellExecute(TApplication.Instance.Handle, "open", "http://moras.sourceforge.net", null, null, ProcessWindowStyle.Normal);
+                    info = ad.CheckForDetailedUpdate();
                 }
-                else if (sender != null)
+                catch (DeploymentDownloadException dde)
                 {
-                    msg = _("Im Moment gibt es keine neue Version.");
-                    title = _("Keine neue Version");
-                    MessageBox.Show(msg, title, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    msg = _("Im Moment kann keine neue Version heruntergeladen werden.") + Environment.NewLine +
+                        _("Bitte überprüfen Sie Ihre Netzwerkverbindung oder versuchen Sie es später noch einmal.") + Environment.NewLine +
+                        _("Fehler: ") + dde.Message;
+                    title = _("Fehler");
+                    MessageBox.Show(msg, title, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                catch (InvalidDeploymentException ide)
+                {
+                    msg = _("Auf eine neue Version kann nicht geprüft werden. Das ClickOnce-Deployment ist beschädigt.") + Environment.NewLine +
+                        _("Bitte führen Sie ein neues Deployment durch und versuchen es noch einmal.") + Environment.NewLine +
+                        _("Fehler: ") + ide.Message;
+                    title = _("Fehler");
+                    MessageBox.Show(msg, title, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                catch (InvalidOperationException ioe)
+                {
+                    msg = _("This application cannot be updated.") + Environment.NewLine +
+                       _("It is likely not a ClickOnce application.") + Environment.NewLine +
+                       _("Fehler: ") + ioe.Message;
+                    title = _("Fehler");
+                    MessageBox.Show(msg, title, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                if (info.UpdateAvailable)
+                {
+                    Boolean doUpdate = true;
+
+                    if (!info.IsUpdateRequired)
+                    {
+                        msg = _("Es gibt eine neue Version. Möchten Sie jetzt das Update durchführen?");
+                        title = _("Neue Version");
+                        if (DialogResult.Yes != MessageBox.Show(msg, title, MessageBoxButtons.YesNo, MessageBoxIcon.Question))
+                        {
+                            doUpdate = false;
+                        }
+                    }
+                    else
+                    {
+                        // Display a message that the app MUST reboot. Display the minimum required version.
+                        msg = string.Format(_("Das Update zu Version {0} wurde als erforderlich eingestuft. " +
+                            "Das Update wird jetzt installiert und das Programm danach neugestartet."), info.MinimumRequiredVersion);
+                        title = _("Neue Version");
+                        MessageBox.Show(msg, title, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+
+                    if (doUpdate)
+                    {
+                        try
+                        {
+                            SQLiteUtils.SQLiteDBClose();
+                            ad.Update();
+                            //TODO: Verschiebe items.db in neues Verzeichnis!
+                            msg = _("Das Update war erfolgreich und das Programm wird jetzt neugestartet.");
+                            title = _("Update erfolgreich");
+                            MessageBox.Show(msg, title, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            Application.Restart();
+                        }
+                        catch (DeploymentDownloadException dde)
+                        {
+                            msg = _("Die aktuellste Version kann nicht installiert werden.") + Environment.NewLine +
+                                _("Bitte überprüfen Sie Ihre Netzwerkverbindung oder versuchen Sie es später noch einmal.") + Environment.NewLine +
+                                _("Fehler: ") + dde.Message;
+                            title = _("Fehler");
+                            MessageBox.Show(msg, title, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            return;
+                        }
+                    }
+                }
+            }
+            else
+            {
+                TIniFile MorasIni = new TIniFile(AppPath + "moras.ini");
+                string RegMD5 = MorasIni.ReadString("Update", "VersionMD5", "");
+                MorasIni.Dispose();
+
+                if (RegMD5 != "")
+                {
+                    CheckUpdateMD5 = Mougdl.Unit.CheckForUpdates("http://moras.sourceforge.net/onlineupdates/equipmentplaner");
+                    if (CheckUpdateMD5 != "" && CheckUpdateMD5 != RegMD5)
+                    {
+                        msg = _("Es gibt eine neue Version, möchtest du auf die Homepage um sie zu installieren?");
+                        title = _("Neue Version");
+                        if (MessageBox.Show(msg, title, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                            Extensions.ShellExecute(TApplication.Instance.Handle, "open", "http://moras.sourceforge.net", null, null, ProcessWindowStyle.Normal);
+                    }
+                    else if (sender != null)
+                    {
+                        msg = _("Im Moment gibt es keine neue Version.");
+                        title = _("Keine neue Version");
+                        MessageBox.Show(msg, title, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
                 }
             }
         }
@@ -3177,7 +3269,7 @@ namespace Moras.Net
         {
             if (NewDatabase)
             {
-                string itemsfile = FilePath + "items.xml";
+                string itemsfile = DataPath + "items.xml";
                 NewDatabase = false;
                 if (File.Exists(itemsfile))
                 {

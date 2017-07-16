@@ -11,6 +11,7 @@ using dxgettext;
 using System.IO;
 using System.Xml;
 using System.Diagnostics;
+using System.Deployment.Application;
 using Moras.Net.IndyCustom;
 using TBufferedFS = Moras.Net.Compression.UBufferedFS.TBufferedFS;
 using TLZMAProgressAction = Moras.Net.Compression.LZMA.ULZMACommon.TLZMAProgressAction;
@@ -32,6 +33,7 @@ namespace Moras.Net.Mougdl
         private int curFileIndex;
         private MemoryStream DataStream;
         private string appFile;
+        private string appFolder;
         private string baseFolder;
         private int step;
         private XmlNode nodeFiles;
@@ -199,7 +201,11 @@ namespace Moras.Net.Mougdl
         {
             TGnuGettextInstance.TranslateComponent(this);
             appFile = Path.GetFileName(Application.ExecutablePath);
-            baseFolder = Utils.IncludeTrailingPathDelimiter(Application.StartupPath);
+            appFolder = Utils.IncludeTrailingPathDelimiter(Path.GetDirectoryName(Application.ExecutablePath));
+            if (ApplicationDeployment.IsNetworkDeployed)
+                baseFolder = Utils.IncludeTrailingPathDelimiter(ApplicationDeployment.CurrentDeployment.DataDirectory);
+            else
+                baseFolder = Utils.IncludeTrailingPathDelimiter(Application.StartupPath);
             LogFile = new TStringList();
             Log("Update Log " + DateTime.Now.ToString());
             DataStream = new MemoryStream();
@@ -235,22 +241,26 @@ namespace Moras.Net.Mougdl
         {
             lbStatus.Text = _("Update:");
             Application.DoEvents();
-            if ((baseFolder + AFolder + Path.DirectorySeparatorChar + AFile) == Application.ExecutablePath)
+            bool useAppFolder = false;
+            if ((appFolder + AFolder + Path.DirectorySeparatorChar + AFile) == Application.ExecutablePath)
             {
                 selfUpdate = true;
+                useAppFolder = true;
                 File.Delete(Path.ChangeExtension(Application.ExecutablePath, ".old"));
                 File.Move(Application.ExecutablePath, Path.ChangeExtension(Application.ExecutablePath, ".old"));
             }
             else if (AFile.ToLower() == "mms.xml")
             {
                 selfUpdate = true;
+                useAppFolder = true;
             }
             else if (AFile.ToLower() == "changelog.txt")
             {
                 newsUpdated = true;
+                useAppFolder = true;
             }
             Log("Download: " + (AFolder + Path.DirectorySeparatorChar + AFile));
-            ExtractFile(baseFolder + "moug.tmp.7z", baseFolder + AFolder + Path.DirectorySeparatorChar + AFile);
+            ExtractFile(baseFolder + "moug.tmp.7z", (useAppFolder ? appFolder : baseFolder + AFolder + Path.DirectorySeparatorChar) + AFile);
         }
 
         private void bnCancelClick(object sender, EventArgs e)

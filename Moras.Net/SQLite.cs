@@ -534,6 +534,13 @@ namespace Moras.Net
             return result;
         }
 
+        internal static void SQLiteDBClose()
+        {
+            Unit.frmMain.ZQuery.Close();
+            Unit.frmMain.ZQuery.Connection = null; // reset would leave prepared statements intact, so we need to dispose or clear the connection
+            Unit.frmMain.ZConnection.Close();
+        }
+
         internal static int SQLiteDBVersion()
         {
             int result = 0;
@@ -733,10 +740,8 @@ CREATE TABLE [morasversion] (
                     Unit.frmMain.ZConnection.AddTypeMapping((string)mapping[0], (DbType)mapping[1], (bool)mapping[2]);
                 }
             }
-            Unit.frmMain.ZQuery.Close();
-            Unit.frmMain.ZQuery.Connection = null; // reset would leave prepared statements intact, so we need to dispose or clear the connection
             string dbpath = Unit.frmMain.ZConnection.FileName;
-            Unit.frmMain.ZConnection.Close();
+            SQLiteDBClose();
 
             string dbpathcopy = Path.ChangeExtension(dbpath, "db3.bak");
             bool createcopy = true;

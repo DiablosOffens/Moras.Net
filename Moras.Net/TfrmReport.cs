@@ -56,10 +56,10 @@ namespace Moras.Net
 
             switch (idx)
             {
-                case 0: DoReport(Unit.frmMain.FilePath + "reports\\Configreport_" + curlang + ".rpt"); break;
-                case 1: DoReport(Unit.frmMain.FilePath + "reports\\Shortreport_" + curlang + ".rpt"); break;
-                case 2: DoReport(Unit.frmMain.FilePath + "reports\\Crafterreport_" + curlang + ".rpt"); break;
-                case 3: DoReport(Unit.frmMain.FilePath + "reports\\Materiallist_" + curlang + ".rpt"); break;
+                case 0: DoReport(Unit.frmMain.DataPath + "reports\\Configreport_" + curlang + ".rpt"); break;
+                case 1: DoReport(Unit.frmMain.DataPath + "reports\\Shortreport_" + curlang + ".rpt"); break;
+                case 2: DoReport(Unit.frmMain.DataPath + "reports\\Crafterreport_" + curlang + ".rpt"); break;
+                case 3: DoReport(Unit.frmMain.DataPath + "reports\\Materiallist_" + curlang + ".rpt"); break;
             }
             NativeMethods.SendMessage(new HandleRef(tbReport, tbReport.Handle), NativeMethods.EM_LINESCROLL, 0, 0xFFFF8000);
             tbReport.Invalidate();
