@@ -163,7 +163,10 @@ namespace Moras.Net
         {
 #if MAIN_PROJEKT
             if (ApplicationDeployment.IsNetworkDeployed)
-                return AppDomain.CurrentDomain.SetupInformation.ActivationArguments.ActivationData.Length;
+            {
+                string[] args = AppDomain.CurrentDomain.SetupInformation.ActivationArguments.ActivationData;
+                return args != null ? args.Length : 0;
+            }
 #endif
             return Environment.GetCommandLineArgs().Length - 1;
         }
@@ -174,7 +177,12 @@ namespace Moras.Net
                 throw new ArgumentOutOfRangeException("index");
 #if MAIN_PROJEKT
             if (ApplicationDeployment.IsNetworkDeployed && index != 0)
-                return AppDomain.CurrentDomain.SetupInformation.ActivationArguments.ActivationData[index - 1];
+            {
+                string[] args = AppDomain.CurrentDomain.SetupInformation.ActivationArguments.ActivationData;
+                if (args == null)
+                    throw new ArgumentOutOfRangeException("index");
+                return args[index - 1];
+            }
 #endif
             return Environment.GetCommandLineArgs()[index];
         }
