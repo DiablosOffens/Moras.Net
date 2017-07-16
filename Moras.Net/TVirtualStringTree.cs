@@ -355,6 +355,7 @@ namespace Moras.Net
         static readonly FieldInfo fiColumnHeaderCollection = typeof(ListView).GetField("columnHeaderCollection", BindingFlags.NonPublic | BindingFlags.Instance);
         private OLVColumn autoSizeColumn;
         private string defaultCellText = "Node";
+        private bool showAutomaticTreeRenderer;
 
         public TVirtualStringTree()
         {
@@ -447,6 +448,15 @@ namespace Moras.Net
         {
             get { return base.VirtualListSize; }
             set { SetVirtualListSize(value); }
+        }
+
+        [Category("Appearance")]
+        [Description("Decides wether current TreeRenderer is automaticaly shown on first column")]
+        [DefaultValue(false)]
+        public bool ShowAutomaticTreeRenderer
+        {
+            get { return showAutomaticTreeRenderer; }
+            set { showAutomaticTreeRenderer = value; }
         }
 
         [Browsable(true)]
@@ -554,6 +564,12 @@ namespace Moras.Net
         {
             if (TreeFactory == null) TreeFactory = view => new VirtualTree(view);
             base.RegenerateTree();
+        }
+
+        protected override void EnsureTreeRendererPresent(TreeListView.TreeRenderer renderer)
+        {
+            if (showAutomaticTreeRenderer)
+                base.EnsureTreeRendererPresent(renderer);
         }
 
         protected override void ShowSortIndicator(OLVColumn columnToSort, SortOrder sortOrder)
