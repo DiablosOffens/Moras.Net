@@ -1,0 +1,131 @@
+Moras Ausrüstungsplaner
+http://moras.sourceforge.net
+
+Händler Report
+Diese Liste einfach dem Bannzauberer deiner Wahl übergeben.
+Spieler: <name>
+Stufe: <level>
+
+<if chest notempty>
+<if chest pcmade>
+Körper:
+Imbue Punkte: <chest usedpoints> von <chest availablepoints> (<chest quality> Qual) Überladen: <chest overcharge>
+Juwel 1: <chest gem1 amount 2> <chest gem1 effect> - <chest gem1 quality> <chest gem1 name> (<chest gem1 price>)
+Juwel 2: <chest gem2 amount 2> <chest gem2 effect> - <chest gem2 quality> <chest gem2 name> (<chest gem2 price>)
+Juwel 3: <chest gem3 amount 2> <chest gem3 effect> - <chest gem3 quality> <chest gem3 name> (<chest gem3 price>)
+Juwel 4: <chest gem4 amount 2> <chest gem4 effect> - <chest gem4 quality> <chest gem4 name> (<chest gem4 price>)
+
+<endif>
+<endif>
+<if arms notempty>
+<if arms pcmade>
+Arme:
+Imbue Punkte: <arms usedpoints> von <arms availablepoints> (<arms quality> Qual) Überladen: <arms overcharge>
+Juwel 1: <arms gem1 amount 2> <arms gem1 effect> - <arms gem1 quality> <arms gem1 name> (<arms gem1 price>)
+Juwel 2: <arms gem2 amount 2> <arms gem2 effect> - <arms gem2 quality> <arms gem2 name> (<arms gem2 price>)
+Juwel 3: <arms gem3 amount 2> <arms gem3 effect> - <arms gem3 quality> <arms gem3 name> (<arms gem3 price>)
+Juwel 4: <arms gem4 amount 2> <arms gem4 effect> - <arms gem4 quality> <arms gem4 name> (<arms gem4 price>)
+
+<endif>
+<endif>
+<if head notempty>
+<if head pcmade>
+Kopf:
+Imbue Punkte: <head usedpoints> von <head availablepoints> (<head quality> Qual) Überladen: <head overcharge>
+Juwel 1: <head gem1 amount 2> <head gem1 effect> - <head gem1 quality> <head gem1 name> (<head gem1 price>)
+Juwel 2: <head gem2 amount 2> <head gem2 effect> - <head gem2 quality> <head gem2 name> (<head gem2 price>)
+Juwel 3: <head gem3 amount 2> <head gem3 effect> - <head gem3 quality> <head gem3 name> (<head gem3 price>)
+Juwel 4: <head gem4 amount 2> <head gem4 effect> - <head gem4 quality> <head gem4 name> (<head gem4 price>)
+
+<endif>
+<endif>
+<if legs notempty>
+<if legs pcmade>
+Beine:
+Imbue Punkte: <legs usedpoints> von <legs availablepoints> (<legs quality> Qual) Überladen: <legs overcharge>
+Juwel 1: <legs gem1 amount 2> <legs gem1 effect> - <legs gem1 quality> <legs gem1 name> (<legs gem1 price>)
+Juwel 2: <legs gem2 amount 2> <legs gem2 effect> - <legs gem2 quality> <legs gem2 name> (<legs gem2 price>)
+Juwel 3: <legs gem3 amount 2> <legs gem3 effect> - <legs gem3 quality> <legs gem3 name> (<legs gem3 price>)
+Juwel 4: <legs gem4 amount 2> <legs gem4 effect> - <legs gem4 quality> <legs gem4 name> (<legs gem4 price>)
+
+<endif>
+<endif>
+<if hands notempty>
+<if hands pcmade>
+Hände:
+Imbue Punkte: <hands usedpoints> von <hands availablepoints> (<hands quality> Qual) Überladen: <hands overcharge>
+Juwel 1: <hands gem1 amount 2> <hands gem1 effect> - <hands gem1 quality> <hands gem1 name> (<hands gem1 price>)
+Juwel 2: <hands gem2 amount 2> <hands gem2 effect> - <hands gem2 quality> <hands gem2 name> (<hands gem2 price>)
+Juwel 3: <hands gem3 amount 2> <hands gem3 effect> - <hands gem3 quality> <hands gem3 name> (<hands gem3 price>)
+Juwel 4: <hands gem4 amount 2> <hands gem4 effect> - <hands gem4 quality> <hands gem4 name> (<hands gem4 price>)
+
+<endif>
+<endif>
+<if feet notempty>
+<if feet pcmade>
+Füsse:
+Imbue Punkte: <feet usedpoints> von <feet availablepoints> (<feet quality> Qual) Überladen: <feet overcharge>
+Juwel 1: <feet gem1 amount 2> <feet gem1 effect> - <feet gem1 quality> <feet gem1 name> (<feet gem1 price>)
+Juwel 2: <feet gem2 amount 2> <feet gem2 effect> - <feet gem2 quality> <feet gem2 name> (<feet gem2 price>)
+Juwel 3: <feet gem3 amount 2> <feet gem3 effect> - <feet gem3 quality> <feet gem3 name> (<feet gem3 price>)
+Juwel 4: <feet gem4 amount 2> <feet gem4 effect> - <feet gem4 quality> <feet gem4 name> (<feet gem4 price>)
+
+<endif>
+<endif>
+<if rweapon notempty>
+<if rweapon pcmade>
+Rechts/2H Waffen:
+Imbue Punkte: <rweapon usedpoints> von <rweapon availablepoints> (<rweapon quality> Qual) Überladen: <rweapon overcharge>
+Juwel 1: <rweapon gem1 amount 2> <rweapon gem1 effect> - <rweapon gem1 quality> <rweapon gem1 name> (<rweapon gem1 price>)
+Juwel 2: <rweapon gem2 amount 2> <rweapon gem2 effect> - <rweapon gem2 quality> <rweapon gem2 name> (<rweapon gem2 price>)
+Juwel 3: <rweapon gem3 amount 2> <rweapon gem3 effect> - <rweapon gem3 quality> <rweapon gem3 name> (<rweapon gem3 price>)
+Juwel 4: <rweapon gem4 amount 2> <rweapon gem4 effect> - <rweapon gem4 quality> <rweapon gem4 name> (<rweapon gem4 price>)
+
+<endif>
+<endif>
+<if lweapon notempty>
+<if lweapon pcmade>
+Linke Waffe/Schild:
+Imbue Punkte: <lweapon usedpoints> von <lweapon availablepoints> (<lweapon quality> Qual) Überladen: <lweapon overcharge>
+Juwel 1: <lweapon gem1 amount 2> <lweapon gem1 effect> - <lweapon gem1 quality> <lweapon gem1 name> (<lweapon gem1 price>)
+Juwel 2: <lweapon gem2 amount 2> <lweapon gem2 effect> - <lweapon gem2 quality> <lweapon gem2 name> (<lweapon gem2 price>)
+Juwel 3: <lweapon gem3 amount 2> <lweapon gem3 effect> - <lweapon gem3 quality> <lweapon gem3 name> (<lweapon gem3 price>)
+Juwel 4: <lweapon gem4 amount 2> <lweapon gem4 effect> - <lweapon gem4 quality> <lweapon gem4 name> (<lweapon gem4 price>)
+
+<endif>
+<endif>
+<if 2handed notempty>
+<if 2handed pcmade>
+Zweihand:
+Imbue Punkte: <2handed usedpoints> von <2handed availablepoints> (<2handed quality> Qual) Überladen: <2handed overcharge>
+Juwel 1: <2handed gem1 amount 2> <2handed gem1 effect> - <2handed gem1 quality> <2handed gem1 name> (<2handed gem1 price>)
+Juwel 2: <2handed gem2 amount 2> <2handed gem2 effect> - <2handed gem2 quality> <2handed gem2 name> (<2handed gem2 price>)
+Juwel 3: <2handed gem3 amount 2> <2handed gem3 effect> - <2handed gem3 quality> <2handed gem3 name> (<2handed gem3 price>)
+Juwel 4: <2handed gem4 amount 2> <2handed gem4 effect> - <2handed gem4 quality> <2handed gem4 name> (<2handed gem4 price>)
+
+<endif>
+<endif>
+<if ranged notempty>
+<if ranged pcmade>
+Fernwaffe:
+Imbue Punkte: <ranged usedpoints> von <ranged availablepoints> (<ranged quality> Qual) Überladen: <ranged overcharge>
+Juwel 1: <ranged gem1 amount 2> <ranged gem1 effect> - <ranged gem1 quality> <ranged gem1 name> (<ranged gem1 price>)
+Juwel 2: <ranged gem2 amount 2> <ranged gem2 effect> - <ranged gem2 quality> <ranged gem2 name> (<ranged gem2 price>)
+Juwel 3: <ranged gem3 amount 2> <ranged gem3 effect> - <ranged gem3 quality> <ranged gem3 name> (<ranged gem3 price>)
+Juwel 4: <ranged gem4 amount 2> <ranged gem4 effect> - <ranged gem4 quality> <ranged gem4 name> (<ranged gem4 price>)
+
+<endif>
+<endif>
+Gesamtkosten: <totalcost>
+
+Juwelen:
+<materials gemlist>
+
+Juwelen:
+<materials gems>
+
+Stäube:
+<materials dusts>
+
+Flüssigkeiten:
+<materials liquids>
