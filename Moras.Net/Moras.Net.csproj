@@ -31,8 +31,8 @@
     <ProductName>Moras Ausrüstungsplaner</ProductName>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>publish.htm</WebPage>
-    <ApplicationRevision>394</ApplicationRevision>
-    <ApplicationVersion>2.5.0.394</ApplicationVersion>
+    <ApplicationRevision>395</ApplicationRevision>
+    <ApplicationVersion>2.5.0.395</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -104,6 +104,12 @@
   </PropertyGroup>
   <PropertyGroup>
     <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>Internet</TargetZone>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Indy.Sockets, Version=10.1.5.33678, Culture=neutral, PublicKeyToken=05173a852504317f">
@@ -608,6 +614,7 @@
     </Content>
     <None Include="Moras.Net_TemporaryKey.pfx" />
     <None Include="packages.config" />
+    <None Include="Properties\app.manifest" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
