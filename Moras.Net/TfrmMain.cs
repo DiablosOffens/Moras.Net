@@ -3187,6 +3187,12 @@ namespace Moras.Net
                         }
                     }
                 }
+                else
+                {
+                    msg = _("Im Moment gibt es keine neue Version.");
+                    title = _("Keine neue Version");
+                    MessageBox.Show(msg, title, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
             else
             {

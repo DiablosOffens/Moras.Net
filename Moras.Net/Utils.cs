@@ -35,6 +35,9 @@ using DelphiClasses;
 using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Reflection;
+#if MAIN_PROJEKT
+using System.Deployment.Application;
+#endif
 
 namespace Moras.Net
 {
@@ -158,11 +161,21 @@ namespace Moras.Net
 
         public static int ParamCount()
         {
+#if MAIN_PROJEKT
+            if (ApplicationDeployment.IsNetworkDeployed)
+                return AppDomain.CurrentDomain.SetupInformation.ActivationArguments.ActivationData.Length;
+#endif
             return Environment.GetCommandLineArgs().Length - 1;
         }
 
         public static string ParamStr(int index)
         {
+            if (index < 0)
+                throw new ArgumentOutOfRangeException("index");
+#if MAIN_PROJEKT
+            if (ApplicationDeployment.IsNetworkDeployed && index != 0)
+                return AppDomain.CurrentDomain.SetupInformation.ActivationArguments.ActivationData[index - 1];
+#endif
             return Environment.GetCommandLineArgs()[index];
         }
 
