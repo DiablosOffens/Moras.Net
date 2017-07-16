@@ -325,7 +325,22 @@
       <Link>x86\sqlite3.dll</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="history_de.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="history_en.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="knownproblems_de.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="knownproblems_en.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="mainicon.ico" />
+    <Content Include="moras.ini">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="options\language_english.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <SubType>Designer</SubType>
@@ -588,7 +603,7 @@
     <None Include="app.config" />
     <None Include="key.snk" />
     <msgfmt Include="locale\en\LC_MESSAGES\default.po" />
-    <Content Include="moras.ini">
+    <Content Include="MORAS.HLP">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <None Include="Moras.Net_TemporaryKey.pfx" />
@@ -677,6 +692,16 @@
     </FileAssociation>
   </ItemGroup>
   <ItemGroup>
+    <PublishFile Include="moras.ini">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
     <PublishFile Include="reports\Configreport_de.rpt">
       <Visible>False</Visible>
       <Group>
