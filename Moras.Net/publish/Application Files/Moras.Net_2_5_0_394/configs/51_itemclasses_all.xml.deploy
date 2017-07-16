@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<moras>
+	<itemclasses>
+		<!-- Itemklassen ohne Subclasses werden bei nicht craftbaren Gegenständen angezeigt -->
+		<!-- CLOTH ist die generelle Stoffklasse -->
+		<!-- Die ersten 5 Klassen vorläufig bitte nicht ändern -->
+		<itemclass id="CLOTH" oldid="0">
+			<material>CLOTH</material>
+			<slot_type>armor</slot_type>
+			<position>HANDS</position>
+			<position>HEAD</position>
+			<position>FEET</position>
+			<position>LEGS</position>
+			<position>ARMS</position>
+			<position>CHEST</position>
+		</itemclass>
+		<itemclass id="LEATHER" oldid="1">
+			<material>LEATHER</material>
+			<slot_type>armor</slot_type>
+			<position>HANDS</position>
+			<position>HEAD</position>
+			<position>FEET</position>
+			<position>LEGS</position>
+			<position>ARMS</position>
+			<position>CHEST</position>
+		</itemclass>
+		<itemclass id="STUDDED" oldid="2">
+			<material>METAL</material>
+			<slot_type>armor</slot_type>
+			<position>HANDS</position>
+			<position>HEAD</position>
+			<position>FEET</position>
+			<position>LEGS</position>
+			<position>ARMS</position>
+			<position>CHEST</position>
+		</itemclass>
+		<itemclass id="CHAIN" oldid="3">
+			<material>METAL</material>
+			<slot_type>armor</slot_type>
+			<position>HANDS</position>
+			<position>HEAD</position>
+			<position>FEET</position>
+			<position>LEGS</position>
+			<position>ARMS</position>
+			<position>CHEST</position>
+		</itemclass>
+		<itemclass id="PLATE" oldid="4">
+			<material>METAL</material>
+			<slot_type>armor</slot_type>
+			<realm>albion</realm>
+			<position>HANDS</position>
+			<position>HEAD</position>
+			<position>FEET</position>
+			<position>LEGS</position>
+			<position>ARMS</position>
+			<position>CHEST</position>
+		</itemclass>
+		<itemclass id="STAFF" oldid="4">
+			<material>WOOD</material>
+			<slot_type>weapon</slot_type>
+			<damage>CRUSH</damage>
+			<position>2_HAND</position>
+			<subclass id="STAFF">
+				<speed>4,5</speed>
+				<material metal="4" wood="25" leather="1"/>
+				<dps level="1">1,4</dps>
+				<dps level="2">2,9</dps>
+				<dps level="3">4,4</dps>
+				<dps level="4">5,9</dps>
+				<dps level="5">7,4</dps>
+				<dps level="6">8,9</dps>
+				<dps level="7">10,4</dps>
+				<dps level="8">11,9</dps>
+				<dps level="9">13,4</dps>
+				<dps level="10">14,9</dps>
+			</subclass>
+			<subclass id="SHOD_STAFF">
+				<speed>5,0</speed>
+				<material metal="4" wood="38" leather="1"/>
+				<dps level="1">2,0</dps>
+				<dps level="2">3,5</dps>
+				<dps level="3">5,0</dps>
+				<dps level="4">6,5</dps>
+				<dps level="5">8,0</dps>
+				<dps level="6">9,5</dps>
+				<dps level="7">11,0</dps>
+				<dps level="8">12,5</dps>
+				<dps level="9">14,0</dps>
+				<dps level="10">15,5</dps>
+			</subclass>
+			<subclass id="EXCEPTIONAL_MAGUS_STAFF">
+				<speed>3,0</speed>
+				<material metal="9" wood="32" leather="5"/>
+				<dps level="5">9,0</dps>
+				<dps level="6">10,5</dps>
+				<dps level="7">12,0</dps>
+				<dps level="8">13,5</dps>
+				<dps level="9">15,0</dps>
+				<dps level="10">16,5</dps>
+			</subclass>
+			<subclass id="HEAVY_SHOD_STAFF">
+				<speed>5,5</speed>
+				<material metal="9" wood="32" leather="5"/>
+				<dps level="5">9,0</dps>
+				<dps level="6">10,5</dps>
+				<dps level="7">12,0</dps>
+				<dps level="8">13,5</dps>
+				<dps level="9">15,0</dps>
+				<dps level="10">16,5</dps>
+			</subclass>
+		</itemclass>
+		<itemclass id="SHIELD_SMALL" oldid="10">
+			<material>WOOD</material>
+			<slot_type>weapon</slot_type>
+			<skill>SHIELD</skill>
+			<position>L_HAND</position>
+			<no_stats/>
+			<subclass id="ROUND_SHIELD">
+				<material metal="3" wood="2"/>
+				<level level="1">1</level>
+				<level level="2">6</level>
+				<level level="3">11</level>
+				<level level="4">16</level>
+				<level level="5">21</level>
+				<level level="6">26</level>
+				<level level="7">31</level>
+				<level level="8">36</level>
+				<level level="9">41</level>
+				<level level="10">46</level>
+			</subclass>
+			<subclass id="REINFORCED_ROUND_SHIELD">
+				<material metal="3" wood="4"/>
+				<level level="5">26</level>
+				<level level="6">31</level>
+				<level level="7">36</level>
+				<level level="8">41</level>
+				<level level="9">46</level>
+				<level level="10">51</level>
+			</subclass>
+			<subclass id="EXCEPTIONAL_BUCKLER">
+				<material metal="3" wood="4"/>
+				<level level="5">26</level>
+				<level level="6">31</level>
+				<level level="7">36</level>
+				<level level="8">41</level>
+				<level level="9">46</level>
+				<level level="10">51</level>
+			</subclass>
+		</itemclass>
+		<itemclass id="SHIELD_MEDIUM" oldid="11">
+			<material>WOOD</material>
+			<slot_type>weapon</slot_type>
+			<skill>SHIELD</skill>
+			<position>L_HAND</position>
+			<no_stats/>
+			<subclass id="KITE_SHIELD">
+				<material metal="3" wood="3" leather="1"/>
+				<level level="1">1</level>
+				<level level="2">6</level>
+				<level level="3">11</level>
+				<level level="4">16</level>
+				<level level="5">21</level>
+				<level level="6">26</level>
+				<level level="7">31</level>
+				<level level="8">36</level>
+				<level level="9">41</level>
+				<level level="10">46</level>
+			</subclass>
+			<subclass id="REINFORCED_KITE_SHIELD">
+				<material metal="4" wood="3" leather="1"/>
+				<level level="5">26</level>
+				<level level="6">31</level>
+				<level level="7">36</level>
+				<level level="8">41</level>
+				<level level="9">46</level>
+				<level level="10">51</level>
+			</subclass>
+			<subclass id="EXCEPTIONAL_HEATHER_SHIELD">
+				<material metal="4" wood="3" leather="1"/>
+				<level level="5">26</level>
+				<level level="6">31</level>
+				<level level="7">36</level>
+				<level level="8">41</level>
+				<level level="9">46</level>
+				<level level="10">51</level>
+			</subclass>
+		</itemclass>
+		<itemclass id="SHIELD_LARGE" oldid="12">
+			<material>WOOD</material>
+			<slot_type>weapon</slot_type>
+			<skill>SHIELD</skill>
+			<position>L_HAND</position>
+			<no_stats/>
+			<subclass id="TOWER_SHIELD">
+				<material metal="4" wood="3" leather="1"/>
+				<level level="1">1</level>
+				<level level="2">6</level>
+				<level level="3">11</level>
+				<level level="4">16</level>
+				<level level="5">21</level>
+				<level level="6">26</level>
+				<level level="7">31</level>
+				<level level="8">36</level>
+				<level level="9">41</level>
+				<level level="10">46</level>
+			</subclass>
+			<subclass id="REINFORCED_TOWER_SHIELD">
+				<material metal="5" wood="3" leather="1"/>
+				<level level="5">26</level>
+				<level level="6">31</level>
+				<level level="7">36</level>
+				<level level="8">41</level>
+				<level level="9">46</level>
+				<level level="10">51</level>
+			</subclass>
+			<subclass id="HEATHER_SHIELD">
+				<material metal="5" wood="3" leather="1"/>
+				<level level="5">26</level>
+				<level level="6">31</level>
+				<level level="7">36</level>
+				<level level="8">41</level>
+				<level level="9">46</level>
+				<level level="10">51</level>
+			</subclass>
+			<subclass id="EXCEPTIONAL_BLOCK_SHIELD">
+				<material metal="5" wood="3" leather="1"/>
+				<level level="5">26</level>
+				<level level="6">31</level>
+				<level level="7">36</level>
+				<level level="8">41</level>
+				<level level="9">46</level>
+				<level level="10">51</level>
+			</subclass>
+			<subclass id="EXCEPTIONAL_LARGE_ROUND_SHIELD">
+				<material metal="5" wood="3" leather="1"/>
+				<level level="5">26</level>
+				<level level="6">31</level>
+				<level level="7">36</level>
+				<level level="8">41</level>
+				<level level="9">46</level>
+				<level level="10">51</level>
+			</subclass>
+		</itemclass>
+	</itemclasses>
+</moras>
