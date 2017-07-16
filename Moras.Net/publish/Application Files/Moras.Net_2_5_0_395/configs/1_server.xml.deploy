@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<moras>
+	<servers>
+		<server type="german">Avalon</server>
+		<server type="german">Lyonesse</server>
+		<server type="german">Stonehenge</server>
+		<server type="german">Logres</server>
+		<server type="german">Dartmoor</server>
+		<server type="german">Salisbury</server>
+		<server type="english">Excalibur</server>
+		<server type="english">Prydwen</server>
+		<server type="english">Glastonbury</server>
+		<server type="french">Broceliande</server>
+		<server type="french">Ys</server>
+		<server type="french">Orcanie</server>
+		<server type="french">Carnac</server>
+		<server type="pvp">Camlann</server>
+		<server type="spanish">Cumbria</server>
+		<server type="italian">Deira</server>
+		<server type="american">Ector</server>
+		<server type="american">Lamorak</server>
+		<server type="american">Gareth</server>
+		<server type="american">Iseult</server>
+		<server type="american">Kay</server>
+		<server type="american">Lancelot</server>
+		<server type="american">Pellinor</server>
+		<server type="american">Akatsuki</server>
+		<server type="american">Bedevere</server>
+		<server type="american">Galahad</server>
+		<server type="american">Igraine</server>
+		<server type="american">Morgan LeFay</server>
+		<server type="american">Tristan</server>
+		<server type="american">Bors</server>
+		<server type="american">Gawaine</server>
+		<server type="american">Merlin</server>
+		<server type="american">Palomides</server>
+		<server type="american">Guinevere</server>
+		<server type="american">Percival</server>
+		<server type="american">Nimue</server>
+		<server type="american">Gaheris</server>
+		<server type="american">Mordred</server>
+		<server type="american">Pendragon</server>
+	</servers>
+</moras>
