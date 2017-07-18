@@ -18,7 +18,7 @@ description: > # this means to ignore newlines until "baseurl:"
   Moras is a character equipment planing tool for the
   MMORPG "Dark Age of Camelot" with a large item database.
 baseurl: "/Moras.Net" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://diablosoffens.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  DiablosOffens
 
 # Build settings
