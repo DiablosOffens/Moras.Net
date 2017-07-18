@@ -243,3 +243,8 @@ ModelManifest.xml
 
 # FAKE - F# Make
 .fake/
+
+# jekyll GitHub pages
+_site
+.sass-cache
+.jekyll-metadata
