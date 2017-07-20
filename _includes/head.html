@@ -1,40 +1,40 @@
-<head>
+﻿<head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  {%- if page.lang -%}
-  {%- capture page_lang_attr %}lang="{{ page.lang }}"{% endcapture -%}
-  {%- endif -%}
-  {%- if site.lang -%}
-  {%- capture site_lang_attr %}lang="{{ site.lang }}"{% endcapture -%}
-  {%- endif -%}
+  {% if page.lang %}
+  {% capture page_lang_attr %}lang="{{ page.lang }}"{% endcapture %}
+  {% endif %}
+  {% if site.lang %}
+  {% capture site_lang_attr %}lang="{{ site.lang }}"{% endcapture %}
+  {% endif %}
   <title {{ page_lang_attr | default: site_lang_attr }}>{{ page.title | default: site.title | escape }}</title>
   <meta name="description" {{ page_lang_attr | default: site_lang_attr }} content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
-  {%- if page.keywords -%}
+  {% if page.keywords %}
   <meta name="keywords" {{ page_lang_attr }} content="{{ page.keywords }}">
-  {%- endif -%}
-  {%- if site.keywords -%}
+  {% endif %}
+  {% if site.keywords %}
   <meta name="keywords" {{ site_lang_attr }} content="{{ site.keywords }}">
-  {%- endif -%}        
+  {% endif %}
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ "/feed.xml" | relative_url }}">
   <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 
-  {%- if jekyll.environment == 'production' and site.google_analytics -%}
+  {% if jekyll.environment == 'production' and site.google_analytics %}
   {% include google-analytics.html %}
-  {%- endif -%}
-  {%- if page.include_full_url -%}
-  {%- assign base_url = page.include_full_url | absolute_url | split: "/" | pop | push: "" | join: "/" -%}
+  {% endif %}
+  {% if page.include_full_url %}
+  {% assign base_url = page.include_full_url | absolute_url | split: "/" | pop | push: "" | join: "/" %}
   <base href="{{ base_url }}" />
-  {%- capture head_html %}{% include_relative {{ page.include_full_url }} %}{% endcapture -%}
-  {%- assign head_parts = head_html | downcase | split: "<head>" -%}
-  {%- assign part0_len = head_parts[0] | size | plus: 6 -%}
-  {%- assign part1_len = head_parts[1] | size -%}
-  {%- assign head_html = head_html | slice: part0_len, part1_len -%}
-  {%- assign head_parts = head_html | downcase | split: "</head>" -%}
-  {%- assign part0_len = head_parts[0] | size -%}
-  {%- assign head_html = head_html | slice: 0, part0_len -%}
+  {% capture head_html %}{% include_relative {{ page.include_full_url }} %}{% endcapture %}
+  {% assign head_parts = head_html | downcase | split: "<head>" %}
+  {% assign part0_len = head_parts[0] | size | plus: 6 %}
+  {% assign part1_len = head_parts[1] | size %}
+  {% assign head_html = head_html | slice: part0_len, part1_len %}
+  {% assign head_parts = head_html | downcase | split: "</head>" %}
+  {% assign part0_len = head_parts[0] | size %}
+  {% assign head_html = head_html | slice: 0, part0_len %}
   {{ head_html }}
-  {%- endif -%}
+  {% endif %}
   {% seo title=false %}
 </head>
