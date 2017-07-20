@@ -11,10 +11,10 @@
   <title {{ page_lang_attr | default: site_lang_attr }}>{{ page.title | default: site.title | escape }}</title>
   <meta name="description" {{ page_lang_attr | default: site_lang_attr }} content="{{ page.description | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
   {% if page.keywords %}
-  <meta name="keywords" {{ page_lang_attr }} content="{{ page.keywords }}">
+  <meta name="keywords" {{ page_lang_attr }} content="{{ page.keywords | normalize_whitespace | escape }}">
   {% endif %}
   {% if site.keywords %}
-  <meta name="keywords" {{ site_lang_attr }} content="{{ site.keywords }}">
+  <meta name="keywords" {{ site_lang_attr }} content="{{ site.keywords | normalize_whitespace | escape }}">
   {% endif %}
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ "/feed.xml" | relative_url }}">
