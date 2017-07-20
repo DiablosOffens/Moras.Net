@@ -1,4 +1,4 @@
-# Welcome to Jekyll!
+ï»¿# Welcome to Jekyll!
 #
 # This config file is meant for settings that affect your whole blog, values
 # which you are expected to set up once and rarely edit after that. If you find
@@ -14,13 +14,13 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 lang: de
-title: Moras Ausrüstungsplaner
+title: Moras AusrÃ¼stungsplaner
 description: > # this means to ignore newlines until "keywords:"
-  Moras ist ein Tool zur Planung der Ausrüstung von Charakteren
-  im MMORPG "Dark Age of Camelot" mithilfe einer großen Datenbank für Gegenstände.
+  Moras ist ein Tool zur Planung der AusrÃ¼stung von Charakteren
+  im MMORPG "Dark Age of Camelot" mithilfe einer groÃŸen Datenbank fÃ¼r GegenstÃ¤nde.
 keywords: >
-  Moras, Moras.Net, Tool, planen, Ausrüstung, Charakter, MMORPG,
-  Dark Age of Camelot, Gegenstände, Gegenstand, Datenbank
+  Moras, Moras.Net, Tool, planen, AusrÃ¼stung, Charakter, MMORPG,
+  Dark Age of Camelot, GegenstÃ¤nde, Gegenstand, Datenbank
 baseurl: "/Moras.Net" # the subpath of your site, e.g. /blog
 url: "https://diablosoffens.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  DiablosOffens
