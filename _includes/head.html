@@ -2,20 +2,6 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  {% if page.lang %}
-  {% capture page_lang_attr %}lang="{{ page.lang }}"{% endcapture %}
-  {% endif %}
-  {% if site.lang %}
-  {% capture site_lang_attr %}lang="{{ site.lang }}"{% endcapture %}
-  {% endif %}
-  <title {{ page_lang_attr | default: site_lang_attr }}>{{ page.title | default: site.title | escape }}</title>
-  <meta name="description" {{ page_lang_attr | default: site_lang_attr }} content="{{ page.description | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
-  {% if page.keywords %}
-  <meta name="keywords" {{ page_lang_attr }} content="{{ page.keywords | normalize_whitespace | escape }}">
-  {% endif %}
-  {% if site.keywords %}
-  <meta name="keywords" {{ site_lang_attr }} content="{{ site.keywords | normalize_whitespace | escape }}">
-  {% endif %}
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ "/feed.xml" | relative_url }}">
   <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
@@ -36,5 +22,21 @@
   {% assign head_html = head_html | slice: 0, part0_len %}
   {{ head_html }}
   {% endif %}
+
+  {% if page.lang %}
+  {% capture page_lang_attr %}lang="{{ page.lang }}"{% endcapture %}
+  {% endif %}
+  {% if site.lang %}
+  {% capture site_lang_attr %}lang="{{ site.lang }}"{% endcapture %}
+  {% endif %}
+  <title {{ page_lang_attr | default: site_lang_attr }}>{{ page.title | default: site.title | escape }}</title>
+  <meta name="description" {{ page_lang_attr | default: site_lang_attr }} content="{{ page.description | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
+  {% if page.keywords %}
+  <meta name="keywords" {{ page_lang_attr }} content="{{ page.keywords | normalize_whitespace | escape }}">
+  {% endif %}
+  {% if site.keywords %}
+  <meta name="keywords" {{ site_lang_attr }} content="{{ site.keywords | normalize_whitespace | escape }}">
+  {% endif %}
+
   {% seo title=false %}
 </head>
