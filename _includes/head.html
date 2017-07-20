@@ -2,13 +2,19 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title {% if page.lang or site.lang %}lang="{{ page.lang | default: site.lang }}"{% endif %}>{{ page.title | default: site.title | escape }}</title>
-  <meta name="description" {% if page.lang or site.lang %}lang="{{ page.lang | default: site.lang }}"{% endif %} content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
+  {%- if page.lang -%}
+  {%- capture page_lang_attr %}lang="{{ page.lang }}"{% endcapture -%}
+  {%- endif -%}
+  {%- if site.lang -%}
+  {%- capture site_lang_attr %}lang="{{ site.lang }}"{% endcapture -%}
+  {%- endif -%}
+  <title {{ page_lang_attr | default: site_lang_attr }}>{{ page.title | default: site.title | escape }}</title>
+  <meta name="description" {{ page_lang_attr | default: site_lang_attr }} content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
   {%- if page.keywords -%}
-  <meta name="keywords" {% if page.lang %}lang="{{ page.lang }}"{% endif %} content="{{ page.keywords }}">
+  <meta name="keywords" {{ page_lang_attr }} content="{{ page.keywords }}">
   {%- endif -%}
   {%- if site.keywords -%}
-  <meta name="keywords" {% if site.lang %}lang="{{ site.lang }}"{% endif %} content="{{ site.keywords }}">
+  <meta name="keywords" {{ site_lang_attr }} content="{{ site.keywords }}">
   {%- endif -%}        
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ "/feed.xml" | relative_url }}">
