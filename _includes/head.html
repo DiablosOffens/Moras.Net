@@ -9,7 +9,7 @@
   {% capture site_lang_attr %}lang="{{ site.lang }}"{% endcapture %}
   {% endif %}
   <title {{ page_lang_attr | default: site_lang_attr }}>{{ page.title | default: site.title | escape }}</title>
-  <meta name="description" {{ page_lang_attr | default: site_lang_attr }} content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
+  <meta name="description" {{ page_lang_attr | default: site_lang_attr }} content="{{ page.description | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
   {% if page.keywords %}
   <meta name="keywords" {{ page_lang_attr }} content="{{ page.keywords }}">
   {% endif %}

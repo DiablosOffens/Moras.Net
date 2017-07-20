@@ -1,32 +1,8 @@
 <!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+<html lang="{{ page.include_lang | default: page.lang | default: site.lang | default: "en" }}">
 
   {% include head.html %}
 
-  <body>
-
-  {% if page.include_full_url %}
-    {% capture body_html %}{% include_relative {{ page.include_full_url }} %}{% endcapture %}
-    {% assign body_parts = body_html | downcase | split: "<body>" %}
-    {% assign part0_len = body_parts[0] | size | plus: 6 %}
-    {% assign part1_len = body_parts[1] | size %}
-    {% assign body_html = body_html | slice: part0_len, part1_len %}
-    {% assign body_parts = body_html | downcase | split: "</body>" %}
-    {% assign part0_len = body_parts[0] | size %}
-    {% assign body_html = body_html | slice: 0, part0_len %}
-    {{ body_html }}
-  {% else %}
-    {% include header.html %}
-
-    <main class="page-content" aria-label="Content">
-      <div class="wrapper">
-        {{ content }}
-      </div>
-    </main>
-
-    {% include footer.html %}
-  {% endif %}
-
-  </body>
+  {% include body.html %}
 
 </html>
