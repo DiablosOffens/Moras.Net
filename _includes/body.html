@@ -2,13 +2,11 @@
 
     {% if page.include_full_url %}
     {% capture body_html %}{% include_relative {{ page.include_full_url }} %}{% endcapture %}
-    {% assign body_parts = body_html | downcase | split: "<body>
-        " %}
+    {% assign body_parts = body_html | downcase | split: "<body>" %}
         {% assign part0_len = body_parts[0] | size | plus: 6 %}
         {% assign part1_len = body_parts[1] | size %}
         {% assign body_html = body_html | slice: part0_len, part1_len %}
-        {% assign body_parts = body_html | downcase | split: "
-    </body>" %}
+        {% assign body_parts = body_html | downcase | split: "</body>" %}
     {% assign part0_len = body_parts[0] | size %}
     {% assign body_html = body_html | slice: 0, part0_len %}
     {{ body_html }}
