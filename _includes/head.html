@@ -31,6 +31,9 @@
   {% endif %}
   <title {{ page_lang_attr | default: site_lang_attr }}>{{ page.title | default: site.title | escape }}</title>
   <meta name="description" {{ page_lang_attr | default: site_lang_attr }} content="{{ page.description | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
+  {% if page.title and page.title != site.title %}
+  <meta name="description" {{ site_lang_attr }} content="{{ site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
+  {% endif %}
   {% if page.keywords %}
   <meta name="keywords" {{ page_lang_attr }} content="{{ page.keywords | normalize_whitespace | escape }}">
   {% endif %}
