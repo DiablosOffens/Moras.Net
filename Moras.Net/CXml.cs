@@ -257,6 +257,8 @@ namespace Moras.Net
         {
             int nAttributes = 0;
             String strTemp = "";
+            if (fiXml.EndOfStream)
+                return false;
             fiXml.get(out cCur);
             while (!fiXml.EndOfStream)
             {
