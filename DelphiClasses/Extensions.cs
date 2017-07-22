@@ -241,6 +241,14 @@ namespace DelphiClasses
             cmb.SelectedIndex = -1;
         }
 
+        //TODO: try to avoid this
+        public static void SetSelectedIndexSafe(this ComboBox cmb, int index)
+        {
+            if (index < 0 || index >= cmb.Items.Count)
+                cmb.SelectedIndex = -1; // behave like delphi but without crashing the app
+            cmb.SelectedIndex = index;
+        }
+
         //public static bool CanPersist(this object obj)
         //{
         //    if (obj is ISerializable)

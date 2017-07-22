@@ -1392,8 +1392,8 @@ namespace Moras.Net
                 {	// Wenn noch keine Klasse festgelegt ist,
                     // dann bei Rüstungen die der Klasse,
                     // bei Waffen einfach der erste Eintrag
-                    if (bWeapon) i = 0;
-                    else
+                    if (bWeapon && cbItemClass.Items.Count != 0) i = 0;
+                    else if (!bWeapon)
                     {	// Den Eintrag suchen, der die gleiche Rüstungsklasse ist wie default der Klasse
                         int idArmor = Unit.xml_config.arClasses[Unit.player.Class].iArmor;
                         Debug.Assert(idArmor >= 0);
@@ -1528,9 +1528,9 @@ namespace Moras.Net
             if (pos < 5) cbEffect[pos].Clear();	// In Boni nur, wenn Effektslot < 4
             // Effekttyp in jeweils anderen Boni-Tab setzen
             if (!bDrop)
-                cbType[idx + 5].SelectedIndex = cbType[idx].SelectedIndex;
+                cbType[idx + 5].SetSelectedIndexSafe(cbType[idx].SelectedIndex);
             else
-                if (pos < 5) cbType[pos].SelectedIndex = cbType[idx].SelectedIndex;
+                if (pos < 5) cbType[pos].SetSelectedIndexSafe(cbType[idx].SelectedIndex);
             if (pos < 5)
             {
                 cbValue[pos].SelectedIndex = -1;
@@ -1834,7 +1834,7 @@ namespace Moras.Net
             for (int i = 0; i < Unit.xml_config.arItemClasses[idClass].arSubClasses.Length; i++)
                 cbItemSubClass.Add(Unit.xml_config.arItemClasses[idClass].arSubClasses[i].Name, -1, i);
 
-            cbItemSubClass.SelectedIndex = Unit.player.ItemSubClass[iActSlot];
+            cbItemSubClass.SetSelectedIndexSafe(Unit.player.ItemSubClass[iActSlot]);
             if (cbItemSubClass.SelectedIndex == -1) cbItemSubClass.SelectedIndex = 0;
 
             // Wenn es ein Waffenslot ist, dann die Damage-Combobox ausfüllen
@@ -1851,11 +1851,19 @@ namespace Moras.Net
                             cbDamage.Add(sDamage, -1, idDamage);
                     }
                 }
-                // Erstmal eine Schadensart einstellen
-                cbDamage.SelectedIndex = 0;
-                // Wenn die Damage-Combobox nun leer ist, dann Fald ausblenden
-                cbDamage.Visible = (cbDamage.Items.Count != 0);
-                lbDamage.Visible = (cbDamage.Items.Count != 0);
+                if (cbDamage.Items.Count != 0)
+                {
+                    // Erstmal eine Schadensart einstellen
+                    cbDamage.SelectedIndex = 0;
+                    cbDamage.Visible = true;
+                    lbDamage.Visible = true;
+                }
+                else
+                {
+                    // Wenn die Damage-Combobox nun leer ist, dann Fald ausblenden
+                    cbDamage.Visible = false;
+                    lbDamage.Visible = false;
+                }
             }
 
             //	tbAF.Visible = bArmor;
@@ -1906,7 +1914,7 @@ namespace Moras.Net
                 }
                 // Materialstufe bestimmen
                 if (cbMaterial.SelectData(Unit.player.Material[iActSlot]) < 0)
-                    cbMaterial.SelectedIndex = 0;
+                    cbMaterial.SetSelectedIndexSafe(0);
                 cbMaterialChange(null, EventArgs.Empty);
 
                 // Schadensart und Speed bei Waffen einstellen
@@ -2375,7 +2383,7 @@ namespace Moras.Net
             if (bLock != 0) return;
             int value = tbQuality.Text.ToIntDef(0);
             Unit.player.Quality[iActSlot] = value;
-            // Wenn wir hier eine Qualität zwischen 94 und 100 haben,
+            // Wenn wir hier eine Qualität zwischen 96 und 100 haben,
             // Dann auch die Quality-Combobox setzen
             if ((value >= 96) & (value <= 100))
                 cbQuality.SelectedIndex = value - 96;
@@ -2891,13 +2899,11 @@ namespace Moras.Net
             DialogResult ret = Unit.frmNewName.ShowDialog();
             if ((ret == DialogResult.OK) && (Unit.frmNewName.tbName.Text.Length > 0))
             {
-                Unit.account.NewAccount(Unit.frmNewName.tbName.Text);
-                cbAccount.Clear();
-                for (int i = 0; i < Unit.account.NAccounts; i++)
-                {
-                    cbAccount.Add(Unit.account.Name[i], -1, i);
-                }
-                cbAccount.SelectedIndex = Unit.account.NAccounts - 1;
+                int oldcount = Unit.account.NAccounts;
+                int index = Unit.account.NewAccount(Unit.frmNewName.tbName.Text);
+                if (index == oldcount)
+                    cbAccount.Add(Unit.account.Name[index], -1, index);
+                cbAccount.SelectedIndex = index;
                 cbAccountChange(null, EventArgs.Empty);
             }
             else
