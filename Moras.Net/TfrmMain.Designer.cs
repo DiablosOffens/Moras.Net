@@ -76,6 +76,7 @@
             this.mnDatabase = new DelphiClasses.TMainMenu.TTBXSubmenuItem(this.components);
             this.mnImport = new DelphiClasses.TMainMenu.TTBXSubmenuItem(this.components);
             this.mnImportMora = new DelphiClasses.TMainMenu.TTBXItem(this.components);
+            this.mnImportMoraDb = new DelphiClasses.TMainMenu.TTBXItem(this.components);
             this.mnImportLeladia = new DelphiClasses.TMainMenu.TTBXItem(this.components);
             this.mnKort = new DelphiClasses.TMainMenu.TTBXItem(this.components);
             this.mnImportChatLog = new DelphiClasses.TMainMenu.TTBXItem(this.components);
@@ -359,19 +360,19 @@
             this.StatusBar1 = new System.Windows.Forms.StatusStrip();
             this.tbStandard = new DelphiClasses.TToolBar();
             this.MenuImageList = new System.Windows.Forms.ImageList(this.components);
-            this.TBXItem3 = new System.Windows.Forms.ToolStripButton();
-            this.TBXItem2 = new System.Windows.Forms.ToolStripButton();
-            this.TBXItem1 = new System.Windows.Forms.ToolStripButton();
+            this.TBXItem3 = new DelphiClasses.TToolBar.TTBXItem(this.components);
+            this.TBXItem2 = new DelphiClasses.TToolBar.TTBXItem(this.components);
+            this.TBXItem1 = new DelphiClasses.TToolBar.TTBXItem(this.components);
             this.TBXSeparatorItem3 = new System.Windows.Forms.ToolStripSeparator();
-            this.TBXItem9 = new System.Windows.Forms.ToolStripButton();
+            this.TBXItem9 = new DelphiClasses.TToolBar.TTBXItem(this.components);
             this.TBXSeparatorItem4 = new System.Windows.Forms.ToolStripSeparator();
             this.TBXSubmenuItem2 = new DelphiClasses.TToolBar.TTBXSubmenuItem(this.components);
             this.TBXSeparatorItem2 = new System.Windows.Forms.ToolStripSeparator();
-            this.TBXItem7 = new System.Windows.Forms.ToolStripButton();
+            this.TBXItem7 = new DelphiClasses.TToolBar.TTBXItem(this.components);
             this.TBXSeparatorItem1 = new System.Windows.Forms.ToolStripSeparator();
-            this.TBXItem4 = new System.Windows.Forms.ToolStripButton();
-            this.TBXItem5 = new System.Windows.Forms.ToolStripButton();
-            this.TBXItem6 = new System.Windows.Forms.ToolStripButton();
+            this.TBXItem4 = new DelphiClasses.TToolBar.TTBXItem(this.components);
+            this.TBXItem5 = new DelphiClasses.TToolBar.TTBXItem(this.components);
+            this.TBXItem6 = new DelphiClasses.TToolBar.TTBXItem(this.components);
             this.TBXSubmenuItem1 = new DelphiClasses.TToolBar.TTBXSubmenuItem(this.components);
             this.ImInternet1 = new DelphiClasses.TMainMenu.TTBXSubmenuItem(this.components);
             this.Homepage1 = new DelphiClasses.TMainMenu.TTBXItem(this.components);
@@ -518,6 +519,7 @@
             this.ZConnection = new System.Data.SQLite.SQLiteConnection();
             this.ZQuery = new System.Data.SQLite.SQLiteCommand();
             this.sqLiteZeosLibPropertyExtender1 = new Moras.Net.SQLiteZeosLibPropertyExtender(this.components);
+            this.acImportMorasDb = new DelphiClasses.TAction(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.GridInventory)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GridTreasury)).BeginInit();
             this.gbStats.SuspendLayout();
@@ -1166,6 +1168,7 @@
             // 
             this.mnImport.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mnImportMora,
+            this.mnImportMoraDb,
             this.mnImportLeladia,
             this.mnKort,
             this.mnImportChatLog});
@@ -1174,7 +1177,7 @@
             this.helpProvider1.SetHelpNavigator(this.mnImport, System.Windows.Forms.HelpNavigator.TopicId);
             this.mnImport.Name = "mnImport";
             this.helpProvider1.SetShowHelp(this.mnImport, true);
-            this.mnImport.Size = new System.Drawing.Size(133, 22);
+            this.mnImport.Size = new System.Drawing.Size(152, 22);
             this.mnImport.Text = "Import";
             // 
             // mnImportMora
@@ -1182,13 +1185,21 @@
             this.ActionList1.SetAction(this.mnImportMora, this.acImportMoras);
             this.mnImportMora.ImageIndex = 12;
             this.mnImportMora.Name = "mnImportMora";
-            this.mnImportMora.Size = new System.Drawing.Size(135, 22);
+            this.mnImportMora.Size = new System.Drawing.Size(152, 22);
             this.mnImportMora.Text = "Moras XML";
+            // 
+            // mnImportMoraDb
+            // 
+            this.ActionList1.SetAction(this.mnImportMoraDb, this.acImportMorasDb);
+            this.mnImportMoraDb.ImageIndex = 12;
+            this.mnImportMoraDb.Name = "mnImportMoraDb";
+            this.mnImportMoraDb.Size = new System.Drawing.Size(152, 22);
+            this.mnImportMoraDb.Text = "Moras items.db3";
             // 
             // mnImportLeladia
             // 
             this.mnImportLeladia.Name = "mnImportLeladia";
-            this.mnImportLeladia.Size = new System.Drawing.Size(135, 22);
+            this.mnImportLeladia.Size = new System.Drawing.Size(152, 22);
             this.mnImportLeladia.Text = "Leladia 2.0...";
             this.mnImportLeladia.Visible = false;
             this.mnImportLeladia.Click += new System.EventHandler(this.mnImportLeladiaClick);
@@ -1196,7 +1207,7 @@
             // mnKort
             // 
             this.mnKort.Name = "mnKort";
-            this.mnKort.Size = new System.Drawing.Size(135, 22);
+            this.mnKort.Size = new System.Drawing.Size(152, 22);
             this.mnKort.Text = "Kort\'s SCC...";
             this.mnKort.Visible = false;
             this.mnKort.Click += new System.EventHandler(this.mnKortClick);
@@ -1206,20 +1217,20 @@
             this.ActionList1.SetAction(this.mnImportChatLog, this.acImportChatlog);
             this.mnImportChatLog.ImageIndex = 12;
             this.mnImportChatLog.Name = "mnImportChatLog";
-            this.mnImportChatLog.Size = new System.Drawing.Size(135, 22);
+            this.mnImportChatLog.Size = new System.Drawing.Size(152, 22);
             this.mnImportChatLog.Text = "Chat-Log";
             // 
             // N2
             // 
             this.N2.Name = "N2";
-            this.N2.Size = new System.Drawing.Size(130, 6);
+            this.N2.Size = new System.Drawing.Size(149, 6);
             // 
             // mnManageDB
             // 
             this.ActionList1.SetAction(this.mnManageDB, this.acDBManage);
             this.mnManageDB.ImageIndex = 9;
             this.mnManageDB.Name = "mnManageDB";
-            this.mnManageDB.Size = new System.Drawing.Size(133, 22);
+            this.mnManageDB.Size = new System.Drawing.Size(152, 22);
             this.mnManageDB.Text = "Verwalten...";
             // 
             // mnDBStatus
@@ -1227,14 +1238,14 @@
             this.ActionList1.SetAction(this.mnDBStatus, this.acDBStatus);
             this.mnDBStatus.ImageIndex = 8;
             this.mnDBStatus.Name = "mnDBStatus";
-            this.mnDBStatus.Size = new System.Drawing.Size(133, 22);
+            this.mnDBStatus.Size = new System.Drawing.Size(152, 22);
             this.mnDBStatus.Text = "Status...";
             // 
             // TBXItem10
             // 
             this.ActionList1.SetAction(this.TBXItem10, this.acDBVacuum);
             this.TBXItem10.Name = "TBXItem10";
-            this.TBXItem10.Size = new System.Drawing.Size(133, 22);
+            this.TBXItem10.Size = new System.Drawing.Size(152, 22);
             this.TBXItem10.Text = "Optimieren...";
             // 
             // Options1
@@ -6408,6 +6419,15 @@
             this.ZQuery.CommandText = null;
             this.ZQuery.Connection = this.ZConnection;
             // 
+            // acImportMorasDb
+            // 
+            this.acImportMorasDb.Caption = "Moras items.db3";
+            this.acImportMorasDb.Category = "Datenbank";
+            this.acImportMorasDb.Hint = null;
+            this.acImportMorasDb.ImageIndex = 12;
+            this.acImportMorasDb.Name = "acImportMorasDb";
+            this.acImportMorasDb.Execute += new System.EventHandler(this.mnImportMoraDbClick);
+            // 
             // TfrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -6550,16 +6570,16 @@
         private DelphiClasses.DelphiHelpProvider helpProvider1;
         private System.Windows.Forms.StatusStrip StatusBar1;
         private DelphiClasses.TToolBar tbStandard;
-        private System.Windows.Forms.ToolStripButton TBXItem3;
-        private System.Windows.Forms.ToolStripButton TBXItem2;
-        private System.Windows.Forms.ToolStripButton TBXItem1;
-        private System.Windows.Forms.ToolStripButton TBXItem9;
+        private DelphiClasses.TToolBar.TTBXItem TBXItem3;
+        private DelphiClasses.TToolBar.TTBXItem TBXItem2;
+        private DelphiClasses.TToolBar.TTBXItem TBXItem1;
+        private DelphiClasses.TToolBar.TTBXItem TBXItem9;
         private DelphiClasses.TMainMenu tbMainmenu;
         private DelphiClasses.TToolBar.TTBXSubmenuItem TBXSubmenuItem2;
-        private System.Windows.Forms.ToolStripButton TBXItem7;
-        private System.Windows.Forms.ToolStripButton TBXItem4;
-        private System.Windows.Forms.ToolStripButton TBXItem5;
-        private System.Windows.Forms.ToolStripButton TBXItem6;
+        private DelphiClasses.TToolBar.TTBXItem TBXItem7;
+        private DelphiClasses.TToolBar.TTBXItem TBXItem4;
+        private DelphiClasses.TToolBar.TTBXItem TBXItem5;
+        private DelphiClasses.TToolBar.TTBXItem TBXItem6;
         private DelphiClasses.TToolBar.TTBXSubmenuItem TBXSubmenuItem1;
         private DelphiClasses.TMainMenu.TTBXSubmenuItem File1;
         private DelphiClasses.TMainMenu.TTBXItem New1;
@@ -7035,6 +7055,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn GridInventoryCol1;
         private System.Windows.Forms.DataGridViewTextBoxColumn GridTreasuryCol1;
         private SQLiteZeosLibPropertyExtender sqLiteZeosLibPropertyExtender1;
+        private DelphiClasses.TMainMenu.TTBXItem mnImportMoraDb;
+        private DelphiClasses.TAction acImportMorasDb;
     }
 }
 

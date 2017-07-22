@@ -2244,6 +2244,11 @@ namespace Moras.Net
             Unit.frmImport.ImportMora();
             //	delete frmImport;
         }
+
+        private void mnImportMoraDbClick(object sender, EventArgs e)
+        {
+            Unit.frmImport.ImportMoraDb();
+        }
         //---------------------------------------------------------------------------
 
         private void mnImportLeladiaClick(object sender, EventArgs e)
