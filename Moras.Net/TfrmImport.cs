@@ -13,6 +13,7 @@ using Indy.Sockets;
 using System.Diagnostics;
 using Moras.Net.IndyCustom;
 using Borland.Vcl;
+using System.Data.SQLite;
 
 namespace Moras.Net
 {
@@ -26,7 +27,8 @@ namespace Moras.Net
         private TStringStream asReceived;	// Empfangener Text
         private int nUpdated;	// Interne Zählvariable für die geupdateten Items
         private int nNew;	// Interner Zähler für die neuen Items
-        private bool bUpdated;	// Wahr, wenn irgendwas an das Datenbank geändert wurde
+        private int nItemCount; // Anzahl Items vor dem Update
+        private bool bUpdated;	// Wahr, wenn irgendwas an der Datenbank geändert wurde
         private bool cancelUpdate;
         private bool finishedUpdate;
         private bool errorUpdate;
@@ -97,6 +99,7 @@ namespace Moras.Net
         {
             StartImport();
             btOK.Enabled = false;
+            dlgOpen.Filter = _("Moras Itemdatei (*.xml)|*.xml");
             if (AFile != "" || dlgOpen.ShowDialog() == DialogResult.OK)
             {	// Nur importieren, wenn wir auch eine Datei gewählt haben :)
                 Cursor.Current = Cursors.WaitCursor;
@@ -104,9 +107,9 @@ namespace Moras.Net
                     AFile = dlgOpen.FileName;
                 stFrom.ShowsPath = true; //TODO: set to false on other places
                 stFrom.Text = AFile;
+                pbUpdate.Value = 0;
                 pbUpdate.Maximum = (int)(new FileInfo(AFile).Length / 455); // durchschnittliche xml datensatz länge 440 byte
                 Application.DoEvents();
-                CItem Item;
                 CXml xFile = new CXml();
                 if (xFile.OpenXml(AFile))
                 {
@@ -124,6 +127,80 @@ namespace Moras.Net
                 FinishedUpdate();
             }
             Cursor.Current = Cursors.Default;
+        }
+
+        internal void ImportMoraDb(string AFile = "")
+        {
+            StartImport();
+            btOK.Enabled = false;
+            dlgOpen.Filter = _("Moras Itemdatenbank|items.db3");
+            if (AFile != "" || dlgOpen.ShowDialog() == DialogResult.OK)
+            {	// Nur importieren, wenn wir auch eine Datei gewählt haben :)
+                try
+                {
+                    Cursor.Current = Cursors.WaitCursor;
+                    if (AFile == "")
+                        AFile = dlgOpen.FileName;
+                    stFrom.ShowsPath = true; //TODO: set to false on other places
+                    stFrom.Text = AFile;
+                    Application.DoEvents();
+
+                    using (SQLiteConnection otherConnection = new SQLiteConnection(Unit.frmMain.ZConnection.ConnectionString))
+                    {
+                        otherConnection.SetDataSource(AFile);
+                        otherConnection.Open();
+                        using (SQLiteCommand importQuery = new SQLiteCommand(otherConnection))
+                        {
+                            int version = SQLiteUtils.SQLiteDBVersion(importQuery);
+                            if (version == 0)
+                            {
+                                Utils.MorasInfoMessage(_("Die gewählte Datei ist nicht kompatibel mit der Moras Datenbank."), _("Fehler"));
+                                return;
+                            }
+                            else if (version < 4)
+                            {
+                                // set type mapping for ansi string
+                                otherConnection.ClearTypeMappings();
+                                otherConnection.AddTypeMapping("VARCHAR2", DbType.Binary, true);
+                                otherConnection.Flags |= SQLiteConnectionFlags.UseConnectionTypes;
+                            }
+
+                            DialogResult mr = DialogResult.None;
+                            bool answerForAll = false;
+                            if (Utils.GetRegistryInteger("OverwriteItems", 0) != 0)
+                            {
+                                mr = DialogResult.Yes;
+                                answerForAll = true;
+                            }
+                            importQuery.CommandText = "select * from items";
+                            importQuery.Open();
+                            int itemcount = importQuery.GetRecordCount();
+                            nItemCount = Unit.ItemDB.GetNDrops();
+                            pbUpdate.Value = 0;
+                            pbUpdate.Maximum = itemcount;
+                            Application.DoEvents();
+                            CItem Item;
+                            Show();	// Dialog anzeigen
+
+                            for (int i = 0; i < itemcount; i++)
+                            {
+                                Item = Unit.ItemDB.GetItem(importQuery);
+                                int ret = Unit.ItemDB.CheckItem(Item);
+                                AddItem(Item, ret, ref  mr, ref answerForAll, i + 1);
+                                Unit.frmMain.ZQuery.Next();
+                            }
+                            SQLiteUtils.SQLiteDBClose(importQuery);
+                        }
+                    }
+                    Unit.ItemDB.Save();
+
+                    FinishedUpdate();
+                }
+                finally
+                {
+                    Cursor.Current = Cursors.Default;
+                }
+            }
         }
         //---------------------------------------------------------------------------
         // Für Online-Update. Es sind hier nur die Mora-xml-Files gültig
@@ -148,7 +225,8 @@ namespace Moras.Net
                     string asReplace = asPath.Substring(pos1 + 1, pos2 - pos1 - 1);
                     if (asReplace == "version")
                     {	// Durch Programmversion ersetzen
-                        asReplace = (Unit.frmMain.iMajor).ToString() + "." + (Unit.frmMain.iMinor).ToString();
+                        int major = Unit.frmMain.iMajor, minor = Unit.frmMain.iMinor;
+                        asReplace = (major).ToString() + "." + (minor).ToString();
                         umUpdate = UpdateMode.umVersion;
                     }
                     else if (asReplace == "counter")
@@ -224,6 +302,9 @@ namespace Moras.Net
             if (dlgOpen.ShowDialog() == DialogResult.OK)
             {	// Nur importieren, wenn wir auch eine Datei gewählt haben :)
                 Cursor.Current = Cursors.WaitCursor;
+                nItemCount = Unit.ItemDB.GetNDrops();
+                pbUpdate.Value = 0;
+                pbUpdate.Maximum = dlgOpen.FileNames.Length;
                 Application.DoEvents();
                 CItem Item = new CItem();
                 Show();	// Dialog anzeigen
@@ -276,6 +357,10 @@ namespace Moras.Net
                 {
                     @in.OpenChatLog(dlgOpen.FileName);
                     @in.Init();
+                    nItemCount = Unit.ItemDB.GetNDrops();
+                    pbUpdate.Value = 0;
+                    pbUpdate.Maximum = @in.NItems;
+                    Application.DoEvents();
                     for (int i = 0; i < @in.NItems; i++)
                     {
                         if (@in.GetItem(i, Item) == true)
@@ -291,7 +376,7 @@ namespace Moras.Net
                             else
                                 ret = Unit.ItemDB.CheckItem(Item);
                             if (mr2 == DialogResult.Cancel) ret = -2;	// Abbruch beim Rüstungs/Waffen/Schmuckdialog gedrückt
-                            AddItem(Item, ret, ref  mr, ref answerForAll, i);
+                            AddItem(Item, ret, ref  mr, ref answerForAll, i + 1);
                         }
                     }
                 }
@@ -362,7 +447,7 @@ namespace Moras.Net
             CItem Item = new CItem();
             if (xFile.isTag("daoc_items"))
             {
-                int n = 0, itemcount = Unit.ItemDB.GetNDrops();
+                int n = 0; nItemCount = Unit.ItemDB.GetNDrops();
                 bool ret;
                 DialogResult mr = DialogResult.None;
                 bool answerForAll = false;
@@ -382,53 +467,7 @@ namespace Moras.Net
                         if (iLastTimeStamp < Item.LastUpdate)
                             iLastTimeStamp = Item.LastUpdate;
                         int ni = Unit.ItemDB.CheckItem(Item);
-                        if (ni >= 0)
-                        {	// Ein Item wurde gefunden
-                            CItem DBItem = Unit.ItemDB.GetItem(ni);
-                            if (DBItem.LastUpdate < Item.LastUpdate)
-                            {	// Wenn das Datum des neuen Items neuer ist dann evtl Überschreiben
-                                if (!answerForAll)
-                                {
-                                    TApplication.Instance.CreateForm(out Unit.frmOverWrite);
-                                    Unit.frmOverWrite.lbName1.Text = DBItem.Name;
-                                    Unit.frmOverWrite.lbName1.SetHint(DBItem.Name);
-                                    Unit.frmOverWrite.lbDescription1.Text = DBItem.LongInfo;
-                                    Unit.frmOverWrite.lbName2.Text = Item.Name;
-                                    Unit.frmOverWrite.lbName2.SetHint(Item.Name);
-                                    Unit.frmOverWrite.lbDescription2.Text = Item.LongInfo;
-                                    mr = Unit.frmOverWrite.ShowDialog(this);
-                                    answerForAll = Unit.frmOverWrite.AnswerToAll;
-                                    Unit.frmOverWrite.Dispose();
-                                    Unit.frmOverWrite = null;
-                                }
-                                if (mr == DialogResult.Yes)
-                                {	// Überschreiben
-                                    Unit.ItemDB.UpdateItem(ni, Item);
-                                    nUpdated++;
-                                    bUpdated = true;
-                                }
-                                else if (mr == DialogResult.No)
-                                {	// Nicht überschreiben, neues Item
-                                    ni = -1;
-                                }
-                                else
-                                    ni = -2;
-                            }
-                            DBItem = null;
-                        }
-                        if (ni == -1)
-                        {	// Item ist neu
-                            nNew++;
-                            Item.Changed = true;	// Als geändert markieren
-                            Unit.ItemDB.AddItem(Item);
-                            bUpdated = true;
-                        }
-                        lbItems.Text = (itemcount + nNew).ToString();
-                        lbNew.Text = nNew.ToString();
-                        lbUpdated.Text = nUpdated.ToString();
-                        lbCount.Text = n.ToString();
-                        pbUpdate.Value = n;
-                        Application.DoEvents();
+                        AddItem(Item, ni, ref mr, ref answerForAll, n);
                     }
                     n++;
                 } while (ret == true);
@@ -449,51 +488,57 @@ namespace Moras.Net
         private void AddItem(CItem Item, int nr, ref DialogResult mr, ref bool answerForAll, int cnt)
         {
             if ((nr >= 0) && !Item.Deleted)
-            {	// Ist ein Update. Mit Safecopy kopieren
-                if (!answerForAll)
-                {
-                    TApplication.Instance.CreateForm(out Unit.frmOverWrite);
-                    Unit.frmOverWrite.lbName1.Text = Unit.ItemDB.GetItem(nr).Name;
-                    Unit.frmOverWrite.lbName1.SetHint(Unit.ItemDB.GetItem(nr).Name);
-                    Unit.frmOverWrite.lbDescription1.Text = Unit.ItemDB.GetItem(nr).LongInfo;
-                    Unit.frmOverWrite.lbName2.Text = Item.Name;
-                    Unit.frmOverWrite.lbName2.SetHint(Item.Name);
-                    Unit.frmOverWrite.lbDescription2.Text = Item.LongInfo;
-                    mr = Unit.frmOverWrite.ShowDialog(this);
-                    answerForAll = Unit.frmOverWrite.AnswerToAll;
-                    Unit.frmOverWrite.Dispose();
-                    Unit.frmOverWrite = null;
+            {	// Ist ein Update.
+                CItem DBItem = Unit.ItemDB.GetItem(nr);
+                if (DBItem.LastUpdate < Item.LastUpdate)
+                {	// Wenn das Datum des neuen Items neuer ist dann evtl Überschreiben
+                    if (!answerForAll)
+                    {
+                        TApplication.Instance.CreateForm(out Unit.frmOverWrite);
+                        Unit.frmOverWrite.lbName1.Text = DBItem.Name;
+                        Unit.frmOverWrite.lbName1.SetHint(DBItem.Name);
+                        Unit.frmOverWrite.lbDescription1.Text = DBItem.LongInfo;
+                        Unit.frmOverWrite.lbName2.Text = Item.Name;
+                        Unit.frmOverWrite.lbName2.SetHint(Item.Name);
+                        Unit.frmOverWrite.lbDescription2.Text = Item.LongInfo;
+                        mr = Unit.frmOverWrite.ShowDialog(this);
+                        answerForAll = Unit.frmOverWrite.AnswerToAll;
+                        Unit.frmOverWrite.Dispose();
+                        Unit.frmOverWrite = null;
+                    }
+                    if (mr == DialogResult.Yes)
+                    {	// Überschreiben
+                        Unit.ItemDB.UpdateItem(nr, Item);
+                        nUpdated++;
+                        bUpdated = true;
+                    }
+                    else if (mr == DialogResult.No)
+                    {	// Nicht überschreiben, neues Item
+                        nr = -1;
+                    }
+                    else
+                        nr = -2;
                 }
-                if (mr == DialogResult.Yes)
-                {	// Überschreiben
-                    Unit.ItemDB.GetItem(nr).SafeCopy(Item);
-                    nUpdated++;
-                    bUpdated = true;
-                }
-                else if (mr == DialogResult.No)
-                {	// Nicht überschreiben, neues Item
-                    nr = -1;
-                }
-                else
-                    nr = -2;
+                DBItem = null;
             }
             if ((nr == -1) && !Item.Deleted)
             {	// Item ist neu. Master?
-                int master = Utils.GetRegistryString("MasterKey", "0").ToIntDef(0);
+                /*int master = Utils.GetRegistryString("MasterKey", "0").ToIntDef(0);
                 if (master > 0)
                 {	// Sind Masterprogramm. UID vergeben und Masterkey erhöhen
                     Item.iUID = master++;
                     Utils.SetRegistryString("MasterKey", master.ToString());
-                }
+                }*/
                 nNew++;
-                Item.Changed = true;
+                Item.Changed = true;	// Als geändert markieren
                 Unit.ItemDB.AddItem(Item);
                 bUpdated = true;
             }
-            lbItems.Text = Unit.ItemDB.GetNDrops().ToString();
+            lbItems.Text = (nItemCount + nNew).ToString();
             lbNew.Text = nNew.ToString();
             lbUpdated.Text = nUpdated.ToString();
             lbCount.Text = cnt.ToString();
+            pbUpdate.Value = cnt;
             Application.DoEvents();
         }
         //---------------------------------------------------------------------------

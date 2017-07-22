@@ -3181,7 +3181,7 @@ namespace Moras.Net
                     {
                         try
                         {
-                            SQLiteUtils.SQLiteDBClose();
+                            SQLiteUtils.SQLiteDBClose(ZQuery);
                             using (ManualResetEvent updateCompleted = new ManualResetEvent(false))
                             {
                                 using (Unit.frmProgress)

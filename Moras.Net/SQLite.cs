@@ -493,15 +493,21 @@ namespace Moras.Net
             bool result = true;
             try
             {
-                int version = SQLiteDBVersion();
+                int version = SQLiteDBVersion(Unit.frmMain.ZQuery);
                 if (version == 0)
                 {
                     if (!File.Exists(Unit.frmMain.ZConnection.FileName))
                         throw new Exception("Die Datenbank konnte nicht erstellt werden.");
+                    Unit.frmMain.NewDatabase = true;
                     SQLiteDBUpdate0to4();
+                }
+                else if (version == 4)
+                {
+                    Unit.frmMain.NewDatabase = false;
                 }
                 else if (version < 4)
                 {
+                    Unit.frmMain.NewDatabase = false;
                     SQLiteDBConvertCharset();
                 }
                 else if (version > 4)
@@ -534,30 +540,29 @@ namespace Moras.Net
             return result;
         }
 
-        internal static void SQLiteDBClose()
+        internal static void SQLiteDBClose(SQLiteCommand cmd)
         {
-            Unit.frmMain.ZQuery.Close();
-            Unit.frmMain.ZQuery.Connection = null; // reset would leave prepared statements intact, so we need to dispose or clear the connection
-            Unit.frmMain.ZConnection.Close();
+            SQLiteConnection con = Unit.frmMain.ZConnection;
+            cmd.Close();
+            cmd.Connection = null; // reset would leave prepared statements intact, so we need to dispose or clear the connection
+            con.Close();
         }
 
-        internal static int SQLiteDBVersion()
+        internal static int SQLiteDBVersion(SQLiteCommand cmd)
         {
             int result = 0;
 
-            Unit.frmMain.ZQuery.SetActive(false);
-            Unit.frmMain.ZQuery.CommandText = "select count(*) as anzahl from sqlite_master where type='table' and name='morasversion'";
-            Unit.frmMain.ZQuery.SetActive(true);
-            result = Unit.frmMain.ZQuery.FieldByName("anzahl").AsInteger;
-            Unit.frmMain.NewDatabase = true;
+            cmd.SetActive(false);
+            cmd.CommandText = "select count(*) as anzahl from sqlite_master where type='table' and name='morasversion'";
+            cmd.SetActive(true);
+            result = cmd.FieldByName("anzahl").AsInteger;
 
             if (result > 0)
             {
-                Unit.frmMain.NewDatabase = false;
-                Unit.frmMain.ZQuery.SetActive(false);
-                Unit.frmMain.ZQuery.CommandText = "select dbversion from morasversion";
-                Unit.frmMain.ZQuery.SetActive(true);
-                result = Unit.frmMain.ZQuery.FieldByName("dbversion").AsInteger;
+                cmd.SetActive(false);
+                cmd.CommandText = "select dbversion from morasversion";
+                cmd.SetActive(true);
+                result = cmd.FieldByName("dbversion").AsInteger;
                 //        ShowMessage("Version " + (result).ToString());
             }
 
@@ -741,7 +746,7 @@ CREATE TABLE [morasversion] (
                 }
             }
             string dbpath = Unit.frmMain.ZConnection.FileName;
-            SQLiteDBClose();
+            SQLiteDBClose(Unit.frmMain.ZQuery);
 
             string dbpathcopy = Path.ChangeExtension(dbpath, "db3.bak");
             bool createcopy = true;

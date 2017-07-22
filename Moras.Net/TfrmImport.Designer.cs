@@ -256,7 +256,6 @@
             // 
             // dlgOpen
             // 
-            this.dlgOpen.FileName = "openFileDialog1";
             this.dlgOpen.Filter = "Moras Itemdatei (*.xml)|*.xml";
             this.dlgOpen.InitialDirectory = ".";
             // 

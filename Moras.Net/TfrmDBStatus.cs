@@ -64,7 +64,7 @@ namespace Moras.Net
             lbArtifacts.Text = ZQuery.FieldByName("arte").AsString;
             lbSum.Text = ZQuery.FieldByName("alle").AsString;
 
-            lbDBVersion.Text = SQLiteUtils.SQLiteDBVersion().ToString();
+            lbDBVersion.Text = SQLiteUtils.SQLiteDBVersion(ZQuery).ToString();
             lbDBVersion.SetHint(ZQuery.Connection.GetDataSource());
             int size = (int)(new FileInfo(ZQuery.Connection.GetDataSource()).Length / 1024.0);
             lbDBSize.Text = string.Format("{0:N0} KByte", size);

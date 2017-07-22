@@ -659,6 +659,9 @@ msgstr "No Items found in file!"
 msgid "Die gewählte Datei enthält keine Gegenstandsdaten."
 msgstr "The chosen file contains no Itemdata."
 
+msgid "Die gewählte Datei ist nicht kompatibel mit der Moras Datenbank."
+msgstr "The chosen file is not compatible with Moras database."
+
 msgid "Fehler"
 msgstr "Error"
 
@@ -673,6 +676,9 @@ msgstr "' contains no Itemdata."
 
 msgid "Moras Itemdatei (*.xml)|*.xml"
 msgstr "Moras Item file (*.xml)|*.xml"
+
+msgid "Moras Itemdatenbank|items.db3"
+msgstr "Moras Item database|items.db3"
 
 # #####################################################################
 # FILE: item.cpp
