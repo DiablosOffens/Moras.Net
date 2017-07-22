@@ -246,7 +246,8 @@ namespace DelphiClasses
         {
             if (index < 0 || index >= cmb.Items.Count)
                 cmb.SelectedIndex = -1; // behave like delphi but without crashing the app
-            cmb.SelectedIndex = index;
+            else
+                cmb.SelectedIndex = index;
         }
 
         //public static bool CanPersist(this object obj)
