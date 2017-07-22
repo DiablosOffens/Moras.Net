@@ -1,0 +1,3 @@
+- Bei sehr grossen Auflösungen kann es aktivieren einer speziellen Option dazu führen das in Moras die Steuerelemente verschoben sind.
+
+Lösung: Eigenschaften von Anzeige->Einstellungen->Erweitert->Allgemein, hier die DPI Einstellung wieder auf Normal stellen (Windows neustart notwendig). Denn es ist falsch damit bei grossen Auflösungen die Lesbarkeit zu erhöhen. Besser unter Eigenschaften von Anzeige->Darstellung den Schriftgrad erhöhen.
