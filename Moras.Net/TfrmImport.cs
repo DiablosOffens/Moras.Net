@@ -551,14 +551,14 @@ namespace Moras.Net
         //---------------------------------------------------------------------------
         private void stFromClick(object sender, EventArgs e)
         {	// Wenn es eine URL ist, dann Browser öffnen
-            if (Unit.xml_config.ItemUpdate.Website.Length > 0)
+            if (!string.IsNullOrEmpty(Unit.xml_config.ItemUpdate.Website))
                 Extensions.ShellExecute(Handle, "open", Unit.xml_config.ItemUpdate.Website, null, null, ProcessWindowStyle.Normal);
         }
         //---------------------------------------------------------------------------
 
         private void stFromMouseEnter(object sender, EventArgs e)
         {	// Wenn es eine URL ist, dann Farbe ändern
-            if (Unit.xml_config.ItemUpdate.Website.Length > 0)
+            if (!string.IsNullOrEmpty(Unit.xml_config.ItemUpdate.Website))
             {
                 stFrom.ForeColor = Color.Red;
             }
@@ -567,7 +567,7 @@ namespace Moras.Net
 
         private void stFromMouseLeave(object sender, EventArgs e)
         {	// Wenn es eine URL ist, dann alles wieder umdrehen
-            if (Unit.xml_config.ItemUpdate.Website.Length > 0)
+            if (!string.IsNullOrEmpty(Unit.xml_config.ItemUpdate.Website))
             {
                 stFrom.ForeColor = SystemColors.Highlight;
             }
