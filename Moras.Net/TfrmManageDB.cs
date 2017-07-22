@@ -62,6 +62,11 @@ namespace Moras.Net
         private static int iOnlineDB;
         private static string sName;
         private static string sExtensions;
+        // cache translation, as long as the gettext locale isn't changed after app start.
+        private static string sSchmuck = _("Schmuck");
+        private static string sJa = _("Ja");
+        private static string sNein = _("Nein");
+
         private static DynamicArray<CItem> arSearchItems;
 
         private static string _(string szMsgId) { return TGnuGettextInstance.gettext(szMsgId); }
@@ -559,10 +564,10 @@ namespace Moras.Net
                 case 8: if (pItem.Class >= 0)
                         e.CellText = Unit.xml_config.arItemClasses[pItem.Class].Name;
                     else
-                        e.CellText = _("Schmuck");
+                        e.CellText = sSchmuck;
                     break;
                 // Artefakt
-                case 9: e.CellText = (pItem.MaxLevel == 0) ? _("Nein") : _("Ja");
+                case 9: e.CellText = (pItem.MaxLevel == 0) ? sNein : sJa;
                     break;
                 // Reich
                 case 10: e.CellText = Utils.Realm2Str(pItem.Realm);
@@ -658,11 +663,11 @@ namespace Moras.Net
                 case 8: if (pItem1.Class >= 0)
                         sTmp1 = Unit.xml_config.arItemClasses[pItem1.Class].Name;
                     else
-                        sTmp1 = _("Schmuck");
+                        sTmp1 = sSchmuck;
                     if (pItem2.Class >= 0)
                         sTmp2 = Unit.xml_config.arItemClasses[pItem2.Class].Name;
                     else
-                        sTmp2 = _("Schmuck");
+                        sTmp2 = sSchmuck;
                     e.Result = string.Compare(sTmp1, sTmp2);
                     break;
                 case 9: e.Result = Comparer<int>.Default.Compare(pItem1.MaxLevel, pItem2.MaxLevel);
