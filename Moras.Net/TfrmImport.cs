@@ -151,45 +151,52 @@ namespace Moras.Net
                         otherConnection.Open();
                         using (SQLiteCommand importQuery = new SQLiteCommand(otherConnection))
                         {
-                            int version = SQLiteUtils.SQLiteDBVersion(importQuery);
-                            if (version == 0)
+                            try
                             {
-                                Utils.MorasInfoMessage(_("Die gewählte Datei ist nicht kompatibel mit der Moras Datenbank."), _("Fehler"));
-                                return;
-                            }
-                            else if (version < 4)
-                            {
-                                // set type mapping for ansi string
-                                otherConnection.ClearTypeMappings();
-                                otherConnection.AddTypeMapping("VARCHAR2", DbType.Binary, true);
-                                otherConnection.Flags |= SQLiteConnectionFlags.UseConnectionTypes;
-                            }
+                                int version = SQLiteUtils.SQLiteDBVersion(importQuery);
+                                if (version == 0)
+                                {
+                                    Utils.MorasInfoMessage(_("Die gewählte Datei ist nicht kompatibel mit der Moras Datenbank."), _("Fehler"));
+                                    return;
+                                }
+                                else if (version < 4)
+                                {
+                                    // set type mapping for ansi string
+                                    otherConnection.ClearTypeMappings();
+                                    otherConnection.AddTypeMapping("VARCHAR2", DbType.Binary, true);
+                                    otherConnection.Flags |= SQLiteConnectionFlags.UseConnectionTypes;
+                                }
 
-                            DialogResult mr = DialogResult.None;
-                            bool answerForAll = false;
-                            if (Utils.GetRegistryInteger("OverwriteItems", 0) != 0)
-                            {
-                                mr = DialogResult.Yes;
-                                answerForAll = true;
-                            }
-                            importQuery.CommandText = "select * from items";
-                            importQuery.Open();
-                            int itemcount = importQuery.GetRecordCount();
-                            nItemCount = Unit.ItemDB.GetNDrops();
-                            pbUpdate.Value = 0;
-                            pbUpdate.Maximum = itemcount;
-                            Application.DoEvents();
-                            CItem Item;
-                            Show();	// Dialog anzeigen
+                                DialogResult mr = DialogResult.None;
+                                bool answerForAll = false;
+                                if (Utils.GetRegistryInteger("OverwriteItems", 0) != 0)
+                                {
+                                    mr = DialogResult.Yes;
+                                    answerForAll = true;
+                                }
+                                importQuery.SetActive(false);
+                                importQuery.CommandText = "select * from items";
+                                importQuery.SetActive(true);
+                                int itemcount = importQuery.GetRecordCount();
+                                nItemCount = Unit.ItemDB.GetNDrops();
+                                pbUpdate.Value = 0;
+                                pbUpdate.Maximum = itemcount;
+                                Application.DoEvents();
+                                CItem Item;
+                                Show();	// Dialog anzeigen
 
-                            for (int i = 0; i < itemcount; i++)
-                            {
-                                Item = Unit.ItemDB.GetItem(importQuery);
-                                int ret = Unit.ItemDB.CheckItem(Item);
-                                AddItem(Item, ret, ref  mr, ref answerForAll, i + 1);
-                                Unit.frmMain.ZQuery.Next();
+                                for (int i = 0; i < itemcount; i++)
+                                {
+                                    Item = Unit.ItemDB.GetItem(importQuery);
+                                    int ret = Unit.ItemDB.CheckItem(Item);
+                                    AddItem(Item, ret, ref  mr, ref answerForAll, i + 1);
+                                    importQuery.Next();
+                                }
                             }
-                            SQLiteUtils.SQLiteDBClose(importQuery);
+                            finally
+                            {
+                                SQLiteUtils.SQLiteDBClose(importQuery);
+                            }
                         }
                     }
                     Unit.ItemDB.Save();
