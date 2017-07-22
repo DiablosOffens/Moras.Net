@@ -45,6 +45,7 @@ namespace Moras.Net
     using Moras.Net.Components;
     using System.Data.SQLite;
     using dxgettext;
+    using System.Threading;
 
     public partial class TfrmMain : TCustomForm
     {
@@ -3079,7 +3080,8 @@ namespace Moras.Net
                 {
                     case (int)DialogResult.Yes: acFileSave.OnExecute(EventArgs.Empty);
                         break;
-                    case (int)DialogResult.Cancel: e.Cancel = true;
+                    // use Application.Exit[Internal] as forced exit reason, so ignore cancel button.
+                    case (int)DialogResult.Cancel: if (e.CloseReason != CloseReason.ApplicationExitCall) e.Cancel = true;
                         break;
                 }
             }
@@ -3175,8 +3177,32 @@ namespace Moras.Net
                         try
                         {
                             SQLiteUtils.SQLiteDBClose();
-                            ad.Update();
-                            //TODO: Verschiebe items.db in neues Verzeichnis!
+                            using (ManualResetEvent updateCompleted = new ManualResetEvent(false))
+                            {
+                                using (Unit.frmProgress)
+                                {
+                                    TApplication.Instance.CreateForm(out Unit.frmProgress);
+                                    Unit.frmProgress.ControlBox = false;
+                                    ad.UpdateProgressChanged += (sender2, e2) =>
+                                    {
+                                        if (Unit.frmProgress.pbBar.InvokeRequired)
+                                            Unit.frmProgress.pbBar.Invoke(new Action<int>(v => Unit.frmProgress.pbBar.Value = v), e2.ProgressPercentage);
+                                        else
+                                            Unit.frmProgress.pbBar.Value = e2.ProgressPercentage;
+                                    };
+                                    ad.UpdateCompleted += (sender2, e2) =>
+                                    {
+                                        updateCompleted.Set();
+                                        if (Unit.frmProgress.InvokeRequired)
+                                            Unit.frmProgress.Invoke(new Action(Unit.frmProgress.Close));
+                                        else
+                                            Unit.frmProgress.Close();
+                                    };
+                                    ad.UpdateAsync();
+                                    Unit.frmProgress.ShowDialog(this);
+                                }
+                                updateCompleted.WaitOne();
+                            }
                             msg = _("Das Update war erfolgreich und das Programm wird jetzt neugestartet.");
                             title = _("Update erfolgreich");
                             MessageBox.Show(msg, title, MessageBoxButtons.OK, MessageBoxIcon.Information);

@@ -60,6 +60,7 @@
 
         #endregion
 
-        private System.Windows.Forms.ProgressBar pbBar;
+        public System.Windows.Forms.ProgressBar pbBar;
+
     }
 }
