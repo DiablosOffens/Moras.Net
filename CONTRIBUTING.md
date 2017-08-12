@@ -1,9 +1,7 @@
 Guidelines
 ==========
 
-When contributing to the Moras.Net project, please follow the [Moras.Net Coding Guidelines][].  We are working to introduce this coding style to the project.  Please make your pull requests conform to these guidelines.
-
-[Moras.Net Coding Guidelines]: https://github.com/DiablosOffens/Moras.Net/blob/master/CODESTYLE.md
+When contributing to the Moras.Net project, please follow the [Moras.Net Coding Guidelines](CODESTYLE.md).  We are working to introduce this coding style to the project.  Please make your pull requests conform to these guidelines.
 
 Etiquette
 =========
