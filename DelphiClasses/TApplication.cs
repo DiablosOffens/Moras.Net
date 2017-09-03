@@ -9,6 +9,7 @@ using System.Reflection;
 using System.ComponentModel;
 using System.Drawing;
 using DelphiClasses.HelpIntfs;
+using System.Threading;
 
 namespace DelphiClasses
 {
@@ -20,6 +21,10 @@ namespace DelphiClasses
 
         internal static readonly int CM_ACTIONUPDATE = RegisterWindowMessage("TApplication_ActionUpdate");
         internal static readonly int CM_ACTIONEXECUTE = RegisterWindowMessage("TApplication_ActionExecute");
+        private static readonly FieldInfo fiExcDialogButtonWidth = typeof(ThreadExceptionDialog).GetField("scaledButtonAlignmentWidth", BindingFlags.Instance | BindingFlags.NonPublic);
+        private static readonly FieldInfo fiExcDialogDetailsButton = typeof(ThreadExceptionDialog).GetField("detailsButton", BindingFlags.Instance | BindingFlags.NonPublic);
+        private static readonly FieldInfo fiExcDialogHelpButton = typeof(ThreadExceptionDialog).GetField("helpButton", BindingFlags.Instance | BindingFlags.NonPublic);
+
         private static readonly object s_lockInstance = new object();
         private static TApplication s_instance = null;
 
@@ -27,6 +32,7 @@ namespace DelphiClasses
         private static FinalizeHandler ProcessExit;
         public event EventHandler<ActionEventAgs> ActionExecute;
         public event EventHandler<ActionEventAgs> ActionUpdate;
+        public event EventHandler EnsureDebugSymbols;
 
         private Type FCreatingFormType;
         public IntPtr Handle { get { return GetHandle(); } }
@@ -47,6 +53,7 @@ namespace DelphiClasses
         {
             Application.AddMessageFilter(this);
             Application.ThreadExit += new EventHandler(Application_ThreadExit);
+            Application.ThreadException += new ThreadExceptionEventHandler(Application_ThreadException);
             HelpIntfs.Unit.GetHelpSystem(out FHelpSystem);
         }
 
@@ -54,6 +61,16 @@ namespace DelphiClasses
         {
             if (ProcessExit != null)
                 ProcessExit();
+        }
+
+        void Application_ThreadException(object sender, ThreadExceptionEventArgs e)
+        {
+            lock (this)
+            {
+                Application.ThreadException -= new ThreadExceptionEventHandler(Application_ThreadException);
+                ShowException(e.Exception);
+                Application.ThreadException += new ThreadExceptionEventHandler(Application_ThreadException);
+            }
         }
 
         public static TApplication Instance
@@ -237,21 +254,48 @@ namespace DelphiClasses
             }
         }
 
+        protected virtual void OnEnsureDebugSymbols()
+        {
+            if (EnsureDebugSymbols != null)
+                EnsureDebugSymbols(this, EventArgs.Empty);
+        }
+
         public virtual void ShowException(Exception exception)
         {
             if (NoAppExceptionMessages) return;
+            OnEnsureDebugSymbols();
             if (!Terminated && AppInitialized)
             {
+                exception.HelpLink = "https://github.com/DiablosOffens/Moras.Net/issues";
                 DialogResult result = DialogResult.OK;
                 using (ThreadExceptionDialog dialog = new ThreadExceptionDialog(exception))
                 {
-                    result = dialog.ShowDialog();
+                    if (!(exception is WarningException) && fiExcDialogButtonWidth != null &&
+                        fiExcDialogDetailsButton != null && fiExcDialogHelpButton != null)
+                    {
+                        //HACK: use reflection to force display help button if it's not a WarningException.
+                        int width = (int)fiExcDialogButtonWidth.GetValue(dialog);
+                        Button detailsButton = (Button)fiExcDialogDetailsButton.GetValue(dialog);
+                        Button helpButton = (Button)fiExcDialogHelpButton.GetValue(dialog);
+                        helpButton.SetBounds(detailsButton.Left + width, detailsButton.Top, detailsButton.Width, detailsButton.Height);
+                        dialog.Controls.Add(helpButton);
+                    }
+                    do
+                    {
+                        result = dialog.ShowDialog();
+                        if (result == DialogResult.Yes)
+                            Help.ShowHelp(null, exception.HelpLink, null);
+                    } while (result == DialogResult.Yes);
                 }
-                if (result != DialogResult.OK)
+                switch (result)
                 {
-                    NoAppExceptionMessages = true;
-                    Application.Exit();
-                    Environment.Exit(0);
+                    case DialogResult.Abort:
+                        NoAppExceptionMessages = true;
+                        Application.Exit();
+                        Environment.Exit(0);
+                        break;
+                    default:
+                        break;
                 }
             }
             else

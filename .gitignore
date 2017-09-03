@@ -136,8 +136,10 @@ DocProject/Help/html
 
 # Click-Once directory
 #publish/
-!**/publish/**/[Xx]64/
-!**/publish/**/[Xx]86/
+!**/publish/*
+# following does not work correctly in vs 2015
+#!**/publish/**/[Xx]64/
+#!**/publish/**/[Xx]86/
 
 # Publish Web Output
 *.[Pp]ublish.xml
