@@ -616,8 +616,8 @@ namespace Moras.Net
                         iSubClass = Unit.xml_config.GetItemSubClassId(iClass, xFile.AttributeValue["subclass"]);
                         if (iSubClass >= 0) iSubClass++;
                         iMaterial = xFile.AttributeValue["material"].ToIntDef(-1);
-                        iDPS = (int)(Utils.Str2Double(xFile.AttributeValue["dps"]) * 10);
-                        iSpeed = (int)(Utils.Str2Double(xFile.AttributeValue["speed"]) * 10);
+                        iDPS = (int)(Utils.Str2Decimal(xFile.AttributeValue["dps"]) * 10);
+                        iSpeed = (int)(Utils.Str2Decimal(xFile.AttributeValue["speed"]) * 10);
                         iDamageType = Unit.xml_config.GetDamageType(xFile.AttributeValue["damage"]) + 1;
                     }
                     else if (xFile.isTag("effect"))
@@ -700,10 +700,10 @@ namespace Moras.Net
                     else if (xFile.isTag("AFDPS"))
                     {
                         iAF = xFile.Content.ToIntDef(0);
-                        iDPS = (int)(Utils.Str2Double(xFile.Content) * 10);
+                        iDPS = (int)(Utils.Str2Decimal(xFile.Content) * 10);
                     }
                     else if (xFile.isTag("Speed"))
-                        iSpeed = (int)(Utils.Str2Double(xFile.Content) * 10);
+                        iSpeed = (int)(Utils.Str2Decimal(xFile.Content) * 10);
                     else if (xFile.isTag("ItemQuality"))
                         iQuality = xFile.Content.ToIntDef(0);
                     else if (xFile.isTag("DROPITEM"))

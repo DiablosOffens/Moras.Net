@@ -430,10 +430,10 @@ namespace Moras.Net
             return iReturn;
         }
 
-        // Einen String in eine Single-Zahl umwandeln
-        public static double Str2Double(String Value)
+        // Einen String in eine Decimal-Zahl umwandeln
+        public static decimal Str2Decimal(String Value)
         {
-            double dReturn = 0, dFaktor = 1;
+            decimal dReturn = 0, dFaktor = 1;
             bool bKomma = false, bNegative = false;
             int i;
             for (i = 0; i < Value.Length; i++)
@@ -451,7 +451,7 @@ namespace Moras.Net
                     case '8':
                     case '9':
                         if (bKomma) dFaktor *= 10;
-                        dReturn = dReturn * 10 + (double)(Value[i] - '0');
+                        dReturn = dReturn * 10 + (decimal)(Value[i] - '0');
                         break;
                     case '-':
                         bNegative = true; break;
