@@ -16,8 +16,8 @@ key.snk
 [Dd]ebugPublic/
 [Rr]elease/
 [Rr]eleases/
-[Xx]64/
-[Xx]86/
+#[Xx]64/
+#[Xx]86/
 [Bb]uild/
 bld/
 [Bb]in/
@@ -136,8 +136,8 @@ DocProject/Help/html
 
 # Click-Once directory
 #publish/
-!**/publish/*
 # following does not work correctly in vs 2015
+!**/publish/**
 #!**/publish/**/[Xx]64/
 #!**/publish/**/[Xx]86/
 

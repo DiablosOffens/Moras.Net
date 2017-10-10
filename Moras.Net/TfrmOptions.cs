@@ -195,7 +195,7 @@ namespace Moras.Net
 
         private void tbGeneralMarkupChange(object sender, EventArgs e)
         {
-            Unit.xml_config.sPriceModel.pGeneralMarkup = (int)(Utils.Str2Double(tbGeneralMarkup.Text) * 10);
+            Unit.xml_config.sPriceModel.pGeneralMarkup = (int)(Utils.Str2Decimal(tbGeneralMarkup.Text) * 10);
         }
         //---------------------------------------------------------------------------
         private void tbPpLevelChange(object sender, EventArgs e)
@@ -230,7 +230,7 @@ namespace Moras.Net
 
         private void tbQualityChange(object sender, EventArgs e)
         {
-            Unit.xml_config.sPriceModel.pGQMarkup[cbQuality.SelectedIndex] = (int)(Utils.Str2Double(tbQuality.Text) * 10);
+            Unit.xml_config.sPriceModel.pGQMarkup[cbQuality.SelectedIndex] = (int)(Utils.Str2Decimal(tbQuality.Text) * 10);
         }
         //---------------------------------------------------------------------------
 
@@ -358,7 +358,7 @@ namespace Moras.Net
         private void KommaExit(object sender, EventArgs e)
         {
             TextBox edit = (TextBox)sender;
-            double Gold = Utils.Str2Double(edit.Text);
+            decimal Gold = Utils.Str2Decimal(edit.Text);
             edit.Text = (Gold).ToString("###0.0");
         }
         //---------------------------------------------------------------------------

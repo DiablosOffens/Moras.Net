@@ -694,9 +694,9 @@ namespace Moras.Net
                         else if (xBase.isTag("displayid"))
                             arAttributes.Array[curAttrib].displayid = int.Parse(xBase.Content);
                         else if (xBase.isTag("capadd"))
-                            arAttributes.Array[curAttrib].capadd = (float)Utils.Str2Double(xBase.Content);
+                            arAttributes.Array[curAttrib].capadd = (float)Utils.Str2Decimal(xBase.Content);
                         else if (xBase.isTag("capmult"))
-                            arAttributes.Array[curAttrib].capmult = (float)Utils.Str2Double(xBase.Content);
+                            arAttributes.Array[curAttrib].capmult = (float)Utils.Str2Decimal(xBase.Content);
                         else if (xBase.isTag("cap"))
                         {	// Erhöht Cap-Wert des folgenden Wertes
                             pi = GetAttributeId(xBase.Content);
@@ -759,9 +759,9 @@ namespace Moras.Net
                         if (xBase.isTag("no_weight"))
                             arGroups.Array[curGroup].bNoWeight = true;
                         if (xBase.isTag("ip_add"))
-                            arGroups.Array[curGroup].ip_add = (int)Utils.Str2Double(xBase.Content) * 100;
+                            arGroups.Array[curGroup].ip_add = (int)(Utils.Str2Decimal(xBase.Content) * 100);
                         if (xBase.isTag("ip_mult"))
-                            arGroups.Array[curGroup].ip_mult = (int)Utils.Str2Double(xBase.Content) * 100;
+                            arGroups.Array[curGroup].ip_mult = (int)(Utils.Str2Decimal(xBase.Content) * 100);
                         if (xBase.isTag("gemlevel"))
                         {
                             pi = int.Parse(xBase.Content);
@@ -832,9 +832,9 @@ namespace Moras.Net
                             }
                         }
                         else if (xBase.isTag("ip_add"))
-                            arBonuses.Array[curBonus].ip_add = (int)Utils.Str2Double(xBase.Content) * 100;
+                            arBonuses.Array[curBonus].ip_add = (int)(Utils.Str2Decimal(xBase.Content) * 100);
                         else if (xBase.isTag("ip_mult"))
-                            arBonuses.Array[curBonus].ip_mult = (int)Utils.Str2Double(xBase.Content) * 100;
+                            arBonuses.Array[curBonus].ip_mult = (int)(Utils.Str2Decimal(xBase.Content) * 100);
                         else if (xBase.isTag("percent"))
                             arBonuses.Array[curBonus].bPercent = true;
                         else if (xBase.isTag("craftonly"))
@@ -1157,7 +1157,7 @@ namespace Moras.Net
                             Debug.Assert((curClass > -1) && (curClass < nItemClasses));
                             pi = xBase.Value.ToIntDef(1);
                             if (pi > 0)
-                                arItemClasses[curClass].arSubClasses[curLevel].arValue[pi - 1] = (int)Utils.Str2Double(xBase.Content) * 10;
+                                arItemClasses[curClass].arSubClasses[curLevel].arValue[pi - 1] = (int)(Utils.Str2Decimal(xBase.Content) * 10);
                         }
                         else if (xBase.isTag("level"))
                         {
@@ -1171,7 +1171,7 @@ namespace Moras.Net
                         {
                             Debug.Assert(curLevel != -1);
                             Debug.Assert((curClass > -1) && (curClass < nItemClasses));
-                            arItemClasses[curClass].arSubClasses.Array[curLevel].iSpeed = (int)Utils.Str2Double(xBase.Content) * 10;
+                            arItemClasses[curClass].arSubClasses.Array[curLevel].iSpeed = (int)(Utils.Str2Decimal(xBase.Content) * 10);
                         }
                         else if (xBase.isTag("damage"))
                         {
@@ -1232,7 +1232,7 @@ namespace Moras.Net
                         break;
                     case xGroup.GROUP_PRICEMODEL:
                         if (xBase.isTag("general_markup"))
-                            sPriceModel.pGeneralMarkup = (int)Utils.Str2Double(xBase.Content) * 10;
+                            sPriceModel.pGeneralMarkup = (int)(Utils.Str2Decimal(xBase.Content) * 10);
                         if (xBase.isTag("gem"))
                             sPriceModel.PPGem = xBase.Content.ToIntDef(0);
                         if (xBase.isTag("item"))
@@ -1248,7 +1248,7 @@ namespace Moras.Net
                         if (xBase.isTag("hour"))
                             sPriceModel.PPHour = xBase.Content.ToIntDef(0);
                         if (xBase.isTag("quality"))
-                            sPriceModel.pGQMarkup[xBase.AttributeValue["value"].ToIntDef(94) - 94] = (int)Utils.Str2Double(xBase.Content) * 10;
+                            sPriceModel.pGQMarkup[xBase.AttributeValue["value"].ToIntDef(94) - 94] = (int)(Utils.Str2Decimal(xBase.Content) * 10);
                         if (xBase.isTag("tier"))
                             sPriceModel.PPGTier[xBase.AttributeValue["level"].ToIntDef(0)] = xBase.Content.ToIntDef(0);
                         if (xBase.isTag("include_quality"))

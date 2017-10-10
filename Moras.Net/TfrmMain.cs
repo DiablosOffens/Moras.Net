@@ -2090,7 +2090,7 @@ namespace Moras.Net
             int value, level;
             if (tbDPS.Text.Length > 0)
             {
-                value = (int)(Utils.Str2Double(tbDPS.Text) * 10);
+                value = (int)(Utils.Str2Decimal(tbDPS.Text) * 10);
                 Unit.player.DPS[iActSlot] = value;
                 // Berechne den Itemlevel
                 level = (value - 11) / 3;
@@ -2378,7 +2378,7 @@ namespace Moras.Net
             if (bLock != 0) return;
             if (tbSpeed.Text.Length > 0)
             {
-                int value = (int)(Utils.Str2Double(tbSpeed.Text) * 10);
+                int value = (int)(Utils.Str2Decimal(tbSpeed.Text) * 10);
                 Unit.player.Speed[iActSlot] = value;
             }
         }
@@ -2971,8 +2971,8 @@ namespace Moras.Net
         // Diese Funktion wird immer aufgerufen, wenn der Endpreis aktualisiert werden soll
         private void UpdateTotalMatPrice()
         {
-            int price = (int)(Utils.ConvertTagToInt(lbMatTotalP.Tag) * (1 + Utils.Str2Double(tbMarkup.Text) / 100));
-            price += (int)(Utils.ConvertTagToInt(lbMatTotalP.Tag) * Utils.Str2Int(tbRetries.Text) * 0.25 * (1 + Utils.Str2Double(tbRemakeMarkup.Text) / 100));
+            int price = (int)(Utils.ConvertTagToInt(lbMatTotalP.Tag) * (1 + Utils.Str2Decimal(tbMarkup.Text) / 100));
+            price += (int)(Utils.ConvertTagToInt(lbMatTotalP.Tag) * Utils.Str2Int(tbRetries.Text) * 0.25m * (1 + Utils.Str2Decimal(tbRemakeMarkup.Text) / 100));
             lbTotalPrice.Text = Utils.Int2Gold(price);
         }
 
