@@ -482,10 +482,16 @@ namespace Moras.Net
 
         internal static string SQLiteDBEncoding()
         {
-            Unit.frmMain.ZQuery.SetActive(false);
             Unit.frmMain.ZQuery.CommandText = "PRAGMA encoding;";
             Unit.frmMain.ZQuery.SetActive(true);
-            return Unit.frmMain.ZQuery.FieldByIndex(0).AsString;
+            try
+            {
+                return Unit.frmMain.ZQuery.FieldByIndex(0).AsString;
+            }
+            finally
+            {
+                Unit.frmMain.ZQuery.SetActive(false);
+            }
         }
 
         internal static bool SQLiteDBInit()
@@ -542,8 +548,7 @@ namespace Moras.Net
 
         internal static void SQLiteDBClose(SQLiteCommand cmd)
         {
-            SQLiteConnection con = Unit.frmMain.ZConnection;
-            cmd.Close();
+            SQLiteConnection con = cmd.Connection;
             cmd.Connection = null; // reset would leave prepared statements intact, so we need to dispose or clear the connection
             con.Close();
         }
@@ -552,18 +557,24 @@ namespace Moras.Net
         {
             int result = 0;
 
-            cmd.SetActive(false);
             cmd.CommandText = "select count(*) as anzahl from sqlite_master where type='table' and name='morasversion'";
-            cmd.SetActive(true);
-            result = cmd.FieldByName("anzahl").AsInteger;
+            try
+            {
+                cmd.SetActive(true);
+                result = cmd.FieldByName("anzahl").AsInteger;
 
-            if (result > 0)
+                if (result > 0)
+                {
+                    cmd.SetActive(false);
+                    cmd.CommandText = "select dbversion from morasversion";
+                    cmd.SetActive(true);
+                    result = cmd.FieldByName("dbversion").AsInteger;
+                    //        ShowMessage("Version " + (result).ToString());
+                }
+            }
+            finally
             {
                 cmd.SetActive(false);
-                cmd.CommandText = "select dbversion from morasversion";
-                cmd.SetActive(true);
-                result = cmd.FieldByName("dbversion").AsInteger;
-                //        ShowMessage("Version " + (result).ToString());
             }
 
             return result;
@@ -573,7 +584,6 @@ namespace Moras.Net
         {
             SQLiteDBCorrection();
 
-            Unit.frmMain.ZQuery.Close();
             Unit.frmMain.ZConnection.Close();
             Unit.frmMain.ZConnection.SetTransactIsolationLevel(null);
             Unit.frmMain.ZConnection.Open();
@@ -591,14 +601,12 @@ namespace Moras.Net
             int i, j;
             string sql;
 
-            Unit.frmMain.ZQuery.Close();
-
             // Falsche Positions ID korregieren
             for (i = 0; i < CPlayer.PLAYER_ITEMS; i++)
             {
-                string name = Unit.xml_config.arItemSlots[i].strPosClass;
+                string id = Unit.xml_config.arItemSlots[i].strPosId;
                 // Ersten ID Eintrag zu dieser Position suchen
-                j = Unit.xml_config.GetSlotPosition(name);
+                j = Unit.xml_config.GetSlotPosition(id);
                 // Wenn ungleich => problematische ID in DB
                 if (i != j)
                 {
@@ -636,7 +644,6 @@ namespace Moras.Net
         internal static void SQLiteDBUpdate0to4()
         {
             //    ShowMessage("Update 0 auf 1");
-            Unit.frmMain.ZQuery.SetActive(false);
             Unit.frmMain.ZQuery.CommandText = @"
 CREATE TABLE [items] (
   [id] INTEGER PRIMARY KEY ON CONFLICT ABORT AUTOINCREMENT,
@@ -685,7 +692,6 @@ CREATE TABLE [morasversion] (
         internal static void SQLiteDBConvertCharset()
         {
             // convert codepage charset to utf-8
-            Unit.frmMain.ZQuery.Close();
             var mappings = Unit.frmMain.ZConnection.GetTypeMappings();
             var flags = Unit.frmMain.ZConnection.Flags;
             Unit.frmMain.ZConnection.ClearTypeMappings();
@@ -737,6 +743,7 @@ CREATE TABLE [morasversion] (
             }
             finally
             {
+                Unit.frmMain.ZQuery.Close();
                 Unit.frmMain.ZConnection.ClearTypeMappings();
                 Unit.frmMain.ZConnection.Flags = flags;
                 foreach (var pair in mappings)
@@ -781,6 +788,7 @@ CREATE TABLE [morasversion] (
                 using (SQLiteCommandBuilder builder = new SQLiteCommandBuilder(adapter))
                 {
                     adapter.InsertCommand = builder.GetInsertCommand(true);
+                    //TODO: let id autoincrement if it is not used anywhere else
                     adapter.InsertCommand.CommandText = adapter.InsertCommand.CommandText.Replace("] (", "] ([id], ");
                     adapter.InsertCommand.CommandText = adapter.InsertCommand.CommandText.Replace("VALUES (", "VALUES (@id, ");
                     SQLiteParameter pkParam = new SQLiteParameter("id", DbType.Int64, "id");
@@ -821,7 +829,6 @@ CREATE TABLE [morasversion] (
         internal static void SQLiteDBUpdate1to4()
         {
             //    ShowMessage("Update 1 auf 2");
-            Unit.frmMain.ZQuery.Close();
             Unit.frmMain.ZQuery.CommandText = "alter table items rename to items_tmp";
             Unit.frmMain.ZQuery.ExecuteNonQuery();
             Unit.frmMain.ZQuery.CommandText = "drop index idxName";
@@ -859,7 +866,6 @@ CREATE TABLE [morasversion] (
         internal static void SQLiteDBUpdate2to4()
         {
             //    ShowMessage("Update 1 auf 2");
-            Unit.frmMain.ZQuery.Close();
             Unit.frmMain.ZQuery.CommandText = "alter table items rename to items_tmp";
             Unit.frmMain.ZQuery.ExecuteNonQuery();
             Unit.frmMain.ZQuery.CommandText = "drop index idxName";

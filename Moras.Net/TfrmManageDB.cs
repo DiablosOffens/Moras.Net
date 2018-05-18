@@ -326,7 +326,6 @@ namespace Moras.Net
         private void FillOnlineDB()
         {
             string sql = "select provider from items group by provider";
-            ZQuery.Close();
             ZQuery.CommandText = sql;
             ZQuery.Open();
             cbOnlineDB.Items.Clear();
@@ -460,7 +459,6 @@ namespace Moras.Net
                     sql = sql + " where " + fsql;
                 if (Unit.xml_config.bDebugSQL)
                     Utils.DebugPrint(sql);
-                ZQuery.Close();
                 ZQuery.CommandText = sql;
                 ZQuery.Open();
 
@@ -516,6 +514,7 @@ namespace Moras.Net
                     }
                     ZQuery.Next();
                 }
+                ZQuery.Close();
 
                 stStatus.Text = (arSearchItems.Length).ToString() + _(" Gegenstände gefunden.");
                 Application.DoEvents();

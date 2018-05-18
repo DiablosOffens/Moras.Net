@@ -55,7 +55,6 @@ namespace Moras.Net
             sql = sql + " (select count(*) as cnt from items where realm = 4) as mid,";
             sql = sql + " (select count(*) as cnt from items where maxlevel > 0) as arte,";
             sql = sql + " (select count(*) as cnt from items) as alle";
-            ZQuery.Close();
             ZQuery.CommandText = sql;
             ZQuery.Open();
             lbAlbion.Text = ZQuery.FieldByName("alb").AsString;
@@ -63,6 +62,7 @@ namespace Moras.Net
             lbMidgard.Text = ZQuery.FieldByName("mid").AsString;
             lbArtifacts.Text = ZQuery.FieldByName("arte").AsString;
             lbSum.Text = ZQuery.FieldByName("alle").AsString;
+            ZQuery.Close();
 
             lbDBVersion.Text = SQLiteUtils.SQLiteDBVersion(ZQuery).ToString();
             lbDBVersion.SetHint(ZQuery.Connection.GetDataSource());

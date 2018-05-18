@@ -181,7 +181,6 @@ namespace Moras.Net
 
             TempPos = Unit.xml_config.GetSlotPosition(Unit.xml_config.arItemSlots[Item.Position].strPosClass);
 
-            Unit.frmMain.ZQuery.SetActive(false);
             string sql = "select id from items where";
             sql += " name = " + Utils.QuotedStr(Item.Name, '\'');
             if (Item.Provider != "")
@@ -195,12 +194,19 @@ namespace Moras.Net
             Unit.frmMain.ZQuery.CommandText = sql;
             //    DebugPrint(sql.c_str());
             Unit.frmMain.ZQuery.SetActive(true);
-            if (Unit.frmMain.ZQuery.GetRecordCount() > 0)
+            try
             {
-                return Unit.frmMain.ZQuery.FieldByName("id").AsInteger;
-            }
+                if (Unit.frmMain.ZQuery.GetRecordCount() > 0)
+                {
+                    return Unit.frmMain.ZQuery.FieldByName("id").AsInteger;
+                }
 
-            return -1;
+                return -1;
+            }
+            finally
+            {
+                Unit.frmMain.ZQuery.SetActive(false);
+            }
         }
 
         // Das übergebene Item wird zur Database hinzugefügt
@@ -214,7 +220,6 @@ namespace Moras.Net
 
             int TempPos = Unit.xml_config.GetSlotPosition(Unit.xml_config.arItemSlots[Item.Position].strPosClass);
 
-            Unit.frmMain.ZQuery.SetActive(false);
             string sql = "insert into items ";
             sql = sql + "(name, nameoriginal, origin, description, onlineurl, extension, provider, classrestrictions, effects, realm, position, type, level, quality, bonus, class, subclass, material, af, dps, speed, damagetype, maxlevel, lastupdate)";
             sql = sql + " values (" + Utils.QuotedStr(Item.Name, '\'');
@@ -252,7 +257,6 @@ namespace Moras.Net
         // Richtig gelöscht werden nur private Items. DB-Items werden nur gelöscht markiert
         public void DeleteItem(int index)
         {
-            Unit.frmMain.ZQuery.SetActive(false);
             Unit.frmMain.ZQuery.CommandText = "delete from items where id = " + (index).ToString();
             Unit.frmMain.ZQuery.ExecuteNonQuery();
         }
@@ -306,11 +310,11 @@ namespace Moras.Net
         public CItem GetItem(int index)          // Liefert ein Item anhand des Index
         {
             CItem item;
-            Unit.frmMain.ZQuery.SetActive(false);
             Unit.frmMain.ZQuery.CommandText = "select * from items where id = " + (index).ToString();
             Unit.frmMain.ZQuery.SetActive(true);
 
             item = GetItem(Unit.frmMain.ZQuery);
+            Unit.frmMain.ZQuery.SetActive(false);
 
             return item;
         }
@@ -319,7 +323,6 @@ namespace Moras.Net
         {
             int TempPos = Unit.xml_config.GetSlotPosition(Unit.xml_config.arItemSlots[Item.Position].strPosClass);
 
-            Unit.frmMain.ZQuery.SetActive(false);
             string sql = "update items set";
             sql = sql + " name = " + Utils.QuotedStr(Item.Name, '\'');
             sql = sql + ", nameoriginal = " + Utils.QuotedStr(Item.NameOriginal, '\'');
@@ -413,11 +416,19 @@ namespace Moras.Net
             string sql = "select count(*) as cnt from items where type = " + ((int)EItemType.Drop).ToString();
             if (Unit.frmMain != null)
             {
-                Unit.frmMain.ZQuery.SetActive(false);
-                Unit.frmMain.ZQuery.CommandText = sql;
-                Unit.frmMain.ZQuery.SetActive(true);
+                try
+                {
+                    Unit.frmMain.ZQuery.CommandText = sql;
+                    Unit.frmMain.ZQuery.SetActive(true);
+                    return Unit.frmMain.ZQuery.FieldByName("cnt").AsInteger;
+                }
+                finally
+                {
+                    Unit.frmMain.ZQuery.SetActive(false);
+                }
             }
-            return Unit.frmMain.ZQuery.FieldByName("cnt").AsInteger;
+
+            return 0;
         }
 
         // Verwalte das Array in 100er oder 1000er Schritten
