@@ -509,6 +509,43 @@ Nutzen: <ranged utility>
 
 <endif>
 <endif>
+<if myth notempty>
+Mythical:
+Name: <myth name>
+Stufe: <myth level 2>  Qualität: <myth quality>
+Bonus: <myth bonus 2>
+Herkunft: <myth fundort>
+Effekt 1: <myth gem1 amount 3> <myth gem1 effect>
+<if myth gem2 notempty>
+Effekt 2: <myth gem2 amount 3> <myth gem2 effect>
+<endif>
+<if myth gem3 notempty>
+Effekt 3: <myth gem3 amount 3> <myth gem3 effect>
+<endif>
+<if myth gem4 notempty>
+Effekt 4: <myth gem4 amount 3> <myth gem4 effect>
+<endif>
+<if myth gem5 notempty>
+Effekt 5: <myth gem5 amount 3> <myth gem5 effect>
+<endif>
+<if myth gem6 notempty>
+Effekt 6: <myth gem6 amount 3> <myth gem6 effect>
+<endif>
+<if myth gem7 notempty>
+Effekt 7: <myth gem7 amount 3> <myth gem7 effect>
+<endif>
+<if myth gem8 notempty>
+Effekt 8: <myth gem8 amount 3> <myth gem8 effect>
+<endif>
+<if myth gem9 notempty>
+Effekt 9: <myth gem9 amount 3> <myth gem9 effect>
+<endif>
+<if myth gem10 notempty>
+Effekt10: <myth gem10 amount 3> <myth gem10 effect>
+<endif>
+Nutzen: <myth utility>
+
+<endif>
 <if neck notempty>
 Hals:
 Name: <neck name>
