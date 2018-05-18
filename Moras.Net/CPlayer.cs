@@ -91,6 +91,7 @@ namespace Moras.Net
                     arPreviewSlot[i].Type = EItemType.Drop;	// Schmuck ist per Default Drop
             }
             //arWeights.Length = xml_config.nAttributes;
+            strFileName = "";
         }
         //---------------------------------------------------------------------------
         /*~CPlayer()
@@ -106,7 +107,6 @@ namespace Moras.Net
         public void Init()
         {   // Spieler initialisieren
             strName = _("<keiner>");
-            //	strFileName = "";
             strServer = "";
             iClass = 0;	// Hier eventuell Klasse aus Registry laden
             iRace = 0;
