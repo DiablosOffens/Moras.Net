@@ -34,6 +34,7 @@ namespace DelphiClasses
 
         private int numImages;
         private bool allowAllUp;
+        private bool inOnEnter;
 
         public TSpeedButton()
         {
@@ -207,8 +208,23 @@ namespace DelphiClasses
             return PushButtonState.Normal;
         }
 
+        protected override void OnEnter(EventArgs e)
+        {
+            inOnEnter = true;
+            try
+            {
+                base.OnEnter(e);
+            }
+            finally
+            {
+                inOnEnter = false;
+            }
+        }
+
         protected override void OnClick(EventArgs e)
         {
+            if (inOnEnter)
+                return;
             bool autocheck = AutoCheck;
             if (AllowAllUp && autocheck)
             {

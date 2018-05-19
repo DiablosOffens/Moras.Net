@@ -546,15 +546,19 @@ namespace Moras.Net
         // Wandele einen String in einen xml-Conformen String um
         // & => &amp;
         // < => &lt;
+        // > => &gt;
         public static String Str2XmlStr(String input)
         {
             String strReturn = "";
-            for (int i = 1; i <= input.Length; i++)
+            for (int i = 0; i < input.Length; i++)
             {
                 switch (input[i])
                 {
                     case '&': strReturn += "&amp;"; break;
                     case '<': strReturn += "&lt;"; break;
+                    case '>': strReturn += "&gt;"; break;
+                    case '\'': strReturn += "&apos;"; break;
+                    case '"': strReturn += "&quot;"; break;
                     case '\r': break;	// Herausfiltern, da es automatisch angehängt wird
                     default: strReturn += input[i]; break;
                 }

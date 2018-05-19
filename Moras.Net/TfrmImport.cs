@@ -174,7 +174,6 @@ namespace Moras.Net
                                     mr = DialogResult.Yes;
                                     answerForAll = true;
                                 }
-                                importQuery.SetActive(false);
                                 importQuery.CommandText = "select * from items";
                                 importQuery.SetActive(true);
                                 int itemcount = importQuery.GetRecordCount();
@@ -195,6 +194,7 @@ namespace Moras.Net
                             }
                             finally
                             {
+                                importQuery.SetActive(false);
                                 SQLiteUtils.SQLiteDBClose(importQuery);
                             }
                         }

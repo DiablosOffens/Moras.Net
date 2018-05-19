@@ -32,6 +32,7 @@ using dxgettext;
 using System.Runtime.InteropServices;
 using System.Diagnostics;
 using System.Drawing.Printing;
+using System.IO;
 
 namespace Moras.Net
 {
@@ -459,6 +460,8 @@ namespace Moras.Net
                 iPos = 16;
             else if (strName == "lwrist")
                 iPos = 17;
+            else if (strName == "myth")
+                iPos = 18;
             else	// Ist kein slot, deshalb Funktion beenden
                 return 0;
             // Position des ersten Leerzeichens nach dem Namen
@@ -643,13 +646,23 @@ namespace Moras.Net
         private void btSaveClick(object sender, EventArgs e)
         {
             if (SaveDialog1.ShowDialog() != DialogResult.None)
-                tbReport.Lines.SaveToFile(SaveDialog1.FileName);
+                tbReport.SaveFile(SaveDialog1.FileName, RichTextBoxStreamType.PlainText);
         }
         //---------------------------------------------------------------------------
 
         private void btClipboardClick(object sender, EventArgs e)
         {
-            Clipboard.SetText(tbReport.Text);
+            string text;
+            using (MemoryStream stream = new MemoryStream())
+            {
+                tbReport.SaveFile(stream, RichTextBoxStreamType.UnicodePlainText);
+                stream.Position = 0;
+                using (StreamReader reader = new StreamReader(stream, Encoding.Unicode))
+                {
+                    text = reader.ReadToEnd();
+                }
+            }
+            Clipboard.SetText(text);
         }
         //---------------------------------------------------------------------------
 

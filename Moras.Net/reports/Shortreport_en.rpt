@@ -199,6 +199,14 @@ Utility: <ranged utility>
 
 <endif>
 <endif>
+<if myth notempty>
+Mythical: <myth name>
+Level: <myth level 2>  Quality: <myth quality> Bonus: <myth bonus 2>
+Origin: <myth fundort>
+<myth effects>
+Utility: <myth utility>
+
+<endif>
 <if neck notempty>
 Neck: <neck name>
 Level: <neck level 2>  Quality: <neck quality> Bonus: <neck bonus 2>

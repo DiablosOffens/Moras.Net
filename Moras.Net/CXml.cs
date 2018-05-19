@@ -361,13 +361,11 @@ namespace Moras.Net
                         case ParserState.STATE_CONTENT:	// Alles in strContent kopieren, bis ein '<' kommt
                             if (cCur == '<')
                             {	// Hier noch die xml-Escape-Sequencen umwandeln
-                                int pos;
-                                if ((pos = strContent.IndexOf("&amp;")) >= 0)
-                                    strContent = strContent.Substring(0, pos + 1) + strContent.Substring(pos + 5, Math.Min(1000, strContent.Length - pos - 5));
-                                if ((pos = strContent.IndexOf("&lt;")) >= 0)
-                                    strContent = strContent.Substring(0, pos) + '<' + strContent.Substring(pos + 4, Math.Min(1000, strContent.Length - pos - 4));
-                                if ((pos = strContent.IndexOf("&apos;")) >= 0)
-                                    strContent = strContent.Substring(0, pos) + "'" + strContent.Substring(pos + 6, Math.Min(1000, strContent.Length - pos - 6));
+                                strContent = strContent.Replace("&lt;", "<");
+                                strContent = strContent.Replace("&gt;", ">");
+                                strContent = strContent.Replace("&apos;", "'");
+                                strContent = strContent.Replace("&quot;", "\"");
+                                strContent = strContent.Replace("&amp;", "&");
                                 State = ParserState.STATE_OPEN;
                                 return true;
                             }
