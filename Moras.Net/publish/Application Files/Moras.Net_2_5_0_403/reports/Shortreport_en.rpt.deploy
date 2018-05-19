@@ -1,0 +1,272 @@
+Moras Equipmentplaner
+http://moras.sourceforge.net
+
+Configuration Short-Report for <name>
+
+Attributes:
+Strength:     <str 3>  Intelligence: <int 3>  Hitpoints: <hits 4>
+Constitution: <con 3>  Piety:        <pie 3>  Power:     <power 4>
+Dexterity:    <dex 3>  Charisma:     <cha 3>
+Quickness:    <qui 3>  Empathy:      <emp 3>
+
+Resists:
+Crush : <crush 3>  Heat:   <heat 3>  Body:   <body 3>
+Slash:  <slash 3>  Cold:   <cold 3>  Spirit: <spirit 3>
+Thrust: <thrust 3>  Matter: <matter 3>  Energy: <energy 3>
+
+Skills:
+<skills>
+
+Focus:
+<focus1>
+<focus2>
+<focus3>
+<focus4>
+
+Cap-Increases:
+<capbonuses>
+
+Other Bonuses:
+<otherbonuses>
+
+<if chest notempty>
+<if chest pcmade>
+Chest:
+Imbue Points: <chest usedpoints> of <chest availablepoints> (<chest quality> Qual)
+Effects: <chest effects>
+Utility: <chest utility>
+
+<else>
+Chest: <chest name>
+Level: <chest level 2>  Quality: <chest quality>
+AF:   <chest af 3>  Bonus: <chest bonus>
+Origin: <chest fundort>
+<chest effects>
+Utility: <chest utility>
+
+<endif>
+<endif>
+<if arms notempty>
+<if arms pcmade>
+Arms:
+Imbue Points: <arms usedpoints> of <arms availablepoints> (<arms quality> Qual)
+Effects: <arms effects>
+Utility: <arms utility>
+
+<else>
+Arms: <arms name>
+Level: <arms level 2>  Quality: <arms quality>
+AF:   <arms af 3>  Bonus: <arms bonus>
+Origin: <arms fundort>
+<arms effects>
+Utility: <arms utility>
+
+<endif>
+<endif>
+<if head notempty>
+<if head pcmade>
+Head:
+Imbue Points: <head usedpoints> of <head availablepoints> (<head quality> Qual)
+Effects: <head effects>
+Utility: <head utility>
+
+<else>
+Head: <head name>
+Level: <head level 2>  Quality: <head quality>
+AF:   <head af 3>  Bonus: <head bonus>
+Origin: <head fundort>
+<head effects>
+Utility: <head utility>
+
+<endif>
+<endif>
+<if legs notempty>
+<if legs pcmade>
+Legs:
+Imbue Points: <legs usedpoints> of <legs availablepoints> (<legs quality> Qual)
+Effects: <legs effects>
+Utility: <legs utility>
+
+<else>
+Legs: <legs name>
+Level: <legs level 2>  Quality: <legs quality>
+AF:   <legs af 3>  Bonus: <legs bonus>
+Origin: <legs fundort>
+<legs effects>
+Utility: <legs utility>
+
+<endif>
+<endif>
+<if hands notempty>
+<if hands pcmade>
+Hands:
+Imbue Points: <hands usedpoints> of <hands availablepoints> (<hands quality> Qual)
+Effects: <hands effects>
+Utility: <hands utility>
+
+<else>
+Hands: <hands name>
+Level: <hands level 2>  Quality: <hands quality>
+AF:   <hands af 3>  Bonus: <hands bonus>
+Origin: <hands fundort>
+<hands effects>
+Utility: <hands utility>
+
+<endif>
+<endif>
+<if feet notempty>
+<if feet pcmade>
+Feet:
+Imbue Points: <feet usedpoints> of <feet availablepoints> (<feet quality> Qual)
+Effects: <feet effects>
+Utility: <feet utility>
+
+<else>
+Feet: <feet name>
+Level: <feet level 2>  Quality: <feet quality>
+AF:   <feet af 3>  Bonus: <feet bonus>
+Origin: <feet fundort>
+<feet effects>
+Utility: <feet utility>
+
+<endif>
+<endif>
+<if rweapon notempty>
+<if rweapon pcmade>
+Right Hand:
+Imbue Points: <rweapon usedpoints> of <rweapon availablepoints> (<rweapon quality> Qual)
+Effects: <rweapon effects>
+Utility: <rweapon utility>
+
+<else>
+Right Hand: <rweapon name>
+Level: <rweapon level 2>  Quality: <rweapon quality>
+DPS:  <rweapon af 3>  Bonus: <rweapon bonus>
+Origin: <rweapon fundort>
+<rweapon effects>
+Utility: <rweapon utility>
+
+<endif>
+<endif>
+<if lweapon notempty>
+<if lweapon pcmade>
+Left Hand:
+Imbue Points: <lweapon usedpoints> of <lweapon availablepoints> (<lweapon quality> Qual)
+Effects: <lweapon effects>
+Utility: <lweapon utility>
+
+<else>
+Left Hand: <lweapon name>
+Level: <lweapon level 2>  Quality: <lweapon quality>
+DPS:  <lweapon af 3>  Bonus: <lweapon bonus>
+Origin: <lweapon fundort>
+<lweapon effects>
+Utility: <lweapon utility>
+
+<endif>
+<endif>
+<if 2handed notempty>
+<if 2handed pcmade>
+Twohand:
+Imbue Points: <2handed usedpoints> of <2handed availablepoints> (<2handed quality> Qual)
+Effects: <2handed effects>
+Utility: <2handed utility>
+
+<else>
+Twohand: <2handed name>
+Level: <2handed level 2>  Quality: <2handed quality>
+DPS:  <2handed af 3>  Bonus: <2handed bonus>
+Origin: <2handed fundort>
+<2handed effects>
+Utility: <2handed utility>
+
+<endif>
+<endif>
+<if ranged notempty>
+<if ranged pcmade>
+Ranged:
+Imbue Points: <ranged usedpoints> of <ranged availablepoints> (<ranged quality> Qual)
+Effects: <ranged effects>
+Utility: <ranged utility>
+
+<else>
+Ranged: <ranged name>
+Level: <ranged level 2>  Quality: <ranged quality>
+DPS:  <ranged af 3>  Bonus: <ranged bonus>
+Origin: <ranged fundort>
+<ranged effects>
+Utility: <ranged utility>
+
+<endif>
+<endif>
+<if myth notempty>
+Mythical: <myth name>
+Level: <myth level 2>  Quality: <myth quality> Bonus: <myth bonus 2>
+Origin: <myth fundort>
+<myth effects>
+Utility: <myth utility>
+
+<endif>
+<if neck notempty>
+Neck: <neck name>
+Level: <neck level 2>  Quality: <neck quality> Bonus: <neck bonus 2>
+Origin: <neck fundort>
+<neck effects>
+Utility: <neck utility>
+
+<endif>
+<if cloak notempty>
+Cloak: <cloak name>
+Level: <cloak level 2>  Quality: <cloak quality> Bonus: <cloak bonus 2>
+Origin: <cloak fundort>
+<cloak effects>
+Utility: <cloak utility>
+
+<endif>
+<if jewel notempty>
+Jewel: <jewel name>
+Level: <jewel level 2>  Quality: <jewel quality> Bonus: <jewel bonus 2>
+Origin: <jewel fundort>
+<jewel effects>
+Utility: <jewel utility>
+
+<endif>
+<if belt notempty>
+Belt: <belt name>
+Level: <belt level 2>  Quality: <belt quality> Bonus: <belt bonus 2>
+Origin: <belt fundort>
+<belt effects>
+Utility: <belt utility>
+
+<endif>
+<if rring notempty>
+Right Ring: <rring name>
+Level: <rring level 2>  Quality: <rring quality> Bonus: <rring bonus 2>
+Origin: <rring fundort>
+<rring effects>
+Utility: <rring utility>
+
+<endif>
+<if lring notempty>
+Left Ring: <lring name>
+Level: <lring level 2>  Quality: <lring quality> Bonus: <lring bonus 2>
+Origin: <lring fundort>
+<lring effects>
+Utility: <lring utility>
+
+<endif>
+<if rwrist notempty>
+Right Wrist: <rwrist name>
+Level: <rwrist level 2>  Quality: <rwrist quality> Bonus: <rwrist bonus 2>
+Origin: <rwrist fundort>
+<rwrist effects>
+Utility: <rwrist utility>
+
+<endif>
+<if lwrist notempty>
+Left Wrist: <lwrist name>
+Level: <lwrist level 2>  Quality: <lwrist quality> Bonus: <lwrist bonus 2>
+Origin: <lwrist fundort>
+<lwrist effects>
+Utility: <lwrist utility>
+<endif>

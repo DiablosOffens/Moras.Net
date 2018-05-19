@@ -1,0 +1,17 @@
+Moras Ausrüstungsplaner
+http://moras.sourceforge.net
+
+Materialliste
+Gesamtkosten: <totalcost>
+
+Juwelen:
+<materials gemlist>
+
+Basisjuwelen:
+<materials gems>
+
+Stäube:
+<materials dusts>
+
+Flüssigkeiten:
+<materials liquids>

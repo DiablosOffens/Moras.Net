@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<moras>
+	<attributes>
+		<attribute id="CRUSH"></attribute>
+		<attribute id="THRUST"></attribute>
+		<attribute id="SLASH"></attribute>
+		<attribute id="STAFF"></attribute>
+		<attribute id="POLEARM"></attribute>
+		<attribute id="TWO_HANDED"></attribute>
+		<attribute id="ENHANCEMENT"></attribute>
+		<attribute id="REJUVENATION"></attribute>
+		<attribute id="SMITE"></attribute>
+		<attribute id="DUAL_WIELD"></attribute>
+		<attribute id="CHANTS"></attribute>
+		<attribute id="INSTRUMENTS"></attribute>
+		<attribute id="LONGBOW"></attribute>
+		<attribute id="CROSSBOW"></attribute>
+		<attribute id="SHORT_BOW"></attribute>
+		<attribute id="FLEXIBLE"></attribute>
+		<attribute id="EARTH_MAGIC"></attribute>
+		<attribute id="COLD_MAGIC"></attribute>
+		<attribute id="WIND_MAGIC"></attribute>
+		<attribute id="FIRE_MAGIC"></attribute>
+		<attribute id="BODY_MAGIC"></attribute>
+		<attribute id="MATTER_MAGIC"></attribute>
+		<attribute id="SPIRIT_MAGIC"></attribute>
+		<attribute id="MIND_MAGIC"></attribute>
+		<attribute id="DEATH_SERVANT"></attribute>
+		<attribute id="DEATHSIGHT"></attribute>
+		<attribute id="PAINWORKING"></attribute>
+		<attribute id="SOULRENDING"></attribute>
+
+		<attribute id="FIST_WRAPS_ALB"></attribute>
+		<attribute id="MAULER_STAFF_ALB"></attribute>
+		<attribute id="MAGNETISM_ALB"></attribute>
+		<attribute id="POWER_STRIKES_ALB"></attribute>
+		<attribute id="AURA_MANIPULATION_ALB"></attribute>
+
+		<attribute id="EARTH_FOCUS">
+			<skill>EARTH_MAGIC</skill>
+			<capadd>0</capadd>
+			<capmult>1</capmult>
+		</attribute>
+		<attribute id="COLD_FOCUS">
+			<skill>COLD_MAGIC</skill>
+			<capadd>0</capadd>
+			<capmult>1</capmult>
+		</attribute>
+		<attribute id="WIND_FOCUS">
+			<skill>WIND_MAGIC</skill>
+			<capadd>0</capadd>
+			<capmult>1</capmult>
+		</attribute>
+		<attribute id="FIRE_FOCUS">
+			<skill>FIRE_MAGIC</skill>
+			<capadd>0</capadd>
+			<capmult>1</capmult>
+		</attribute>
+		<attribute id="BODY_FOCUS">
+			<skill>BODY_MAGIC</skill>
+			<capadd>0</capadd>
+			<capmult>1</capmult>
+		</attribute>
+		<attribute id="MATTER_FOCUS">
+			<skill>MATTER_MAGIC</skill>
+			<capadd>0</capadd>
+			<capmult>1</capmult>
+		</attribute>
+		<attribute id="SPIRIT_FOCUS">
+			<skill>SPIRIT_MAGIC</skill>
+			<capadd>0</capadd>
+			<capmult>1</capmult>
+		</attribute>
+		<attribute id="MIND_FOCUS">
+			<skill>MIND_MAGIC</skill>
+			<capadd>0</capadd>
+			<capmult>1</capmult>
+		</attribute>
+		<attribute id="DEATH_SERVANT_FOCUS">
+			<skill>DEATH_SERVANT</skill>
+			<capadd>0</capadd>
+			<capmult>1</capmult>
+		</attribute>
+		<attribute id="DEATHSIGHT_FOCUS">
+			<skill>DEATHSIGHT</skill>
+			<capadd>0</capadd>
+			<capmult>1</capmult>
+		</attribute>
+		<attribute id="PAINWORKING_FOCUS">
+			<skill>PAINWORKING</skill>
+			<capadd>0</capadd>
+			<capmult>1</capmult>
+		</attribute>
+	</attributes>
+</moras>
