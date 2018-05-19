@@ -143,6 +143,7 @@ namespace Moras.Net
                     mnItem.Tag = i;
                     mnItem.GroupIndex = 1;
                     //			mnItem.CheckOnClick = true;
+                    mnItem.CheckedChanged += new EventHandler(mnColCustomCheckedChanged);
                     mnColCustom[j].DropDownItems.Add(mnItem);
                 }
             }
@@ -879,7 +880,7 @@ namespace Moras.Net
             int bid = Utils.ConvertTagToInt(mi.Tag) & 0xffff;
             int user = Utils.ConvertTagToInt(mi.Tag) >> 16;
             mi.Checked = true;
-            ((TMainMenu.TTBXItem)mi.OwnerItem).Checked = true;
+            ((TMainMenu.TTBXCustomItem)mi.OwnerItem).Checked = true;
             // die Zeile deshalb, weil radioitem nur im aktuellen menu funktioniert
             //	if (lastitem != NULL)
             //        lastitem.Checked = false;
@@ -891,6 +892,17 @@ namespace Moras.Net
             Utils.SetRegistryString("UserDefinedCol" + (user).ToString(), Unit.xml_config.arBonuses[bid].id);
             // Und die Anzeige updaten
             vtItems.Refresh();
+        }
+        private void mnColCustomCheckedChanged(object sender, EventArgs e)
+        {
+            TMainMenu.TTBXSubmenuItem pmi = (TMainMenu.TTBXSubmenuItem)sender;
+            if (!pmi.Checked)
+            {
+                foreach (TMainMenu.TTBXItem mi in pmi.DropDownItems)
+                {
+                    mi.Checked = false;
+                }
+            }
         }
         //---------------------------------------------------------------------------
         private void cbOnlineDBChange(object sender, EventArgs e)
