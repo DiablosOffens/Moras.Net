@@ -477,7 +477,7 @@ namespace Moras.Net
                         if (iSpeed > 0)
                             att += " speed=\"" + (Speed * 0.1).ToString("000.0") + '\"';
                     }
-                    xFile.OpenTag("weapon", Unit.xml_config.arItemClasses[Class].id, att.Substring(2, 100));
+                    xFile.OpenTag("weapon", Unit.xml_config.arItemClasses[Class].id, att.Substring(1));
                     xFile.CloseTag();
                 }
                 // Eventuelle Klassenbeschränkungen
