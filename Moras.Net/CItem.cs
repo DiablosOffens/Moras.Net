@@ -85,6 +85,7 @@ namespace Moras.Net
         // Der Copy-Konstruktor
         public CItem(CItem rhs)
         {
+            Init();
             strName = rhs.strName;
             strNameOriginal = rhs.strNameOriginal;
             if (rhs.strOrigin != "")
