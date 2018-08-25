@@ -757,7 +757,7 @@ namespace dxgettext
                                                     {
                                                         IComponent compmarker = ((Component)obj).FindComponent("GNUgettextMarker");
                                                         if (compmarker != null)
-                                                            return;
+                                                            break;
                                                     }
                                                     TodoList.AddObject("", obj);
                                                 }// { case item }
