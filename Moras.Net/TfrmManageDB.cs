@@ -120,9 +120,13 @@ namespace Moras.Net
                 }
             }
 
+            // SuspendLayout does not work recursive, so to get better performance, we need to call it on every child
+            // control which has its own childs but not on the leaves of this tree.
+            TBXPopupMenu1.SuspendLayout();
             for (i = 0; i < USER_COLS; i++)
             {
                 mnColCustom[i] = (TMainMenu.TTBXSubmenuItem)this.FindComponent("miUser" + (i + 1).ToString());
+                mnColCustom[i].DropDown.SuspendLayout();
             }
             // Benutzerdefinirtes Menü aufbauen
             // Lade die letzten benutzerdefinierten Werte
@@ -144,6 +148,7 @@ namespace Moras.Net
                     mnItem.GroupIndex = 1;
                     //			mnItem.CheckOnClick = true;
                     mnItem.CheckedChanged += new EventHandler(mnColCustomCheckedChanged);
+                    mnItem.DropDown.SuspendLayout();
                     mnColCustom[j].DropDownItems.Add(mnItem);
                 }
             }
@@ -177,6 +182,15 @@ namespace Moras.Net
                     }
                 }
             }
+            for (i = 0; i < USER_COLS; i++)
+            {
+                foreach (TMainMenu.TTBXSubmenuItem mnItem in mnColCustom[i].DropDownItems)
+                {
+                    mnItem.DropDown.ResumeLayout(false);
+                }
+                mnColCustom[i].DropDown.ResumeLayout(false);
+            }
+            TBXPopupMenu1.ResumeLayout(false);
         }
         //---------------------------------------------------------------------------
         ~TfrmManageDB()
