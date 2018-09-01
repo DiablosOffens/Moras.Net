@@ -36,14 +36,15 @@ namespace DelphiClasses
         private readonly static MethodInfo genDefaultCtor = typeof(ObjectAsValue<T>).GetMethod("DefaultCtor", BindingFlags.Static | BindingFlags.NonPublic);
         private static Func<T> defaultCtor;
 
-        private static Func<T2> DefaultCtor<T2>() where T2 : new()
+        private static Func<T2> DefaultCtor<T2>() where T2 : class, new()
         {
+            GenericConstructor<T2> ctor = GenericConstructor<T2>.Default;
             if (!typeof(T2).ImplementsInterface(typeof(INeedsInitialization)))
-                return () => new T2();
+                return ctor.CreateInstance;
             else
                 return () =>
                 {
-                    T2 obj = new T2();
+                    T2 obj = ctor.CreateInstance();
                     ((INeedsInitialization)obj).Init();
                     return obj;
                 };
