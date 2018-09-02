@@ -707,164 +707,164 @@
     <PublishFile Include="DelphiClasses.pdb">
       <Visible>False</Visible>
       <Group>PDB</Group>
-      <PublishState>Include</PublishState>
-      <IncludeHash>True</IncludeHash>
       <TargetPath>
       </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
       <FileType>File</FileType>
     </PublishFile>
     <PublishFile Include="dxgettext.pdb">
       <Visible>False</Visible>
       <Group>PDB</Group>
-      <PublishState>Include</PublishState>
-      <IncludeHash>True</IncludeHash>
       <TargetPath>
       </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
       <FileType>File</FileType>
     </PublishFile>
     <PublishFile Include="Indy.Sockets.pdb">
       <Visible>False</Visible>
       <Group>PDB</Group>
-      <PublishState>Include</PublishState>
-      <IncludeHash>True</IncludeHash>
       <TargetPath>
       </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
       <FileType>File</FileType>
     </PublishFile>
     <PublishFile Include="moras.ini">
       <Visible>False</Visible>
       <Group>
       </Group>
-      <PublishState>Exclude</PublishState>
-      <IncludeHash>True</IncludeHash>
       <TargetPath>
       </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
       <FileType>File</FileType>
     </PublishFile>
     <PublishFile Include="Moras.Net.Components.pdb">
       <Visible>False</Visible>
       <Group>PDB</Group>
-      <PublishState>Include</PublishState>
-      <IncludeHash>True</IncludeHash>
       <TargetPath>
       </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
       <FileType>File</FileType>
     </PublishFile>
     <PublishFile Include="Moras.Net.pdb">
       <Visible>False</Visible>
       <Group>PDB</Group>
-      <PublishState>Include</PublishState>
-      <IncludeHash>True</IncludeHash>
       <TargetPath>
       </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
       <FileType>File</FileType>
     </PublishFile>
     <PublishFile Include="ObjectListView.pdb">
       <Visible>False</Visible>
       <Group>PDB</Group>
-      <PublishState>Include</PublishState>
-      <IncludeHash>True</IncludeHash>
       <TargetPath>
       </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
       <FileType>File</FileType>
     </PublishFile>
     <PublishFile Include="reports\Configreport_de.rpt">
       <Visible>False</Visible>
       <Group>
       </Group>
-      <PublishState>DataFile</PublishState>
-      <IncludeHash>True</IncludeHash>
       <TargetPath>
       </TargetPath>
+      <PublishState>DataFile</PublishState>
+      <IncludeHash>True</IncludeHash>
       <FileType>File</FileType>
     </PublishFile>
     <PublishFile Include="reports\Configreport_en.rpt">
       <Visible>False</Visible>
       <Group>
       </Group>
-      <PublishState>DataFile</PublishState>
-      <IncludeHash>True</IncludeHash>
       <TargetPath>
       </TargetPath>
+      <PublishState>DataFile</PublishState>
+      <IncludeHash>True</IncludeHash>
       <FileType>File</FileType>
     </PublishFile>
     <PublishFile Include="reports\Crafterreport_de.rpt">
       <Visible>False</Visible>
       <Group>
       </Group>
-      <PublishState>DataFile</PublishState>
-      <IncludeHash>True</IncludeHash>
       <TargetPath>
       </TargetPath>
+      <PublishState>DataFile</PublishState>
+      <IncludeHash>True</IncludeHash>
       <FileType>File</FileType>
     </PublishFile>
     <PublishFile Include="reports\Crafterreport_en.rpt">
       <Visible>False</Visible>
       <Group>
       </Group>
-      <PublishState>DataFile</PublishState>
-      <IncludeHash>True</IncludeHash>
       <TargetPath>
       </TargetPath>
+      <PublishState>DataFile</PublishState>
+      <IncludeHash>True</IncludeHash>
       <FileType>File</FileType>
     </PublishFile>
     <PublishFile Include="reports\Materiallist_de.rpt">
       <Visible>False</Visible>
       <Group>
       </Group>
-      <PublishState>DataFile</PublishState>
-      <IncludeHash>True</IncludeHash>
       <TargetPath>
       </TargetPath>
+      <PublishState>DataFile</PublishState>
+      <IncludeHash>True</IncludeHash>
       <FileType>File</FileType>
     </PublishFile>
     <PublishFile Include="reports\Materiallist_en.rpt">
       <Visible>False</Visible>
       <Group>
       </Group>
-      <PublishState>DataFile</PublishState>
-      <IncludeHash>True</IncludeHash>
       <TargetPath>
       </TargetPath>
+      <PublishState>DataFile</PublishState>
+      <IncludeHash>True</IncludeHash>
       <FileType>File</FileType>
     </PublishFile>
     <PublishFile Include="reports\Shortreport_de.rpt">
       <Visible>False</Visible>
       <Group>
       </Group>
-      <PublishState>DataFile</PublishState>
-      <IncludeHash>True</IncludeHash>
       <TargetPath>
       </TargetPath>
+      <PublishState>DataFile</PublishState>
+      <IncludeHash>True</IncludeHash>
       <FileType>File</FileType>
     </PublishFile>
     <PublishFile Include="reports\Shortreport_en.rpt">
       <Visible>False</Visible>
       <Group>
       </Group>
-      <PublishState>DataFile</PublishState>
-      <IncludeHash>True</IncludeHash>
       <TargetPath>
       </TargetPath>
+      <PublishState>DataFile</PublishState>
+      <IncludeHash>True</IncludeHash>
       <FileType>File</FileType>
     </PublishFile>
     <PublishFile Include="System.Data.SQLite.pdb">
       <Visible>False</Visible>
       <Group>PDB</Group>
-      <PublishState>Include</PublishState>
-      <IncludeHash>True</IncludeHash>
       <TargetPath>
       </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
       <FileType>File</FileType>
     </PublishFile>
     <PublishFile Include="weights\dummy.txt">
       <Visible>False</Visible>
       <Group>
       </Group>
-      <PublishState>DataFile</PublishState>
-      <IncludeHash>True</IncludeHash>
       <TargetPath>
       </TargetPath>
+      <PublishState>DataFile</PublishState>
+      <IncludeHash>True</IncludeHash>
       <FileType>File</FileType>
     </PublishFile>
   </ItemGroup>
