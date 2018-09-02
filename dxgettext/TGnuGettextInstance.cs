@@ -44,7 +44,7 @@ namespace dxgettext
         //private static TStringList savememory;
         private static readonly string DefaultDomainDirectory;
         private static TStringList domainlist;
-        private static TStringList TP_IgnoreList;
+        private static HashSet<string> TP_IgnoreList;
         private static List<TClassMode> TP_ClassHandling;
         private static List<TClassMode> TP_GlobalClassHandling;
         private static List<TClassMode> TP_InterfaceHandling;
@@ -122,8 +122,7 @@ namespace dxgettext
             curmsgdomain = DefaultTextDomain;
             savefileCS = new ReaderWriterLock();
             domainlist = new TStringList();
-            TP_IgnoreList = new TStringList();
-            TP_IgnoreList.Sorted = true;
+            TP_IgnoreList = new HashSet<string>();
             TP_GlobalClassHandling = new List<TClassMode>();
             TP_ClassHandling = new List<TClassMode>();
             TP_InterfaceHandling = new List<TClassMode>();
@@ -552,14 +551,14 @@ namespace dxgettext
 
         public static void TranslateProperties(Object AnObject, string textdomain = "")
         {
-            TStringList TodoList; // List of Name/TObject's that is to be processed
+            Queue TodoList; // List of Name/TObject's that is to be processed
             HashSet<object> DoneList; // hashset of objects that have been done
             PropertyInfo[] PropList;
             string UPropName;
             PropertyInfo PropInfo;
             TClassMode cm,
             currentcm; // currentcm is nil or contains special information about how to handle the current object
-            TStringList ObjectPropertyIgnoreList;
+            HashSet<string> ObjectPropertyIgnoreList;
             string Name;
             Object ActionProperty;
 
@@ -574,20 +573,16 @@ namespace dxgettext
                 else
                     ((TTP_Retranslator)TP_Retranslator).TextDomain = textdomain;
             DoneList = new HashSet<object>();
-            TodoList = new TStringList();
-            ObjectPropertyIgnoreList = new TStringList();
+            TodoList = new Queue();
+            ObjectPropertyIgnoreList = new HashSet<string>();
             try
             {
-                TodoList.AddObject("", AnObject);
-                ObjectPropertyIgnoreList.Sorted = true;
-                ObjectPropertyIgnoreList.Duplicates = TDuplicates.dupIgnore;
-                ObjectPropertyIgnoreList.CaseSensitive = false;
+                TodoList.Enqueue(AnObject);
 
                 while (TodoList.Count != 0)
                 {
-                    AnObject = TodoList.Objects[0];
-                    Name = TodoList.Strings[0];
-                    TodoList.RemoveAt(0);
+                    AnObject = TodoList.Dequeue();
+                    Name = AnObject is IComponent ? (((IComponent)AnObject).GetName() ?? "") : "";
                     // In c# all things can be persisted by reflection. And WinForms has no concept of an abstract form file.
                     // But WPF supports both (form data is stored as XML), so reimplement this for WPF if there is a need for.
                     if (AnObject != null /*&& AnObject.CanPersist()*/)
@@ -610,7 +605,7 @@ namespace dxgettext
                             {
                                 if (cm.PropertiesToIgnore.Count != 0)
                                 {
-                                    ObjectPropertyIgnoreList.AddStrings(cm.PropertiesToIgnore);
+                                    ObjectPropertyIgnoreList.UnionWith(cm.PropertiesToIgnore.Strings);
                                 }
                                 else
                                 {
@@ -629,7 +624,7 @@ namespace dxgettext
                                 {
                                     if (cm.PropertiesToIgnore.Count != 0)
                                     {
-                                        ObjectPropertyIgnoreList.AddStrings(cm.PropertiesToIgnore);
+                                        ObjectPropertyIgnoreList.UnionWith(cm.PropertiesToIgnore.Strings);
                                     }
                                     else
                                     {
@@ -647,7 +642,7 @@ namespace dxgettext
                                 {
                                     if (cm.PropertiesToIgnore.Count != 0)
                                     {
-                                        ObjectPropertyIgnoreList.AddStrings(cm.PropertiesToIgnore); //TODO: craft special interface properties list
+                                        ObjectPropertyIgnoreList.UnionWith(cm.PropertiesToIgnore.Strings); //TODO: craft special interface properties list
                                     }
                                     else
                                     {
@@ -695,8 +690,8 @@ namespace dxgettext
                                 int i;
                                 // Ignore properties that are meant to be ignored
                                 if ((currentcm == null || !currentcm.PropertiesToIgnore.Find(UPropName, out i)) &&
-                                   !TP_IgnoreList.Find(Name + "." + UPropName, out i) &&
-                                   !ObjectPropertyIgnoreList.Find(UPropName, out i))
+                                   !TP_IgnoreList.Contains(Name.ToUpper() + "." + UPropName) &&
+                                   !ObjectPropertyIgnoreList.Contains(UPropName))
                                 {
                                     TranslateProperty(AnObject, PropInfo, TodoList, textdomain);
                                 }  // if
@@ -714,7 +709,7 @@ namespace dxgettext
                             TranslateStrings((TStringList)AnObject, textdomain);
                         }
                         // Check for TCollection
-                        if (AnObject is IList)
+                        else if (AnObject is IList)
                         {
                             // Only add the object if it's not totally ignored already
                             if (currentcm == null || !AnObject.GetType().InheritsFrom(currentcm.HClass))
@@ -757,9 +752,9 @@ namespace dxgettext
                                                     {
                                                         IComponent compmarker = ((Component)obj).FindComponent("GNUgettextMarker");
                                                         if (compmarker != null)
-                                                            return;
+                                                            break;
                                                     }
-                                                    TodoList.AddObject("", obj);
+                                                    TodoList.Enqueue(obj);
                                                 }// { case item }
                                                 break;
                                         } //{ case };
@@ -775,16 +770,15 @@ namespace dxgettext
                             for (int i = 0; i < components.Count; i++)
                             {
                                 IComponent comp = components[i];
-                                int j;
                                 string compname = comp.GetName() ?? string.Empty; //HACK: WinForms supports unnamed components
-                                if (!TP_IgnoreList.Find(compname.ToUpper(), out j))
+                                if (!TP_IgnoreList.Contains(compname.ToUpper()))
                                 {
                                     // Only add the object if it's not totally ignored or translated already
                                     if (currentcm == null || !AnObject.GetType().InheritsFrom(currentcm.HClass))
                                     {
                                         IComponent compmarker = comp.FindComponent("GNUgettextMarker");
                                         if (compmarker == null)
-                                            TodoList.AddObject(compname.ToUpper(), comp);
+                                            TodoList.Enqueue(comp);
                                     }
                                 }
                             }
@@ -1223,7 +1217,7 @@ namespace dxgettext
         }
 
         // Translates a single property of an object
-        private static void TranslateProperty(object AnObject, PropertyInfo PropInfo, TStringList TodoList, string TextDomain)
+        private static void TranslateProperty(object AnObject, PropertyInfo PropInfo, Queue TodoList, string TextDomain)
         {
             string Propname = PropInfo.Name;
             try
@@ -1289,7 +1283,7 @@ namespace dxgettext
                                     if (compmarker != null)
                                         return;
                                 }
-                                TodoList.AddObject("", obj);
+                                TodoList.Enqueue(obj);
                             }
                         }// { case item }
                         break;

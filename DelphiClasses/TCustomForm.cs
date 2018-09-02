@@ -200,7 +200,7 @@ namespace DelphiClasses
 
         public static TForm Create<TForm>() where TForm : TCustomForm, new()
         {
-            TForm form = new TForm();
+            TForm form = GenericConstructor<TForm>.Default.CreateInstance();
             form.AfterConstruction();
             return form;
         }

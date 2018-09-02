@@ -28,26 +28,37 @@ namespace DelphiClasses
         }
     }*/
 
+    internal static class ObjectAsValueHelper
+    {
+        private readonly static MethodInfo genDefaultCtor = typeof(ObjectAsValueHelper).GetMethod("DefaultCtor", BindingFlags.Static | BindingFlags.NonPublic);
+
+        internal static Delegate CreateDefaultCtor(Type elemType)
+        {
+            MethodInfo genCtor = genDefaultCtor.MakeGenericMethod(elemType);
+            return (Delegate)genCtor.Invoke(null, null);
+        }
+
+        private static Func<T> DefaultCtor<T>() where T : class, new()
+        {
+            GenericConstructor<T> ctor = GenericConstructor<T>.Default;
+            if (!typeof(T).ImplementsInterface(typeof(INeedsInitialization)))
+                return ctor.CreateInstance;
+            else
+                return () =>
+                {
+                    T obj = ctor.CreateInstance();
+                    ((INeedsInitialization)obj).Init();
+                    return obj;
+                };
+        }
+    }
+
     // Thats an extension from above, it stores these reference type "values" with always initialized default values by using the default constructor or
     // empty string.
     //HINT: if structs could have a user-defined default ctor, we could avoid the lazy initialized property.
     public struct ObjectAsValue<T> where T : class
     {
-        private readonly static MethodInfo genDefaultCtor = typeof(ObjectAsValue<T>).GetMethod("DefaultCtor", BindingFlags.Static | BindingFlags.NonPublic);
         private static Func<T> defaultCtor;
-
-        private static Func<T2> DefaultCtor<T2>() where T2 : new()
-        {
-            if (!typeof(T2).ImplementsInterface(typeof(INeedsInitialization)))
-                return () => new T2();
-            else
-                return () =>
-                {
-                    T2 obj = new T2();
-                    ((INeedsInitialization)obj).Init();
-                    return obj;
-                };
-        }
 
         static ObjectAsValue()
         {
@@ -57,10 +68,7 @@ namespace DelphiClasses
             else if (elemType == typeof(string))
                 defaultCtor = () => (T)(object)string.Empty;
             else if (elemType.GetConstructor(Type.EmptyTypes) != null)
-            {
-                MethodInfo genCtor = genDefaultCtor.MakeGenericMethod(elemType);
-                defaultCtor = (Func<T>)genCtor.Invoke(null, null);
-            }
+                defaultCtor = (Func<T>)ObjectAsValueHelper.CreateDefaultCtor(elemType);
             else
                 throw new NotSupportedException(string.Format("The class \"{0}\" doesn't provide a default constructor.", elemType));
         }

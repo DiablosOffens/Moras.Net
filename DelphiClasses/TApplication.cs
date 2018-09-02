@@ -180,7 +180,7 @@ namespace DelphiClasses
             {
                 if (FCreatingFormType == null && typeof(TCustomForm).IsAssignableFrom(typeof(TComponent)))
                     FCreatingFormType = typeof(TComponent);
-                comp = new TComponent();
+                comp = GenericConstructor<TComponent>.Default.CreateInstance();
                 ok = true;
             }
             finally

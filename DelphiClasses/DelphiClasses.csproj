@@ -60,6 +60,7 @@
     </Compile>
     <Compile Include="DynamicArray.cs" />
     <Compile Include="Extensions.cs" />
+    <Compile Include="GenericConstructor.cs" />
     <Compile Include="HelpIntfs\IHelpSystem2.cs" />
     <Compile Include="HelpIntfs\IHelpSystem3.cs" />
     <Compile Include="HelpIntfs\ISetActiveControl.cs" />
