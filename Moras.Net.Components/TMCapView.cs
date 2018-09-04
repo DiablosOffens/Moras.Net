@@ -25,6 +25,7 @@ namespace Moras.Net.Components
 
         private int iCapBase;		// Basis-Cap  = (Level + CapAdd) * CapMult
         private int iCapIncCap;  	// Limit für Cap-Inc, nur durch Overcap überschreitbar
+        private int iCapIncOvercap; // Limit für Over-Cap-Inc
         // CapCap = (Level + CCapAdd) * CCapMult + CCapInc
 
         private int iFloor;			// Der Basiswert. Ist eigentlich immer 0, ausser bei den Rassenboni bei den Resistenzen
@@ -48,6 +49,8 @@ namespace Moras.Net.Components
         public int CapBase { get { return iCapBase; } set { SetCapBase(value); } }
         [DefaultValue(0)]
         public int CapIncCap { get { return iCapIncCap; } set { SetCapIncCap(value); } }
+        [DefaultValue(0)]
+        public int CapIncOvercap { get { return iCapIncOvercap; } set { SetCapIncOvercap(value); } }
 
         [DefaultValue(0)]
         public int Floor { get { return iFloor; } set { SetFloor(value); } }
@@ -117,6 +120,7 @@ namespace Moras.Net.Components
             // Diese beiden Werte sind die Werte für Fertigkeiten
             iCapBase = 11;
             iCapIncCap = 0;
+            iCapIncOvercap = 0;
 
             iFloor = 0;
             iValue = 0;
@@ -143,9 +147,9 @@ namespace Moras.Net.Components
             string strOut, strVal;
 
             // Berechne die einzelnen Maximas
-            int iMaxVal = iValue + ((iValueChange > 0) ? iValueChange : 0);
-            //int iMaxCap = iCapBase + iCapInc + ( (iCapChange > 0) ? iCapChange : 0);
-            int iMaxCapCap = iCapBase + iCapIncCap + iOvercap + ((iOvercapChange > 0) ? iOvercap : 0);
+            int iMaxVal = iValue + Math.Max(iValueChange, 0);
+            //int iMaxCap = iCapBase + iCapInc + ((iCapIncChange > 0) ? iCapIncChange : 0) + iOvercap + ((iOvercapChange > 0) ? iOvercapChange : 0);
+            int iMaxCapCap = iCapBase + iCapIncCap + iCapIncOvercap;
             // Suche den größten vorkommenden Anzeigewert:
             /*
             int iMaxMax = (iMaxVal > iMaxCap) ? iMaxVal : iMaxCap;
@@ -157,8 +161,8 @@ namespace Moras.Net.Components
             int iCapT = (iMaxMax <= 0) ? 0 : Width * 4096 / iMaxMax;
 
             // Tatsächliche Caperhöhung und tatsächliche Änderunge von diesem
-            int iRealCapInc = (iCapIncCap + iOvercap > iCapInc) ? iCapInc : iCapIncCap + iOvercap;
-            int iRealCapIncChange = (iCapIncCap + iOvercap + iOvercapChange > iCapInc + iCapIncChange) ? iCapInc + iCapIncChange : iCapIncCap + iOvercap + iOvercapChange;
+            int iRealCapInc = Math.Min(iCapIncCap, iCapInc) + Math.Min(iCapIncOvercap, iOvercap);
+            int iRealCapIncChange = Math.Min(iCapIncCap, iCapInc + iCapIncChange) + Math.Min(iCapIncOvercap, iOvercap + iOvercapChange);
             iRealCapIncChange -= iRealCapInc;
 
             // Startwert für Balken
@@ -263,9 +267,9 @@ namespace Moras.Net.Components
             strOut = Text + ":";
 
             // Ausgabe des Strings mit den Zahlenwerten
-            if (iCapInc + iCapIncChange > iRealCapInc + iRealCapIncChange)
+            if (iCapInc + iCapIncChange + iOvercap + iOvercapChange > iRealCapInc + iRealCapIncChange)
             {
-                strVal = string.Format("{0}({1}|{2})", iFloor + iValue + iValueChange, (iCapBase + iRealCapInc + iRealCapIncChange) - (iValue + iValueChange), iRealCapInc + iRealCapIncChange - (iCapInc + iCapIncChange));
+                strVal = string.Format("{0}({1}|{2})", iFloor + iValue + iValueChange, (iCapBase + iRealCapInc + iRealCapIncChange) - (iValue + iValueChange), iRealCapInc + iRealCapIncChange - (iCapInc + iCapIncChange + iOvercap + iOvercapChange));
             }
             else
             {
@@ -362,9 +366,8 @@ namespace Moras.Net.Components
         {
             // Bastele den Hint zusammen
             StringBuilder hintBuilder = new StringBuilder();
-            int iMaxCapInc = iCapIncCap + iOvercap;
-            int iCapEff = iCapBase + ((iCapInc > iMaxCapInc) ? iMaxCapInc : iCapInc);
-            int iValueEff = iFloor + ((iValue > iCapEff) ? iCapEff : iValue);
+            int iCapEff = iCapBase + Math.Min(iCapInc, iCapIncCap) + Math.Min(iOvercap, iCapIncOvercap);
+            int iValueEff = iFloor + Math.Min(iValue, iCapEff);
 
             hintBuilder.AppendFormat("{0}: {1}\n" +
                 "{2} = {3}\n" +
@@ -397,6 +400,17 @@ namespace Moras.Net.Components
             if (iCapIncCap != CapIncCap)
             {
                 iCapIncCap = CapIncCap;
+                BuildHint();
+                Invalidate();
+            }
+        }
+
+        private void SetCapIncOvercap(int CapIncOvercap)
+        {
+            // Nur setzten und neu zeichnen wenn die Wert anders sind. Sollte das Zeichnen etwas beschleunigen
+            if (iCapIncOvercap != CapIncOvercap)
+            {
+                iCapIncOvercap = CapIncOvercap;
                 BuildHint();
                 Invalidate();
             }
