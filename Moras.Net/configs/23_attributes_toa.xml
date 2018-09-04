@@ -44,7 +44,7 @@
 		<attribute id="CAP_HITPOINTS">
 			<cap>HITPOINTS</cap>
 			<capadd>0</capadd>
-			<capmult>4</capmult>
+			<capmult>8</capmult>
 		</attribute>
 		<attribute id="CAP_POWER">
 			<cap>POWER</cap>

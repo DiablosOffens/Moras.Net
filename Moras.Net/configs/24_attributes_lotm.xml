@@ -4,7 +4,7 @@
 		<attribute id="OVERCAP_STRENGTH"><lotm/>
 			<cap>STRENGTH</cap>
 			<capadd>2</capadd>
-			<capmult>1.5</capmult>
+			<capmult>0.5</capmult>
 			<cap_and_attribute/>
 		</attribute>
 		<attribute id="OVERCAP_CONSTITUTION"><lotm/>
@@ -25,7 +25,31 @@
 			<capmult>0.5</capmult>
 			<cap_and_attribute/>
 		</attribute>
-		<attribute id="OVERCAP_RES_CRUSH"><lotm/>
+    <attribute id="OVERCAP_INTELLIGENCE">
+      <cap>INTELLIGENCE</cap>
+      <capadd>2</capadd>
+      <capmult>0.5</capmult>
+      <cap_and_attribute/>
+    </attribute>
+    <attribute id="OVERCAP_PIETY">
+      <cap>PIETY</cap>
+      <capadd>2</capadd>
+      <capmult>0.5</capmult>
+      <cap_and_attribute/>
+    </attribute>
+    <attribute id="OVERCAP_CHARISMA">
+      <cap>CHARISMA</cap>
+      <capadd>2</capadd>
+      <capmult>0.5</capmult>
+      <cap_and_attribute/>
+    </attribute>
+    <attribute id="OVERCAP_EMPATHY">
+      <cap>EMPATHY</cap>
+      <capadd>2</capadd>
+      <capmult>0.5</capmult>
+      <cap_and_attribute/>
+    </attribute>
+    <attribute id="OVERCAP_RES_CRUSH"><lotm/>
 			<cap>RES_CRUSH</cap>
 			<capadd>2</capadd>
 			<capmult>0.5</capmult>
