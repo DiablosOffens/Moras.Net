@@ -102,7 +102,23 @@
 			<gemlevel bonus="10" dust="0" liquid="0">3</gemlevel>
 			<gemlevel bonus="40" dust="0" liquid="0">4</gemlevel>
 		</group>
-		<group id="OTHERS">
+    <group id="STAT_OVERCAP">
+      <ip_mult>0.67</ip_mult>
+      <drop_only/>
+      <gemlevel bonus="3" dust="0" liquid="0">1</gemlevel>
+      <gemlevel bonus="5" dust="0" liquid="0">2</gemlevel>
+      <gemlevel bonus="10" dust="0" liquid="0">3</gemlevel>
+      <gemlevel bonus="40" dust="0" liquid="0">4</gemlevel>
+    </group>
+    <group id="RESIST_OVERCAP">
+      <ip_mult>0.67</ip_mult>
+      <drop_only/>
+      <gemlevel bonus="3" dust="0" liquid="0">1</gemlevel>
+      <gemlevel bonus="5" dust="0" liquid="0">2</gemlevel>
+      <gemlevel bonus="10" dust="0" liquid="0">3</gemlevel>
+      <gemlevel bonus="40" dust="0" liquid="0">4</gemlevel>
+    </group>
+    <group id="OTHERS">
 			<ip_mult>2</ip_mult>
 			<drop_only/>
 			<gemlevel bonus="3" dust="0" liquid="0">1</gemlevel>

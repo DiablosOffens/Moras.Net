@@ -2125,11 +2125,13 @@ namespace Moras.Net
                 {	// Berechne den Bereich, in dem die Zeile vollständig sichtbar ist
                     int min = ((-height / 24) + 5 - idx) * 24;
                     if (min > 0) min = 0;
-                    int max = (4 - idx) * 24;
+                    int max = (5 - idx) * 24;
                     if (max < height) max = height;
-                    if (panScroll.Top > min) panScroll.Top = min;
-                    if (panScroll.Top < max) panScroll.Top = max;
-                    ScrollBar1.Value = -panScroll.Top;
+                    int top = panScroll.Top;
+                    if (top > min) top = min;
+                    if (top < max) top = max;
+                    panScroll.Top = top;
+                    ScrollBar1.Value = -top;
                 }
             }
         }
@@ -2743,7 +2745,9 @@ namespace Moras.Net
         {
             int max = panScroll.Height - Panel2.Height;
             if (max < 0) max = 0;
-            ScrollBar1.Maximum = max;
+            //https://stackoverflow.com/questions/2882789/net-vertical-scrollbar-not-respecting-maximum-property
+            //Adjust by slider height
+            ScrollBar1.Maximum = max + (ScrollBar1.LargeChange - 1);
         }
         //---------------------------------------------------------------------------
 

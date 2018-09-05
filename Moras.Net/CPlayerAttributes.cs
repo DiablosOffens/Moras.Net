@@ -61,6 +61,7 @@ namespace Moras.Net
         // Die von iLevel abhängigen Caps:
         public int iPlayerCapBase;     // Normales levelbasiertes Cap
         public int iPlayerCapIncCap;    // Normales levelbasiertes Cap für Cap-Erhöhungen
+        public int iPlayerCapIncOvercap;    // Normales levelbasiertes Cap für Über-Cap-Erhöhungen
     }
 
     //---------------------------------------------------------------------------
@@ -111,6 +112,7 @@ namespace Moras.Net
 
                 arAttributeStates.Array[i].iPlayerCapBase = 0;
                 arAttributeStates.Array[i].iPlayerCapIncCap = 0;
+                arAttributeStates.Array[i].iPlayerCapIncOvercap = 0;
             }
 
             // Daten initialisieren
@@ -154,8 +156,9 @@ namespace Moras.Net
         {
             if (pos >= 0 && pos <= arAttributeStates.Length)
             {
-                int iEffMaxCap = arAttributeStates[pos].iPlayerCapIncCap + arAttributeStates[pos].iItemsOvercap;
-                return arAttributeStates[pos].iPlayerCapBase + ((arAttributeStates[pos].iItemsCap > iEffMaxCap) ? iEffMaxCap : arAttributeStates[pos].iItemsCap);
+                int iEffMaxCap = Math.Min(arAttributeStates[pos].iItemsOvercap, arAttributeStates[pos].iPlayerCapIncOvercap);
+                iEffMaxCap += Math.Min(arAttributeStates[pos].iItemsCap, arAttributeStates[pos].iPlayerCapIncCap);
+                return arAttributeStates[pos].iPlayerCapBase + iEffMaxCap;
             }
             else
             {
@@ -334,14 +337,18 @@ namespace Moras.Net
                 {
                     arAttributeStates.Array[i].iPlayerCapBase = (int)(((Single)Level + Unit.xml_config.arAttributes[i].capadd) * Unit.xml_config.arAttributes[i].capmult);
                     arAttributeStates.Array[i].iPlayerCapIncCap = 0; // Cap-Limit initialisieren
+                    arAttributeStates.Array[i].iPlayerCapIncOvercap = 0;
                 }
                 // Nun die Cap-Limits kopieren
                 for (int i = 0; i < arAttributeStates.Length; i++)
                 {
                     int iStatId = Unit.xml_config.arAttributes[i].CapId;
-                    if (iStatId >= 0 && !Unit.xml_config.arAttributes[i].bCapAttr)
+                    if (iStatId >= 0)
                     {
-                        arAttributeStates.Array[iStatId].iPlayerCapIncCap = arAttributeStates[i].iPlayerCapBase;
+                        if (!Unit.xml_config.arAttributes[i].bCapAttr)
+                            arAttributeStates.Array[iStatId].iPlayerCapIncCap = arAttributeStates[i].iPlayerCapBase;
+                        else
+                            arAttributeStates.Array[iStatId].iPlayerCapIncOvercap = arAttributeStates[i].iPlayerCapBase;
                     }
                 }
             }
@@ -375,8 +382,9 @@ namespace Moras.Net
                                     {
                                         if (cid >= 0)
                                         {	// Caperhöhung
-                                            lhs.arAttributeStates.Array[cid].iItemsCap += rhs.EffectValue[i];
-                                            if (Unit.xml_config.arAttributes[aid].bCapAttr)
+                                            if (!Unit.xml_config.arAttributes[aid].bCapAttr)
+                                                lhs.arAttributeStates.Array[cid].iItemsCap += rhs.EffectValue[i];
+                                            else
                                                 lhs.arAttributeStates.Array[cid].iItemsOvercap += rhs.EffectValue[i];
                                         }
                                         else
@@ -386,8 +394,9 @@ namespace Moras.Net
                                     {
                                         if (cid >= 0)
                                         {	// Caperhöhung
-                                            lhs.arAttributeStates.Array[cid].iPreviewCap += rhs.EffectValue[i];
-                                            if (Unit.xml_config.arAttributes[aid].bCapAttr)
+                                            if (!Unit.xml_config.arAttributes[aid].bCapAttr)
+                                                lhs.arAttributeStates.Array[cid].iPreviewCap += rhs.EffectValue[i];
+                                            else
                                                 lhs.arAttributeStates.Array[cid].iPreviewOvercap += rhs.EffectValue[i];
                                         }
                                         else
@@ -505,9 +514,10 @@ namespace Moras.Net
             {
                 if (arAttributeStates[i].bActive)
                 {
-                    int iEffMaxCap = arAttributeStates[i].iPlayerCapIncCap + arAttributeStates[i].iItemsOvercap;
-                    int iEffCap = arAttributeStates[i].iPlayerCapBase + ((arAttributeStates[i].iItemsCap > iEffMaxCap) ? iEffMaxCap : arAttributeStates[i].iItemsCap);
-                    int iEffVal = (arAttributeStates[i].iItemsValue > iEffCap) ? iEffCap : arAttributeStates[i].iItemsValue;
+                    int iEffMaxCap = Math.Min(arAttributeStates[i].iItemsOvercap, arAttributeStates[i].iPlayerCapIncOvercap);
+                    iEffMaxCap += Math.Min(arAttributeStates[i].iItemsCap, arAttributeStates[i].iPlayerCapIncCap);
+                    int iEffCap = arAttributeStates[i].iPlayerCapBase + iEffMaxCap;
+                    int iEffVal = Math.Min(arAttributeStates[i].iItemsValue, iEffCap);
                     dTotalUtility += Weights.UpV[i] * iEffVal;
                 }
             }
@@ -560,6 +570,7 @@ namespace Moras.Net
                             // Aktualisiere Anzeige-Werte
                             Unit.frmMain.Attributes[did].CapBase = arAttributeStates[i].iPlayerCapBase;
                             Unit.frmMain.Attributes[did].CapIncCap = arAttributeStates[i].iPlayerCapIncCap;
+                            Unit.frmMain.Attributes[did].CapIncOvercap = arAttributeStates[i].iPlayerCapIncOvercap;
 
                             Unit.frmMain.Attributes[did].Value = arAttributeStates[i].iItemsValue;
                             Unit.frmMain.Attributes[did].CapInc = arAttributeStates[i].iItemsCap;
@@ -627,6 +638,7 @@ namespace Moras.Net
                     // Aktualisiere Anzeige-Werte
                     Unit.frmMain.Attributes[idx].CapBase = arAttributeStates[j].iPlayerCapBase;
                     Unit.frmMain.Attributes[idx].CapIncCap = arAttributeStates[j].iPlayerCapIncCap;
+                    Unit.frmMain.Attributes[idx].CapIncOvercap = arAttributeStates[j].iPlayerCapIncOvercap;
 
                     Unit.frmMain.Attributes[idx].Value = arAttributeStates[j].iItemsValue;
                     Unit.frmMain.Attributes[idx].CapInc = arAttributeStates[j].iItemsCap;
