@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<moras>
+	<bonuses>
+		<bonus id="OVERCAP_STRENGTH">
+			<group>OVERCAP_INC</group>
+    </bonus>
+    <bonus id="OVERCAP_CONSTITUTION">
+			<group>OVERCAP_INC</group>
+		</bonus>
+    <bonus id="OVERCAP_DEXTERITY">
+      <group>OVERCAP_INC</group>
+    </bonus>
+    <bonus id="OVERCAP_QUICKNESS">
+			<group>OVERCAP_INC</group>
+		</bonus>
+    <bonus id="OVERCAP_ACUITY">
+      <group>OVERCAP_INC</group>
+      <effect type="VALUE">OVERCAP_INTELLIGENCE</effect>
+      <effect type="VALUE">OVERCAP_PIETY</effect>
+      <effect type="VALUE">OVERCAP_CHARISMA</effect>
+      <effect type="VALUE">OVERCAP_EMPATHY</effect>
+    </bonus>
+    <bonus id="OVERCAP_RES_CRUSH" oldid="2000" kortid="Crush Resist">
+			<group>OVERCAP_INC</group>
+			<percent/>
+		</bonus>
+		<bonus id="OVERCAP_RES_SLASH" oldid="2001" kortid="Slash Resist">
+			<group>OVERCAP_INC</group>
+			<percent/>
+		</bonus>
+		<bonus id="OVERCAP_RES_THRUST" oldid="2002" kortid="Thrust Resist">
+			<group>OVERCAP_INC</group>
+			<percent/>
+		</bonus>
+		<bonus id="OVERCAP_RES_HEAT" oldid="2003" kortid="Heat Resist">
+			<group>OVERCAP_INC</group>
+			<percent/>
+		</bonus>
+		<bonus id="OVERCAP_RES_COLD" oldid="2004" kortid="Cold Resist">
+			<group>OVERCAP_INC</group>
+			<percent/>
+		</bonus>
+		<bonus id="OVERCAP_RES_MATTER" oldid="2005" kortid="Matter Resist">
+			<group>OVERCAP_INC</group>
+			<percent/>
+		</bonus>
+		<bonus id="OVERCAP_RES_BODY" oldid="2006" kortid="Body Resist">
+			<group>OVERCAP_INC</group>
+			<percent/>
+		</bonus>
+		<bonus id="OVERCAP_RES_SPIRIT" oldid="2007" kortid="Spirit Resist">
+			<group>OVERCAP_INC</group>
+			<percent/>
+		</bonus>
+		<bonus id="OVERCAP_RES_ENERGY" oldid="2008" kortid="Energy Resist">
+			<group>OVERCAP_INC</group>
+			<percent/>
+		</bonus>
+    <bonus id="STAT_OVERCAP_STRENGTH">
+      <group>STAT_OVERCAP</group>
+      <effect type="VALUE">STRENGTH</effect>
+      <effect type="VALUE">OVERCAP_STRENGTH</effect>
+    </bonus>
+    <bonus id="STAT_OVERCAP_CONSTITUTION">
+      <group>STAT_OVERCAP</group>
+      <effect type="VALUE">CONSTITUTION</effect>
+      <effect type="VALUE">OVERCAP_CONSTITUTION</effect>
+    </bonus>
+    <bonus id="STAT_OVERCAP_DEXTERITY">
+      <group>STAT_OVERCAP</group>
+      <effect type="VALUE">DEXTERITY</effect>
+      <effect type="VALUE">OVERCAP_DEXTERITY</effect>
+    </bonus>
+    <bonus id="STAT_OVERCAP_QUICKNESS">
+      <group>STAT_OVERCAP</group>
+      <effect type="VALUE">QUICKNESS</effect>
+      <effect type="VALUE">OVERCAP_QUICKNESS</effect>
+    </bonus>
+    <bonus id="STAT_OVERCAP_ACUITY">
+      <group>STAT_OVERCAP</group>
+      <effect type="VALUE">INTELLIGENCE</effect>
+      <effect type="VALUE">PIETY</effect>
+      <effect type="VALUE">CHARISMA</effect>
+      <effect type="VALUE">EMPATHY</effect>
+      <effect type="VALUE">OVERCAP_INTELLIGENCE</effect>
+      <effect type="VALUE">OVERCAP_PIETY</effect>
+      <effect type="VALUE">OVERCAP_CHARISMA</effect>
+      <effect type="VALUE">OVERCAP_EMPATHY</effect>
+    </bonus>
+    <bonus id="RESIST_OVERCAP_RES_CRUSH" oldid="2000" kortid="Crush Resist">
+      <group>RESIST_OVERCAP</group>
+      <percent/>
+      <effect type="VALUE">RES_CRUSH</effect>
+      <effect type="VALUE">OVERCAP_RES_CRUSH</effect>
+    </bonus>
+    <bonus id="RESIST_OVERCAP_RES_SLASH" oldid="2001" kortid="Slash Resist">
+      <group>RESIST_OVERCAP</group>
+      <percent/>
+      <effect type="VALUE">RES_SLASH</effect>
+      <effect type="VALUE">OVERCAP_RES_SLASH</effect>
+    </bonus>
+    <bonus id="RESIST_OVERCAP_RES_THRUST" oldid="2002" kortid="Thrust Resist">
+      <group>RESIST_OVERCAP</group>
+      <percent/>
+      <effect type="VALUE">RES_THRUST</effect>
+      <effect type="VALUE">OVERCAP_RES_THRUST</effect>
+    </bonus>
+    <bonus id="RESIST_OVERCAP_RES_HEAT" oldid="2003" kortid="Heat Resist">
+      <group>RESIST_OVERCAP</group>
+      <percent/>
+      <effect type="VALUE">RES_HEAT</effect>
+      <effect type="VALUE">OVERCAP_RES_HEAT</effect>
+    </bonus>
+    <bonus id="RESIST_OVERCAP_RES_COLD" oldid="2004" kortid="Cold Resist">
+      <group>RESIST_OVERCAP</group>
+      <percent/>
+      <effect type="VALUE">RES_COLD</effect>
+      <effect type="VALUE">OVERCAP_RES_COLD</effect>
+    </bonus>
+    <bonus id="RESIST_OVERCAP_RES_MATTER" oldid="2005" kortid="Matter Resist">
+      <group>RESIST_OVERCAP</group>
+      <percent/>
+      <effect type="VALUE">RES_MATTER</effect>
+      <effect type="VALUE">OVERCAP_RES_MATTER</effect>
+    </bonus>
+    <bonus id="RESIST_OVERCAP_RES_BODY" oldid="2006" kortid="Body Resist">
+      <group>RESIST_OVERCAP</group>
+      <percent/>
+      <effect type="VALUE">RES_BODY</effect>
+      <effect type="VALUE">OVERCAP_RES_BODY</effect>
+    </bonus>
+    <bonus id="RESIST_OVERCAP_RES_SPIRIT" oldid="2007" kortid="Spirit Resist">
+      <group>RESIST_OVERCAP</group>
+      <percent/>
+      <effect type="VALUE">RES_SPIRIT</effect>
+      <effect type="VALUE">OVERCAP_RES_SPIRIT</effect>
+    </bonus>
+    <bonus id="RESIST_OVERCAP_RES_ENERGY" oldid="2008" kortid="Energy Resist">
+      <group>RESIST_OVERCAP</group>
+      <percent/>
+      <effect type="VALUE">RES_ENERGY</effect>
+      <effect type="VALUE">OVERCAP_RES_ENERGY</effect>
+    </bonus>
+    <bonus id="ENCUMBRANCE_INCREASE">
+			<group>OTHERS</group>
+		</bonus>
+		<bonus id="ESSENCE_RESIST">
+			<group>OTHERS</group>
+			<percent/>
+		</bonus>
+		<bonus id="SAFE_FALL">
+			<group>OTHERS</group>
+			<percent/>
+		</bonus>
+		<bonus id="SPELL_LEVEL_INCREASE">
+			<group>OTHERS</group>
+		</bonus>
+		<bonus id="SIEGE_DAMAGE_REDUCTION">
+			<group>OTHERS</group>
+			<percent/>
+		</bonus>
+		<bonus id="REALM_POINT_BONUS">
+			<group>OTHERS</group>
+			<percent/>
+		</bonus>
+		<bonus id="CROWD_CONTROL_REDUCTION">
+			<group>OTHERS</group>
+			<percent/>
+		</bonus>
+		<bonus id="DAMAGE_INCREASE">
+			<group>OTHERS</group>
+			<percent/>
+		</bonus>
+		<bonus id="HEALTH_REGEN">
+			<group>OTHERS</group>
+		</bonus>
+		<bonus id="POWER_REGEN">
+			<group>OTHERS</group>
+		</bonus>
+		<bonus id="SIEGE_SPEED_BONUS">
+			<group>OTHERS</group>
+			<percent/>
+		</bonus>
+		<bonus id="WATER_BREATHING">
+			<group>OTHERS</group>
+		</bonus>
+		<bonus id="ENDURANCE_REGEN">
+			<group>OTHERS</group>
+		</bonus>
+		<bonus id="PHYSICAL_DAMAGE_DECREASE">
+			<group>OTHERS</group>
+			<percent/>
+		</bonus>
+	</bonuses>
+</moras>

@@ -31,8 +31,8 @@
     <ProductName>Moras Ausrüstungsplaner</ProductName>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>publish.htm</WebPage>
-    <ApplicationRevision>406</ApplicationRevision>
-    <ApplicationVersion>2.5.0.406</ApplicationVersion>
+    <ApplicationRevision>407</ApplicationRevision>
+    <ApplicationVersion>2.5.0.407</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
     <PublishWizardCompleted>true</PublishWizardCompleted>
