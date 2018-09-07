@@ -10,6 +10,7 @@
     {% assign part0_len = body_parts[0] | size %}
     {% assign body_html = body_html | slice: 0, part0_len %}
     {{ body_html }}
+    {{ content }}
     {% else %}
     {% include header.html %}
 
