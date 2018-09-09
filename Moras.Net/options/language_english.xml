@@ -227,6 +227,7 @@
 <attribute id="WATER_BREATHING"><name>Water Breathing</name></attribute>
 <attribute id="ENDURANCE_REGEN"><name>Endurance Regen</name></attribute>
 <attribute id="PHYSICAL_DAMAGE_DECREASE"><name>Physical Damage Decrease(%)</name></attribute>
+<attribute id="DAMAGE_CONVERSION"><name>Damage Conversion(%)</name></attribute>
 </attributes>
 <groups>
 <group id="UNUSED"><name>Unused</name></group>
@@ -839,6 +840,7 @@
 <bonus id="WATER_BREATHING"><name>Water Breathing</name></bonus>
 <bonus id="ENDURANCE_REGEN"><name>Endurance Regen</name></bonus>
 <bonus id="PHYSICAL_DAMAGE_DECREASE"><name>Physical Damage Decrease(%)</name></bonus>
+<bonus id="DAMAGE_CONVERSION"><name>Damage Conversion(%)</name></bonus>
 <bonus id="DRAGON_STRENGTH"><name>Strength</name></bonus>
 <bonus id="DRAGON_CONSTITUTION"><name>Constitution</name></bonus>
 <bonus id="DRAGON_DEXTERITY"><name>Dexterity</name></bonus>

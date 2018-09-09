@@ -191,5 +191,9 @@
 			<group>OTHERS</group>
 			<percent/>
 		</bonus>
-	</bonuses>
+    <bonus id="DAMAGE_CONVERSION">
+      <group>OTHERS</group>
+      <percent/>
+    </bonus>
+  </bonuses>
 </moras>
