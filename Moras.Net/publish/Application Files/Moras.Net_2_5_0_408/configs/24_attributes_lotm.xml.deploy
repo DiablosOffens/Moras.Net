@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<moras>
+	<attributes>
+		<attribute id="OVERCAP_STRENGTH"><lotm/>
+			<cap>STRENGTH</cap>
+			<capadd>2</capadd>
+			<capmult>1</capmult>
+			<cap_and_attribute/>
+		</attribute>
+		<attribute id="OVERCAP_CONSTITUTION"><lotm/>
+			<cap>CONSTITUTION</cap>
+			<capadd>2</capadd>
+			<capmult>1</capmult>
+			<cap_and_attribute/>
+		</attribute>
+		<attribute id="OVERCAP_DEXTERITY"><lotm/>
+			<cap>DEXTERITY</cap>
+			<capadd>2</capadd>
+			<capmult>1</capmult>
+			<cap_and_attribute/>
+		</attribute>
+		<attribute id="OVERCAP_QUICKNESS"><lotm/>
+			<cap>QUICKNESS</cap>
+			<capadd>2</capadd>
+			<capmult>1</capmult>
+			<cap_and_attribute/>
+		</attribute>
+    <attribute id="OVERCAP_INTELLIGENCE">
+      <cap>INTELLIGENCE</cap>
+      <capadd>2</capadd>
+      <capmult>1</capmult>
+      <cap_and_attribute/>
+    </attribute>
+    <attribute id="OVERCAP_PIETY">
+      <cap>PIETY</cap>
+      <capadd>2</capadd>
+      <capmult>1</capmult>
+      <cap_and_attribute/>
+    </attribute>
+    <attribute id="OVERCAP_CHARISMA">
+      <cap>CHARISMA</cap>
+      <capadd>2</capadd>
+      <capmult>1</capmult>
+      <cap_and_attribute/>
+    </attribute>
+    <attribute id="OVERCAP_EMPATHY">
+      <cap>EMPATHY</cap>
+      <capadd>2</capadd>
+      <capmult>1</capmult>
+      <cap_and_attribute/>
+    </attribute>
+    <attribute id="OVERCAP_RES_CRUSH"><lotm/>
+			<cap>RES_CRUSH</cap>
+			<cap_and_attribute/>
+		</attribute>
+		<attribute id="OVERCAP_RES_SLASH"><lotm/>
+			<cap>RES_SLASH</cap>
+			<cap_and_attribute/>
+		</attribute>
+		<attribute id="OVERCAP_RES_THRUST"><lotm/>
+			<cap>RES_THRUST</cap>
+			<cap_and_attribute/>
+		</attribute>
+		<attribute id="OVERCAP_RES_HEAT"><lotm/>
+			<cap>RES_HEAT</cap>
+			<cap_and_attribute/>
+		</attribute>
+		<attribute id="OVERCAP_RES_COLD"><lotm/>
+			<cap>RES_COLD</cap>
+			<cap_and_attribute/>
+		</attribute>
+		<attribute id="OVERCAP_RES_MATTER"><lotm/>
+			<cap>RES_MATTER</cap>
+			<cap_and_attribute/>
+		</attribute>
+		<attribute id="OVERCAP_RES_BODY"><lotm/>
+			<cap>RES_BODY</cap>
+			<cap_and_attribute/>
+		</attribute>
+		<attribute id="OVERCAP_RES_SPIRIT"><lotm/>
+			<cap>RES_SPIRIT</cap>
+			<cap_and_attribute/>
+		</attribute>
+		<attribute id="OVERCAP_RES_ENERGY"><lotm/>
+			<cap>RES_ENERGY</cap>
+			<cap_and_attribute/>
+		</attribute>
+		<attribute id="ENCUMBRANCE_INCREASE"><lotm/>
+			<capadd>0</capadd>
+			<capmult>1.6</capmult>
+		</attribute>
+		<attribute id="ESSENCE_RESIST"><lotm/>
+			<capadd>0</capadd>
+			<capmult>0.25</capmult>
+		</attribute>
+		<attribute id="SAFE_FALL"><lotm/>
+			<capadd>0</capadd>
+			<capmult>1.6</capmult>
+		</attribute>
+		<attribute id="SPELL_LEVEL_INCREASE"><lotm/>
+			<capadd>0</capadd>
+			<capmult>0.09</capmult>
+		</attribute>
+		<attribute id="SIEGE_DAMAGE_REDUCTION"><lotm/>
+			<capadd>0</capadd>
+			<capmult>0.3</capmult>
+		</attribute>
+		<attribute id="REALM_POINT_BONUS"><lotm/>
+			<capadd>0</capadd>
+			<capmult>0.13</capmult>
+		</attribute>
+		<attribute id="CROWD_CONTROL_REDUCTION"><lotm/>
+			<capadd>0</capadd>
+			<capmult>1.0</capmult>
+		</attribute>
+		<attribute id="DAMAGE_INCREASE"><lotm/>
+			<capadd>0</capadd>
+			<capmult>0.2</capmult>
+		</attribute>
+		<attribute id="HEALTH_REGEN"><lotm/>
+			<capadd>0</capadd>
+			<capmult>1.0</capmult>
+		</attribute>
+		<attribute id="POWER_REGEN"><lotm/>
+			<capadd>0</capadd>
+			<capmult>1.0</capmult>
+		</attribute>
+		<attribute id="SIEGE_SPEED_BONUS"><lotm/>
+			<capadd>0</capadd>
+			<capmult>0.18</capmult>
+		</attribute>
+		<attribute id="WATER_BREATHING"><lotm/>
+			<capadd>0</capadd>
+			<capmult>0.03</capmult>
+		</attribute>
+		<attribute id="ENDURANCE_REGEN"><lotm/>
+			<capadd>0</capadd>
+			<capmult>1</capmult>
+		</attribute>
+		<attribute id="PHYSICAL_DAMAGE_DECREASE"><lotm/>
+			<capadd>0</capadd>
+			<capmult>0.07</capmult>
+		</attribute>
+		<attribute id="DAMAGE_CONVERSION"><lotm/>
+      <capadd>0</capadd>
+      <capmult>1</capmult>
+    </attribute>
+	</attributes>
+</moras>
