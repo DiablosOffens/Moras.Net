@@ -1,0 +1,1630 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<Moras version="1.0">
+<option group="Sprache" default="true">Deutsch</option>
+<attributes>
+<attribute id="STRENGTH"><name>Stärke</name></attribute>
+<attribute id="CONSTITUTION"><name>Konstitution</name></attribute>
+<attribute id="DEXTERITY"><name>Geschick</name></attribute>
+<attribute id="QUICKNESS"><name>Schnelligkeit</name></attribute>
+<attribute id="INTELLIGENCE"><name>Intelligenz</name></attribute>
+<attribute id="PIETY"><name>Frömmigkeit</name></attribute>
+<attribute id="CHARISMA"><name>Charisma</name></attribute>
+<attribute id="EMPATHY"><name>Empathie</name></attribute>
+<attribute id="RES_CRUSH"><name>Schlag</name></attribute>
+<attribute id="RES_SLASH"><name>Schnitt</name></attribute>
+<attribute id="RES_THRUST"><name>Stoß</name></attribute>
+<attribute id="RES_HEAT"><name>Hitze</name></attribute>
+<attribute id="RES_COLD"><name>Kälte</name></attribute>
+<attribute id="RES_MATTER"><name>Materie</name></attribute>
+<attribute id="RES_BODY"><name>Körper</name></attribute>
+<attribute id="RES_SPIRIT"><name>Geist</name></attribute>
+<attribute id="RES_ENERGY"><name>Energie</name></attribute>
+<attribute id="HITPOINTS"><name>Trefferpunkte</name></attribute>
+<attribute id="POWER"><name>Manapool</name></attribute>
+<attribute id="PARRY"><name>Parieren</name></attribute>
+<attribute id="CRUSH"><name>Schlag</name></attribute>
+<attribute id="THRUST"><name>Stoß</name></attribute>
+<attribute id="SLASH"><name>Schnitt</name></attribute>
+<attribute id="STAFF"><name>Stab</name></attribute>
+<attribute id="POLEARM"><name>Stangenwaffen</name></attribute>
+<attribute id="SHIELD"><name>Schild</name></attribute>
+<attribute id="TWO_HANDED"><name>Zweihänder</name></attribute>
+<attribute id="ENHANCEMENT"><name>Verbesserungen</name></attribute>
+<attribute id="REJUVENATION"><name>Verjüngung</name></attribute>
+<attribute id="SMITE"><name>Schmettern</name></attribute>
+<attribute id="EARTH_MAGIC"><name>Erdmagie</name></attribute>
+<attribute id="COLD_MAGIC"><name>Kältemagie</name></attribute>
+<attribute id="WIND_MAGIC"><name>Windmagie</name></attribute>
+<attribute id="FIRE_MAGIC"><name>Feuermagie</name></attribute>
+<attribute id="DUAL_WIELD"><name>Doppelwaffen</name></attribute>
+<attribute id="CHANTS"><name>Gesänge</name></attribute>
+<attribute id="BODY_MAGIC"><name>Körpermagie</name></attribute>
+<attribute id="MATTER_MAGIC"><name>Materiemagie</name></attribute>
+<attribute id="SPIRIT_MAGIC"><name>Geistmagie</name></attribute>
+<attribute id="MIND_MAGIC"><name>Verstandesmagie</name></attribute>
+<attribute id="STEALTH"><name>Schleichen</name></attribute>
+<attribute id="CRITICAL_STRIKE"><name>Meuchelmord</name></attribute>
+<attribute id="ENVENOM"><name>Vergiften</name></attribute>
+<attribute id="INSTRUMENTS"><name>Instrumente</name></attribute>
+<attribute id="LONGBOW"><name>Langbogen</name></attribute>
+<attribute id="CROSSBOW"><name>Armbrust</name></attribute>
+<attribute id="SHORT_BOW"><name>Kurzbogen</name></attribute>
+<attribute id="FLEXIBLE"><name>Flexible Waffen</name></attribute>
+<attribute id="DEATH_SERVANT"><name>Todesdiener</name></attribute>
+<attribute id="DEATHSIGHT"><name>Todeskunst</name></attribute>
+<attribute id="PAINWORKING"><name>Schmerzkunst</name></attribute>
+<attribute id="SOULRENDING"><name>Seelenzerfetzen</name></attribute>
+<attribute id="BLADES"><name>Klingen</name></attribute>
+<attribute id="BLUNT"><name>Stumpfe Waffen</name></attribute>
+<attribute id="PIERCING"><name>Stichwaffen</name></attribute>
+<attribute id="CELTIC_SPEAR"><name>Keltenspeer</name></attribute>
+<attribute id="CELTIC_DUAL"><name>Keltendoppel</name></attribute>
+<attribute id="LARGE_WEAPONRY"><name>Große Waffen</name></attribute>
+<attribute id="RECURVE_BOW"><name>Reflexbogen</name></attribute>
+<attribute id="SCYTHE"><name>Sensen</name></attribute>
+<attribute id="ARBOREAL_PATH"><name>Pfad des Haines</name></attribute>
+<attribute id="CREEPING_PATH"><name>Gestrüpp-Pfad</name></attribute>
+<attribute id="MUSIC"><name>Musik</name></attribute>
+<attribute id="NATURE"><name>Naturnähe</name></attribute>
+<attribute id="NURTURE"><name>Nähren</name></attribute>
+<attribute id="REGROWTH"><name>Nachwachsen</name></attribute>
+<attribute id="VERDANT_PATH"><name>Blühender Pfad</name></attribute>
+<attribute id="ENCHANTMENTS"><name>Verzaubern</name></attribute>
+<attribute id="LIGHT"><name>Licht-Magie</name></attribute>
+<attribute id="MANA"><name>Mana-Magie</name></attribute>
+<attribute id="MENTALISM"><name>Mentalismus</name></attribute>
+<attribute id="VALOR"><name>Tapferkeit</name></attribute>
+<attribute id="VOID"><name>Leeren-Magie</name></attribute>
+<attribute id="PATHFINDING"><name>Pfadfinden</name></attribute>
+<attribute id="AXE"><name>Axt</name></attribute>
+<attribute id="LEFT_AXE"><name>Axt links</name></attribute>
+<attribute id="HAMMER"><name>Hammer</name></attribute>
+<attribute id="HAND2HAND"><name>Faustkampf</name></attribute>
+<attribute id="SWORD"><name>Schwert</name></attribute>
+<attribute id="SPEAR"><name>Speer</name></attribute>
+<attribute id="COMPOSITE_BOW"><name>Kompositbogen</name></attribute>
+<attribute id="THROWN_WEAPONS"><name>Wurfwaffen</name></attribute>
+<attribute id="SAVAGERY"><name>Wildheit</name></attribute>
+<attribute id="AUGMENTATION"><name>Erhöhung</name></attribute>
+<attribute id="BONE_ARMY"><name>Knochenarmee</name></attribute>
+<attribute id="DARKNESS"><name>Dunkelheit</name></attribute>
+<attribute id="MENDING"><name>Heilen</name></attribute>
+<attribute id="PACIFICATION"><name>Befriedung</name></attribute>
+<attribute id="RUNECARVING"><name>Runenschnitzen</name></attribute>
+<attribute id="SUBTERRANEAN"><name>Höhlen-Magie</name></attribute>
+<attribute id="SUMMONING"><name>Beschwören</name></attribute>
+<attribute id="SUPPRESSION"><name>Unterdrückung</name></attribute>
+<attribute id="STORMCALLING"><name>Sturmanrufung</name></attribute>
+<attribute id="BATTLESONGS"><name>Schlachtgesang</name></attribute>
+<attribute id="BEASTCRAFT"><name>Tierherrschaft</name></attribute>
+<attribute id="ODINS_WILL"><name>Odins Wille</name></attribute>
+<attribute id="WITCHCRAFT"><name>Hexerei</name></attribute>
+<attribute id="CURSING"><name>Verfluchen</name></attribute>
+<attribute id="HEXING"><name>Hexenkunst</name></attribute>
+
+<attribute id="FIST_WRAPS_ALB"><name>Faustbandagen</name></attribute>
+<attribute id="MAULER_STAFF_ALB"><name>Malmerstäbe</name></attribute>
+<attribute id="MAGNETISM_ALB"><name>Magnetismus</name></attribute>
+<attribute id="POWER_STRIKES_ALB"><name>Kraft der Ahnen</name></attribute>
+<attribute id="AURA_MANIPULATION_ALB"><name>Auramanipulation</name></attribute>
+
+<attribute id="FIST_WRAPS_HIB"><name>Faustbandagen</name></attribute>
+<attribute id="MAULER_STAFF_HIB"><name>Malmerstäbe</name></attribute>
+<attribute id="MAGNETISM_HIB"><name>Magnetismus</name></attribute>
+<attribute id="POWER_STRIKES_HIB"><name>Kraft der Ahnen</name></attribute>
+<attribute id="AURA_MANIPULATION_HIB"><name>Auramanipulation</name></attribute>
+
+<attribute id="FIST_WRAPS_MID"><name>Faustbandagen</name></attribute>
+<attribute id="MAULER_STAFF_MID"><name>Malmerstäbe</name></attribute>
+<attribute id="MAGNETISM_MID"><name>Magnetismus</name></attribute>
+<attribute id="POWER_STRIKES_MID"><name>Kraft der Ahnen</name></attribute>
+<attribute id="AURA_MANIPULATION_MID"><name>Auramanipulation</name></attribute>
+
+<attribute id="EARTH_FOCUS"><name>Erde-Fokus</name></attribute>
+<attribute id="COLD_FOCUS"><name>Kälte-Fokus</name></attribute>
+<attribute id="WIND_FOCUS"><name>Wind-Fokus</name></attribute>
+<attribute id="FIRE_FOCUS"><name>Feuer-Fokus</name></attribute>
+<attribute id="BODY_FOCUS"><name>Körper-Fokus</name></attribute>
+<attribute id="MATTER_FOCUS"><name>Materie-Fokus</name></attribute>
+<attribute id="SPIRIT_FOCUS"><name>Geist-Fokus</name></attribute>
+<attribute id="MIND_FOCUS"><name>Verstand-Fokus</name></attribute>
+<attribute id="DEATH_SERVANT_FOCUS"><name>Todesdiener-Fokus</name></attribute>
+<attribute id="DEATHSIGHT_FOCUS"><name>Todeskunst-Fokus</name></attribute>
+<attribute id="PAINWORKING_FOCUS"><name>SchmerzkunstFokus</name></attribute>
+<attribute id="ARBOREAL_FOCUS"><name>Hain-Fokus</name></attribute>
+<attribute id="CREEPING_PATH_FOCUS"><name>Gestrüpp-Fokus</name></attribute>
+<attribute id="ENCHANTMENTS_FOCUS"><name>Verzaubern-Fokus</name></attribute>
+<attribute id="LIGHT_FOCUS"><name>Licht-Fokus</name></attribute>
+<attribute id="MANA_FOCUS"><name>Mana-Fokus</name></attribute>
+<attribute id="MENTALISM_FOCUS"><name>Mentalismus-Fokus</name></attribute>
+<attribute id="PHANTASMAL_WAIL_FOCUS"><name>Geisterheulen-Fokus</name></attribute>
+<attribute id="ETHEREAL_SHRIEK_FOCUS"><name>Kreischen-Fokus</name></attribute>
+<attribute id="SPECTRAL_GUARD_FOCUS"><name>Schemenwache-Fokus</name></attribute>
+<attribute id="VERDANT_PATH_FOCUS"><name>Blühend-Fokus</name></attribute>
+<attribute id="VOID_FOCUS"><name>Leeren-Fokus</name></attribute>
+<attribute id="BONE_ARMY_FOCUS"><name>Knochenarmee-Fokus</name></attribute>
+<attribute id="CURSING_FOCUS"><name>Verfluchen-Fokus</name></attribute>
+<attribute id="DARKNESS_FOCUS"><name>Dunkelheit-Fokus</name></attribute>
+<attribute id="RUNECARVING_FOCUS"><name>Runenschnitzen-Fokus</name></attribute>
+<attribute id="SUMMONING_FOCUS"><name>Beschwören-Fokus</name></attribute>
+<attribute id="SUPPRESSION_FOCUS"><name>Unterdrückung-Fokus</name></attribute>
+<attribute id="CAP_STRENGTH"><name>Stärke-Cap</name></attribute>
+<attribute id="CAP_CONSTITUTION"><name>Konstitution-Cap</name></attribute>
+<attribute id="CAP_DEXTERITY"><name>Geschick-Cap</name></attribute>
+<attribute id="CAP_QUICKNESS"><name>Schnelligkeit-Cap</name></attribute>
+<attribute id="CAP_INTELLIGENCE"><name>Intelligenz-Cap</name></attribute>
+<attribute id="CAP_PIETY"><name>Frömmigkeit-Cap</name></attribute>
+<attribute id="CAP_CHARISMA"><name>Charisma-Cap</name></attribute>
+<attribute id="CAP_EMPATHY"><name>Empathie-Cap</name></attribute>
+<attribute id="CAP_HITPOINTS"><name>Trefferpunkte-Cap</name></attribute>
+<attribute id="CAP_POWER"><name>Manapool-Cap</name></attribute>
+<attribute id="POWER_PERCENTAGE_BONUS"><name>Manapool Bonus(%)</name></attribute>
+<attribute id="CAP_POWER_PERCENTAGE_BONUS"><name>Manapool Bonus-Cap</name></attribute>
+<attribute id="DEBUFF_BONUS"><name>Debuff Bonus(%)</name></attribute>
+<attribute id="BUFF_BONUS"><name>Buff Bonus(%)</name></attribute>
+<attribute id="HEALING_BONUS"><name>Heilungs Bonus(%)</name></attribute>
+<attribute id="SPELL_DURATION_BONUS"><name>Spruchdauer Bonus(%)</name></attribute>
+<attribute id="REDUCE_MAGIC_RESISTS"><name>reduzierte Magieresistenzen(%)</name></attribute>
+<attribute id="STYLE_DAMAGE_BONUS"><name>Stilschaden Bonus(%)</name></attribute>
+<attribute id="MELEE_DAMAGE_BONUS"><name>Nahkampfschaden Bonus(%)</name></attribute>
+<attribute id="MELEE_SPEED_BONUS"><name>Nahkampfgeschw. Bonus(%)</name></attribute>
+<attribute id="ARCHERY_CASTING_SPEED_BONUS"><name>Bogen-/Zaubergeschw. Bonus(%)</name></attribute>
+<attribute id="ARCHERY_SPELL_RANGE_BONUS"><name>Bogen-/Zauberreichweite Bonus(%)</name></attribute>
+<attribute id="ARCHERY_SPELL_DAMAGE_BONUS"><name>Bogen-/Magieschaden Bonus(%)</name></attribute>
+<attribute id="FATIGUE"><name>Ausdauer Bonus</name></attribute>
+<attribute id="AF_BONUS"><name>AF Bonus</name></attribute>
+<attribute id="PARRY_BONUS"><name>Parieren Bonus(%)</name></attribute>
+<attribute id="BLOCK_BONUS"><name>Blocken Bonus(%)</name></attribute>
+<attribute id="DEFENSIVE_BONUS"><name>Verteidigungsbonus(%)</name></attribute>
+<attribute id="EVADE_BONUS"><name>Ausweichen Bonus(%)</name></attribute>
+<attribute id="REACTIONARY_STYLE_DAMAGE_BONUS"><name>Reaktionskampfstil-Schadensbonus(%)</name></attribute>
+<attribute id="STYLE_COST_REDUCTION"><name>Kostenreduzierung für Kampfstile</name></attribute>
+<attribute id="NEGATIVE_EFFECT_DURATION_REDUCTION"><name>Verkürzung der negativen Effekte(%)</name></attribute>
+<attribute id="PIERCE_ABLATIVE"><name>Absorptionsbonus(%)</name></attribute>
+<attribute id="BLADETURN_REINFORCEMENT"><name>Klingenwendungverstärkung(%)</name></attribute>
+<attribute id="CONCENTRATION"><name>Konzentration(%)</name></attribute>
+<attribute id="DEATH_EXPIERIENCE_LOSS_REDUCTION"><name>Erfahrungsverlustreduzierung(%)</name></attribute>
+<attribute id="SPELL_POWER_COST_REDUCTION"><name>Magiekostenreduzierung(%)</name></attribute>
+<attribute id="TO_HIT_BONUS"><name>Zum-Treffen Bonus(%)</name></attribute>
+<attribute id="ARROW_RECOVERY"><name>Pfeilwiederherstellung-Alt(%)</name></attribute>
+<attribute id="ARCANE_SIPHON"><name>Arkaner Siphon(%)</name></attribute>
+<attribute id="SHADOW_MASTERY"><name>Schattenmeister</name></attribute>
+<attribute id="VAMPIIRIC_EMBRACE"><name>Vampyrumarmung</name></attribute>
+<attribute id="DEMENTIA"><name>Demenz</name></attribute>
+<attribute id="PHANTASMAL_WAIL"><name>Geisterheulen</name></attribute>
+<attribute id="ETHEREAL_SHRIEK"><name>Kreischen</name></attribute>
+<attribute id="SPECTRAL_GUARD"><name>Schemenwache</name></attribute>
+<attribute id="EXTRA_COINS"><name>Extra Geld(%)</name></attribute>
+
+<attribute id="OVERCAP_STRENGTH"><name>Über-CAP Stärke</name></attribute>
+<attribute id="OVERCAP_CONSTITUTION"><name>Über-CAP Konstitution</name></attribute>
+<attribute id="OVERCAP_DEXTERITY"><name>Über-CAP Geschick</name></attribute>
+<attribute id="OVERCAP_QUICKNESS"><name>Über-CAP Schnelligkeit</name></attribute>
+<attribute id="OVERCAP_INTELLIGENCE"><name>Über-CAP Intelligenz</name></attribute>
+<attribute id="OVERCAP_PIETY"><name>Über-CAP Frömmigkeit</name></attribute>
+<attribute id="OVERCAP_CHARISMA"><name>Über-CAP Charisma</name></attribute>
+<attribute id="OVERCAP_EMPATHY"><name>Über-CAP Empathie</name></attribute>
+<attribute id="OVERCAP_RES_CRUSH"><name>Über-CAP Schlag</name></attribute>
+<attribute id="OVERCAP_RES_SLASH"><name>Über-CAP Schnitt</name></attribute>
+<attribute id="OVERCAP_RES_THRUST"><name>Über-CAP Stoß</name></attribute>
+<attribute id="OVERCAP_RES_HEAT"><name>Über-CAP Hitze</name></attribute>
+<attribute id="OVERCAP_RES_COLD"><name>Über-CAP Kälte</name></attribute>
+<attribute id="OVERCAP_RES_MATTER"><name>Über-CAP Materie</name></attribute>
+<attribute id="OVERCAP_RES_BODY"><name>Über-CAP Körper</name></attribute>
+<attribute id="OVERCAP_RES_SPIRIT"><name>Über-CAP Geist</name></attribute>
+<attribute id="OVERCAP_RES_ENERGY"><name>Über-CAP Energie</name></attribute>
+<attribute id="ENCUMBRANCE_INCREASE"><name>Mehr Tragkraft</name></attribute>
+<attribute id="ESSENCE_RESIST"><name>Essenzresistenz(%)</name></attribute>
+<attribute id="SAFE_FALL"><name>Fallschaden senken(%)</name></attribute>
+<attribute id="SPELL_LEVEL_INCREASE"><name>Zauberlevel erhöhen</name></attribute>
+<attribute id="SIEGE_DAMAGE_REDUCTION"><name>Belagerungsschaden reduzieren(%)</name></attribute>
+<attribute id="REALM_POINT_BONUS"><name>Reichspunktebonus(%)</name></attribute>
+<attribute id="CROWD_CONTROL_REDUCTION"><name>CC-Dauer senken(%)</name></attribute>
+<attribute id="DAMAGE_INCREASE"><name>Schadenserhöhung(%)</name></attribute>
+<attribute id="HEALTH_REGEN"><name>Heilung-über-Zeit(%)</name></attribute>
+<attribute id="POWER_REGEN"><name>Mana-über-Zeit(%)</name></attribute>
+<attribute id="SIEGE_SPEED_BONUS"><name>Belagerungsgeschw.(%)</name></attribute>
+<attribute id="WATER_BREATHING"><name>Wasseratmung</name></attribute>
+<attribute id="ENDURANCE_REGEN"><name>Ausdauer-über-Zeit</name></attribute>
+<attribute id="PHYSICAL_DAMAGE_DECREASE"><name>physische Schadensverringerung(%)</name></attribute>
+<attribute id="DAMAGE_CONVERSION"><name>Schadensumwandlung(%)</name></attribute>
+</attributes>
+<groups>
+<group id="UNUSED"><name>Unbenutzt</name></group>
+<group id="STAT"><name>Stats</name></group>
+<group id="RESIST"><name>Resistenzen</name></group>
+<group id="HITS"><name>Trefferpunkte</name></group>
+<group id="POWER"><name>Manapool</name></group>
+<group id="FOCUS"><name>Fokus</name></group>
+<group id="SKILL"><name>Fertigkeiten</name></group>
+<group id="CAP_INC"><name>Caperhöhung</name></group>
+<group id="OVERCAP_INC"><name>Über-Caperhöhung</name></group>
+<group id="STAT_OVERCAP"><name>Stats + Über-Caperhöhung</name></group>
+<group id="RESIST_OVERCAP"><name>Resistenzen + Über-Caperhöhung</name></group>
+<group id="OTHERS"><name>Andere Boni</name></group>
+<group id="DRAGON_STATS"><name>DH-Stats</name></group>
+<group id="DRAGON_HITS"><name>DH-Trefferpunkte</name></group>
+<group id="DRAGON_OTHER"><name>DH-Andere</name></group>
+</groups>
+<dusts>
+<dust id="BLOODIED_BATTLEFIELD_DIRT"><name>blutgetränkter Schlachtfeldstaub</name></dust>
+<dust id="ESSENCE_OF_LIFE"><name>Essenz des Lebens</name></dust>
+<dust id="FAIRY_DUST"><name>Feenstaub</name></dust>
+<dust id="GROUND_BLESSED_UNDEAD_BONE"><name>gemahlene gesegnete Untotenknochen</name></dust>
+<dust id="GROUND_CAVE_CRYSTAL"><name>gemahlener Höhlenkristall</name></dust>
+<dust id="GROUND_CAER_STONE"><name>gemahlener Caer-Stein</name></dust>
+<dust id="GROUND_DRACONIC_SCALES"><name>gemahlene Drachenschuppen</name></dust>
+<dust id="GROUND_GIANT_BONE"><name>gemahlener Riesenknochen</name></dust>
+<dust id="GROUND_VENDO_BONE"><name>gemahlener Vendoknochen</name></dust>
+<dust id="OTHERWORLDLY_DUST"><name>Staub aus der Anderwelt</name></dust>
+<dust id="SOOT_FROM_NIFLHEIM"><name>Ruß aus Niffelheim</name></dust>
+<dust id="UNSEELIE_DUST"><name>Unseelie-Staub</name></dust>
+</dusts>
+<liquids>
+<liquid id="AIR_ELEMENTAL_ESSENCE"><name>Essenz eines Luftelementes</name></liquid>
+<liquid id="DRACONIC_FIRE"><name>Drachenfeuer</name></liquid>
+<liquid id="FROST_FROM_A_WASTELAND"><name>Frost einer Einöde</name></liquid>
+<liquid id="GIANTS_BLOOD"><name>Riesenblut</name></liquid>
+<liquid id="HEAT_FROM_AN_UNEARTHLY_PYRE"><name>Hitze eines übernatürlichen Scheiterhaufens</name></liquid>
+<liquid id="LEVIATHAN_BLOOD"><name>Leviathanblut</name></liquid>
+<liquid id="MYSTIC_ENERGY"><name>Mystische Energie</name></liquid>
+<liquid id="SUN_LIGHT"><name>Sonnenlicht</name></liquid>
+<liquid id="SWAMP_FOG"><name>Sumpfnebel</name></liquid>
+<liquid id="TREANT_BLOOD"><name>Treantblut</name></liquid>
+<liquid id="UNDEAD_ASH_AND_HOLY_WATER"><name>Untotenasche und Weihwasser</name></liquid>
+</liquids>
+<bonuses>
+<bonus id="STRENGTH"><name>Stärke</name>
+<gem id="FIERY_ESSENCE_JEWEL"><name>Essenzjuwel des Feuers</name></gem>
+</bonus>
+<bonus id="CONSTITUTION"><name>Konstitution</name>
+<gem id="EARTHEN_ESSENCE_JEWEL"><name>Essenzjuwel der Erde</name></gem>
+</bonus>
+<bonus id="DEXTERITY"><name>Geschick</name>
+<gem id="VAPOR_ESSENCE_JEWEL"><name>Essenzjuwel des Nebels</name></gem>
+</bonus>
+<bonus id="QUICKNESS"><name>Schnelligkeit</name>
+<gem id="AIRY_ESSENCE_JEWEL"><name>Essenzjuwel der Luft</name></gem>
+</bonus>
+<bonus id="INTELLIGENCE"><name>Intelligenz</name>
+<gem id="DUSTY_ESSENCE_JEWEL"><name>Essenzjuwel des Staubes</name></gem>
+</bonus>
+<bonus id="PIETY"><name>Frömmigkeit</name>
+<gem id="WATERY_ESSENCE_JEWEL"><name>Essenzjuwel des Wassers</name></gem>
+</bonus>
+<bonus id="CHARISMA"><name>Charisma</name>
+<gem id="ICY_ESSENCE_JEWEL"><name>Essenzjuwel des Eises</name></gem>
+</bonus>
+<bonus id="EMPATHY"><name>Empathie</name>
+<gem id="HEATED_ESSENCE_JEWEL"><name>Essenzjuwel der Hitze</name></gem>
+</bonus>
+<bonus id="ACUITY"><name>Sinnesschärfe</name></bonus>
+<bonus id="RES_CRUSH"><name>Schlag-Resistenz</name><name>Schlag</name>
+<gem id="FIERY_SHIELDING_JEWEL"><name>Schutzjuwel des Feuers</name></gem>
+</bonus>
+<bonus id="RES_SLASH"><name>Schnitt-Resistenz</name><name>Schnitt</name>
+<gem id="WATERY_SHIELDING_JEWEL"><name>Schutzjuwel des Wassers</name></gem>
+</bonus>
+<bonus id="RES_THRUST"><name>Stoß-Resistenz</name><name>Stoß</name>
+<gem id="AIRY_SHIELDING_JEWEL"><name>Schutzjuwel der Luft</name></gem>
+</bonus>
+<bonus id="RES_HEAT"><name>Hitze-Resistenz</name><name>Hitze</name>
+<gem id="HEATED_SHIELDING_JEWEL"><name>Schutzjuwel der Hitze</name></gem>
+</bonus>
+<bonus id="RES_COLD"><name>Kälte-Resistenz</name><name>Kälte</name>
+<gem id="ICY_SHIELDING_JEWEL"><name>Schutzjuwel des Eises</name></gem>
+</bonus>
+<bonus id="RES_MATTER"><name>Materie-Resistenz</name><name>Materie</name>
+<gem id="EARTHEN_SHIELDING_JEWEL"><name>Schutzjuwel der Erde</name></gem>
+</bonus>
+<bonus id="RES_BODY"><name>Körper-Resistenz</name><name>Körper</name>
+<gem id="DUSTY_SHIELDING_JEWEL"><name>Schutzjuwel des Staubes</name></gem>
+</bonus>
+<bonus id="RES_SPIRIT"><name>Geist-Resistenz</name><name>Geist</name>
+<gem id="VAPOR_SHIELDING_JEWEL"><name>Schutzjuwel des Nebels</name></gem>
+</bonus>
+<bonus id="RES_ENERGY"><name>Energie-Resistenz</name><name>Energie</name>
+<gem id="LIGHT_SHIELDING_JEWEL"><name>Schutzjuwel des Lichtes</name></gem>
+</bonus>
+<bonus id="HITPOINTS"><name>Trefferpunkte</name>
+<gem id="BLOOD_ESSENCE_JEWEL"><name>Essenzjuwel des Blutes</name></gem>
+</bonus>
+<bonus id="POWER"><name>Manapool</name><name>Magiekraft</name>
+<gem id="MYSTIC_ESSENCE_JEWEL"><name>Essenzjuwel der Mystik</name></gem>
+</bonus>
+<bonus id="EARTH_FOCUS"><name>Erde-Fokus</name>
+<gem id="EARTHEN_FOCUS_SIGIL"><name>Siegel der Erde</name></gem>
+</bonus>
+<bonus id="COLD_FOCUS"><name>Kälte-Fokus</name>
+<gem id="ICY_FOCUS_SIGIL"><name>Siegel des Eises</name></gem>
+</bonus>
+<bonus id="WIND_FOCUS"><name>Wind-Fokus</name>
+<gem id="AIRY_FOCUS_SIGIL"><name>Siegel der Luft</name></gem>
+</bonus>
+<bonus id="FIRE_FOCUS"><name>Feuer-Fokus</name>
+<gem id="FIERY_FOCUS_SIGIL"><name>Siegel des Feuers</name></gem>
+</bonus>
+<bonus id="BODY_FOCUS"><name>Körper-Fokus</name>
+<gem id="HEATED_FOCUS_SIGIL"><name>Siegel der Hitze</name></gem>
+</bonus>
+<bonus id="MATTER_FOCUS"><name>Materie-Fokus</name>
+<gem id="DUSTY_FOCUS_SIGIL"><name>Siegel des Staubes</name></gem>
+</bonus>
+<bonus id="SPIRIT_FOCUS"><name>Geist-Fokus</name>
+<gem id="VAPOR_FOCUS_SIGIL"><name>Siegel des Nebels</name></gem>
+</bonus>
+<bonus id="MIND_FOCUS"><name>Verstand-Fokus</name>
+<gem id="WATERY_FOCUS_SIGIL"><name>Siegel des Wassers</name></gem>
+</bonus>
+<bonus id="DEATH_SERVANT_FOCUS"><name>Todesdiener-Fokus</name>
+<gem id="ASHEN_FOCUS_SIGIL"><name>Siegel der Asche</name></gem>
+</bonus>
+<bonus id="DEATHSIGHT_FOCUS"><name>Todeskunst-Fokus</name>
+<gem id="VACUOUS_FOCUS_SIGIL"><name>Siegel der Leere</name></gem>
+</bonus>
+<bonus id="PAINWORKING_FOCUS"><name>Schmerzkunst-Fokus</name>
+<gem id="SALT_ENCRUSTED_FOCUS_SIGIL"><name>Siegel des Salzes</name></gem>
+</bonus>
+<bonus id="ARBOREAL_FOCUS"><name>Hain-Fokus</name>
+<gem id="STEAMING_FOCUS_STONE"><name>Zauberstein des Dampfes</name></gem>
+</bonus>
+<bonus id="CREEPING_PATH_FOCUS"><name>Gestrüpp-Fokus</name>
+<gem id="OOZING_FOCUS_STONE"><name>Zauberstein des Versickerns</name></gem>
+</bonus>
+<bonus id="ENCHANTMENTS_FOCUS"><name>Verzaubern-Fokus</name>
+<gem id="VAPOR_FOCUS_STONE"><name>Zauberstein des Nebels</name></gem>
+</bonus>
+<bonus id="ETHEREAL_SHRIEK_FOCUS"><name>Kreischen-Fokus</name>
+<gem id="ETHEREAL_FOCUS_STONE"><name>Zauberstein des Äthers</name></gem>
+</bonus>
+<bonus id="LIGHT_FOCUS"><name>Licht-Fokus</name>
+<gem id="FIERY_FOCUS_STONE"><name>Zauberstein des Feuers</name></gem>
+</bonus>
+<bonus id="MANA_FOCUS"><name>Mana-Fokus</name>
+<gem id="WATER_FOCUS_STONE"><name>Zauberstein des Wassers</name></gem>
+</bonus>
+<bonus id="MENTALISM_FOCUS"><name>Mentalismus-Fokus</name>
+<gem id="EARTHEN_FOCUS_STONE"><name>Zauberstein der Erde</name></gem>
+</bonus>
+<bonus id="PHANTASMAL_WAIL_FOCUS"><name>Geisterheulen-Fokus</name>
+<gem id="PHANTASMAL_FOCUS_STONE"><name>Zauberstein der Illusion</name></gem>
+</bonus>
+<bonus id="SPECTRAL_GUARD_FOCUS"><name>Schemen-Fokus</name>
+<gem id="SPECTRAL_FOCUS_STONE"><name>Zauberstein der Schemen</name></gem>
+</bonus>
+<bonus id="VERDANT_PATH_FOCUS"><name>Blühend-Fokus</name>
+<gem id="MINERAL_ENCRUSTED_FOCUS_STONE"><name>Zauberstein des Minerals</name></gem>
+</bonus>
+<bonus id="VOID_FOCUS"><name>Leeren-Fokus</name>
+<gem id="ICY_FOCUS_STONE"><name>Zauberstein des Eises</name></gem>
+</bonus>
+<bonus id="BONE_ARMY_FOCUS"><name>Knochenarmee-Fokus</name>
+<gem id="ASHEN_RUNE"><name>Rune der Asche</name></gem>
+</bonus>
+<bonus id="CURSING_FOCUS"><name>Verfluchen-Fokus</name>
+<gem id="BLIGHTED_RUNE"><name>Rune der Vereitelung</name></gem>
+</bonus>
+<bonus id="DARKNESS_FOCUS"><name>Dunkelheit-Fokus</name>
+<gem id="ICE_RUNE"><name>Rune des Eises</name></gem>
+</bonus>
+<bonus id="RUNECARVING_FOCUS"><name>Runenschnitzen-Fokus</name>
+<gem id="HEAT_RUNE"><name>Rune der Hitze</name></gem>
+</bonus>
+<bonus id="SUMMONING_FOCUS"><name>Beschwören-Fokus</name>
+<gem id="VAPOR_RUNE"><name>Rune des Nebels</name></gem>
+</bonus>
+<bonus id="SUPPRESSION_FOCUS"><name>Unterdrückung-Fokus</name>
+<gem id="DUST_RUNE"><name>Rune des Staubes</name></gem>
+</bonus>
+<bonus id="WITCHCRAFT_FOCUS"><name>Hexerei-Fokus</name>
+<gem id="DUST_RUNE2"><name>Rune des Staubes</name></gem>
+</bonus>
+<bonus id="HEXING_FOCUS"><name>Hexen-Fokus</name>
+<gem id="DUST_RUNE3"><name>Rune des Staubes</name></gem>
+</bonus>
+<bonus id="ALL_MAGIC_FOCUS"><name>Alle Magie-Foki</name></bonus>
+<bonus id="ALB_MAGIC_FOCUS"><name>Alle Magie-Foki (Alb)</name>
+<gem id="BRILLIANT_SIGIL"><name>Siegel der Brillanz</name></gem>
+</bonus>
+<bonus id="HIB_MAGIC_FOCUS"><name>Alle Magie-Foki (Hib)</name>
+<gem id="BRILLIANT_SPELL_STONE"><name>Zauberstein der Brillanz</name></gem>
+</bonus>
+<bonus id="MID_MAGIC_FOCUS"><name>Alle Magie-Foki (Mid)</name>
+<gem id="BRILLIANT_RUNE"><name>Rune der Brillanz</name></gem>
+</bonus>
+<bonus id="PARRY"><name>Parieren</name>
+<gem id="VAPOR_BATTLE_JEWEL"><name>Kampfjuwel des Nebels</name></gem>
+</bonus>
+<bonus id="CRUSH"><name>Schlag</name>
+<gem id="FIERY_WAR_SIGIL"><name>Kriegssiegel des Feuers</name></gem>
+</bonus>
+<bonus id="THRUST"><name>Stoß</name>
+<gem id="DUSTY_WAR_SIGIL"><name>Kriegssiegel des Staubes</name></gem>
+</bonus>
+<bonus id="SLASH"><name>Schnitt</name>
+<gem id="WATERY_WAR_SIGIL"><name>Kriegssiegel des Wassers</name></gem>
+</bonus>
+<bonus id="STAFF"><name>Stab</name>
+<gem id="EARTHEN_BATTLE_JEWEL"><name>Kampfjuwel der Erde</name></gem>
+</bonus>
+<bonus id="FLEXIBLE"><name>Flexible Waffen</name>
+<gem id="MOLTEN_MAGMA_WAR_SIGIL"><name>Kriegssiegel des Magmas</name></gem>
+</bonus>
+<bonus id="POLEARM"><name>Stangenwaffen</name>
+<gem id="EARTHEN_WAR_SIGIL"><name>Kriegssiegel der Erde</name></gem>
+</bonus>
+<bonus id="SHIELD"><name>Schild</name>
+<gem id="FIERY_BATTLE_JEWEL"><name>Kampfjuwel des Feuers</name></gem>
+</bonus>
+<bonus id="TWO_HANDED"><name>Zweihänder</name>
+<gem id="HEATED_WAR_SIGIL"><name>Kriegssiegel der Hitze</name></gem>
+</bonus>
+<bonus id="ENHANCEMENT"><name>Verbesserungen</name>
+<gem id="AIRY_FERVOR_SIGIL"><name>Eifersiegel der Luft</name></gem>
+</bonus>
+<bonus id="REJUVENATION"><name>Verjüngung</name>
+<gem id="WATERY_FERVOR_SIGIL"><name>Eifersiegel des Wassers</name></gem>
+</bonus>
+<bonus id="SMITE"><name>Schmettern</name>
+<gem id="FIERY_FERVOR_SIGIL"><name>Eifersiegel des Feuers</name></gem>
+</bonus>
+<bonus id="EARTH_MAGIC"><name>Erdmagie</name>
+<gem id="EARTHEN_EVOCATION_SIGIL"><name>Zaubersiegel der Erde</name></gem>
+</bonus>
+<bonus id="COLD_MAGIC"><name>Kältemagie</name>
+<gem id="ICY_EVOCATION_SIGIL"><name>Zaubersiegel des Eises</name></gem>
+</bonus>
+<bonus id="WIND_MAGIC"><name>Windmagie</name>
+<gem id="AIRY_EVOCATION_SIGIL"><name>Zaubersiegel des Luft</name></gem>
+</bonus>
+<bonus id="FIRE_MAGIC"><name>Feuermagie</name>
+<gem id="FIERY_EVOCATION_SIGIL"><name>Zaubersiegel des Feuers</name></gem>
+</bonus>
+<bonus id="DUAL_WIELD"><name>Doppelwaffen</name>
+<gem id="ICY_WAR_SIGIL"><name>Kriegssiegel des Eises</name></gem>
+</bonus>
+<bonus id="CHANTS"><name>Gesänge</name>
+<gem id="EARTHEN_FERVOR_SIGIL"><name>Eifersiegel der Erde</name></gem>
+</bonus>
+<bonus id="BODY_MAGIC"><name>Körpermagie</name>
+<gem id="HEATED_EVOCATION_SIGIL"><name>Zaubersiegel der Hitze</name></gem>
+</bonus>
+<bonus id="MATTER_MAGIC"><name>Materiemagie</name>
+<gem id="DUSTY_EVOCATION_SIGIL"><name>Zaubersiegel des Staubes</name></gem>
+</bonus>
+<bonus id="SPIRIT_MAGIC"><name>Geistmagie</name>
+<gem id="VAPOR_EVOCATION_SIGIL"><name>Zaubersiegel des Nebels</name></gem>
+</bonus>
+<bonus id="MIND_MAGIC"><name>Verstandesmagie</name>
+<gem id="WATERY_EVOCATION_SIGIL"><name>Zaubersiegel des Wassers</name></gem>
+</bonus>
+<bonus id="STEALTH"><name>Schleichen</name>
+<gem id="AIRY_BATTLE_JEWEL"><name>Kampfjuwel der Luft</name></gem>
+</bonus>
+<bonus id="CRITICAL_STRIKE"><name>Meuchelmord</name>
+<gem id="HEATED_BATTLE_JEWEL"><name>Kampfjuwel der Hitze</name></gem>
+</bonus>
+<bonus id="ENVENOM"><name>Vergiften</name>
+<gem id="DUSTY_BATTLE_JEWEL"><name>Kampfjuwel des Staubes</name></gem>
+</bonus>
+<bonus id="INSTRUMENTS"><name>Instrumente</name>
+<gem id="VAPOR_FERVOR_SIGIL"><name>Eifersiegel des Nebels</name></gem>
+</bonus>
+<bonus id="LONGBOW"><name>Langbogen</name>
+<gem id="AIRY_WAR_SIGIL"><name>Kriegssiegel der Luft</name></gem>
+</bonus>
+<bonus id="CROSSBOW"><name>Armbrust</name>
+<gem id="VAPOR_WAR_SIGIL"><name>Kriegssiegel des Nebels</name></gem>
+</bonus>
+<bonus id="DEATH_SERVANT"><name>Todesdiener</name>
+<gem id="ASHEN_FERVOR_SIGIL"><name>Eifersiegel der Asche</name></gem>
+</bonus>
+<bonus id="DEATHSIGHT"><name>Todeskunst</name>
+<gem id="VACUOUS_FERVOR_SIGIL"><name>Eifersiegel der Leere</name></gem>
+</bonus>
+<bonus id="PAINWORKING"><name>Schmerzkunst</name>
+<gem id="SALT_ENCRUSTED_FERVOR_SIGIL"><name>Eifersiegel des Salzes</name></gem>
+</bonus>
+<bonus id="SOULRENDING"><name>Seelenzerfetzen</name>
+<gem id="STEAMING_FERVOR_SIGIL"><name>Eifersiegel des Dampfes</name></gem>
+</bonus>
+<bonus id="BLADES"><name>Klingen</name>
+<gem id="WATERY_WAR_SPELL_STONE"><name>Kriegszauberstein des Wassers</name></gem>
+</bonus>
+<bonus id="BLUNT"><name>Stumpfe Waffen</name>
+<gem id="FIERY_WAR_SPELL_STONE"><name>Kriegszauberstein des Feuers</name></gem>
+</bonus>
+<bonus id="PIERCING"><name>Stichwaffen</name>
+<gem id="DUSTY_WAR_SPELL_STONE"><name>Kriegszauberstein des Staubes</name></gem>
+</bonus>
+<bonus id="CELTIC_SPEAR"><name>Keltenspeer</name>
+<gem id="EARTHEN_WAR_SPELL_STONE"><name>Kriegszauberstein der Erde</name></gem>
+</bonus>
+<bonus id="CELTIC_DUAL"><name>Keltendoppel</name>
+<gem id="ICY_WAR_SPELL_STONE"><name>Kriegszauberstein des Eises</name></gem>
+</bonus>
+<bonus id="LARGE_WEAPONRY"><name>Große Waffen</name>
+<gem id="HEATED_WAR_SPELL_STONE"><name>Kriegszauberstein der Hitze</name></gem>
+</bonus>
+<bonus id="RECURVE_BOW"><name>Reflexbogen</name>
+<gem id="AIRY_WAR_SPELL_STONE"><name>Kriegszauberstein der Luft</name></gem>
+</bonus>
+<bonus id="SCYTHE"><name>Sensen</name>
+<gem id="LIGHT_WAR_SPELL_STONE"><name>Kriegszauberstein des Lichts</name></gem>
+</bonus>
+<bonus id="ARBOREAL_PATH"><name>Pfad des Haines</name>
+<gem id="STEAMING_NATURE_SPELL_STONE"><name>Naturzauberstein des Dampfes</name></gem>
+</bonus>
+<bonus id="CREEPING_PATH"><name>Gestrüpp Pfad</name>
+<gem id="OOZING_NATURE_SPELL_STONE"><name>Naturzauberstein des Versickerns</name></gem>
+</bonus>
+<bonus id="MUSIC"><name>Musik</name>
+<gem id="AIRY_NATURE_SPELL_STONE"><name>Naturzauberstein der Luft</name></gem>
+</bonus>
+<bonus id="NATURE"><name>Naturnähe</name>
+<gem id="EARTHEN_NATURE_SPELL_STONE"><name>Naturzauberstein der Erde</name></gem>
+</bonus>
+<bonus id="NURTURE"><name>Nähren</name>
+<gem id="FIERY_NATURE_SPELL_STONE"><name>Naturzauberstein des Feuers</name></gem>
+</bonus>
+<bonus id="REGROWTH"><name>Nachwachsen</name>
+<gem id="WATERY_NATURE_SPELL_STONE"><name>Naturzauberstein des Wassers</name></gem>
+</bonus>
+<bonus id="VERDANT_PATH"><name>Blühender Pfad</name>
+<gem id="MINERAL_ENCRUSTED_NATURE_SPELL_STONE"><name>Naturzauberstein des Minerals</name></gem>
+</bonus>
+<bonus id="ENCHANTMENTS"><name>Verzaubern</name>
+<gem id="VAPOR_ARCANE_SPELL_STONE"><name>Arkanenzauberstein des Nebels</name></gem>
+</bonus>
+<bonus id="LIGHT"><name>Licht-Magie</name><name>Lichtmagie</name>
+<gem id="FIERY_ARCANE_SPELL_STONE"><name>Arkanenzauberstein des Feuers</name></gem>
+</bonus>
+<bonus id="MANA"><name>Mana-Magie</name>
+<gem id="WATERY_ARCANE_SPELL_STONE"><name>Arkanenzauberstein des Wassers</name></gem>
+</bonus>
+<bonus id="MENTALISM"><name>Mentalismus</name>
+<gem id="EARTHEN_ARCANE_SPELL_STONE"><name>Arkanenzauberstein der Erde</name></gem>
+</bonus>
+<bonus id="VALOR"><name>Tapferkeit</name>
+<gem id="AIRY_ARCANE_SPELL_STONE"><name>Arkanenzauberstein der Luft</name></gem>
+</bonus>
+<bonus id="VOID"><name>Leeren-Magie</name>
+<gem id="ICY_ARCANE_SPELL_STONE"><name>Arkanenzauberstein des Eises</name></gem>
+</bonus>
+<bonus id="PHANTASMAL_WAIL"><name>Geisterheulen</name>
+<gem id="PHANTASMAL_ARCANE_SPELL_STONE"><name>Arkanenzauberstein der Illusion</name></gem>
+</bonus>
+<bonus id="ETHEREAL_SHRIEK"><name>Kreischen</name>
+<gem id="ETHEREAL_ARCANE_SPELL_STONE"><name>Arkanenzauberstein des Äthers</name></gem>
+</bonus>
+<bonus id="SPECTRAL_GUARD"><name>Schemenwache</name>
+<gem id="SPECTRAL_ARCANE_SPELL_STONE"><name>Arkanenzauberstein der Schemen</name></gem>
+</bonus>
+<bonus id="SHADOW_MASTERY"><name>Schattenmeister</name>
+<gem id="SHADOWY_ARCANE_SPELL_STONE"><name>Arkanenzauberstein der Schatten</name></gem>
+</bonus>
+<bonus id="VAMPIIRIC_EMBRACE"><name>Vampyrumarmung</name>
+<gem id="EMBRACING_ARCANE_SPELL_STONE"><name>Arkanenzauberstein der Umarmung</name></gem>
+</bonus>
+<bonus id="DEMENTIA"><name>Demenz</name>
+<gem id="ABERRANT_ARCANE_SPELL_STONE"><name>Arkanenzauberstein des Irrtums</name></gem>
+</bonus>
+<bonus id="AXE"><name>Axt</name>
+<gem id="EARTHEN_WAR_RUNE"><name>Kriegsrune der Erde</name></gem>
+</bonus>
+<bonus id="LEFT_AXE"><name>Axt links</name>
+<gem id="ICY_WAR_RUNE"><name>Kriegsrune des Eises</name></gem>
+</bonus>
+<bonus id="HAMMER"><name>Hammer</name>
+<gem id="FIERY_WAR_RUNE"><name>Kriegsrune des Feuers</name></gem>
+</bonus>
+<bonus id="HAND2HAND"><name>Faustkampf</name><name>Faustkampfwaffe</name>
+<gem id="LIGHTNING_CHARGED_WAR_RUNE"><name>Kriegsrune des Blitzes</name></gem>
+</bonus>
+<bonus id="SWORD"><name>Schwert</name>
+<gem id="WATERY_WAR_RUNE"><name>Kriegsrune des Wassers</name></gem>
+</bonus>
+<bonus id="SPEAR"><name>Speer</name>
+<gem id="HEATED_WAR_RUNE"><name>Kriegsrune der Hitze</name></gem>
+</bonus>
+<bonus id="COMPOSITE_BOW"><name>Kompositbogen</name>
+<gem id="AIRY_WAR_RUNE"><name>Kriegsrune der Luft</name></gem>
+</bonus>
+<bonus id="THROWN_WEAPONS"><name>Wurfwaffen</name>
+<gem id="VAPOR_WAR_RUNE"><name>Kriegsrune des Nebels</name></gem>
+</bonus>
+<bonus id="SAVAGERY"><name>Wildheit</name></bonus>
+<bonus id="AUGMENTATION"><name>Erhöhung</name>
+<gem id="AIRY_CHAOS_RUNE"><name>Chaosrune der Luft</name></gem>
+</bonus>
+<bonus id="BONE_ARMY"><name>Knochenarmee</name>
+<gem id="ASHEN_PRIMAL_RUNE"><name>Urrune der Asche</name></gem>
+</bonus>
+<bonus id="DARKNESS"><name>Dunkelheit</name>
+<gem id="ICY_CHAOS_RUNE"><name>Chaosrune des Eises</name></gem>
+</bonus>
+<bonus id="MENDING"><name>Heilen</name><name>Erhöhung</name>
+<gem id="WATERY_CHAOS_RUNE"><name>Chaosrune des Wassers</name></gem>
+</bonus>
+<bonus id="PACIFICATION"><name>Befriedung</name>
+<gem id="EARTHEN_CHAOS_RUNE"><name>Chaosrune der Erde</name></gem>
+</bonus>
+<bonus id="RUNECARVING"><name>Runenschnitzen</name>
+<gem id="HEATED_CHAOS_RUNE"><name>Chaosrune der Hitze</name></gem>
+</bonus>
+<bonus id="SUBTERRANEAN"><name>Höhlen-Magie</name><name>Höhlenmagie</name>
+<gem id="FIERY_CHAOS_RUNE"><name>Chaosrune des Feuers</name></gem>
+</bonus>
+<bonus id="SUMMONING"><name>Beschwören</name><name>Beschwörung</name>
+<gem id="VAPOR_CHAOS_RUNE"><name>Chaosrune des Nebels</name></gem>
+</bonus>
+<bonus id="SUPPRESSION"><name>Unterdrückung</name>
+<gem id="DUSTY_CHAOS_RUNE"><name>Chaosrune des Staubes</name></gem>
+</bonus>
+<bonus id="BATTLESONGS"><name>Schlachtgesang</name>
+<gem id="AIRY_PRIMAL_RUNE"><name>Urrune der Luft</name></gem>
+</bonus>
+<bonus id="BEASTCRAFT"><name>Tierherrschaft</name>
+<gem id="EARTHEN_PRIMAL_RUNE"><name>Urrune der Erde</name></gem>
+</bonus>
+<bonus id="STORMCALLING"><name>Sturmanrufung</name>
+<gem id="FIERY_PRIMAL_RUNE"><name>Urrune des Feuers</name></gem>
+</bonus>
+<bonus id="ODINS_WILL"><name>Odins Wille</name>
+<gem id="VALIANT_PRIMAL_RUNE"><name>Urrune der Tapferkeit</name></gem>
+</bonus>
+<bonus id="WITCHCRAFT"><name>Hexerei</name></bonus>
+<bonus id="CURSING"><name>Verfluchen</name>
+<gem id="BLIGHTED_PRIMAL_RUNE"><name>Urrune der Vereitelung</name></gem>
+</bonus>
+<bonus id="HEXING"><name>Hexenkunst</name>
+<gem id="UNHOLY_PRIMAL_RUNE"><name>Urrune der Gottlosigkeit</name></gem>
+</bonus>
+<bonus id="ALL_MELEE_BONUS"><name>Alle Nahkampf Bonus</name><name>Nahkampftalente</name></bonus>
+<bonus id="ALB_MELEE_BONUS"><name>Alle Nahkampf Bonus (Alb)</name>
+<gem id="FINESSE_WAR_SIGIL"><name>Kriegssiegel der Finesse</name></gem>
+</bonus>
+<bonus id="HIB_MELEE_BONUS"><name>Alle Nahkampf Bonus (Hib)</name>
+<gem id="FINESSE_WAR_SPELL_STONE"><name>Kriegszauberstein der Finesse</name></gem>
+</bonus>
+<bonus id="MID_MELEE_BONUS"><name>Alle Nahkampf Bonus (Mid)</name>
+<gem id="FINESSE_WAR_RUNE"><name>Kriegsrune der Finesse</name></gem>
+</bonus>
+<bonus id="ALL_MAGIC_BONUS"><name>Alle Magieschulen</name><name>Magietalente</name></bonus>
+<bonus id="ALB_MAGIC_BONUS"><name>Alle Magieschulen (Alb)</name>
+<gem id="FINESSE_FERVOR_SIGIL"><name>Eifersiegel der Finesse</name></gem>
+</bonus>
+<bonus id="HIB_MAGIC_BONUS"><name>Alle Magieschulen (Hib)</name>
+<gem id="FINESSE_NATURE_SPELL_STONE"><name>Naturzauberstein der Finesse</name></gem>
+</bonus>
+<bonus id="MID_MAGIC_BONUS"><name>Alle Magieschulen (Mid)</name>
+<gem id="FINESSE_PRIMAL_RUNE"><name>Urrune der Finesse</name></gem>
+</bonus>
+<bonus id="ALL_DUAL_WIELD_BONUS"><name>Alle Doppelwaffen Bonus</name><name>Doppelwaffentalente</name></bonus>
+<bonus id="ALL_ARCHERY_BONUS"><name>Alle Bögen Bonus</name><name>Bogentalente</name></bonus>
+<bonus id="CAP_STRENGTH"><name>Stärke-Cap</name><name>Stärkebonuslimit</name></bonus>
+<bonus id="CAP_CONSTITUTION"><name>Konstitution-Cap</name><name>Konstitutionbonuslimit</name></bonus>
+<bonus id="CAP_DEXTERITY"><name>Geschick-Cap</name><name>Geschickbonuslimit</name></bonus>
+<bonus id="CAP_QUICKNESS"><name>Schnelligkeit-Cap</name><name>Schnelligkeitbonuslimit</name></bonus>
+<bonus id="CAP_INTELLIGENCE"><name>Intelligenz-Cap</name><name>Intelligenzbonuslimit</name></bonus>
+<bonus id="CAP_PIETY"><name>Frömmigkeit-Cap</name><name>Frömmigkeitbonuslimit</name></bonus>
+<bonus id="CAP_CHARISMA"><name>Charisma-Cap</name><name>Charismabonuslimit</name></bonus>
+<bonus id="CAP_EMPATHY"><name>Empathie-Cap</name><name>Empathiebonuslimit</name></bonus>
+<bonus id="CAP_HITPOINTS"><name>Trefferpunkte-Cap</name><name>Objekt-Trefferpunktbonuslimit</name><name>Trefferpunktbonuslimit</name></bonus>
+<bonus id="CAP_POWER"><name>Manapool-Cap</name><name>Objekt-Magiekraftbonuslimit</name><name>Magiekraftbonuslimit</name></bonus>
+<bonus id="CAP_ACUITY"><name>Sinnesschärfe-Cap</name><name>Sinnesschärfebonuslimit</name></bonus>
+<bonus id="POWER_PERCENTAGE_BONUS"><name>Manapool Bonus</name><name>Magiekraft</name></bonus>
+<bonus id="DEBUFF_BONUS"><name>Debuff Bonus</name><name>attributsenkende Zaubereffektivität</name></bonus>
+<bonus id="BUFF_BONUS"><name>Buff Bonus</name><name>attributerhöhende Zaubereffektivität</name></bonus>
+<bonus id="HEALING_BONUS"><name>Heilungs Bonus</name><name>Heilungseffektivität</name></bonus>
+<bonus id="SPELL_DURATION_BONUS"><name>Zauberdauer Bonus</name><name>Zauberdauer</name></bonus>
+<bonus id="CASTING_SPEED_BONUS"><name>Zaubergeschw. Bonus-Alt</name><name>Zaubergeschwindigkeit</name></bonus>
+<bonus id="SPELL_RANGE_BONUS"><name>Zauberreichweite Bonus-Alt</name><name>Zauberreichweite</name></bonus>
+<bonus id="SPELL_DAMAGE_BONUS"><name>Magieschaden Bonus-Alt</name><name>Magieschaden</name></bonus>
+<bonus id="REDUCE_MAGIC_RESISTS"><name>reduzierte Magieresistenzen</name></bonus>
+<bonus id="ARCHERY_DAMAGE_BONUS"><name>Bogenschaden-Alt</name></bonus>
+<bonus id="ARCHERY_RANGE_BONUS"><name>Bogenreichweite-Alt</name></bonus>
+<bonus id="ARCHERY_SPEED_BONUS"><name>Bogengeschwindigkeit-Alt</name></bonus>
+<bonus id="ARCHERY_CASTING_SPEED_BONUS"><name>Bogen-/Zaubergeschw. Bonus</name><name>Zaubergeschwindigkeit</name></bonus>
+<bonus id="ARCHERY_SPELL_RANGE_BONUS"><name>Bogen-/Zauberreichweite Bonus</name><name>Zauberreichweite</name></bonus>
+<bonus id="ARCHERY_SPELL_DAMAGE_BONUS"><name>Bogen-/Magieschaden Bonus</name><name>Magieschaden</name></bonus>
+<bonus id="STYLE_DAMAGE_BONUS"><name>Waffenstyle-Bonus</name><name>Stilschaden</name></bonus>
+<bonus id="MELEE_DAMAGE_BONUS"><name>Nahkampfschaden-Bonus</name><name>Nahkampfschaden</name></bonus>
+<bonus id="MELEE_SPEED_BONUS"><name>Nahkampfgeschw.-Bonus</name><name>Nahkampfwaffengeschwindigkeit</name></bonus>
+<bonus id="AF_BONUS"><name>AF-Bonus</name><name>Rüstungsfaktor</name></bonus>
+<bonus id="FATIGUE"><name>Ausdauer</name><name>Erschöpfung</name></bonus>
+<bonus id="PARRY_BONUS"><name>Parieren Bonus</name><name>Parieren</name></bonus>
+<bonus id="BLOCK_BONUS"><name>Blocken Bonus</name><name>Blocken</name></bonus>
+<bonus id="DEFENSIVE_BONUS"><name>Verteidigungsbonus</name></bonus>
+<bonus id="EVADE_BONUS"><name>Ausweichen Bonus</name><name>Ausweichen</name></bonus>
+<bonus id="REACTIONARY_STYLE_DAMAGE_BONUS"><name>Reaktionskampfstil-Schadensbonus</name></bonus>
+<bonus id="STYLE_COST_REDUCTION"><name>Kostenreduzierung für Kampfstile</name><name>Kampfstile</name></bonus>
+<bonus id="NEGATIVE_EFFECT_DURATION_REDUCTION"><name>Verkürzung der negativen Effekte</name><name>Effekte</name></bonus>
+<bonus id="PIERCE_ABLATIVE"><name>Absorptionsbonus</name></bonus>
+<bonus id="BLADETURN_REINFORCEMENT"><name>Klingenwendungverstärkung</name></bonus>
+<bonus id="CONCENTRATION"><name>Konzentration</name></bonus>
+<bonus id="DEATH_EXPIERIENCE_LOSS_REDUCTION"><name>Erfahrungsverlustreduzierung</name></bonus>
+<bonus id="SPELL_POWER_COST_REDUCTION"><name>Magiekostenreduzierung</name></bonus>
+<bonus id="TO_HIT_BONUS"><name>Zum-Treffen Bonus</name><name>Bonus</name></bonus>
+<bonus id="ARROW_RECOVERY"><name>Pfeilwiederherstellung-Alt</name></bonus>
+<bonus id="ARCANE_SIPHON"><name>Arkaner Siphon</name></bonus>
+<bonus id="EXTRA_COINS"><name>Extra Geld(%)</name></bonus>
+
+<bonus id="FIST_WRAPS_ALB"><name>Faustbandagen</name>
+	<gem id="GLACIER_WAR_SIGIL"><name>Kriegssiegel des Gletschers</name></gem>
+</bonus>
+<bonus id="MAULER_STAFF_ALB"><name>Malmerstäbe</name>
+	<gem id="CINDER_WAR_SIGIL"><name>Kriegssiegel der Schlacke</name></gem>
+</bonus>
+<bonus id="POWER_STRIKES_ALB"><name>Kraft der Ahnen</name>
+	<gem id="CLOUT_FERVOR_SIGIL"><name>Eifersiegel des Schlages</name></gem>
+</bonus>
+<bonus id="MAGNETISM_ALB"><name>Magnetismus</name>
+	<gem id="MAGNETIC_FERVOR_SIGIL"><name>Eifersiegel des Magnetismus</name></gem>
+</bonus>
+<bonus id="AURA_MANIPULATION_ALB"><name>Auramanipulation</name>
+	<gem id="RADIANT_FERVOR_SIGIL"><name>Eifersiegel des Strahlens</name></gem>
+</bonus>
+
+<bonus id="FIST_WRAPS_HIB"><name>Faustbandagen</name>
+	<gem id="GLACIER_WAR_SPELL_STONE"><name>Kriegszauberstein des Gletschers</name></gem>
+</bonus>
+<bonus id="MAULER_STAFF_HIB"><name>Malmerstäbe</name>
+	<gem id="CINDER_WAR_SPELL_STONE"><name>Kriegszauberstein der Schlacke</name></gem>
+</bonus>
+<bonus id="POWER_STRIKES_HIB"><name>Kraft der Ahnen</name>
+	<gem id="CLOUT_NATURE_SPELL_STONE"><name>Naturzauberstein des Schlages</name></gem>
+</bonus>
+<bonus id="MAGNETISM_HIB"><name>Magnetismus</name>
+	<gem id="MAGNETIC_NATURE_SPELL_STONE"><name>Naturzauberstein des Magnetismus</name></gem>
+</bonus>
+<bonus id="AURA_MANIPULATION_HIB"><name>Auramanipulation</name>
+	<gem id="RADIANT_NATURE_SPELL_STONE"><name>Naturzauberstein des Strahlens</name></gem>
+</bonus>
+
+<bonus id="FIST_WRAPS_MID"><name>Faustbandagen</name>
+	<gem id="GLACIER_WAR_RUNE"><name>Kriegsrune des Gletschers</name></gem>
+</bonus>
+<bonus id="MAULER_STAFF_MID"><name>Malmerstäbe</name>
+	<gem id="CINDER_WAR_RUNE"><name>Kriegsrune der Schlacke</name></gem>
+</bonus>
+<bonus id="POWER_STRIKES_MID"><name>Kraft der Ahnen</name>
+	<gem id="CLOUT_PRIMAL_RUNE"><name>Urrune des Schlages</name></gem>
+</bonus>
+<bonus id="MAGNETISM_MID"><name>Magnetismus</name>
+	<gem id="MAGNETIC_PRIMAL_RUNE"><name>Urrune des Magnetismus</name></gem>
+</bonus>
+<bonus id="AURA_MANIPULATION_MID"><name>Auramanipulation</name>
+	<gem id="RADIANT_PRIMAL_RUNE"><name>Urrune des Strahlens</name></gem>
+</bonus>
+
+<bonus id="OVERCAP_STRENGTH"><name>Über-CAP Stärke</name></bonus>
+<bonus id="OVERCAP_CONSTITUTION"><name>Über-CAP Konstitution</name></bonus>
+<bonus id="OVERCAP_DEXTERITY"><name>Über-CAP Geschick</name></bonus>
+<bonus id="OVERCAP_QUICKNESS"><name>Über-CAP Schnelligkeit</name></bonus>
+<bonus id="OVERCAP_ACUITY"><name>Über-CAP Sinnesschärfe</name></bonus>
+<bonus id="OVERCAP_RES_CRUSH"><name>Über-CAP Schlag-Resistenz</name></bonus>
+<bonus id="OVERCAP_RES_SLASH"><name>Über-CAP Schnitt-Resistenz</name></bonus>
+<bonus id="OVERCAP_RES_THRUST"><name>Über-CAP Stoß-Resistenz</name></bonus>
+<bonus id="OVERCAP_RES_HEAT"><name>Über-CAP Hitze-Resistenz</name></bonus>
+<bonus id="OVERCAP_RES_COLD"><name>Über-CAP Kälte-Resistenz</name></bonus>
+<bonus id="OVERCAP_RES_MATTER"><name>Über-CAP Materie-Resistenz</name></bonus>
+<bonus id="OVERCAP_RES_BODY"><name>Über-CAP Körper-Resistenz</name></bonus>
+<bonus id="OVERCAP_RES_SPIRIT"><name>Über-CAP Geist-Resistenz</name></bonus>
+<bonus id="OVERCAP_RES_ENERGY"><name>Über-CAP Energie-Resistenz</name></bonus>
+<bonus id="STAT_OVERCAP_STRENGTH"><name>Stärke + Über-CAP Stärke</name></bonus>
+<bonus id="STAT_OVERCAP_CONSTITUTION"><name>Konstitution + Über-CAP Konstitution</name></bonus>
+<bonus id="STAT_OVERCAP_DEXTERITY"><name>Geschick + Über-CAP Geschick</name></bonus>
+<bonus id="STAT_OVERCAP_QUICKNESS"><name>Schnelligkeit + Über-CAP Schnelligkeit</name></bonus>
+<bonus id="STAT_OVERCAP_ACUITY"><name>Sinnesschärfe + Über-CAP Sinnesschärfe</name></bonus>
+<bonus id="RESIST_OVERCAP_RES_CRUSH"><name>Schlag-Resistenz + Über-CAP Schlag-Resistenz</name></bonus>
+<bonus id="RESIST_OVERCAP_RES_SLASH"><name>Schnitt-Resistenz + Über-CAP Schnitt-Resistenz</name></bonus>
+<bonus id="RESIST_OVERCAP_RES_THRUST"><name>Stoß-Resistenz + Über-CAP Stoß-Resistenz</name></bonus>
+<bonus id="RESIST_OVERCAP_RES_HEAT"><name>Hitze-Resistenz + Über-CAP Hitze-Resistenz</name></bonus>
+<bonus id="RESIST_OVERCAP_RES_COLD"><name>Kälte-Resistenz + Über-CAP Kälte-Resistenz</name></bonus>
+<bonus id="RESIST_OVERCAP_RES_MATTER"><name>Materie-Resistenz + Über-CAP Materie-Resistenz</name></bonus>
+<bonus id="RESIST_OVERCAP_RES_BODY"><name>Körper-Resistenz + Über-CAP Körper-Resistenz</name></bonus>
+<bonus id="RESIST_OVERCAP_RES_SPIRIT"><name>Geist-Resistenz + Über-CAP Geist-Resistenz</name></bonus>
+<bonus id="RESIST_OVERCAP_RES_ENERGY"><name>Energie-Resistenz + Über-CAP Energie-Resistenz</name></bonus>
+<bonus id="ENCUMBRANCE_INCREASE"><name>Mehr Tragkraft</name></bonus>
+<bonus id="ESSENCE_RESIST"><name>Essenzresistenz(%)</name></bonus>
+<bonus id="SAFE_FALL"><name>Fallschaden senken(%)</name></bonus>
+<bonus id="SPELL_LEVEL_INCREASE"><name>Zauberlevel erhöhen</name></bonus>
+<bonus id="SIEGE_DAMAGE_REDUCTION"><name>Belagerungsschaden reduzieren(%)</name></bonus>
+<bonus id="REALM_POINT_BONUS"><name>Reichspunktebonus(%)</name></bonus>
+<bonus id="CROWD_CONTROL_REDUCTION"><name>CC-Dauer senken(%)</name></bonus>
+<bonus id="DAMAGE_INCREASE"><name>Schadenserhöhung(%)</name></bonus>
+<bonus id="HEALTH_REGEN"><name>Heilung-über-Zeit</name></bonus>
+<bonus id="POWER_REGEN"><name>Mana-über-Zeit</name></bonus>
+<bonus id="SIEGE_SPEED_BONUS"><name>Belagerungsgeschw.(%)</name></bonus>
+<bonus id="WATER_BREATHING"><name>Wasseratmung</name></bonus>
+<bonus id="ENDURANCE_REGEN"><name>Ausdauer-über-Zeit</name></bonus>
+<bonus id="PHYSICAL_DAMAGE_DECREASE"><name>physische Schadensverringerung(%)</name></bonus>
+<bonus id="DAMAGE_CONVERSION"><name>Schadensumwandlung(%)</name></bonus>
+<bonus id="DRAGON_STRENGTH"><name>Stärke</name></bonus>
+<bonus id="DRAGON_CONSTITUTION"><name>Konstitution</name></bonus>
+<bonus id="DRAGON_DEXTERITY"><name>Geschick</name></bonus>
+<bonus id="DRAGON_QUICKNESS"><name>Schnelligkeit</name></bonus>
+<bonus id="DRAGON_INTELLIGENCE"><name>Intelligenz</name></bonus>
+<bonus id="DRAGON_PIETY"><name>Frömmigkeit</name></bonus>
+<bonus id="DRAGON_CHARISMA"><name>Charisma</name></bonus>
+<bonus id="DRAGON_EMPATHY"><name>Empathie</name></bonus>
+<bonus id="DRAGON_ACUITY"><name>Sinnesschärfe</name></bonus>
+<bonus id="DRAGON_HITPOINTS"><name>Trefferpunkte</name></bonus>
+<bonus id="DRAGON_TO_HIT_BONUS"><name>Zum-Treffen Bonus</name><name>Bonus</name></bonus>
+<bonus id="DRAGON_SPELL_DURATION_BONUS"><name>Zauberdauer Bonus</name><name>Zauberdauer</name></bonus>
+<bonus id="DRAGON_FATIGUE"><name>Ausdauer</name><name>Erschöpfung</name></bonus>
+<bonus id="DRAGON_HEALING_BONUS"><name>Heilungs Bonus</name><name>Heilungseffektivität</name></bonus>
+<bonus id="DRAGON_BUFF_BONUS"><name>Buff Bonus</name><name>attributerhöhende Zaubereffektivität</name></bonus>
+<bonus id="DRAGON_MELEE_DAMAGE_BONUS"><name>Nahkampfschaden-Bonus</name><name>Nahkampfschaden</name></bonus>
+<bonus id="DRAGON_ARCHERY_SPELL_DAMAGE_BONUS"><name>Bogen-/Magieschaden Bonus</name><name>Magieschaden</name></bonus>
+</bonuses>
+<classes>
+<class id="ARMSMAN"><name>Waffenmeister</name></class>
+<class id="CLERIC"><name>Kleriker</name></class>
+<class id="FRIAR"><name>Ordensbruder</name></class>
+<class id="NECROMANCER"><name>Nekromant</name></class>
+<class id="THEURGIST"><name>Theurg</name></class>
+<class id="WIZARD"><name>Zauberer</name></class>
+<class id="REAVER"><name>Arawnritter</name></class>
+<class id="MERCENARY"><name>Söldner</name></class>
+<class id="PALADIN"><name>Paladin</name></class>
+<class id="CABALIST"><name>Kabbalist</name></class>
+<class id="SORCERER"><name>Hexer</name></class>
+<class id="INFILTRATOR"><name>Infiltrator</name></class>
+<class id="MINSTREL"><name>Minnesänger</name></class>
+<class id="SCOUT"><name>Kundschafter</name></class>
+<class id="HERETIC"><name>Ketzer</name></class>
+<class id="ANIMIST"><name>Animist</name></class>
+<class id="BAINSHEE"><name>Banshee</name></class>
+<class id="BARD"><name>Barde</name></class>
+<class id="BLADEMASTER"><name>Schwertmeister</name></class>
+<class id="CHAMPION"><name>Champion</name></class>
+<class id="DRUID"><name>Druide</name></class>
+<class id="ELDRITCH"><name>Eldritch</name></class>
+<class id="ENCHANTER"><name>Beschwörer</name></class>
+<class id="HERO"><name>Fian</name></class>
+<class id="MENTALIST"><name>Mentalist</name></class>
+<class id="NIGHTSHADE"><name>Nachtschatten</name></class>
+<class id="RANGER"><name>Waldläufer</name></class>
+<class id="VALEWALKER"><name>Schnitter</name></class>
+<class id="VAMPIIR"><name>Vampyr</name></class>
+<class id="WARDEN"><name>Hüter</name></class>
+<class id="BERSERKER"><name>Berserker</name></class>
+<class id="BONEDANCER"><name>Knochentänzer</name></class>
+<class id="HEALER"><name>Heiler</name></class>
+<class id="HUNTER"><name>Jäger</name></class>
+<class id="RUNEMASTER"><name>Runenmeister</name></class>
+<class id="SAVAGE"><name>Wilder</name></class>
+<class id="SHADOWBLADE"><name>Schattenklinge</name></class>
+<class id="SHAMAN"><name>Schamane</name></class>
+<class id="SKALD"><name>Skalde</name></class>
+<class id="SPIRITMASTER"><name>Geisterbeschwörer</name></class>
+<class id="THANE"><name>Donnerkrieger</name></class>
+<class id="VALKYRIE"><name>Valküre</name></class>
+<class id="WARLOCK"><name>Hexenmeister</name></class>
+<class id="WARRIOR"><name>Krieger</name></class>
+
+<class id="MAULER_ALB"><name>Malmer</name></class>
+<class id="MAULER_HIB"><name>Malmer</name></class>
+<class id="MAULER_MID"><name>Malmer</name></class>
+</classes>
+<itemslots>
+<slot id="1">
+	<pos_name>Hände</pos_name>
+	<slot_name>Hände</slot_name>
+</slot>
+<slot id="2">
+	<pos_name>Kopf</pos_name>
+	<slot_name>Kopf</slot_name>
+</slot>
+<slot id="3">
+	<pos_name>Füsse</pos_name>
+	<slot_name>Füsse</slot_name>
+</slot>
+<slot id="4">
+	<pos_name>Beine</pos_name>
+	<slot_name>Beine</slot_name>
+</slot>
+<slot id="5">
+	<pos_name>Arme</pos_name>
+	<slot_name>Arme</slot_name>
+</slot>
+<slot id="6">
+	<pos_name>Körper</pos_name>
+	<slot_name>Körper</slot_name>
+</slot>
+<slot id="7">
+	<pos_name>Waffen</pos_name>
+	<slot_name>R.Hand</slot_name>
+</slot>
+<slot id="8">
+	<pos_name>Waffen</pos_name>
+	<slot_name>L.Hand</slot_name>
+</slot>
+<slot id="9">
+	<pos_name>Waffen</pos_name>
+	<slot_name>2-Hand</slot_name>
+</slot>
+<slot id="10">
+	<pos_name>Waffen</pos_name>
+	<slot_name>Fern</slot_name>
+</slot>
+<slot id="11">
+	<pos_name>Hals</pos_name>
+	<slot_name>Hals</slot_name>
+</slot>
+<slot id="12">
+	<pos_name>Umhang</pos_name>
+	<slot_name>Umhang</slot_name>
+</slot>
+<slot id="13">
+	<pos_name>Juwel</pos_name>
+	<slot_name>Juwel</slot_name>
+</slot>
+<slot id="14">
+	<pos_name>Taille</pos_name>
+	<slot_name>Taille</slot_name>
+</slot>
+<slot id="15">
+	<pos_name>Ringe</pos_name>
+	<slot_name>L.Ring</slot_name>
+</slot>
+<slot id="16">
+	<pos_name>Ringe</pos_name>
+	<slot_name>R.Ring</slot_name>
+</slot>
+<slot id="17">
+	<pos_name>Handgelenk</pos_name>
+	<slot_name>L.Handg</slot_name>
+</slot>
+<slot id="18">
+	<pos_name>Handgelenk</pos_name>
+	<slot_name>R.Handg</slot_name>
+</slot>
+<slot id="19">
+	<pos_name>Mythical</pos_name>
+	<slot_name>Mythical</slot_name>
+</slot>
+</itemslots>
+<materials>
+<material id="METAL">
+<level number="1"><name>Bronze</name></level>
+<level number="2"><name>Eisen</name></level>
+<level number="3"><name>Stahl</name></level>
+<level number="4"><name>Titan</name></level>
+<level number="5"><name>Platin</name></level>
+<level number="6"><name>Mithril</name></level>
+<level number="7"><name>Adamant</name></level>
+<level number="8"><name>Asterit</name></level>
+<level number="9"><name>Netherit</name></level>
+<level number="10"><name>Arkanit</name></level>
+</material>
+<material id="ORE">
+<level number="1"><name>Kupfer</name></level>
+<level number="2"><name>Ferrit</name></level>
+<level number="3"><name>Quartz</name></level>
+<level number="4"><name>Dolomit</name></level>
+<level number="5"><name>Kobalt</name></level>
+<level number="6"><name>Karbit</name></level>
+<level number="7"><name>Saphir</name></level>
+<level number="8"><name>Diamant</name></level>
+<level number="9"><name>Netherit</name></level>
+<level number="10"><name>Arkanit</name></level>
+</material>
+<material id="WOOD">
+<level number="1"><name>Esche</name></level>
+<level number="2"><name>Ulme</name></level>
+<level number="3"><name>Eiche</name></level>
+<level number="4"><name>Eisenholz</name></level>
+<level number="5"><name>Kernholz</name></level>
+<level number="6"><name>Runenholz</name></level>
+<level number="7"><name>Steinholz</name></level>
+<level number="8"><name>Ebenholz</name></level>
+<level number="9"><name>Dyrrholz</name></level>
+<level number="10"><name>Düsterholz</name></level>
+</material>
+<material id="LEATHER">
+<level number="1"><name>unbehandelt</name></level>
+<level number="2"><name>gegerbt</name></level>
+<level number="3"><name>getrocknet</name></level>
+<level number="4"><name>hart</name></level>
+<level number="5"><name>starr</name></level>
+<level number="6"><name>geprägt</name></level>
+<level number="7"><name>getränkt</name></level>
+<level number="8"><name>runenbemalt</name></level>
+<level number="9"><name>verzaubert</name></level>
+<level number="10"><name>gesegnet</name></level>
+</material>
+<material id="CLOTH">
+<level number="1"><name>Wolle</name></level>
+<level number="2"><name>Leinen</name></level>
+<level number="3"><name>Brokat</name></level>
+<level number="4"><name>Seide</name></level>
+<level number="5"><name>Samt</name></level>
+<level number="6"><name>Waldqualität</name></level>
+<level number="7"><name>Meeresnebel</name></level>
+<level number="8"><name>Nachtschatten</name></level>
+<level number="9"><name>Wyvernhaut</name></level>
+<level number="10"><name>Seidenstahl</name></level>
+</material>
+<material id="THREAD">
+<level number="1"><name>Wolle</name></level>
+<level number="2"><name>Leinen</name></level>
+<level number="3"><name>Brokat</name></level>
+<level number="4"><name>Seide</name></level>
+<level number="5"><name>Samt</name></level>
+<level number="6"><name>Waldqualität</name></level>
+<level number="7"><name>Meeresnebel</name></level>
+<level number="8"><name>Nachtschatten</name></level>
+<level number="9"><name>Wyvernhaut</name></level>
+<level number="10"><name>Seidenstahl</name></level>
+</material>
+<material id="STRIPS">
+<level number="1"><name>Blätter</name></level>
+<level number="2"><name>Knochen</name></level>
+<level number="3"><name>Ranken</name></level>
+<level number="4"><name>Muscheln</name></level>
+<level number="5"><name>Fossilien</name></level>
+<level number="6"><name>Bernstein</name></level>
+<level number="7"><name>Korallen</name></level>
+<level number="8"><name>Chitin</name></level>
+<level number="9"><name>Versteinert</name></level>
+<level number="10"><name>Kristallisiert</name></level>
+</material>
+<material id="GEMS">
+<level number="1"><name>Lo</name><gem_prefix>roh</gem_prefix></level>
+<level number="2"><name>Um</name><gem_prefix>unpoliert</gem_prefix></level>
+<level number="3"><name>On</name><gem_prefix>rau</gem_prefix></level>
+<level number="4"><name>Ee</name><gem_prefix>unrein</gem_prefix></level>
+<level number="5"><name>Pal</name><gem_prefix>mangelhaft</gem_prefix></level>
+<level number="6"><name>Mon</name><gem_prefix>poliert</gem_prefix></level>
+<level number="7"><name>Ros</name><gem_prefix>Facettiert</gem_prefix></level>
+<level number="8"><name>Zo</name><gem_prefix>kostbar</gem_prefix></level>
+<level number="9"><name>Kath</name><gem_prefix>lupenrein</gem_prefix></level>
+<level number="10"><name>Ra</name><gem_prefix>perfekt</gem_prefix></level>
+</material>
+</materials>
+<damagetypes>
+<damagetype id="SLASH"><name>Schnitt</name></damagetype>
+<damagetype id="THRUST"><name>Stoß</name></damagetype>
+<damagetype id="CRUSH"><name>Schlag</name></damagetype>
+</damagetypes>
+<itemclasses>
+<itemclass id="CLOTH"><name>Stoff</name></itemclass>
+<itemclass id="LEATHER"><name>Leder</name></itemclass>
+<itemclass id="STUDDED"><name>Niete/Verstärkt</name></itemclass>
+<itemclass id="CHAIN"><name>Kette/Schuppe</name></itemclass>
+<itemclass id="PLATE"><name>Platte</name></itemclass>
+<itemclass id="ALB_CLOTH"><name>Stoff</name>
+  <subclass id="QUILTED"><name>Polster</name></subclass>
+  <subclass id="DOUBLE_STICHED"><name>Umsäumtes Quilt</name></subclass>
+</itemclass>
+<itemclass id="HIB_CLOTH"><name>Stoff</name>
+  <subclass id="WOVEN"><name>Web</name></subclass>
+  <subclass id="THICK_WOVEN"><name>Dicke Web</name></subclass>
+</itemclass>
+<itemclass id="MID_CLOTH"><name>Stoff</name>
+  <subclass id="PADDED"><name>Polster</name></subclass>
+  <subclass id="THICK_PADDED"><name>Dicke Polster</name></subclass>
+</itemclass>
+<itemclass id="ALB_LEATHER"><name>Leder</name>
+  <subclass id="ROMAN"><name>Römisch</name></subclass>
+  <subclass id="CYMRIC"><name>Kymrisch</name></subclass>
+  <subclass id="SILURIC"><name>Silurisch</name></subclass>
+  <subclass id="PADDED_LEATHER"><name>Gefüttertes Leder</name></subclass>
+</itemclass>
+<itemclass id="HIB_LEATHER"><name>Leder</name>
+  <subclass id="BREA"><name>Brea</name></subclass>
+  <subclass id="CONSTAIC"><name>Constatik</name></subclass>
+  <subclass id="CRUAIGH"><name>Cruaigh</name></subclass>
+  <subclass id="PADDED CRUAIGH"><name>Gefüttertes Cruaigh</name></subclass>
+</itemclass>
+<itemclass id="MID_LEATHER"><name>Leder</name>
+  <subclass id="MJUKLAEDAR"><name>Mjukleder</name></subclass>
+  <subclass id="SVARLAEDAR"><name>Svarleder</name></subclass>
+  <subclass id="STARKLAEDAR"><name>Starkleder</name></subclass>
+  <subclass id="PADDED_STARKLAEDAR"><name>Gefüttertes Starkleder</name></subclass>
+</itemclass>
+<itemclass id="ALB_STUDDED"><name>Nietenleder</name>
+  <subclass id="STUDDED"><name>Nieten</name></subclass>
+  <subclass id="BONNED"><name>Rippen</name></subclass>
+  <subclass id="LAMELLAR"><name>Lamellen</name></subclass>
+  <subclass id="REINFORCED_LAMELLAR"><name>verstärkte Lamellen</name></subclass>
+</itemclass>
+<itemclass id="HIB_REINFORCED"><name>Verstärkt</name>
+  <subclass id="TAKUIL"><name>Takuil</name></subclass>
+  <subclass id="NADURTHA"><name>Nadurtha</name></subclass>
+  <subclass id="CAILIOCHT"><name>Kailiocht</name></subclass>
+  <subclass id="HEAVY_CAILIOCHT"><name>schwere Kailiocht</name></subclass>
+</itemclass>
+<itemclass id="MID_STUDDED"><name>Nietenleder</name>
+  <subclass id="STELSKODD"><name>Stelskodd</name></subclass>
+  <subclass id="SVARSKODD"><name>Svarskodd</name></subclass>
+  <subclass id="STARKASKODD"><name>Starkaskodd</name></subclass>
+  <subclass id="HEAVY_STARKASKODD"><name>schwere Starkaskodd</name></subclass>
+</itemclass>
+<itemclass id="ALB_CHAIN"><name>Kette</name>
+  <subclass id="CHAIN"><name>Kette</name></subclass>
+  <subclass id="MAIL"><name>Panzerkette</name></subclass>
+  <subclass id="IMPROVED_MAIL"><name>verbesserte Kette</name></subclass>
+</itemclass>
+<itemclass id="HIB_SCALE"><name>Schuppe</name>
+  <subclass id="CRUANACH"><name>Cruanach</name></subclass>
+  <subclass id="DAINGEA"><name>Daingea</name></subclass>
+  <subclass id="OSNADURTHA"><name>Osnadurtha</name></subclass>
+  <subclass id="IMPROVED_OSNADURTHA"><name>verbesserte Osnadurtha</name></subclass>
+</itemclass>
+<itemclass id="MID_CHAIN"><name>Kette</name>
+  <subclass id="PANSARKEDJA"><name>Pansarkedja</name></subclass>
+  <subclass id="SVARKEDJA"><name>Svarkedja</name></subclass>
+  <subclass id="STARKAKEDJA"><name>Starkakedja</name></subclass>
+  <subclass id="HEAVY_STARKAKEDJA"><name>schwere Starkakedja</name></subclass>
+</itemclass>
+<itemclass id="ALB_PLATE"><name>Platte</name>
+  <subclass id="PLATE"><name>Platte</name></subclass>
+  <subclass id="SCALED"><name>Schuppenplatte</name></subclass>
+  <subclass id="FLUTED"><name>Röhrenplatte</name></subclass>
+  <subclass id="FULL"><name>schwere Platte</name></subclass>
+</itemclass>
+<itemclass id="SLASH"><name>Schnittwaffen</name>
+	<subclass id="BROADSWORD"><name>Breitschwert</name></subclass>
+	<subclass id="SCIMITAR"><name>Krummsäbel</name></subclass>
+	<subclass id="LONG_SWORD"><name>Langschwert</name></subclass>
+	<subclass id="BASTARD_SWORD"><name>Bastardschwert</name></subclass>
+	<subclass id="SABRE"><name>Säbel</name></subclass>
+	<subclass id="FORTIFIED_LONG_SWORD"><name>verbessertes Langschwert</name></subclass>
+	<subclass id="EXCEPTIONAL_LONG_SWORD"><name>besonderes Langschwert</name></subclass>
+</itemclass>
+<itemclass id="SLASH_LEFT"><name>Schnittwaffen (links)</name>
+	<subclass id="DAGGER"><name>Dolch</name></subclass>
+	<subclass id="SHORT_SWORD"><name>Kurzschwert</name></subclass>
+	<subclass id="HAND_AXE"><name>Streitaxt</name></subclass>
+	<subclass id="JAMBIYA"><name>Jambiya</name></subclass>
+	<subclass id="FORTIFIED_SHORT_SWORD"><name>verbessertes Kurzschwert</name></subclass>
+	<subclass id="EXCEPTIONAL_SHORT_SWORD"><name>besonderes Kurzschwert</name></subclass>
+</itemclass>
+<itemclass id="CRUSH"><name>Schlagwaffen</name>
+	<subclass id="FLANGED_MACE"><name>Nietenstreitkolben</name></subclass>
+	<subclass id="SPIKED_MACE"><name>Stachelstreitkolben</name></subclass>
+	<subclass id="WAR_HAMMER"><name>Kriegshammer</name></subclass>
+	<subclass id="NEEDLE_MACE"><name>Nadelstreitkolben</name></subclass>
+	<subclass id="FORTIFIED_MACE"><name>verstärkter Streitkolben</name></subclass>
+	<subclass id="EXPECTIONAL_MACE"><name>besonderer Streitkolben</name></subclass>
+</itemclass>
+<itemclass id="CRUSH_LEFT"><name>Schlagwaffen (links)</name>
+  <subclass id="HAMMER"><name>Hammer</name></subclass>
+	<subclass id="MACE"><name>Streitkolben</name></subclass>
+	<subclass id="WAR_MACE"><name>Kriegsstreitkolben</name></subclass>
+	<subclass id="FORTIFIED_HAMMER"><name>verstärkter Hammer</name></subclass>
+	<subclass id="EXCEPTIONAL_HAMMER"><name>besonderer Hammer</name></subclass>
+</itemclass>
+<itemclass id="THRUST"><name>Stichwaffen</name>
+	<subclass id="RAPIER"><name>Rapier</name></subclass>
+	<subclass id="GLADIUS"><name>Gladius</name></subclass>
+	<subclass id="GUARDED_RAPIER"><name>Militärrapier</name></subclass>
+	<subclass id="FORTIFIED_RAPIER"><name>verstärkter Rapier</name></subclass>
+	<subclass id="EXCEPTIONAL_RAPIER"><name>besonderer Rapier</name></subclass>
+</itemclass>
+<itemclass id="THRUST_LEFT"><name>Stichwaffen (links)</name>
+	<subclass id="DIRK"><name>Katzbalger</name></subclass>
+	<subclass id="STILLETTO"><name>Stilett</name></subclass>
+	<subclass id="MAIN_GAUCHE"><name>Main-Gauche</name></subclass>
+	<subclass id="LONG_DIRK"><name>Langkatzbalger</name></subclass>
+	<subclass id="FORTIFIED_STILLETTO"><name>verstärktes Stilett</name></subclass>
+	<subclass id="EXCEPTIONAL_STILLETTO"><name>besonderes Stilett</name></subclass>
+</itemclass>
+<itemclass id="POLEARM"><name>Stangenwaffen</name>
+	<subclass id="PIKE"><name>Pike</name></subclass>
+	<subclass id="LOCHABER_AXE"><name>Lochaber-Axt</name></subclass>
+	<subclass id="BILL"><name>Spitzhacke</name></subclass>
+	<subclass id="LUCERNE_HAMMER"><name>Luzerner Hammer</name></subclass>
+	<subclass id="HALBERD"><name>Hellebarde</name></subclass>
+	<subclass id="FORTIFIED_LUCERNE_HAMMER"><name>verstärkter Luzerner Hammer</name></subclass>
+	<subclass id="EXCEPTIONAL_LUCERNE_HAMMER"><name>besonderer Luzerner Hammer</name></subclass>
+	<subclass id="SPIKED_HAMMER"><name>Stachelhammer</name></subclass>
+	<subclass id="EXCEPTIONAL_BARDICHE"><name>besondere Bardike</name></subclass>
+	<subclass id="BARDICHE"><name>Bardike</name></subclass>
+	<subclass id="POLEAXE"><name>Langaxt</name></subclass>
+	<subclass id="FORTIFIED_PARTISAN"><name>verstärkte Partisane</name></subclass>
+	<subclass id="PARTISAN"><name>Partisane</name></subclass>
+	<subclass id="EXCEPTIONAL_PARTISAN"><name>besondere Partisane</name></subclass>
+</itemclass>
+<itemclass id="FLEXIBLE"><name>Flexible Waffen</name>
+	<subclass id="BARBED_CHAIN"><name>Stachelkette</name></subclass>
+	<subclass id="CHAIN"><name>Kette</name></subclass>
+	<subclass id="MORNING_STAR"><name>Morgenstern</name></subclass>
+	<subclass id="TIPPED_WHIP"><name>Peitsche</name></subclass>
+	<subclass id="WAR_CHAIN"><name>Kriegskette</name></subclass>
+	<subclass id="BLADE_TIPPED_WHIP"><name>Klingenpeitsche</name></subclass>
+	<subclass id="FLAIL"><name>Dreschflegel</name></subclass>
+	<subclass id="BARBED_WHIP"><name>Stachelpeitsche</name></subclass>
+	<subclass id="FORTIFIED_CHAIN"><name>verstärkte Kette</name></subclass>
+	<subclass id="EXCEPTIONAL_CHAIN"><name>besondere Kette</name></subclass>
+	<subclass id="WEIGHTED_FLAIL"><name>Schwerer Dreschflegel</name></subclass>
+	<subclass id="FORTIFIED_WHIP"><name>verstärkte Peitsche</name></subclass>
+	<subclass id="THICK_BARBED_WHIP"><name>Dicke Stachelpeitsche</name></subclass>
+	<subclass id="EXCEPTIONAL_WHIP"><name>besondere Peitsche</name></subclass>
+</itemclass>
+<itemclass id="TWO_HAND"><name>2-Handwaffen</name>
+	<subclass id="WAR_MATTOCK"><name>Kampfhacke</name></subclass>
+	<subclass id="TWO_HANDED_SWORD"><name>Zweihänder</name></subclass>
+	<subclass id="GREAT_HAMMER"><name>Riesenhammer</name></subclass>
+	<subclass id="WAR_AXE"><name>Kriegsaxt</name></subclass>
+	<subclass id="BATTLE_AXE"><name>Kriegsstreitaxt</name></subclass>
+	<subclass id="GREAT_SWORD"><name>Großschwert</name></subclass>
+	<subclass id="GREAT_AXE"><name>Prunkaxt</name></subclass>
+	<subclass id="FORTIFIED_GREAT_SWORD"><name>verstärktes Großschwert</name></subclass>
+	<subclass id="GREAT_SCIMITAR"><name>Türkensäbel</name></subclass>
+	<subclass id="EXCEPTIONAL_GREAT_SWORD"><name>besonderes Großschwert</name></subclass>
+	<subclass id="FORTIFIED_GREAT_HAMMER"><name>verstärkter Riesenhammer</name></subclass>
+	<subclass id="ARCHMACE"><name>Erzstreitkolben</name></subclass>
+	<subclass id="EXCEPTIONAL_GREAT_HAMMER"><name>besonderer Riesenhammer</name></subclass>
+	<subclass id="FORTIFIED_WAR_PICK"><name>verstärkte Kriegshacke</name></subclass>
+	<subclass id="WAR_PICK"><name>Kriegshacke</name></subclass>
+	<subclass id="EXCEPTIONAL_WAR_PICK"><name>besondere Kriegshacke</name></subclass>
+</itemclass>
+<itemclass id="SWORD"><name>Schwert</name>
+	<subclass id="DAGGER"><name>Dolch</name></subclass>
+	<subclass id="SHORT_SWORD"><name>Kurzschwert</name></subclass>
+	<subclass id="BROADSWORD"><name>Breitschwert</name></subclass>
+	<subclass id="LONG_SWORD"><name>Langschwert</name></subclass>
+	<subclass id="BASTARD_SWORD"><name>Bastardschwert</name></subclass>
+	<subclass id="DWARFEN_SHORT_SWORD"><name>Zwergenkurzschwert</name></subclass>
+	<subclass id="FORTIFIED_LONG_SWORD"><name>verstärktes Langschwert</name></subclass>
+	<subclass id="EXCEPTIONAL_LONG_SWORD"><name>besonderes Langschwert</name></subclass>
+</itemclass>
+<itemclass id="SWORD_2H"><name>Schwert(2H)</name>
+	<subclass id="TWO_HANDED_SWORD"><name>Zweihänderschwert</name></subclass>
+	<subclass id="GREAT_SWORD"><name>Großschwert</name></subclass>
+	<subclass id="FORTIFIED_GREAT_SWORD"><name>verstärktes Großschwert</name></subclass>
+	<subclass id="DWARFEN_GREAT_SWORD"><name>Zwergengroßschwert</name></subclass>
+	<subclass id="EXCEPTIONAL_GREAT_SWORD"><name>besonderes Großschwert</name></subclass>
+</itemclass>
+<itemclass id="AXE"><name>Axt</name>
+	<subclass id="SPIKED_AXE"><name>Stachelaxt</name></subclass>
+	<subclass id="DOUBLE_BLADED_AXE"><name>Doppelaxt</name></subclass>
+	<subclass id="FORTIFIED_DOUBLE_BLADED_AXE"><name>verstärkte Doppelaxt</name></subclass>
+	<subclass id="EXCEPTIONAL_DOUBLE_BLADED_AXE"><name>besondere Doppelaxt</name></subclass>
+	<subclass id="WEIGHTED_DOUBLE_BLADED_AXE"><name>schwere Doppelaxt</name></subclass>
+</itemclass>
+<itemclass id="AXE_LEFT"><name>Axt(links)</name>
+	<subclass id="HAND_AXE"><name>Streitaxt</name></subclass>
+	<subclass id="BEARDED_AXE"><name>Amazonenaxt</name></subclass>
+	<subclass id="WAR_AXE"><name>Kriegsaxt</name></subclass>
+	<subclass id="WEIGHTED_BEARDED_AXE"><name>Amazonenkampfaxt</name></subclass>
+	<subclass id="EXCEPTIONAL_HATCHED"><name>besonderes Beil</name></subclass>
+	<subclass id="CLEAVER"><name>Hackmesser</name></subclass>
+</itemclass>
+<itemclass id="AXE_2H"><name>Axt(2H)</name>
+	<subclass id="LARGE_AXE"><name>Großaxt</name></subclass>
+	<subclass id="GREAT_AXE"><name>Prunkaxt</name></subclass>
+	<subclass id="FORTIFIED_BATTLE_AXE"><name>verstärkte Kriegsstreitaxt</name></subclass>
+	<subclass id="WAR_CLEAVER"><name>Kriegsbeil</name></subclass>
+	<subclass id="EXCEPTIONAL_BATTLE_AXE"><name>besondere Kriegsstreitaxt</name></subclass>
+</itemclass>
+<itemclass id="HAMMER"><name>Hammer</name>
+	<subclass id="SMALL_HAMMER"><name>Fäustel</name></subclass>
+	<subclass id="HAMMER"><name>Hammer</name></subclass>
+	<subclass id="WAR_HAMMER"><name>Kriegshammer</name></subclass>
+	<subclass id="PICK_HAMMER"><name>Spitzhammer</name></subclass>
+	<subclass id="BATTLE_HAMMER"><name>Kampfhammer</name></subclass>
+	<subclass id="FORTIFIED_PICK_HAMMER"><name>verstärkter Spitzhammer</name></subclass>
+	<subclass id="EXPECTIONAL_PICK_HAMMER"><name>besonderer Spitzhammer</name></subclass>
+	<subclass id="SPIKED_HAMMER"><name>Stachelhammer</name></subclass>
+</itemclass>
+<itemclass id="HAMMER_2H"><name>Hammer(2H)</name>
+	<subclass id="TWO_HANDED_WAR_HAMMER"><name>Zweihänderhammer</name></subclass>
+	<subclass id="GREAT_HAMMER"><name>Riesenhammer</name></subclass>
+	<subclass id="FORTIFIED_GREAT_HAMMER"><name>verstärkter Riesenhammer</name></subclass>
+	<subclass id="GREAT_SPIKED_HAMMER"><name>Stachel Kriegshammer</name></subclass>
+	<subclass id="EXCEPTIONAL_GREAT_HAMMER"><name>besonderer Riesenhammer</name></subclass>
+</itemclass>
+<itemclass id="SPEAR"><name>Speer</name>
+	<subclass id="SPEAR"><name>Speer</name></subclass>
+	<subclass id="LONG_SPEAR"><name>Langspeer</name></subclass>
+	<subclass id="TRIDENT"><name>Dreizack</name></subclass>
+	<subclass id="LUGGED_SPEAR"><name>Massaispeer</name></subclass>
+	<subclass id="GREAT_SPEAR"><name>Großspeer</name></subclass>
+	<subclass id="FORTIFIED_BATTLE_SPEAR"><name>verstärkter Kriegsspeer</name></subclass>
+	<subclass id="FORTIFIED_BATTLE_SPEAR"><name>verstärkter Kriegsspeer</name></subclass>
+	<subclass id="EXCEPTIONAL_BATTLE_SPEAR"><name>besonderer Kriegsspeer</name></subclass>
+	<subclass id="BATTLE_SPEAR"><name>Kriegsspeer</name></subclass>
+	<subclass id="FORTIFIED_HOOKED_SPEAR"><name>verstärkter Hakenspeer</name></subclass>
+	<subclass id="EXCEPTIONAL_HOOKED_SPEAR"><name>besonderer Hakenspeer</name></subclass>
+	<subclass id="WEIGHTED_HOOKED_SPEAR"><name>schwerer Hakenspeer</name></subclass>
+</itemclass>
+<itemclass id="CLAWS"><name>Faustwaffen</name>
+	<subclass id="MOON_FANG"><name>Mondreißzahn</name></subclass>
+	<subclass id="FANG_GREAVE"><name>Reißzahnschiene</name></subclass>
+	<subclass id="MOON_CLAW"><name>Mondkralle</name></subclass>
+	<subclass id="CLAW_GREAVE"><name>Krallenschiene</name></subclass>
+	<subclass id="BLADED_MOON_FANG"><name>Mondwiderhaken</name></subclass>
+	<subclass id="BLADED_FANG_GREAVE"><name>Widerhakenschiene</name></subclass>
+	<subclass id="BLADED_MOON_CLAW"><name>MondStachel</name></subclass>
+	<subclass id="BLADED_CLAW_GREAVE"><name>Stachelschiene</name></subclass>
+	<subclass id="FORTIFIED_MOON_CLAW"><name>verstärkte Mondkralle</name></subclass>
+	<subclass id="FORTIFIED_FANG_GREAVE"><name>verstärkte Reißzahnschiene</name></subclass>
+	<subclass id="HEAVE_BLADED_MOON_CLAW"><name>schwerer Mondstachel</name></subclass>
+	<subclass id="HEAVE_BLADED_CLAW_GREAVE"><name>schwerer Stachelschiene</name></subclass>
+	<subclass id="EXCEPTIONAL_MOON_CLAW"><name>besondere Mondkralle</name></subclass>
+	<subclass id="EXCEPTIONAL_FANG_GREAVE"><name>besondere Reißzahnschiene</name></subclass>
+</itemclass>
+<itemclass id="LARGE_WEAPON"><name>Zweihandwaffen</name>
+	<subclass id="TWO_HANDED_SWORD"><name>Zweihänderschwert</name></subclass>
+	<subclass id="BIG_SHILLELAGH"><name>Shillelagh</name></subclass>
+	<subclass id="TWO_HANDED_SPIKED_MACE"><name>Zweihänderstreitkolben</name></subclass>
+	<subclass id="GREAT_HAMMER"><name>Riesenhammer</name></subclass>
+	<subclass id="GREAT_SWORD"><name>Großschwert</name></subclass>
+	<subclass id="GREAT_FALCATA"><name>Großfalcata</name></subclass>
+	<subclass id="FORTIFIED_GREAT_SWORD"><name>verstärktes Großschwert</name></subclass>
+	<subclass id="EXCEPTIONAL_GREAT_SWORD"><name>besonderes Großschwert</name></subclass>
+	<subclass id="FORTIFIED_GREAT_HAMMER"><name>verstärkter Riesenhammer</name></subclass>
+	<subclass id="EXCEPTIONAL_GREAT_HAMMER"><name>besonderer Riesenhammer</name></subclass>
+	<subclass id="SLEDGE_HAMMER"><name>Gesenkhammer</name></subclass>
+</itemclass>
+<itemclass id="BLADES"><name>Klingenwaffen</name>
+	<subclass id="BROADSWORD"><name>Breitschwert</name></subclass>
+	<subclass id="LONGSWORT"><name>Langschwert</name></subclass>
+	<subclass id="BASTARD_SWORT"><name>Bastardschwert</name></subclass>
+	<subclass id="EXCEPTIONAL_SWORD"><name>besonderes Langschwert</name></subclass>
+	<subclass id="FORTIFIED_SWORD"><name>verstärktes Langschwert</name></subclass>
+	<subclass id="WEIGHTED_SWORD"><name>Schweres Langschwert</name></subclass>
+</itemclass>
+<itemclass id="BLADES_LEFT"><name>Klingenwaffen (links)</name>
+	<subclass id="SHORT_SWORD"><name>Kurzschwert</name></subclass>
+	<subclass id="FALCATA"><name>Falcata</name></subclass>
+	<subclass id="SICKLE"><name>Sichel</name></subclass>
+	<subclass id="CRESCENT_SWORD"><name>Krummschwert</name></subclass>
+	<subclass id="EXCEPTIONAL_SHORTSWORD"><name>besonderes Kurzschwert</name></subclass>
+</itemclass>
+<itemclass id="BLUNT"><name>Stumpfe Waffen</name>
+	<subclass id="SPIKED_CLUB"><name>Stachelkeule</name></subclass>
+	<subclass id="HAMMER"><name>Hammer</name></subclass>
+	<subclass id="SPIKED_MACE"><name>Streitkolben mit Stacheln</name></subclass>
+	<subclass id="PICKHAMMER"><name>Spitzhammer</name></subclass>
+	<subclass id="EXCEPTIONAL_MACE"><name>besonderer Streitkolben</name></subclass>
+	<subclass id="FORTIFIED_MACE"><name>verbesserter Streitkolben</name></subclass>
+</itemclass>
+<itemclass id="BLUNT_LEFT"><name>Stumpfe Waffen (links)</name>
+	<subclass id="CLUB"><name>Keule</name></subclass>
+	<subclass id="Mace"><name>Streitkolben</name></subclass>
+	<subclass id="BARBED_MACE"><name>Kriegsstreitkolben</name></subclass>
+	<subclass id="EXCEPTIONAL_HAMMER"><name>besonderer Hammer</name></subclass>
+	<subclass id="FORTIFIED_HAMMER"><name>verbesserter Hammer</name></subclass>
+</itemclass>
+<itemclass id="PIERCE"><name>Stichwaffen</name>
+	<subclass id="RAPIER"><name>Rapier</name></subclass>
+	<subclass id="CURVED_DAGGER"><name>Krummdolch</name></subclass>
+	<subclass id="GUARDED_RAPIER"><name>Militärrapier</name></subclass>
+	<subclass id="EXCEPTIONAL_RAPIER"><name>besonderes Militärrapier</name></subclass>
+	<subclass id="FORTIFIED_RAPIER"><name>verbessertes Militärrapier</name></subclass>
+</itemclass>
+<itemclass id="PIERCE_LEFT"><name>Stichwaffen (links)</name>
+	<subclass id="DIRK"><name>Katzbalger</name></subclass>
+	<subclass id="DAGGER"><name>Dolch</name></subclass>
+	<subclass id="STILETTO"><name>Stilett</name></subclass>
+	<subclass id="ANGLED_DAGGER"><name>Hakendolch</name></subclass>
+	<subclass id="EXCEPTIONAL_STILETTO"><name>besonderes Stilett</name></subclass>
+	<subclass id="FORTIFIED_STILETTO"><name>verbessertes Stilett</name></subclass>
+</itemclass>
+<itemclass id="SCYTHE"><name>Sensen</name>
+	<subclass id="SCYTHE"><name>Sense</name></subclass>
+	<subclass id="HARVEST_SCYTHE"><name>Erntesense</name></subclass>
+	<subclass id="MARTIAL_SCYTHE"><name>Kampfsense</name></subclass>
+	<subclass id="WAR_SCYTHE"><name>Kriegssense</name></subclass>
+	<subclass id="GREAT_WAR_SCYTHE"><name>Große Kriegssense</name></subclass>
+	<subclass id="MOONCRESTED_WAR_SCYTHE"><name>schwere Kriegssense</name></subclass>
+	<subclass id="EXCEPTIONAL_WAR_SCYTHE"><name>besondere Kriegssense</name></subclass>
+	<subclass id="FORTIFIED_WAR_SCYTHE"><name>verstärkte Kriegssense</name></subclass>
+</itemclass>
+<itemclass id="CELTIC_SPEAR"><name>Keltenspeer</name>
+	<subclass id="SHORT_SPEAR"><name>Kurzspeer</name></subclass>
+	<subclass id="SPEAR"><name>Speer</name></subclass>
+	<subclass id="LONG_SPEAR"><name>Langspeer</name></subclass>
+	<subclass id="WAR_SPEAR"><name>Kampfspieß</name></subclass>
+	<subclass id="BARBED_SPEAR"><name>Zackenspeer</name></subclass>
+	<subclass id="HOOKED_SPEAR"><name>Hakenspieß</name></subclass>
+	<subclass id="EXCEPTIONAL_BATTLE_SPEAR"><name>besonderer Kriegsspeer</name></subclass>
+	<subclass id="FORTIFIED_BATTLE_SPEAR"><name>verbesserter Kriegsspeer</name></subclass>
+</itemclass>
+<itemclass id="LONGBOW"><name>Langbogen</name>
+	<subclass id="HUNTING_BOW"><name>Jagdbogen</name></subclass>
+	<subclass id="BOW"><name>Bogen</name></subclass>
+	<subclass id="LONGBOW"><name>Langbogen</name></subclass>
+	<subclass id="FORTIFIED_LONGBOW"><name>verstärkter Langbogen</name></subclass>
+	<subclass id="EXCEPTIONAL_LONGBOW"><name>besonderer Langbogen</name></subclass>
+	<subclass id="HEAVY_LONGBOW"><name>schwerer Langbogen</name></subclass>
+</itemclass>
+<itemclass id="SHORT_BOW"><name>Kurzbögen (Alb)</name>
+	<subclass id="SHORT_BOW"><name>Kurzbogen</name></subclass>
+	<subclass id="FORTIFIED_SHORT_BOW"><name>verstärkter Kurzbogen</name></subclass>
+	<subclass id="EXCEPTIONAL_SHORT_BOW"><name>besonderer Kurzbogen</name></subclass>
+	<subclass id="HEAVY_SHORT_BOW"><name>schwerer Kurzbogen</name></subclass>
+</itemclass>
+<itemclass id="SHORT_BOWS_HIB"><name>Kurzbögen (Hib)</name>
+	<subclass id="SHORT_BOW_HIB"><name>Kurzbogen</name></subclass>
+	<subclass id="HEAVY_SHORT_BOW_HIB"><name>Schwerer Kurzbogen</name></subclass>
+	<subclass id="EXCEPTIONAL_SHORT_BOW_HIB"><name>Besonderer Kurzbogen</name></subclass>
+	<subclass id="FORTIFIED_SHORT_BOW_HIB"><name>Verstärkter Kurzbogen</name></subclass>
+</itemclass>
+<itemclass id="THROWING_WEAPONS_MID"><name>Wurfwaffen (Mid)</name>
+	<subclass id="WEIGHTED_THROWING_KNIVES_MID"><name>Wurfmesser</name></subclass>
+	<subclass id="WEIGHTED_THROWING_HAMMERS_MID"><name>Wurfhämmer</name></subclass>
+	<subclass id="WEIGHTED_THROWING_AXES_MID"><name>Wurfäxte</name></subclass>
+</itemclass>
+<itemclass id="CROSSBOW"><name>Armbrust</name>
+	<subclass id="CROSSBOW"><name>Armbrust</name></subclass>
+	<subclass id="FORTIFIED_CROSSBOW"><name>verstärkte Armbrust</name></subclass>
+	<subclass id="LIGHT_CROSSBOW"><name>leichte Armbrust</name></subclass>
+	<subclass id="EXCEPTIONAL_CROSSBOW"><name>besondere Armbrust</name></subclass>
+</itemclass>
+<itemclass id="COMPOSITE_BOW"><name>Kompositbogen</name>
+	<subclass id="COMPOSITE_BOW"><name>Kompositbogen</name></subclass>
+	<subclass id="GREAT_COMPOSITE_BOW"><name>Komposit-Großbogen</name></subclass>
+	<subclass id="FORTIFIED_COMPOSITE_BOW"><name>verstärkter Kompositbogen</name></subclass>
+	<subclass id="EXCEPTIONAL_COMPOSITE_BOW"><name>besonderer Kompositbogen</name></subclass>
+	<subclass id="HEAVY_COMPOSITE_BOW"><name>schwerer Kompositbogen</name></subclass>
+</itemclass>
+<itemclass id="RECURVE_BOW"><name>Reflexbogen</name>
+	<subclass id="SHORT_RECURVE_BOW"><name>Reflexkurzbogen</name></subclass>
+	<subclass id="RECURVE_BOW"><name>Reflexbogen</name></subclass>
+	<subclass id="GREAT_RECURVE_BOW"><name>Reflexlangbogen</name></subclass>
+	<subclass id="HEAVY_RECURVE_BOW"><name>Schwerer Reflexbogen</name></subclass>
+	<subclass id="EXEPTIONAL_RECURVE_BOW"><name>Besonderer Reflexbogen</name></subclass>
+	<subclass id="FORTIFIED_RECURVE_BOW"><name>Verbesserter Reflexbogen</name></subclass>
+</itemclass>
+<itemclass id="STAFF"><name>Stäbe</name>
+	<subclass id="STAFF"><name>Stab</name></subclass>
+	<subclass id="SHOD_STAFF"><name>verstärkter Stab</name></subclass>
+	<subclass id="EXCEPTIONAL_MAGUS_STAFF"><name>besonderer Magierstab</name></subclass>
+	<subclass id="HEAVY_SHOD_STAFF"><name>schwerer verstärkter Stab</name></subclass>
+</itemclass>
+<itemclass id="QUARTERSTAFF"><name>Kampfstäbe</name>
+	<subclass id="QUARTERSTAFF"><name>Kampfstab</name></subclass>
+	<subclass id="SHOD_QUARTERSTAFF"><name>verstärkter Kampfstab</name></subclass>
+	<subclass id="EXCEPTIONAL_QUARTERSTAFF"><name>besonderer Kampfstab</name></subclass>
+	<subclass id="HEAVY_SHOD_QUARTERSTAFF"><name>schwerer verstärkter Kampfstab</name></subclass>
+</itemclass>
+<itemclass id="SHIELD_SMALL"><name>Schild (klein)</name>
+	<subclass id="ROUND_SHIELD"><name>Rundschild</name></subclass>
+	<subclass id="REINFORCED_ROUND_SHIELD"><name>schweres Rundschild</name></subclass>
+	<subclass id="EXCEPTIONAL_BUCKLER"><name>besonderer kleiner Rundschild</name></subclass>
+</itemclass>
+<itemclass id="SHIELD_MEDIUM"><name>Schild (mittel)</name>
+	<subclass id="KITE_SHIELD"><name>Drachenschild</name></subclass>
+	<subclass id="REINFORCED_KITE_SHIELD"><name>schweres Drachenschild</name></subclass>
+	<subclass id="EXCEPTIONAL_HEATHER_SHIELD"><name>besonderer Drachenschild</name></subclass>
+</itemclass>
+<itemclass id="SHIELD_LARGE"><name>Schild (groß)</name>
+	<subclass id="TOWER_SHIELD"><name>Turmschild</name></subclass>
+	<subclass id="REINFORCED_TOWER_SHIELD"><name>schwerer Turmschild</name></subclass>
+	<subclass id="HEATHER_SHIELD"><name>Glattschild</name></subclass>
+	<subclass id="EXCEPTIONAL_BLOCK_SHIELD"><name>besonderes Paradeschild</name></subclass>
+	<subclass id="EXCEPTIONAL_LARGE_ROUND_SHIELD"><name>besonderer großer Rundschild</name></subclass>
+</itemclass>
+<itemclass id="INSTRUMENT_FLUTE"><name>Instrument (Flöte)</name>
+	<subclass id="FLUTE"><name>Flöte</name></subclass>
+</itemclass>
+<itemclass id="INSTRUMENT_DRUM"><name>Instrument (Trommel)</name>
+	<subclass id="DRUM"><name>Trommel</name></subclass>
+</itemclass>
+<itemclass id="INSTRUMENT_LUTE"><name>Instrument (Laute)</name>
+	<subclass id="LUTE"><name>Laute</name></subclass>
+</itemclass>
+<itemclass id="MUSIC_FLUTE"><name>Instrument (Flöte)</name>
+	<subclass id="FLUTE"><name>Flöte</name></subclass>
+</itemclass>
+<itemclass id="MUSIC_DRUM"><name>Instrument (Trommel)</name>
+	<subclass id="DRUM"><name>Trommel</name></subclass>
+</itemclass>
+<itemclass id="MUSIC_LUTE"><name>Instrument (Laute)</name>
+	<subclass id="LUTE"><name>Laute</name></subclass>
+</itemclass>
+<itemclass id="INSTRUMENT_HARP"><name>Instrument (Harfe)</name>
+	<subclass id="HARP"><name>Harfe</name></subclass>
+</itemclass>
+<itemclass id="MUSIC_HARP"><name>Instrument (Harfe)</name>
+	<subclass id="HARP"><name>Harfe</name></subclass>
+</itemclass>
+<itemclass id="FIST_WRAPS_ALB"><name>Faustbandagen</name>
+	<subclass id="FIST_WRAP_ALB"><name>Faustbandage</name></subclass>
+	<subclass id="STUDDED_FIST_WRAP_ALB"><name>Nietenfaustbandage</name></subclass>
+	<subclass id="SPIKED_FIST_WRAP_ALB"><name>Stachelfaustbandage</name></subclass>
+	<subclass id="HEAVY_BANDED_FIST_WRAP_ALB"><name>Fest gebundene Faustbandage</name></subclass>
+	<subclass id="EXCEPTIONAL_FIST_WRAP_ALB"><name>Besondere Faustbandage</name></subclass>
+	<subclass id="FORTIFIED_FIST_WRAP_ALB"><name>Verstärkte Faustbandage</name></subclass>
+</itemclass>
+<itemclass id="HAND_WRAPS_ALB"><name>Handbandagen</name>
+	<subclass id="HAND_WRAP_ALB"><name>Handbandage</name></subclass>
+	<subclass id="RIVETED_HAND_WRAP_ALB"><name>genietete Handbandage</name></subclass>
+	<subclass id="RAZORED_HAND_WRAP_ALB"><name>messerscharfe Handbandage</name></subclass>
+	<subclass id="TOUGHENED_HAND_WRAP_ALB"><name>Gehärtete Handbandage</name></subclass>
+	<subclass id="EXCEPTIONAL_HAND_WRAP_ALB"><name>Besondere Handbandage</name></subclass>
+	<subclass id="FORTIFIED_HAND_WRAP_ALB"><name>Verstärkte Handbandage</name></subclass>
+</itemclass>
+<itemclass id="MAULER_STAFFS_ALB"><name>Malmerstäbe</name>
+	<subclass id="MAULER_STAFF_ALB"><name>Malmerstab</name></subclass>
+	<subclass id="MAULER_SHOD_QUARTERSTAFF_ALB"><name>Gehärteter Malmerkampfstab</name></subclass>
+	<subclass id="MAULER_SHOD_STAFF_ALB"><name>Gehärteter Malmerstab</name></subclass>
+	<subclass id="HEAVY_MAULER_STAFF_ALB"><name>Schwerer Malmerstab</name></subclass>
+	<subclass id="HEAVY_MAULER_SHOD_STAFF_ALB"><name>Schwerer gehärteter Malmerstab</name></subclass>
+	<subclass id="EXCEPTIONAL_MAULER_STAFF_ALB"><name>Besonderer Malmerstab</name></subclass>
+	<subclass id="EXCEPTIONAL_MAULER_SHOD_STAFF_ALB"><name>Besonderer gehärteter Malmerstab</name></subclass>
+</itemclass>
+<itemclass id="FIST_WRAPS_HIB"><name>Faustbandagen</name>
+	<subclass id="FIST_WRAP_HIB"><name>Faustbandage</name></subclass>
+	<subclass id="STUDDED_FIST_WRAP_HIB"><name>Nietenfaustbandage</name></subclass>
+	<subclass id="SPIKED_FIST_WRAP_HIB"><name>Stachelfaustbandage</name></subclass>
+	<subclass id="HEAVY_BANDED_FIST_WRAP_HIB"><name>Fest gebundene Faustbandage</name></subclass>
+	<subclass id="EXCEPTIONAL_FIST_WRAP_HIB"><name>Besondere Faustbandage</name></subclass>
+	<subclass id="FORTIFIED_FIST_WRAP_HIB"><name>Verstärkte Faustbandage</name></subclass>
+</itemclass>
+<itemclass id="HAND_WRAPS_HIB"><name>Handbandagen</name>
+	<subclass id="HAND_WRAP_HIB"><name>Handbandage</name></subclass>
+	<subclass id="RIVETED_HAND_WRAP_HIB"><name>genietete Handbandage</name></subclass>
+	<subclass id="RAZORED_HAND_WRAP_HIB"><name>messerscharfe Handbandage</name></subclass>
+	<subclass id="TOUGHENED_HAND_WRAP_HIB"><name>Gehärtete Handbandage</name></subclass>
+	<subclass id="EXCEPTIONAL_HAND_WRAP_HIB"><name>Besondere Handbandage</name></subclass>
+	<subclass id="FORTIFIED_HAND_WRAP_HIB"><name>Verstärkte Handbandage</name></subclass>
+</itemclass>
+<itemclass id="MAULER_STAFFS_HIB"><name>Malmerstäbe</name>
+	<subclass id="MAULER_STAFF_HIB"><name>Malmerstab</name></subclass>
+	<subclass id="MAULER_SHOD_QUARTERSTAFF_HIB"><name>Gehärteter Malmerkampfstab</name></subclass>
+	<subclass id="MAULER_SHOD_STAFF_HIB"><name>Gehärteter Malmerstab</name></subclass>
+	<subclass id="HEAVY_MAULER_STAFF_HIB"><name>Schwerer Malmerstab</name></subclass>
+	<subclass id="HEAVY_MAULER_SHOD_STAFF_HIB"><name>Schwerer gehärteter Malmerstab</name></subclass>
+	<subclass id="EXCEPTIONAL_MAULER_STAFF_HIB"><name>Besonderer Malmerstab</name></subclass>
+	<subclass id="EXCEPTIONAL_MAULER_SHOD_STAFF_HIB"><name>Besonderer gehärteter Malmerstab</name></subclass>
+</itemclass>
+<itemclass id="FIST_WRAPS_MID"><name>Faustbandagen</name>
+	<subclass id="FIST_WRAP_MID"><name>Faustbandage</name></subclass>
+	<subclass id="STUDDED_FIST_WRAP_MID"><name>Nietenfaustbandage</name></subclass>
+	<subclass id="SPIKED_FIST_WRAP_MID"><name>Stachelfaustbandage</name></subclass>
+	<subclass id="HEAVY_BANDED_FIST_WRAP_MID"><name>Fest gebundene Faustbandage</name></subclass>
+	<subclass id="EXCEPTIONAL_FIST_WRAP_MID"><name>Besondere Faustbandage</name></subclass>
+	<subclass id="FORTIFIED_FIST_WRAP_MID"><name>Verstärkte Faustbandage</name></subclass>
+</itemclass>
+<itemclass id="HAND_WRAPS_MID"><name>Handbandagen</name>
+	<subclass id="HAND_WRAP_MID"><name>Handbandage</name></subclass>
+	<subclass id="RIVETED_HAND_WRAP_MID"><name>genietete Handbandage</name></subclass>
+	<subclass id="RAZORED_HAND_WRAP_MID"><name>messerscharfe Handbandage</name></subclass>
+	<subclass id="TOUGHENED_HAND_WRAP_MID"><name>Gehärtete Handbandage</name></subclass>
+	<subclass id="EXCEPTIONAL_HAND_WRAP_MID"><name>Besondere Handbandage</name></subclass>
+	<subclass id="FORTIFIED_HAND_WRAP_MID"><name>Verstärkte Handbandage</name></subclass>
+</itemclass>
+<itemclass id="MAULER_STAFFS_MID"><name>Malmerstäbe</name>
+	<subclass id="MAULER_STAFF_MID"><name>Malmerstab</name></subclass>
+	<subclass id="MAULER_SHOD_QUARTERSTAFF_MID"><name>Gehärteter Malmerkampfstab</name></subclass>
+	<subclass id="MAULER_SHOD_STAFF_MID"><name>Gehärteter Malmerstab</name></subclass>
+	<subclass id="HEAVY_MAULER_STAFF_MID"><name>Schwerer Malmerstab</name></subclass>
+	<subclass id="HEAVY_MAULER_SHOD_STAFF_MID"><name>Schwerer gehärteter Malmerstab</name></subclass>
+	<subclass id="EXCEPTIONAL_MAULER_STAFF_MID"><name>Besonderer Malmerstab</name></subclass>
+	<subclass id="EXCEPTIONAL_MAULER_SHOD_STAFF_MID"><name>Besonderer gehärteter Malmerstab</name></subclass>
+</itemclass>
+</itemclasses>
+<races>
+	<race id="AVALONIAN"><name>Avalonier</name></race>
+	<race id="BRITON"><name>Bretone</name></race>
+	<race id="HALFOGRE"><name>Halboger</name></race>
+	<race id="HIGHLANDER"><name>Highländer</name></race>
+	<race id="INCONNU"><name>Inconnu</name></race>
+	<race id="SARACEN"><name>Sarazene</name></race>
+
+	<race id="CELT"><name>Kelte</name></race>
+	<race id="ELF"><name>Elf</name></race>
+	<race id="FIRBOLG"><name>Firbolg</name></race>
+	<race id="LURIKEEN"><name>Lurikeen</name></race>
+	<race id="SHAR"><name>Shar</name></race>
+	<race id="SYLVAN"><name>Sylvaner</name></race>
+
+	<race id="DWARF"><name>Zwerg</name></race>
+	<race id="FROSTALF"><name>Frostalf</name></race>
+	<race id="KOBOLD"><name>Kobold</name></race>
+ 	<race id="TROLL"><name>Troll</name></race>
+	<race id="NORSEMAN"><name>Nordmann</name></race>
+	<race id="VALKYN"><name>Valkyn</name></race>
+
+	<race id="MINOTAUR"><name>Minotaur</name></race>
+</races>
+</Moras>
