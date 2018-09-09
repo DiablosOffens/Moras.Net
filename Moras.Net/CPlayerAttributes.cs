@@ -157,7 +157,8 @@ namespace Moras.Net
             if (pos >= 0 && pos <= arAttributeStates.Length)
             {
                 int iEffMaxCap = Math.Min(arAttributeStates[pos].iItemsCap, arAttributeStates[pos].iPlayerCapIncCap);
-                iEffMaxCap = Math.Min(iEffMaxCap + arAttributeStates[pos].iItemsOvercap, arAttributeStates[pos].iPlayerCapIncOvercap);
+                if (arAttributeStates[pos].iPlayerCapIncOvercap > 0) // use cap from over-cap only if this attribute has a cap in over-cap
+                    iEffMaxCap = Math.Min(iEffMaxCap + arAttributeStates[pos].iItemsOvercap, arAttributeStates[pos].iPlayerCapIncOvercap);
                 return arAttributeStates[pos].iPlayerCapBase + iEffMaxCap;
             }
             else
@@ -515,7 +516,8 @@ namespace Moras.Net
                 if (arAttributeStates[i].bActive)
                 {
                     int iEffMaxCap = Math.Min(arAttributeStates[i].iItemsCap, arAttributeStates[i].iPlayerCapIncCap);
-                    iEffMaxCap = Math.Min(iEffMaxCap + arAttributeStates[i].iItemsOvercap, arAttributeStates[i].iPlayerCapIncOvercap);
+                    if (arAttributeStates[i].iPlayerCapIncOvercap > 0) // use cap from over-cap only if this attribute has a cap in over-cap
+                        iEffMaxCap = Math.Min(iEffMaxCap + arAttributeStates[i].iItemsOvercap, arAttributeStates[i].iPlayerCapIncOvercap);
                     int iEffCap = arAttributeStates[i].iPlayerCapBase + iEffMaxCap;
                     int iEffVal = Math.Min(arAttributeStates[i].iItemsValue, iEffCap);
                     dTotalUtility += Weights.UpV[i] * iEffVal;

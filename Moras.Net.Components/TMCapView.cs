@@ -149,7 +149,7 @@ namespace Moras.Net.Components
             // Berechne die einzelnen Maximas
             int iMaxVal = iValue + Math.Max(iValueChange, 0);
             //int iMaxCap = iCapBase + iCapInc + ((iCapIncChange > 0) ? iCapIncChange : 0) + iOvercap + ((iOvercapChange > 0) ? iOvercapChange : 0);
-            int iMaxCapCap = iCapBase + iCapIncOvercap;
+            int iMaxCapCap = iCapBase + (iCapIncOvercap > 0 ? iCapIncOvercap : iCapIncCap);
             // Suche den größten vorkommenden Anzeigewert:
             /*
             int iMaxMax = (iMaxVal > iMaxCap) ? iMaxVal : iMaxCap;
@@ -161,8 +161,12 @@ namespace Moras.Net.Components
             int iCapT = (iMaxMax <= 0) ? 0 : Width * 4096 / iMaxMax;
 
             // Tatsächliche Caperhöhung und tatsächliche Änderunge von diesem
-            int iRealCapInc = Math.Min(iCapIncOvercap, Math.Min(iCapIncCap, iCapInc) + iOvercap);
-            int iRealCapIncChange = Math.Min(iCapIncOvercap, Math.Min(iCapIncCap, iCapInc + iCapIncChange) + iOvercap + iOvercapChange);
+            int iRealCapInc = Math.Min(iCapIncCap, iCapInc);
+            if (iCapIncOvercap > 0) // use cap from over-cap only if this attribute has a cap in over-cap
+                iRealCapInc = Math.Min(iCapIncOvercap, iRealCapInc + iOvercap);
+            int iRealCapIncChange = Math.Min(iCapIncCap, iCapInc + iCapIncChange);
+            if (iCapIncOvercap > 0) // use cap from over-cap only if this attribute has a cap in over-cap
+                iRealCapIncChange = Math.Min(iCapIncOvercap, iRealCapIncChange + iOvercap + iOvercapChange);
             iRealCapIncChange -= iRealCapInc;
 
             // Startwert für Balken
@@ -366,7 +370,10 @@ namespace Moras.Net.Components
         {
             // Bastele den Hint zusammen
             StringBuilder hintBuilder = new StringBuilder();
-            int iCapEff = iCapBase + Math.Min(Math.Min(iCapInc, iCapIncCap) + iOvercap, iCapIncOvercap);
+            int iMaxCapInc = Math.Min(iCapInc, iCapIncCap);
+            if (iCapIncOvercap > 0) // use cap from over-cap only if this attribute has a cap in over-cap
+                iMaxCapInc = Math.Min(iMaxCapInc + iOvercap, iCapIncOvercap);
+            int iCapEff = iCapBase + iMaxCapInc;
             int iValueEff = iFloor + Math.Min(iValue, iCapEff);
 
             hintBuilder.AppendFormat("{0}: {1}\n" +
