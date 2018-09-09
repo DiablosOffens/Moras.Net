@@ -149,20 +149,20 @@ namespace Moras.Net.Components
             // Berechne die einzelnen Maximas
             int iMaxVal = iValue + Math.Max(iValueChange, 0);
             //int iMaxCap = iCapBase + iCapInc + ((iCapIncChange > 0) ? iCapIncChange : 0) + iOvercap + ((iOvercapChange > 0) ? iOvercapChange : 0);
-            int iMaxCapCap = iCapBase + iCapIncCap + iCapIncOvercap;
+            int iMaxCapCap = iCapBase + iCapIncOvercap;
             // Suche den größten vorkommenden Anzeigewert:
             /*
             int iMaxMax = (iMaxVal > iMaxCap) ? iMaxVal : iMaxCap;
             iMaxMax = iFloor + ( (iMaxCapCap > iMaxMax) ? iMaxCapCap : iMaxMax );
             */
-            int iMaxMax = (iMaxVal > iMaxCapCap) ? iMaxVal : iMaxCapCap;
+            int iMaxMax = Math.Max(iMaxVal, iMaxCapCap);
 
             // Zwischenwert. Breite eines einzelnen Wertes skaliert um 4096
             int iCapT = (iMaxMax <= 0) ? 0 : Width * 4096 / iMaxMax;
 
             // Tatsächliche Caperhöhung und tatsächliche Änderunge von diesem
-            int iRealCapInc = Math.Min(iCapIncCap, iCapInc) + Math.Min(iCapIncOvercap, iOvercap);
-            int iRealCapIncChange = Math.Min(iCapIncCap, iCapInc + iCapIncChange) + Math.Min(iCapIncOvercap, iOvercap + iOvercapChange);
+            int iRealCapInc = Math.Min(iCapIncOvercap, Math.Min(iCapIncCap, iCapInc) + iOvercap);
+            int iRealCapIncChange = Math.Min(iCapIncOvercap, Math.Min(iCapIncCap, iCapInc + iCapIncChange) + iOvercap + iOvercapChange);
             iRealCapIncChange -= iRealCapInc;
 
             // Startwert für Balken
@@ -366,7 +366,7 @@ namespace Moras.Net.Components
         {
             // Bastele den Hint zusammen
             StringBuilder hintBuilder = new StringBuilder();
-            int iCapEff = iCapBase + Math.Min(iCapInc, iCapIncCap) + Math.Min(iOvercap, iCapIncOvercap);
+            int iCapEff = iCapBase + Math.Min(Math.Min(iCapInc, iCapIncCap) + iOvercap, iCapIncOvercap);
             int iValueEff = iFloor + Math.Min(iValue, iCapEff);
 
             hintBuilder.AppendFormat("{0}: {1}\n" +
