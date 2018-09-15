@@ -115,7 +115,7 @@ namespace Moras.Net
             STATE_ITEM,	// Suche danach in der Sektion, das es ein Gegenstand ist
         }
 
-        //TODO: fix false indexes from delphi conversion
+        //TODO: fix false indices from delphi conversion
         // Diese Funktion scannt erstmal das gesamte Log nach Gegenständen und merkt
         // sich deren Position. In einem zweiten durchlauf wird versucht, die Herkunft
         // der Gegenstände herauszubekommen. Doppelte Items werden herausgefiltert
@@ -132,9 +132,9 @@ namespace Moras.Net
             arOffsets.Length = 0;
             ParserStateInit State = ParserStateInit.STATE_START;
             fChatLog.BaseStream.Seek(0, SeekOrigin.Begin);	// Lesezeiger auf Dateianfang
-            Line = fChatLog.ReadLine();
             while (!fChatLog.EndOfStream)
             {
+                Line = fChatLog.ReadLine();
                 Debug.Assert(Line.Length < 1024);
                 iLineNo++;
                 switch (State)
@@ -188,8 +188,6 @@ namespace Moras.Net
                         }
                         break;
                 }
-
-                Line = fChatLog.ReadLine();
             }
         }
 
