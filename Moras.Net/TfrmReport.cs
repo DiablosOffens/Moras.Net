@@ -84,9 +84,9 @@ namespace Moras.Net
             try
             {
                 IFStreamWrapper _in = new IFStreamWrapper(ReportFile);
-                _in.get(out cCur);
                 while (!_in.EndOfStream)
                 {	// Lese alles bis zum Dateiende
+                    _in.get(out cCur);
                     if (bTag)
                     {
                         if (cCur == '>')
@@ -400,7 +400,6 @@ namespace Moras.Net
                         else
                             if (bVisible[ifLevel]) strLine += cCur;
                     }
-                    _in.get(out cCur);
                 }
                 tbReport.Lines = strText.Strings.ToArray();
                 strText = null;

@@ -259,9 +259,18 @@ namespace Moras.Net
             String strTemp = "";
             if (fiXml.EndOfStream)
                 return false;
-            fiXml.get(out cCur);
+            bool isifstream = fiXml is IFStreamWrapper;
             while (!fiXml.EndOfStream)
             {
+                fiXml.get(out cCur);
+                // normalize line endings if stream doesn't do it for us
+                if (!isifstream && cCur == '\r')
+                {
+                    cCur = '\n';
+                    if (cLast == cCur || (!fiXml.EndOfStream && (char)fiXml.Peek() == cCur))
+                        continue;
+                }
+
                 if (cCur == '\n')
                 {
                     iLineNo++;
@@ -366,6 +375,9 @@ namespace Moras.Net
                                 strContent = strContent.Replace("&apos;", "'");
                                 strContent = strContent.Replace("&quot;", "\"");
                                 strContent = strContent.Replace("&amp;", "&");
+                                // Line endings should've been normalized to \n, but current platform may have different, so replace them.
+                                if (Environment.NewLine != '\n')
+                                    strContent = strContent.Replace("\n", Environment.NewLine);
                                 State = ParserState.STATE_OPEN;
                                 return true;
                             }
@@ -375,7 +387,6 @@ namespace Moras.Net
                     }
                 }
                 cLast = cCur;
-                fiXml.get(out cCur);
             }
             return false;
         }
