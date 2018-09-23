@@ -7,6 +7,7 @@
 			<shield>SMALL</shield>
 			<dualwield/>
 			<race>DWARF</race>
+			<race>KOBOLD</race>
 			<race>TROLL</race>
 			<race>NORSEMAN</race>
 			<race>VALKYN</race>
@@ -23,6 +24,7 @@
 			<armor>CLOTH</armor>
 			<shield>SMALL</shield>
 			<race>KOBOLD</race>
+			<race>FROSTALF</race>
 			<race>TROLL</race>
 			<race>VALKYN</race>
 			<magic>PIETY</magic>
@@ -126,6 +128,7 @@
 			<realm>Midgard</realm>
 			<armor>CHAIN</armor>
 			<shield>SMALL</shield>
+			<race>DWARF</race>
 			<race>KOBOLD</race>
 			<race>TROLL</race>
 			<race>FROSTALF</race>
@@ -147,6 +150,7 @@
 			<race>TROLL</race>
 			<race>NORSEMAN</race>
 			<race>FROSTALF</race>
+			<race>MINOTAUR</race>
 			<magic>CHARISMA</magic>
 			<skill>AXE</skill>
 			<skill>HAMMER</skill>
@@ -176,6 +180,7 @@
 			<armor>CHAIN</armor>
 			<shield>LARGE</shield>
 			<race>DWARF</race>
+			<race>FROSTALF</race>
 			<race>TROLL</race>
 			<race>NORSEMAN</race>
 			<race>FROSTALF</race>
@@ -212,6 +217,7 @@
 			<race>KOBOLD</race>
 			<race>NORSEMAN</race>
 			<race>FROSTALF</race>
+			<race>TROLL</race>
 			<magic>PIETY</magic>
 			<skill>WITCHCRAFT</skill>
 			<skill>CURSING</skill>
@@ -244,6 +250,8 @@
 			<dualwield/>
 			<shield>SMALL</shield>
 			<race>NORSEMAN</race>
+			<race>KOBOLD</race>
+			<race>TROLL</race>
 			<race>MINOTAUR</race>
 			<skill>FIST_WRAPS_MID</skill>
 			<skill>MAULER_STAFF_MID</skill>

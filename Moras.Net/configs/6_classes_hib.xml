@@ -6,6 +6,7 @@
 			<armor>CLOTH</armor>
 			<shield>SMALL</shield>
 			<race>CELT</race>
+			<race>ELF</race>
 			<race>FIRBOLG</race>
 			<race>SYLVAN</race>
 			<magic>INTELLIGENCE</magic>
@@ -55,6 +56,7 @@
 			<dualwield/>
 			<race>CELT</race>
 			<race>ELF</race>
+			<race>LURIKEEN</race>
 			<race>FIRBOLG</race>
 			<race>SHAR</race>
 			<race>MINOTAUR</race>
@@ -74,6 +76,7 @@
 			<race>ELF</race>
 			<race>LURIKEEN</race>
 			<race>SHAR</race>
+			<race>SYLVAN</race>
 			<magic>INTELLIGENCE</magic>
 			<skill>BLADES</skill>
 			<skill>BLUNT</skill>
@@ -170,6 +173,7 @@
 			<armor>LEATHER</armor>
 			<shield>SMALL</shield>
 			<dualwield/>
+			<race>CELT</race>
 			<race>ELF</race>
 			<race>LURIKEEN</race>
 			<magic>INTELLIGENCE</magic>
@@ -207,6 +211,7 @@
 			<race>CELT</race>
 			<race>FIRBOLG</race>
 			<race>SYLVAN</race>
+			<race>MINOTAUR</race>
 			<magic>INTELLIGENCE</magic>
 			<skill>ARBOREAL_PATH</skill>
 			<skill>SCYTHE</skill>
@@ -238,6 +243,7 @@
 			<race>CELT</race>
 			<race>FIRBOLG</race>
 			<race>SYLVAN</race>
+			<race>SHAR</race>
 			<race>MINOTAUR</race>
 			<magic>EMPATHY</magic>
 			<skill>BLADES</skill>
@@ -255,6 +261,7 @@
 			<dualwield/>
 			<shield>SMALL</shield>
 			<race>CELT</race>
+			<race>LURIKEEN</race>
 			<race>MINOTAUR</race>
 			<skill>FIST_WRAPS_HIB</skill>
 			<skill>MAULER_STAFF_HIB</skill>
