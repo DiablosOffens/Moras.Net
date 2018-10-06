@@ -1,3 +1,136 @@
+Version 2.5.0.409
+- UI: Fix the problem, that attributes without over-caps did not use ToA cap as their absolute limit.
+- Config: Revert cap changes on over-cap resists, because TMCapView needs a stable limit (which is not to far away from base cap) for better visual representation. But for the records, mythical resist caps theoretically have no limit.
+
+Version 2.5.0.408
+- UI: Correct calculation and display of attribute caps and over-caps based on statements of Broadsword. see: https://darkageofcamelot.com/article/friday-grab-bag-11032017
+- Config: Correct caps of attributes and add new conversion attribute + bonuses for current patch level of DAoC. see: http://www.postcount.net/forum/showthread.php?214882-Moras-1-124-Fix&p=3501835#post3501835 https://darkageofcamelot.com/article/friday-grab-bag-11032017
+- Repo: Delete Activity1.nvact
+	* Remove accidentally committed file which was created by CUDA toolkit.
+- Web: Update body.html
+	* Include content from Jekyll page if it has the "include_full_url" parameter.
+- Web: Update index.html
+	* Add "fork me" banner generated from "https://blog.github.com/2008-12-19-github-ribbons/".
+
+Version 2.5.0.407
+- UI: Correct calculation and display of attribute caps and over-caps.
+- Config: Add new groups, attributes and bonuses to reflect possible values in current patch level of DAoC.
+- UI: Correct maximum value for scroll bar of bonus tab. Correct index for calculation of focused scroll on bonus tab and reduce flickering.
+
+Version 2.5.0.406
+- IDE: Update Moras.Net.csproj to silence the changed files dialog.
+- Core: Specify the supported CLR version in app.config.
+- Core: Use a static non-generic helper class when creating the cached default constructor delegate for ObjectAsValue<T>, so reflection is done only once and not for every new generic type parameter.
+- Core: Create and use a helper class for the construction of objects from generic type parameters. The new() constraint can be realy slow because it uses Activator.CreateInstance<T> for reference types.
+- Perf: Use SuspendLayout() in constructor of TfrmManageDB for better performance, because the layout engine don't need to be stressed this early on the construction of the object.
+- Perf: Replace most of the delphi lists in TGnuGettextInstance with specialized collections/lists from the Framework class library for better performance.
+- Core: Do not return to early from TranslateProperties (was copied over from TranslateProperty).
+- IDE: Update Moras.Net.csproj to use new code signing certificate and include debug symbols for ObjectListView in ClickOnce deployment.
+- Repo: Update Gemfile.lock to resolve dependency issues.
+
+Version 2.5.0.405
+- Core: Fix false substring index and hard coded limit of 100 characters.
+
+Version 2.5.0.404
+- Core: Use Init() in copy constructor, as long as object fields needs non-null values (like Delphi strings).
+- Repo: Create Pull Request template for Release PRs.
+
+Version 2.5.0.403
+- UI: Fixes #4 by casting to the right type. Implements removal of checked states from other category items that are not inside the current category.
+- Core: Let TSpeedButton behave more like in Delphi, so OnClick is not invoked if the button gets focus by not using the tab key.
+- Report: Implements support for mythical item slot in reports and change config reports and short reports to include them. This fixes #5. Fixes bugs with inconsistent line endings if reports are copied to clipboard.
+- Core: Initialize strFileName to empty string for CPlayer, as long there is no null check wherever it is used. Fix bugs in XML save routines. (It is not a complete or correct XML implementation, but enough for Moras right now. This needs a complete overhaul in future to actually support the XML format. Just use the implementation from .Net-Framework for this.)
+- Core: Correct the sequences of Open() & Close() and respectively SetActive(true) & SetActive(false) on SQLiteCommands, so that SQLiteDataReaders are only active at times they are actually used. (Fixes Database locks on idle time.) Actually use unique strPosId (as mentioned in comment) in SQLiteDBCorrection instead of ambiguous strPosClass.
+- Web: Update head.html
+	* Comment out canonical link as long as the Jekyll SEO plugin does this for us.
+
+Version 2.5.0.402
+- Repo: Change .gitignore to work with Visual Studio 2015.
+- Config: Apply the changes in patch 1.118 to the gem groups config.
+- Core: Use decimals instead of floats/doubles for more accurate results.
+- Core: Fix missing brackets when calculating fixed point values from config.
+- Debug: Publish debug symbols as separate download group, which will be downloaded when exception is caught by TApplication, also display a help button in exception dialog.
+- Repo: Update README.md
+	* point to the main page for the ClickOnce app
+- Repo: Update CONTRIBUTING.md
+	* use relative link to coding style document
+- Repo: Create CODESTYLE.md
+- Repo: Create CONTRIBUTING.md
+
+Version 2.5.0.401
+- Core: Fix NullReferenceException if update was not from URL.
+
+Version 2.5.0.400
+- Core: Correct database access for ImportMoraDb.
+
+Version 2.5.0.399
+- DB,Import: New database import feature, which imports data from old moras SQLite db. Fix some compiler warnings and other code clean-up.
+- UI: Use special class for tool bar items which handles TAction correctly. New menu item for new database import feature.
+- Core: Fix problem where NextTag could read behind end of stream.
+
+Version 2.5.0.398
+- UI: Show progress window for manual update of ClickOnce app.
+- Core: SetSelectedIndexSafe was missing an else block.
+
+Version 2.5.0.397
+- Perf: Small performance boost if column text needs to be translated.
+- Core: Fix problems where SelectedIndex could be set to invalid values.
+- Repo: Create CODE_OF_CONDUCT.md
+- Web: Use also site.description if different from page.description
+- Web: Fix problem with IE: It moves all remaining tags from head at first occurence of different lang attribute to the body when parsing the html.
+- Web: Add some filters to keyword meta tags
+- Web: Remove accidentally added new line from split pattern
+- Web: Use lang at the right places and new default lang for full includes.
+- Web: Remove UTF8 signature.
+- Web: Convert to UTF8
+- Web: Update head.html
+	* Fix jekyll error with matching closing tags. To remove redundant newlines and whitespaces, GitHub pages needs liquid v4.
+	* Fix jekyll error with matching closing tags
+	* Fix jekyll error in nesting control flow.
+	* Do not output title again in SEO tags. Add additional meta tags for search engines.
+	* Add SEO tags to end of head section.
+- Web: Update _config.yml
+	* Add SEO tag support to jekyll pages.
+- Web: Set URL in _config.yml for GitHub pages. Local "jekyll  serve" seems to ignore it.
+- Web: Add favicon.ico for GitHub pages.
+- Web: Use jekyll as page generator for index.html. Currently only ClickOnce publish.html is used as content.
+- Web: Update publish.htm
+	* Add shortcut icon meta tag to publish.htm
+- Setup: Delete obsolete ClickOnce release
+
+Version 2.5.0.396
+- Core: Fix error if ActivationData is null
+
+Version 2.5.0.395
+- Core: Show message if there is no update. Get command line parameters from ActivationArguments if it is started as ClickOnce app.
+- IDE: Enable debug ability in full trust ClickOnce security settings. Was disabled due to bug: https://social.msdn.microsoft.com/Forums/vstudio/en-US/ff3cda97-8772-4a62-a54b-e4faf5b8cffa/command-line-arguments-will-not-be-passed-message?forum=vsdebug
+- UI: Change the appearance of the "list" in TfrmManageDB from tree to list.
+- Setup: Delete obsolete ClickOnce release
+- Setup: Add missing files for Release 2.5.0.394
+
+Version 2.5.0.394
+- Core: Fix paths and update routine for ClickOnce deployment.
+- Setup: Add missing files to ClickOnce deployment and exclude moras.ini, it is only used by non-ClickOnce installations.
+- Core: Fix missing parenthesis
+- IDE,Setup: Include msgfmt output in ClickOnce deployment
+- Repo: Remove unused lib.
+- Repo: Update README.md
+- Web: Let the start page of GitHub pages redirect to publish page.
+- Web: Add index.html for GitHub pages. Use fixed publish versions.
+
+Version 2.5.0.393
+- Repo: Include platform specific folders of published output
+- Repo: Set binary mode for ClickOnce files
+- Repo: Include ClickOnce output
+- Repo: Include NuGet repositories.config
+- Repo: Update README.md
+- All: Complete 1:1 Delphi translation (some minor bugfixes already included)
+
+Version 2.5
+- Core: Some internal changes.
+- Config: The translation for "Augmentation" of healers/shamans is fixed (now "Erhöhung", was "Verstärken").
+- Config: Now you can select frostalf as race for shadowblade.
+
 Version 2.4
 - Setup: The item database consists now of items from BdC and DVI. Items.xml will not be included anymore.
 - Core: All problems with empty databases should be solved now.

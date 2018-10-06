@@ -3002,7 +3002,7 @@ namespace Moras.Net
 
         private void mnWhatsNewClick(object sender, EventArgs e)
         {
-            string curlang = TGnuGettextInstance.GetCurrentLanguage();
+            string curlang = "en-US"; //TGnuGettextInstance.GetCurrentLanguage();
             curlang = curlang.Substring(0, 2);
 
             TApplication.Instance.CreateForm(out Unit.frmInfo);
