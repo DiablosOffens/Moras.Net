@@ -165,7 +165,7 @@ namespace Moras.Net
                 FileVersionInfo info = FileVersionInfo.GetVersionInfo(Application.ExecutablePath);
                 iMajor = info.FileMajorPart;
                 iMinor = info.FileMinorPart;
-                Version = iMajor.ToString() + "." + iMinor.ToString();
+                Version = info.FileVersion;
             }
             if (Utils.GetRegistryInteger("ProcessPriority", 0) != 0)
                 Process.GetCurrentProcess().PriorityClass = ProcessPriorityClass.BelowNormal;
