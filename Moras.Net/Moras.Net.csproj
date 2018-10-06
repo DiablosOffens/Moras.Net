@@ -175,6 +175,7 @@
     </Compile>
     <Compile Include="md5.cs" />
     <Compile Include="NativeMethods.cs" />
+    <Compile Include="Properties\VersionInfo.cs" />
     <Compile Include="ReferenceHelper.cs" />
     <Compile Include="TfoDownload.cs">
       <SubType>Form</SubType>
@@ -914,6 +915,19 @@
       <_Temporary Remove="@(_Temporary)" />
       <_TemporaryWithTargetPath Remove="@(_TemporaryWithTargetPath)" />
     </ItemGroup>
+  </Target>
+  <Import Project="..\packages\MSBuildTasks.1.5.0.235\build\MSBuildTasks.targets" Condition="Exists('..\packages\MSBuildTasks.1.5.0.235\build\MSBuildTasks.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\MSBuildTasks.1.5.0.235\build\MSBuildTasks.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\MSBuildTasks.1.5.0.235\build\MSBuildTasks.targets'))" />
+  </Target>
+  <Target Name="BeforeCompile" Condition="'$(BuildingInsideVisualStudio)|$(Configuration)' == '|Release'">
+    <FormatVersion Version="$(ApplicationVersion)" Revision="$(ApplicationRevision)">
+      <Output TaskParameter="OutputVersion" PropertyName="AssemblyVersionToUse" />
+    </FormatVersion>
+    <AssemblyInfo CodeLanguage="CS" OutputFile="$(ProjectDir)Properties\VersionInfo.cs" AssemblyFileVersion="$(AssemblyVersionToUse)" AssemblyInformationalVersion="$(AssemblyVersionToUse)" />
   </Target>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
