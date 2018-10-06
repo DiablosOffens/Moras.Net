@@ -1,0 +1,7 @@
+{
+    "gitlogOption": [
+        "no-merges",
+        "no-notes",
+        "notes=categories"
+    ]
+}
