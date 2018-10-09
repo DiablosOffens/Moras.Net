@@ -1,3 +1,8 @@
+Version 2.5.0.411
+- Build: Add scripts to the repo to automate the creation and publishing of hotfixes.
+- Core: Move CloseXml() into finally clause for stability.
+- Core: Fix bug in CItem.Save, where weapons without attributes (shields) tried to substring an empty string.
+
 Version 2.5.0.410
 - Build: For now, support only Visual Studio 2010 in build scripts. The default publish target also creates the missing files, now.
 	* It uses special MSBuild tasks to create the publish web page and copy the build results to the final publish folder. All publish tasks needs that the property "VisualStudioVersion" is correctly specified on the command line, because the automatic version is almost always false.
