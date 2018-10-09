@@ -1,3 +1,20 @@
+Version 2.5.0.410
+- Build: For now, support only Visual Studio 2010 in build scripts. The default publish target also creates the missing files, now.
+	* It uses special MSBuild tasks to create the publish web page and copy the build results to the final publish folder. All publish tasks needs that the property "VisualStudioVersion" is correctly specified on the command line, because the automatic version is almost always false.
+- Build: Add scripts to the repo to automate publishing new releases and notes for it.
+	* The make-release.cmd script only creates and updates the release branch and merges it back into devel branch. To actually publish this release, you need to create a pull request from this branch for the master branch and let it merge.
+- Build: Define exe file version with auto generated code based on the ApplicationVersion.
+	* Add MSBuildTasks NuGet package for the build tasks needed for this.
+- UI: Show full version info in app title bar and in the about window.
+- IDE: Use dynamic publish versions again.
+- UI: Update english version history log.
+	* Use commit messages and git notes in "notes/categories" for log entries. Show only english version history log as long as there is no translation for german.
+- Config: Add more available races for many classes.
+- Config: Add new and move current active servers to the top of the list.
+- UI: Use new URL for the wiki pages. As in the past, this is only user created content, so don't take it as reliable information or facts about DAoC, but as orientation for better decisions.
+- Core: Fix reading from StreamReader. Unlike std::istream::eof(), EndOfStream doesn't reflect the state when the stream was read past the end, but only if the current read position is at the end. Also, if StreamReader doesn't normalize line endings do it in the read loop.
+- Core: Fix normalization of line endings in StreamWrapper and use string.Split() instead of string.Replace() for better performance.
+
 Version 2.5.0.409
 - UI: Fix the problem, that attributes without over-caps did not use ToA cap as their absolute limit.
 - Config: Revert cap changes on over-cap resists, because TMCapView needs a stable limit (which is not to far away from base cap) for better visual representation. But for the records, mythical resist caps theoretically have no limit.
