@@ -11,7 +11,7 @@ call git-release-notes -f make-release.json master..HEAD textfile.ejs >> Moras.N
 copy /B Moras.Net\release-notes.txt + Moras.Net\history_en.txt Moras.Net\history_en_new.txt
 move Moras.Net\history_en_new.txt Moras.Net\history_en.txt
 del Moras.Net\release-notes.txt
-msbuild.exe Moras.Net.sln /m /target:publish /property:ApplicationRevision=%AppRevision% /p:platform="any cpu" /p:configuration="release"
+msbuild.exe Moras.Net.sln /m /target:publish /property:VisualStudioVersion=10.0 /property:ApplicationRevision=%AppRevision% /p:platform="any cpu" /p:configuration="release"
 
 git add .
 git rm -r -- "Moras.Net/publish/Application Files/Moras.Net_%AppMajorVersion%_%AppMinorVersion%_%AppBuild%_%AppOldRevision%"

@@ -917,11 +917,13 @@
     </ItemGroup>
   </Target>
   <Import Project="..\packages\MSBuildTasks.1.5.0.235\build\MSBuildTasks.targets" Condition="Exists('..\packages\MSBuildTasks.1.5.0.235\build\MSBuildTasks.targets')" />
+  <Import Project="..\packages\CreatePublishWebPage.1.0.0.3\build\CreatePublishWebPage.targets" Condition="Exists('..\packages\CreatePublishWebPage.1.0.0.3\build\CreatePublishWebPage.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
     <Error Condition="!Exists('..\packages\MSBuildTasks.1.5.0.235\build\MSBuildTasks.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\MSBuildTasks.1.5.0.235\build\MSBuildTasks.targets'))" />
+    <Error Condition="!Exists('..\packages\CreatePublishWebPage.1.0.0.3\build\CreatePublishWebPage.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\CreatePublishWebPage.1.0.0.3\build\CreatePublishWebPage.targets'))" />
   </Target>
   <Target Name="BeforeCompile" Condition="'$(BuildingInsideVisualStudio)|$(Configuration)' == '|Release'">
     <FormatVersion Version="$(ApplicationVersion)" Revision="$(ApplicationRevision)">
@@ -936,4 +938,13 @@
   <Target Name="AfterBuild">
   </Target>
   -->
+  <Target Name="AfterPublish" Condition="'$(BuildingInsideVisualStudio)|$(Configuration)' == '|Release'">
+    <CreatePublishWebPage ApplicationManifestFileName="$(_DeploymentApplicationDir)$(_DeploymentTargetApplicationManifestFileName)" DeploymentManifestFileName="$(PublishDir)$(TargetDeployManifestFileName)" BootstrapperEnabled="$(BootstrapperEnabled)" BootstrapperPackages="@(BootstrapperPackage)" OutputFileName="$(PublishDir)$(WebPage)" TargetFrameworkVersion="$(TargetFrameworkVersion)" TargetFrameworkSubset="$(TargetFrameworkProfile)" VisualStudioVersion="$(VisualStudioVersion)" Condition="'$(CreateWebPageOnPublish)'=='true'" />
+    <ItemGroup>
+      <PublishSetupFiles Include="$(PublishDir)\*.*" />
+      <PublishUpdateFiles Include="$(PublishDir)\Application Files\**\*.*" />
+    </ItemGroup>
+    <Copy SourceFiles="@(PublishSetupFiles)" DestinationFolder="$(PublishUrl)" />
+    <Copy SourceFiles="@(PublishUpdateFiles)" DestinationFolder="$(PublishUrl)Application Files\%(RecursiveDir)" />
+  </Target>
 </Project>
