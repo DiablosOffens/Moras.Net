@@ -202,7 +202,6 @@ namespace Moras.Net
                             arItemSlot[i].Save(xBase, true);
                         xBase.CloseTag();	// Player-Tag schliessen
                     }
-                    xBase.CloseXml();
                 }
                 if (Format == 2)
                 {	// Leladia
@@ -303,6 +302,7 @@ namespace Moras.Net
             }
             finally
             {
+                xBase.CloseXml();
                 if (fOut != null)
                     fOut.Dispose();
             }
