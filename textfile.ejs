@@ -1,0 +1,25 @@
+<% var lasttitle = null
+commits.forEach(function (commit) {
+  var match = commit.title.match(/^(?:Publish Release (\d+\.\d+\.\d+\.\d+))$/)
+  if (match) { %>
+Version <%- match[1] %>
+<%
+  } else {
+	var notes = commit.notes.filter(Boolean)
+	var categories = ""
+	if (notes.length > 0)
+	  categories = notes.join(",") + ": "
+    var title = categories + commit.title
+    if (lasttitle != title) {
+ %>- <%- title %>
+<%
+    }
+	var message = commit.messageLines.join(" ")
+	if (message) { -%>
+	* <%- message /* \r\n\t* */ %>
+<%
+	}
+    lasttitle = title
+  }
+})
+%><%- "\r" -%>

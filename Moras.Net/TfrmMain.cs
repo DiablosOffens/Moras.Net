@@ -165,7 +165,7 @@ namespace Moras.Net
                 FileVersionInfo info = FileVersionInfo.GetVersionInfo(Application.ExecutablePath);
                 iMajor = info.FileMajorPart;
                 iMinor = info.FileMinorPart;
-                Version = iMajor.ToString() + "." + iMinor.ToString();
+                Version = info.FileVersion;
             }
             if (Utils.GetRegistryInteger("ProcessPriority", 0) != 0)
                 Process.GetCurrentProcess().PriorityClass = ProcessPriorityClass.BelowNormal;
@@ -3002,7 +3002,7 @@ namespace Moras.Net
 
         private void mnWhatsNewClick(object sender, EventArgs e)
         {
-            string curlang = TGnuGettextInstance.GetCurrentLanguage();
+            string curlang = "en-US"; //TGnuGettextInstance.GetCurrentLanguage();
             curlang = curlang.Substring(0, 2);
 
             TApplication.Instance.CreateForm(out Unit.frmInfo);

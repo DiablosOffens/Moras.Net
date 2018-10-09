@@ -36,8 +36,8 @@ namespace Moras.Net
             if (result == -1)
                 return result;
             char c = (char)result;
-            if (c == '\r' && Peek() == '\n')
-                return base.Read();
+            if (c == '\r')
+                return Peek() == '\n' ? base.Read() : '\n';
             if (c == '\n' && Peek() == '\r')
                 base.Read();
             return c;
@@ -46,6 +46,9 @@ namespace Moras.Net
 
     public class FStreamWrapper : StreamWriter
     {
+        //HINT: This is used by string.Split() to normalize line endings. Order is crucial!
+        private static readonly string[] NewLineDelemiters = new[] { "\r\n", "\r", "\n\r", "\n" }.Where(nl => nl != Environment.NewLine).ToArray();
+
         public FStreamWrapper(FileStream stream)
             : base(stream, Encoding.Default)
         {
@@ -149,11 +152,8 @@ namespace Moras.Net
 
         public override void Write(string value)
         {
-            string text = value.Replace("\r\n", "\n");
-            text = text.Replace("\n\r", "\n");
-            text = text.Replace("\r", "\n");
-            text = text.Replace("\n", NewLine);
-            base.Write(text);
+            string[] textlines = value.Split(NewLineDelemiters, StringSplitOptions.None);
+            base.Write(string.Join(NewLine, textlines));
         }
     }
 }

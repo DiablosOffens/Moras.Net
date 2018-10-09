@@ -32,7 +32,7 @@
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>publish.htm</WebPage>
     <ApplicationRevision>409</ApplicationRevision>
-    <ApplicationVersion>2.5.0.409</ApplicationVersion>
+    <ApplicationVersion>2.5.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -175,6 +175,7 @@
     </Compile>
     <Compile Include="md5.cs" />
     <Compile Include="NativeMethods.cs" />
+    <Compile Include="Properties\VersionInfo.cs" />
     <Compile Include="ReferenceHelper.cs" />
     <Compile Include="TfoDownload.cs">
       <SubType>Form</SubType>
@@ -915,6 +916,21 @@
       <_TemporaryWithTargetPath Remove="@(_TemporaryWithTargetPath)" />
     </ItemGroup>
   </Target>
+  <Import Project="..\packages\MSBuildTasks.1.5.0.235\build\MSBuildTasks.targets" Condition="Exists('..\packages\MSBuildTasks.1.5.0.235\build\MSBuildTasks.targets')" />
+  <Import Project="..\packages\CreatePublishWebPage.1.0.0.3\build\CreatePublishWebPage.targets" Condition="Exists('..\packages\CreatePublishWebPage.1.0.0.3\build\CreatePublishWebPage.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\MSBuildTasks.1.5.0.235\build\MSBuildTasks.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\MSBuildTasks.1.5.0.235\build\MSBuildTasks.targets'))" />
+    <Error Condition="!Exists('..\packages\CreatePublishWebPage.1.0.0.3\build\CreatePublishWebPage.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\CreatePublishWebPage.1.0.0.3\build\CreatePublishWebPage.targets'))" />
+  </Target>
+  <Target Name="BeforeCompile" Condition="'$(BuildingInsideVisualStudio)|$(Configuration)' == '|Release'">
+    <FormatVersion Version="$(ApplicationVersion)" Revision="$(ApplicationRevision)">
+      <Output TaskParameter="OutputVersion" PropertyName="AssemblyVersionToUse" />
+    </FormatVersion>
+    <AssemblyInfo CodeLanguage="CS" OutputFile="$(ProjectDir)Properties\VersionInfo.cs" AssemblyFileVersion="$(AssemblyVersionToUse)" AssemblyInformationalVersion="$(AssemblyVersionToUse)" />
+  </Target>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
@@ -922,4 +938,13 @@
   <Target Name="AfterBuild">
   </Target>
   -->
+  <Target Name="AfterPublish" Condition="'$(BuildingInsideVisualStudio)|$(Configuration)' == '|Release'">
+    <CreatePublishWebPage ApplicationManifestFileName="$(_DeploymentApplicationDir)$(_DeploymentTargetApplicationManifestFileName)" DeploymentManifestFileName="$(PublishDir)$(TargetDeployManifestFileName)" BootstrapperEnabled="$(BootstrapperEnabled)" BootstrapperPackages="@(BootstrapperPackage)" OutputFileName="$(PublishDir)$(WebPage)" TargetFrameworkVersion="$(TargetFrameworkVersion)" TargetFrameworkSubset="$(TargetFrameworkProfile)" VisualStudioVersion="$(VisualStudioVersion)" Condition="'$(CreateWebPageOnPublish)'=='true'" />
+    <ItemGroup>
+      <PublishSetupFiles Include="$(PublishDir)\*.*" />
+      <PublishUpdateFiles Include="$(PublishDir)\Application Files\**\*.*" />
+    </ItemGroup>
+    <Copy SourceFiles="@(PublishSetupFiles)" DestinationFolder="$(PublishUrl)" />
+    <Copy SourceFiles="@(PublishUpdateFiles)" DestinationFolder="$(PublishUrl)Application Files\%(RecursiveDir)" />
+  </Target>
 </Project>

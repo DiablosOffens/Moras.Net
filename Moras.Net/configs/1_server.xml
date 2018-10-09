@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="iso-8859-1" ?>
 <moras>
 	<servers>
+		<server type="american">Ywain</server>
+		<server type="american">Gaheris</server>
 		<server type="german">Avalon</server>
 		<server type="german">Lyonesse</server>
 		<server type="german">Stonehenge</server>
@@ -37,7 +39,6 @@
 		<server type="american">Guinevere</server>
 		<server type="american">Percival</server>
 		<server type="american">Nimue</server>
-		<server type="american">Gaheris</server>
 		<server type="american">Mordred</server>
 		<server type="american">Pendragon</server>
 	</servers>

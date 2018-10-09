@@ -34,7 +34,7 @@ namespace Moras.Net
                 TApplication.Instance.EnsureDebugSymbols += new EventHandler(DownloadDebugSymbols);
                 TApplication.Instance.Initialize();
                 TApplication.Instance.Title = "Moras Ausrüstungsplaner";
-                TApplication.Instance.HelpFile = "daocpedia.eu";
+                TApplication.Instance.HelpFile = "daocpedia.com";
                 TApplication.Instance.CreateForm(out Unit.frmMain);
                 TApplication.Instance.CreateForm(out Unit.frmImport);
                 Application.Run(TApplication.Instance);
