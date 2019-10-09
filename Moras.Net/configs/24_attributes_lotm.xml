@@ -161,7 +161,7 @@
 		</attribute>
 		<attribute id="DAMAGE_CONVERSION"><lotm/>
       <capadd>0</capadd>
-      <capmult>1</capmult>
+      <capmult>0.2</capmult>
     </attribute>
 	</attributes>
 </moras>
