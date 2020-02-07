@@ -208,6 +208,9 @@ namespace DelphiClasses
                 for (int i = parent.Controls.Count - 1; i > zindex; i--)
                 {
                     Control sibling = parent.Controls[i];
+                    if (!sibling.Visible) continue; // don't render invisible controls
+                                                    // since we manually call the rendering methods for all siblings up to zindex,
+                                                    // we also need to check for visibility
                     Rectangle intersection = Rectangle.Intersect(newClipRect, new Rectangle(sibling.Location, sibling.ClientSize));
                     if (!intersection.IsEmpty)
                     {
