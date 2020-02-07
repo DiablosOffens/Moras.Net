@@ -1388,7 +1388,7 @@ namespace Moras.Net
                 // Und den entsprechenden Eintrag setzen
                 i = Unit.player.ItemClass[iActSlot];
                 if (i >= 0)
-                    i = cbItemClass.Items.IndexOf(Unit.xml_config.arItemClasses[i].Name);
+                    i = cbItemClass.FindStringExact(Unit.xml_config.arItemClasses[i].Name);
                 if (i == -1)
                 {	// Wenn noch keine Klasse festgelegt ist,
                     // dann bei Rüstungen die der Klasse,
@@ -1848,7 +1848,7 @@ namespace Moras.Net
                     if (idDamage >= 0)
                     {	// Nur Damageliste ausfüllen, wenn die "Waffe" ne Schadensart hat
                         string sDamage = Unit.xml_config.arDamageTypes[idDamage].Name;
-                        if (cbDamage.Items.IndexOf(sDamage) == -1)
+                        if (cbDamage.FindStringExact(sDamage) == -1)
                             cbDamage.Add(sDamage, -1, idDamage);
                     }
                 }

@@ -71,7 +71,7 @@ namespace Moras.Net
                 if (idDamage >= 0)
                 {	// Nur Damageliste ausfüllen, wenn die "Waffe" ne Schadensart hat
                     string sDamage = Unit.xml_config.arDamageTypes[idDamage].Name;
-                    if (cbDamageType.Items.IndexOf(sDamage) == -1)
+                    if (cbDamageType.FindStringExact(sDamage) == -1)
                         cbDamageType.Add(sDamage, -1, idDamage);
                 }
             }

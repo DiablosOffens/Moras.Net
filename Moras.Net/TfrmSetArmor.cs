@@ -69,7 +69,7 @@ namespace Moras.Net
             if (Unit.xml_config.arItemClasses[idClass].idMaterial != Unit.xml_config.GetMaterialId("CLOTH"))
                 iAF *= 2;
             iAF += Unit.xml_config.GetItemClassAF(iAF, idClass, out idSubClass, out iMatLevel);
-            iSubClass = cbSubClass.Items.IndexOf(Unit.xml_config.arItemClasses[idClass].arSubClasses[idSubClass - 1].Name);
+            iSubClass = cbSubClass.FindStringExact(Unit.xml_config.arItemClasses[idClass].arSubClasses[idSubClass - 1].Name);
             cbSubClass.SelectedIndex = iSubClass;
             cbSubClassChange(null, EventArgs.Empty);
             cbMaterial.SelectedIndex = iMatLevel - Utils.ConvertTagToInt(cbMaterial.Tag);
