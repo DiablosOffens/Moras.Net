@@ -505,9 +505,9 @@ namespace Moras.Net
                     if (!File.Exists(Unit.frmMain.ZConnection.FileName))
                         throw new Exception("Die Datenbank konnte nicht erstellt werden.");
                     Unit.frmMain.NewDatabase = true;
-                    SQLiteDBUpdate0to4();
+                    SQLiteDBUpdate0to5();
                 }
-                else if (version == 4)
+                else if (version == 5)
                 {
                     Unit.frmMain.NewDatabase = false;
                 }
@@ -516,7 +516,12 @@ namespace Moras.Net
                     Unit.frmMain.NewDatabase = false;
                     SQLiteDBConvertCharset();
                 }
-                else if (version > 4)
+                else if (version < 5)
+                {
+                    Unit.frmMain.NewDatabase = false;
+                    SQLiteDBUpdate4to5();
+                }
+                else if (version > 5)
                 {
                     throw new Exception("Die Version der existierenden Datenbank kann nicht für ein Update verwendet werden.");
                 }
@@ -524,13 +529,13 @@ namespace Moras.Net
 
                 if (version == 1)
                 {
-                    SQLiteDBUpdate1to4();
+                    SQLiteDBUpdate1to5();
                 }
                 Unit.frmMain.ZConnection.DoCommit();
 
                 if (version == 2)
                 {
-                    SQLiteDBUpdate2to4();
+                    SQLiteDBUpdate2to5();
                 }
                 Unit.frmMain.ZConnection.DoCommit();
             }
@@ -641,7 +646,7 @@ namespace Moras.Net
             Unit.frmMain.ZConnection.DoCommit();
         }
 
-        internal static void SQLiteDBUpdate0to4()
+        internal static void SQLiteDBUpdate0to5()
         {
             //    ShowMessage("Update 0 auf 1");
             Unit.frmMain.ZQuery.CommandText = @"
@@ -655,7 +660,7 @@ CREATE TABLE [items] (
   [extension] VARCHAR2(10),
   [provider] VARCHAR2(100),
   [classrestrictions] VARCHAR2(250),
-  [effects] VARCHAR2(250),
+  [effects] VARCHAR2(500),
   [realm] INT NOT NULL ON CONFLICT ABORT,
   [position] INT NOT NULL ON CONFLICT ABORT,
   [type] INT NOT NULL ON CONFLICT ABORT,
@@ -685,7 +690,7 @@ CREATE TABLE [morasversion] (
   [dbversion] INT NOT NULL ON CONFLICT ABORT);";
             Unit.frmMain.ZQuery.ExecuteNonQuery();
 
-            Unit.frmMain.ZQuery.CommandText = "insert into morasversion (dbversion) values (4)";
+            Unit.frmMain.ZQuery.CommandText = "insert into morasversion (dbversion) values (5)";
             Unit.frmMain.ZQuery.ExecuteNonQuery();
         }
 
@@ -778,7 +783,7 @@ CREATE TABLE [morasversion] (
             if (cancel)
                 return;
 
-            SQLiteDBUpdate0to4();
+            SQLiteDBUpdate0to5();
             Unit.frmMain.ZConnection.DoCommit();
 
             Unit.frmMain.ZQuery.CommandText = "select * from items";
@@ -826,7 +831,7 @@ CREATE TABLE [morasversion] (
             Unit.frmMain.ZConnection.DoCommit();
         }
 
-        internal static void SQLiteDBUpdate1to4()
+        internal static void SQLiteDBUpdate1to5()
         {
             //    ShowMessage("Update 1 auf 2");
             Unit.frmMain.ZQuery.CommandText = "alter table items rename to items_tmp";
@@ -845,7 +850,7 @@ CREATE TABLE [morasversion] (
             Unit.frmMain.ZQuery.ExecuteNonQuery();
 
             Unit.frmMain.ZConnection.DoCommit();
-            SQLiteDBUpdate0to4();
+            SQLiteDBUpdate0to5();
             Unit.frmMain.ZConnection.DoCommit();
 
             Unit.frmMain.ZQuery.CommandText = @"insert into items 
@@ -863,7 +868,7 @@ CREATE TABLE [morasversion] (
             SQLiteDBVacuum();
         }
 
-        internal static void SQLiteDBUpdate2to4()
+        internal static void SQLiteDBUpdate2to5()
         {
             //    ShowMessage("Update 1 auf 2");
             Unit.frmMain.ZQuery.CommandText = "alter table items rename to items_tmp";
@@ -882,7 +887,44 @@ CREATE TABLE [morasversion] (
             Unit.frmMain.ZQuery.ExecuteNonQuery();
 
             Unit.frmMain.ZConnection.DoCommit();
-            SQLiteDBUpdate0to4();
+            SQLiteDBUpdate0to5();
+            Unit.frmMain.ZConnection.DoCommit();
+
+            Unit.frmMain.ZQuery.CommandText = @"insert into items 
+ (id,name,nameoriginal,origin,description,onlineurl,extension,
+ provider,classrestrictions,effects,realm,position,type,level,
+ quality,bonus,class,subclass,material,af,dps,speed,maxlevel,
+ damagetype,lastupdate)
+ select * from items_tmp";
+            Unit.frmMain.ZQuery.ExecuteNonQuery();
+
+            Unit.frmMain.ZQuery.CommandText = "drop table items_tmp";
+            Unit.frmMain.ZQuery.ExecuteNonQuery();
+            Unit.frmMain.ZConnection.DoCommit();
+
+            SQLiteDBVacuum();
+        }
+
+        internal static void SQLiteDBUpdate4to5()
+        {
+            //    ShowMessage("Update 4 auf 5");
+            Unit.frmMain.ZQuery.CommandText = "alter table items rename to items_tmp";
+            Unit.frmMain.ZQuery.ExecuteNonQuery();
+            Unit.frmMain.ZQuery.CommandText = "drop index idxName";
+            Unit.frmMain.ZQuery.ExecuteNonQuery();
+            Unit.frmMain.ZQuery.CommandText = "drop index idxExtension";
+            Unit.frmMain.ZQuery.ExecuteNonQuery();
+            Unit.frmMain.ZQuery.CommandText = "drop index idxProvider";
+            Unit.frmMain.ZQuery.ExecuteNonQuery();
+            Unit.frmMain.ZQuery.CommandText = "drop index idxRealm";
+            Unit.frmMain.ZQuery.ExecuteNonQuery();
+            Unit.frmMain.ZQuery.CommandText = "drop index idxPosition";
+            Unit.frmMain.ZQuery.ExecuteNonQuery();
+            Unit.frmMain.ZQuery.CommandText = "drop table morasversion";
+            Unit.frmMain.ZQuery.ExecuteNonQuery();
+
+            Unit.frmMain.ZConnection.DoCommit();
+            SQLiteDBUpdate0to5();
             Unit.frmMain.ZConnection.DoCommit();
 
             Unit.frmMain.ZQuery.CommandText = @"insert into items 
