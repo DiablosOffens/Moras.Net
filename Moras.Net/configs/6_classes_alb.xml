@@ -270,8 +270,8 @@
 			<race>HALFOGRE</race>
 			<race>INCONNU</race>
 			<race>MINOTAUR</race>
-			<skill>FIST_WRAPS_ALB</skill>
-			<skill>MAULER_STAFF_ALB</skill>
+			<skill>FIST_WRAPS</skill>
+			<skill>MAULER_STAFF</skill>
 			<skill>MAGNETISM_ALB</skill>
 			<skill>POWER_STRIKES_ALB</skill>
 			<skill>AURA_MANIPULATION_ALB</skill>

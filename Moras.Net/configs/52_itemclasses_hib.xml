@@ -1016,7 +1016,7 @@
 			<material>WOOD</material>
 			<slot_type>weapon</slot_type>
 			<realm>Hibernia</realm>
-			<skill>SHORT_BOW_HIB</skill>
+			<skill>SHORT_BOW</skill>
 			<position>RANGED</position>
 			<subclass id="SHORT_BOW_HIB">
 				<speed>4,0</speed>
@@ -1230,7 +1230,7 @@
 			<material>ORE</material>
 			<slot_type>weapon</slot_type>
 			<realm>Hibernia</realm>
-			<skill>FIST_WRAPS_HIB</skill>
+			<skill>FIST_WRAPS</skill>
 			<position>R_HAND</position>
 			<position>2_HAND</position>
 			<damage>CRUSH</damage>
@@ -1311,7 +1311,7 @@
 			<material>ORE</material>
 			<slot_type>weapon</slot_type>
 			<realm>Hibernia</realm>
-			<skill>FIST_WRAPS_HIB</skill>
+			<skill>FIST_WRAPS</skill>
 			<dualwield/>
 			<position>R_HAND</position>
 			<position>L_HAND</position>
@@ -1394,7 +1394,7 @@
 			<material>WOOD</material>
 			<slot_type>weapon</slot_type>
 			<realm>Hibernia</realm>
-			<skill>MAULER_STAFF_HIB</skill>
+			<skill>MAULER_STAFF</skill>
 			<position>2_HAND</position>
 			<damage>CRUSH</damage>
 			<subclass id="MAULER_STAFF_HIB">

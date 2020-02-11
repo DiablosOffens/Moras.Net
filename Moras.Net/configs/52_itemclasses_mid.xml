@@ -927,7 +927,8 @@
 			<slot_type>weapon</slot_type>
 			<realm>Midgard</realm>
 			<skill>HAND2HAND</skill>
-			<position>R_HAND</position>
+      <dualwield/>
+      <position>R_HAND</position>
 			<position>L_HAND</position>
 			<position>2_HAND</position>
 			<subclass id="MOON_FANG">
@@ -1235,7 +1236,7 @@
 			<material>METAL</material>
 			<slot_type>weapon</slot_type>
 			<realm>Midgard</realm>
-			<skill>FIST_WRAPS_MID</skill>
+			<skill>FIST_WRAPS</skill>
 			<position>R_HAND</position>
 			<position>2_HAND</position>
 			<damage>CRUSH</damage>
@@ -1316,7 +1317,7 @@
 			<material>METAL</material>
 			<slot_type>weapon</slot_type>
 			<realm>Midgard</realm>
-			<skill>FIST_WRAPS_MID</skill>
+			<skill>FIST_WRAPS</skill>
 			<dualwield/>
 			<position>R_HAND</position>
 			<position>L_HAND</position>
@@ -1399,7 +1400,7 @@
 			<material>WOOD</material>
 			<slot_type>weapon</slot_type>
 			<realm>Midgard</realm>
-			<skill>MAULER_STAFF_MID</skill>
+			<skill>MAULER_STAFF</skill>
 			<position>2_HAND</position>
 			<damage>CRUSH</damage>
 			<subclass id="MAULER_STAFF_MID">

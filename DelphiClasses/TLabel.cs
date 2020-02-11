@@ -205,45 +205,53 @@ namespace DelphiClasses
                 Point renderOrigin = new Point(); //pevent.Graphics.RenderingOrigin;
                 renderOrigin.Offset(-this.Left, -this.Top);
                 int zindex = parent.Controls.GetChildIndex(this);
-                for (int i = parent.Controls.Count - 1; i > zindex; i--)
+                IntPtr hdc = IntPtr.Zero;
+                Graphics g = null;
+                try
                 {
-                    Control sibling = parent.Controls[i];
-                    Rectangle intersection = Rectangle.Intersect(newClipRect, new Rectangle(sibling.Location, sibling.ClientSize));
-                    if (!intersection.IsEmpty)
+                    for (int i = parent.Controls.Count - 1; i > zindex; i--)
                     {
-                        Rectangle siblingClipRect = intersection;
-                        siblingClipRect.Offset(-sibling.Left, -sibling.Top);
-                        IntPtr hdc = pevent.Graphics.GetHdc();
-                        try
+                        Control sibling = parent.Controls[i];
+                        if (!sibling.Visible) continue; // don't render invisible controls
+                                                        // since we manually call the rendering methods for all siblings up to zindex,
+                                                        // we also need to check for visibility
+                        Rectangle intersection = Rectangle.Intersect(newClipRect, new Rectangle(sibling.Location, sibling.ClientSize));
+                        if (!intersection.IsEmpty)
                         {
-                            using (Graphics g = Graphics.FromHdc(hdc))
+                            Rectangle siblingClipRect = intersection;
+                            siblingClipRect.Offset(-sibling.Left, -sibling.Top);
+                            if (g == null)
                             {
+                                hdc = pevent.Graphics.GetHdc();
+                                g = Graphics.FromHdc(hdc);
                                 g.PageUnit = GraphicsUnit.Pixel;
-                                GraphicsState state = g.Save();
+                            }
+                            GraphicsState state = g.Save();
+                            try
+                            {
                                 using (PaintEventArgs pe = new PaintEventArgs(g, siblingClipRect))
                                 {
-                                    try
-                                    {
-                                        Point newOrigin = renderOrigin;
-                                        newOrigin.Offset(sibling.Location);
-                                        //g.RenderingOrigin = newOrigin; //changing the origin directly isn't working
-                                        g.TranslateTransform(newOrigin.X, newOrigin.Y);
-                                        InvokePaintBackground(sibling, pe);
-                                        InvokePaint(sibling, pe);
-
-                                    }
-                                    finally
-                                    {
-                                        //g.Restore(state); // already done by Graphics.Dispose()
-                                    }
+                                    Point newOrigin = renderOrigin;
+                                    newOrigin.Offset(sibling.Location);
+                                    //g.RenderingOrigin = newOrigin; //changing the origin directly isn't working
+                                    g.TranslateTransform(newOrigin.X, newOrigin.Y);
+                                    InvokePaintBackground(sibling, pe);
+                                    InvokePaint(sibling, pe);
                                 }
                             }
-                        }
-                        finally
-                        {
-                            pevent.Graphics.ReleaseHdc(hdc);
+                            finally
+                            {
+                                g.Restore(state);
+                            }
                         }
                     }
+                }
+                finally
+                {
+                    if (g != null)
+                        g.Dispose();
+                    if (hdc != IntPtr.Zero)
+                        pevent.Graphics.ReleaseHdc(hdc);
                 }
             }
         }

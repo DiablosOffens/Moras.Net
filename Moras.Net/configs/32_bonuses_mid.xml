@@ -33,6 +33,14 @@
 				<liquid>HEAT_FROM_AN_UNEARTHLY_PYRE</liquid>
 			</gem>
 		</bonus>
+		<bonus id="SUBTERRANEAN_FOCUS" kortid="Subterranean Focus">
+			<group>FOCUS</group>
+			<realm>midgard</realm>
+			<gem id="FIERY_RUNE">
+				<dust>GROUND_DRACONIC_SCALES</dust>
+				<liquid>DRACONIC_FIRE</liquid>
+			</gem>
+		</bonus>
 		<bonus id="SUMMONING_FOCUS" oldid="5016" kortid="Summoning Focus">
 			<group>FOCUS</group>
 			<realm>midgard</realm>
@@ -91,6 +99,7 @@
 			<effect type="VALUE">HEXING_FOCUS</effect>
 			<effect type="VALUE">DARKNESS_FOCUS</effect>
 			<effect type="VALUE">RUNECARVING_FOCUS</effect>
+			<effect type="VALUE">SUBTERRANEAN_FOCUS</effect>
 			<effect type="VALUE">SUMMONING_FOCUS</effect>
 			<effect type="VALUE">SUPPRESSION_FOCUS</effect>
 		</bonus>
@@ -297,7 +306,8 @@
 				<dust>GROUND_GIANT_BONE</dust>
 				<liquid>FROST_FROM_A_WASTELAND</liquid>
 			</gem>
-		</bonus>
+      <effect type="VALUE">FIST_WRAPS</effect>
+    </bonus>
 		<bonus id="MAULER_STAFF_MID">
 			<group>SKILL</group>
 			<realm>Midgard</realm>
@@ -305,7 +315,8 @@
 				<dust>GROUND_GIANT_BONE</dust>
 				<liquid>DRACONIC_FIRE</liquid>
 			</gem>
-		</bonus>
+      <effect type="VALUE">MAULER_STAFF</effect>
+    </bonus>
 		<bonus id="POWER_STRIKES_MID">
 			<group>SKILL</group>
 			<realm>Midgard</realm>
@@ -348,7 +359,9 @@
 			<effect type="VALUE">SPEAR</effect>
 			<effect type="VALUE">FIST_WRAPS_MID</effect>
 			<effect type="VALUE">MAULER_STAFF_MID</effect>
-		</bonus>
+      <effect type="VALUE">FIST_WRAPS</effect>
+      <effect type="VALUE">MAULER_STAFF</effect>
+    </bonus>
 		<bonus id="MID_MAGIC_BONUS">
 			<group>SKILL</group>
 			<realm>midgard</realm>

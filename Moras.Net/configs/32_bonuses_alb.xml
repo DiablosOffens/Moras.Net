@@ -340,19 +340,21 @@
 		<bonus id="FIST_WRAPS_ALB">
 			<group>SKILL</group>
 			<realm>Albion</realm>
-			<gem id="GLACIER_WAR_SIGIL">
+      <gem id="GLACIER_WAR_SIGIL">
 				<dust>GROUND_CAER_STONE</dust>
 				<liquid>FROST_FROM_A_WASTELAND</liquid>
 			</gem>
-		</bonus>
+      <effect type="VALUE">FIST_WRAPS</effect>
+    </bonus>
 		<bonus id="MAULER_STAFF_ALB">
 			<group>SKILL</group>
 			<realm>Albion</realm>
-			<gem id="CINDER_WAR_SIGIL">
+      <gem id="CINDER_WAR_SIGIL">
 				<dust>GROUND_CAER_STONE</dust>
 				<liquid>DRACONIC_FIRE</liquid>
 			</gem>
-		</bonus>
+      <effect type="VALUE">MAULER_STAFF</effect>
+    </bonus>
 		<bonus id="POWER_STRIKES_ALB">
 			<group>SKILL</group>
 			<realm>Albion</realm>
@@ -395,8 +397,10 @@
 			<effect type="VALUE">TWO_HANDED</effect>
 			<effect type="VALUE">POLEARM</effect>
 			<effect type="VALUE">STAFF</effect>
-			<effect type="VALUE">FIST_WRAPS_ALB</effect>
+      <effect type="VALUE">FIST_WRAPS_ALB</effect>
 			<effect type="VALUE">MAULER_STAFF_ALB</effect>
+      <effect type="VALUE">FIST_WRAPS</effect>
+      <effect type="VALUE">MAULER_STAFF</effect>
 		</bonus>
 		<bonus id="ALB_MAGIC_BONUS">
 			<group>SKILL</group>

@@ -45,6 +45,7 @@ namespace Moras.Net
     public struct SItemUpdate
     {
         public String URL;	// Die zu übergebende URL, mit Platzhalter
+        public String ItemURL;  // URL to item with placeholders
         public String Website;	// Eine zusätzliche Website
         public String Name;	// Unter welchem Namen wird es angezeigt
         public String Registry;	// Unter welchem Namen in Registry gespeichert
@@ -479,6 +480,7 @@ namespace Moras.Net
                     Group = xGroup.GROUP_ITEMUPDATE;
                     ItemUpdate.bFound = true;
                     ItemUpdate.URL = "";
+                    ItemUpdate.ItemURL = "";
                     ItemUpdate.Registry = "";
                     ItemUpdate.Website = "";
                 }
@@ -1264,6 +1266,8 @@ namespace Moras.Net
                             {	// Entferne noch ein eventuell führendes http://
                                 ItemUpdate.URL = xBase.Content;
                             }
+                            if (xBase.isTag("item_url"))
+                                ItemUpdate.ItemURL = xBase.Content;
                             if (xBase.isTag("registry"))
                                 ItemUpdate.Registry = xBase.Content;
                             // Website-Tag kann ich ignorieren momentan

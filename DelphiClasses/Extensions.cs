@@ -65,7 +65,7 @@ namespace DelphiClasses
             return src == null ? null : src.Source;
         }
 
-        public static T Clamp<T>(this T value, T min, T max) where T : struct,IComparable<T>
+        public static T Clamp<T>(this T value, T min, T max) where T : struct, IComparable<T>
         {
             return (value.CompareTo(min) < 0) ? min : ((value.CompareTo(max) > 0) ? max : value);
         }
@@ -102,8 +102,8 @@ namespace DelphiClasses
         public class RequireClass<T> where T : class { }
         public class RequireStruct<T> where T : struct { }
         public struct RequireIntEnumsAndBitSet<TEnum, TFlag>
-            where TEnum : struct,IConvertible
-            where TFlag : struct,IConvertible
+            where TEnum : struct, IConvertible
+            where TFlag : struct, IConvertible
         {
             public static readonly RequireIntEnumsAndBitSet<TEnum, TFlag> Default = CreateDefault();
             public bool IsValid;
@@ -141,8 +141,8 @@ namespace DelphiClasses
         }
 
         public static bool InSet<TEnum, TFlag>(this TEnum bit, TFlag set, RequireIntEnumsAndBitSet<TEnum, TFlag> tag = default(RequireIntEnumsAndBitSet<TEnum, TFlag>))
-            where TEnum : struct,IConvertible, IComparable
-            where TFlag : struct,IConvertible
+            where TEnum : struct, IConvertible, IComparable
+            where TFlag : struct, IConvertible
         {
             if (!RequireIntEnumsAndBitSet<TEnum, TFlag>.Default.IsValid)
                 throw new NotSupportedException();
@@ -153,7 +153,7 @@ namespace DelphiClasses
             return (flagsset & bitvalue) != 0UL;
         }
 
-        public static bool InSet<T>(this T value, BitArray set) where T : struct,IConvertible
+        public static bool InSet<T>(this T value, BitArray set) where T : struct, IConvertible
         {
             int index = value.ToInt32(null);
             return set[index];
@@ -162,6 +162,24 @@ namespace DelphiClasses
         public static bool InSet<T>(this T value, HashSet<T> set)
         {
             return set.Contains(value);
+        }
+
+        public static IEnumerable<int> GetAllSetBitIndices(this int value)
+        {
+            for (int i = 0; i < (sizeof(int) * 8); i++)
+            {
+                if ((value & (1 << i)) != 0)
+                    yield return i;
+            }
+        }
+
+        public static IEnumerable<int> GetAllSetBitIndices(this long value)
+        {
+            for (int i = 0; i < (sizeof(long) * 8); i++)
+            {
+                if ((value & ((long)1 << i)) != 0)
+                    yield return i;
+            }
         }
 
         public static string DebugFormat<T>(this HashSet<T> set)
@@ -468,7 +486,12 @@ namespace DelphiClasses
                 return false;
         }
 
-        internal class IdentityFunction<TElement>
+        public static KeyValuePair<TKey, TValue> CreateKeyValuePair<TKey, TValue>(TKey key, TValue value)
+        {
+            return new KeyValuePair<TKey, TValue>(key, value);
+        }
+
+        public class IdentityFunction<TElement>
         {
             public static Func<TElement, TElement> Instance
             {
@@ -479,6 +502,11 @@ namespace DelphiClasses
         public static IEnumerable<T> Flatten<T>(this IEnumerable<IEnumerable<T>> source)
         {
             return source.SelectMany(IdentityFunction<IEnumerable<T>>.Instance);
+        }
+
+        public static Dictionary<TKey, TValue> ToDictionary<TKey, TValue>(this IEnumerable<KeyValuePair<TKey, TValue>> source)
+        {
+            return source.ToDictionary(p => p.Key, p => p.Value);
         }
 
         public static UnmanagedMemoryStream ToStream(this SafeBuffer buffer, FileAccess access = FileAccess.Read)

@@ -25,25 +25,25 @@
 			<capmult>1</capmult>
 			<cap_and_attribute/>
 		</attribute>
-    <attribute id="OVERCAP_INTELLIGENCE">
+    <attribute id="OVERCAP_INTELLIGENCE"><lotm/>
       <cap>INTELLIGENCE</cap>
       <capadd>2</capadd>
       <capmult>1</capmult>
       <cap_and_attribute/>
     </attribute>
-    <attribute id="OVERCAP_PIETY">
+    <attribute id="OVERCAP_PIETY"><lotm/>
       <cap>PIETY</cap>
       <capadd>2</capadd>
       <capmult>1</capmult>
       <cap_and_attribute/>
     </attribute>
-    <attribute id="OVERCAP_CHARISMA">
+    <attribute id="OVERCAP_CHARISMA"><lotm/>
       <cap>CHARISMA</cap>
       <capadd>2</capadd>
       <capmult>1</capmult>
       <cap_and_attribute/>
     </attribute>
-    <attribute id="OVERCAP_EMPATHY">
+    <attribute id="OVERCAP_EMPATHY"><lotm/>
       <cap>EMPATHY</cap>
       <capadd>2</capadd>
       <capmult>1</capmult>
@@ -121,11 +121,19 @@
 		</attribute>
 		<attribute id="SIEGE_DAMAGE_REDUCTION"><lotm/>
 			<capadd>0</capadd>
-			<capmult>0.3</capmult>
+			<capmult>1</capmult>
+		</attribute>
+		<attribute id="EXP_POINT_BONUS"><lotm/>
+			<capadd>0</capadd>
+			<capmult>0.2</capmult>
 		</attribute>
 		<attribute id="REALM_POINT_BONUS"><lotm/>
 			<capadd>0</capadd>
-			<capmult>0.13</capmult>
+			<capmult>0.2</capmult>
+		</attribute>
+		<attribute id="BOUNTY_POINT_BONUS"><lotm/>
+			<capadd>0</capadd>
+			<capmult>0.2</capmult>
 		</attribute>
 		<attribute id="CROWD_CONTROL_REDUCTION"><lotm/>
 			<capadd>0</capadd>
@@ -145,11 +153,35 @@
 		</attribute>
 		<attribute id="SIEGE_SPEED_BONUS"><lotm/>
 			<capadd>0</capadd>
-			<capmult>0.18</capmult>
+			<capmult>0.2</capmult>
+		</attribute>
+		<attribute id="MYTH_PARRY_BONUS"><lotm/>
+			<capadd>0</capadd>
+			<capmult>0.2</capmult>
+		</attribute>
+		<attribute id="MYTH_BLOCK_BONUS"><lotm/>
+			<capadd>0</capadd>
+			<capmult>0.2</capmult>
+		</attribute>
+		<attribute id="MYTH_EVADE_BONUS"><lotm/>
+			<capadd>0</capadd>
+			<capmult>0.2</capmult>
+		</attribute>
+		<attribute id="MYTH_COIN_BONUS"><lotm/>
+			<capadd>0</capadd>
+			<capmult>0.5</capmult>
+		</attribute>
+		<attribute id="MYTH_RP_BONUS"><lotm/>
+			<capadd>0</capadd>
+			<capmult>0.2</capmult>
+		</attribute>
+		<attribute id="RESURRECTION_SICKNESS_REDUCTION"><lotm/>
+			<capadd>0</capadd>
+			<capmult>1.6</capmult>
 		</attribute>
 		<attribute id="WATER_BREATHING"><lotm/>
 			<capadd>0</capadd>
-			<capmult>0.03</capmult>
+			<capmult>0.02</capmult>
 		</attribute>
 		<attribute id="ENDURANCE_REGEN"><lotm/>
 			<capadd>0</capadd>
@@ -157,11 +189,15 @@
 		</attribute>
 		<attribute id="PHYSICAL_DAMAGE_DECREASE"><lotm/>
 			<capadd>0</capadd>
-			<capmult>0.07</capmult>
+			<capmult>0.2</capmult>
 		</attribute>
 		<attribute id="DAMAGE_CONVERSION"><lotm/>
       <capadd>0</capadd>
       <capmult>0.2</capmult>
+    </attribute>
+		<attribute id="RADIANT_AURA"><lotm/>
+      <capadd>0</capadd>
+      <capmult>0.02</capmult>
     </attribute>
 	</attributes>
 </moras>

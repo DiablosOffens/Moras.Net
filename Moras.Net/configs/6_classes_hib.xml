@@ -66,7 +66,7 @@
 			<skill>SHIELD</skill>
 			<skill>PARRY</skill>
 			<skill>CELTIC_DUAL</skill>
-			<hidden_skill>SHORT_BOW_HIB</hidden_skill>
+			<hidden_skill>SHORT_BOW</hidden_skill>
 		</class>
 		<class id="CHAMPION" oldid="18">
 			<realm>Hibernia</realm>
@@ -149,7 +149,7 @@
 			<skill>CELTIC_SPEAR</skill>
 			<skill>SHIELD</skill>
 			<skill>PARRY</skill>
-			<hidden_skill>SHORT_BOW_HIB</hidden_skill>
+			<hidden_skill>SHORT_BOW</hidden_skill>
 		</class>
 		<class id="MENTALIST" oldid="20">
 			<realm>Hibernia</realm>
@@ -253,7 +253,7 @@
 			<skill>PARRY</skill>
 			<skill>SHIELD</skill>
 			<hidden_skill>PIERCING</hidden_skill>
-			<hidden_skill>SHORT_BOW_HIB</hidden_skill>
+			<hidden_skill>SHORT_BOW</hidden_skill>
 		</class>
 		<class id="MAULER_HIB" oldid="129">
 			<realm>Hibernia</realm>
@@ -263,8 +263,8 @@
 			<race>CELT</race>
 			<race>LURIKEEN</race>
 			<race>MINOTAUR</race>
-			<skill>FIST_WRAPS_HIB</skill>
-			<skill>MAULER_STAFF_HIB</skill>
+			<skill>FIST_WRAPS</skill>
+			<skill>MAULER_STAFF</skill>
 			<skill>MAGNETISM_HIB</skill>
 			<skill>POWER_STRIKES_HIB</skill>
 			<skill>AURA_MANIPULATION_HIB</skill>

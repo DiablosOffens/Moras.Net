@@ -13,6 +13,18 @@
     <bonus id="OVERCAP_QUICKNESS">
 			<group>OVERCAP_INC</group>
 		</bonus>
+    <bonus id="OVERCAP_INTELLIGENCE">
+      <group>OVERCAP_INC</group>
+    </bonus>
+    <bonus id="OVERCAP_PIETY">
+      <group>OVERCAP_INC</group>
+    </bonus>
+    <bonus id="OVERCAP_CHARISMA">
+      <group>OVERCAP_INC</group>
+    </bonus>
+    <bonus id="OVERCAP_EMPATHY">
+      <group>OVERCAP_INC</group>
+    </bonus>
     <bonus id="OVERCAP_ACUITY">
       <group>OVERCAP_INC</group>
       <effect type="VALUE">OVERCAP_INTELLIGENCE</effect>
@@ -75,6 +87,26 @@
       <group>STAT_OVERCAP</group>
       <effect type="VALUE">QUICKNESS</effect>
       <effect type="VALUE">OVERCAP_QUICKNESS</effect>
+    </bonus>
+    <bonus id="STAT_OVERCAP_INTELLIGENCE">
+      <group>STAT_OVERCAP</group>
+      <effect type="VALUE">INTELLIGENCE</effect>
+      <effect type="VALUE">OVERCAP_INTELLIGENCE</effect>
+    </bonus>
+    <bonus id="STAT_OVERCAP_PIETY">
+      <group>STAT_OVERCAP</group>
+      <effect type="VALUE">PIETY</effect>
+      <effect type="VALUE">OVERCAP_PIETY</effect>
+    </bonus>
+    <bonus id="STAT_OVERCAP_CHARISMA">
+      <group>STAT_OVERCAP</group>
+      <effect type="VALUE">CHARISMA</effect>
+      <effect type="VALUE">OVERCAP_CHARISMA</effect>
+    </bonus>
+    <bonus id="STAT_OVERCAP_EMPATHY">
+      <group>STAT_OVERCAP</group>
+      <effect type="VALUE">EMPATHY</effect>
+      <effect type="VALUE">OVERCAP_EMPATHY</effect>
     </bonus>
     <bonus id="STAT_OVERCAP_ACUITY">
       <group>STAT_OVERCAP</group>
@@ -159,7 +191,15 @@
 			<group>OTHERS</group>
 			<percent/>
 		</bonus>
+		<bonus id="EXP_POINT_BONUS">
+			<group>OTHERS</group>
+			<percent/>
+		</bonus>
 		<bonus id="REALM_POINT_BONUS">
+			<group>OTHERS</group>
+			<percent/>
+		</bonus>
+		<bonus id="BOUNTY_POINT_BONUS">
 			<group>OTHERS</group>
 			<percent/>
 		</bonus>
@@ -181,7 +221,31 @@
 			<group>OTHERS</group>
 			<percent/>
 		</bonus>
-		<bonus id="WATER_BREATHING">
+		<bonus id="MYTH_PARRY_BONUS">
+			<group>OTHERS</group>
+			<percent/>
+		</bonus>
+		<bonus id="MYTH_BLOCK_BONUS">
+			<group>OTHERS</group>
+			<percent/>
+		</bonus>
+		<bonus id="MYTH_EVADE_BONUS">
+			<group>OTHERS</group>
+			<percent/>
+		</bonus>
+		<bonus id="MYTH_COIN_BONUS">
+			<group>OTHERS</group>
+			<percent/>
+		</bonus>
+    <bonus id="MYTH_RP_BONUS">
+      <group>OTHERS</group>
+      <percent/>
+    </bonus>
+    <bonus id="RESURRECTION_SICKNESS_REDUCTION">
+      <group>OTHERS</group>
+      <percent/>
+    </bonus>
+    <bonus id="WATER_BREATHING">
 			<group>OTHERS</group>
 		</bonus>
 		<bonus id="ENDURANCE_REGEN">
@@ -192,6 +256,10 @@
 			<percent/>
 		</bonus>
     <bonus id="DAMAGE_CONVERSION">
+      <group>OTHERS</group>
+      <percent/>
+    </bonus>
+    <bonus id="RADIANT_AURA">
       <group>OTHERS</group>
       <percent/>
     </bonus>

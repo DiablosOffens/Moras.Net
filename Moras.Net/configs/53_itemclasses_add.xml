@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<moras>
+  <!-- add new itemclasses here only, because currently only the index of config array is written to db -->
+  <!-- to keep it stable, do not delete any itemclass and add new ones here -->
+  <itemclasses>
+    <itemclass id="STAFF_1H">
+      <material>WOOD</material>
+      <slot_type>weapon</slot_type>
+      <damage>CRUSH</damage>
+      <position>R_HAND</position>
+    </itemclass>
+    <itemclass id="PAINWORKING_TWO_HAND">
+      <material>METAL</material>
+      <slot_type>weapon</slot_type>
+      <realm>Albion</realm>
+      <skill>PAINWORKING</skill>
+      <position>2_HAND</position>
+      <!-- add subclasses for crafting if it's possible to craft these weapons -->
+    </itemclass>
+		<itemclass id="CLAWS_RIGHT">
+			<material>METAL</material>
+			<slot_type>weapon</slot_type>
+			<realm>Midgard</realm>
+			<skill>HAND2HAND</skill>
+      <position>R_HAND</position>
+			<position>2_HAND</position>
+		</itemclass>
+  </itemclasses>
+</moras>
