@@ -46,9 +46,6 @@ namespace Moras.Net
 
     public class FStreamWrapper : StreamWriter
     {
-        //HINT: This is used by string.Split() to normalize line endings. Order is crucial!
-        private static readonly string[] NewLineDelemiters = new[] { "\r\n", "\r", "\n\r", "\n" }.Where(nl => nl != Environment.NewLine).ToArray();
-
         public FStreamWrapper(FileStream stream)
             : base(stream, Encoding.Default)
         {
@@ -152,8 +149,7 @@ namespace Moras.Net
 
         public override void Write(string value)
         {
-            string[] textlines = value.Split(NewLineDelemiters, StringSplitOptions.None);
-            base.Write(string.Join(NewLine, textlines));
+            base.Write(Utils.NormalizeLineEndings(value, NewLine));
         }
     }
 }

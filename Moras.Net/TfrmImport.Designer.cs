@@ -48,6 +48,7 @@
             this.dlgOpen = new System.Windows.Forms.OpenFileDialog();
             this.IdHTTP = new Moras.Net.IndyCustom.TIdHTTP();
             this.IdAntiFreeze1 = new Moras.Net.IndyCustom.TIdAntiFreeze();
+            this.webClient = new System.Net.WebClient();
             this.GroupBox1.SuspendLayout();
             this.GroupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
@@ -336,6 +337,16 @@
             this.IdAntiFreeze1.Name = "IdAntiFreeze1";
             this.IdAntiFreeze1.Tag = null;
             // 
+            // webClient
+            // 
+            this.webClient.BaseAddress = "";
+            this.webClient.CachePolicy = null;
+            this.webClient.Credentials = null;
+            this.webClient.Encoding = ((System.Text.Encoding)(resources.GetObject("webClient.Encoding")));
+            this.webClient.Headers = ((System.Net.WebHeaderCollection)(resources.GetObject("webClient.Headers")));
+            this.webClient.QueryString = ((System.Collections.Specialized.NameValueCollection)(resources.GetObject("webClient.QueryString")));
+            this.webClient.UseDefaultCredentials = false;
+            // 
             // TfrmImport
             // 
             this.AcceptButton = this.btOK;
@@ -385,5 +396,6 @@
         private System.Windows.Forms.OpenFileDialog dlgOpen;
         private IndyCustom.TIdHTTP IdHTTP;
         private IndyCustom.TIdAntiFreeze IdAntiFreeze1;
+        private System.Net.WebClient webClient;
     }
 }

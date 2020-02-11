@@ -32,6 +32,7 @@ namespace Moras.Net
     using System.Windows.Forms;
     using System.Diagnostics;
     using dxgettext;
+    using System.Threading;
 
     public struct SItemEffect
     {
@@ -73,6 +74,7 @@ namespace Moras.Net
         private int iCurLevel;	// Der aktuelle Level eines Levelbaren Gegenstandes
         private int iMaxLevel;	// Der maximale Itemlevel
         private int iUseLevel;	// Level, damit der Proc/Ladung funktioniert
+        private int iBonusLevel; // Minimal level for user to apply bonuses
         private DateTime dtLastUpdate;	// Zeitpunkt des letzten Item-Updates
         private DynamicArray<int> idClassRestriction;	// Array mit den Klassenbeschränkungen
         private DynamicArray<SItemEffect> arEffects;  // Array mit den Effekten die das Item hat
@@ -110,6 +112,8 @@ namespace Moras.Net
                 iLevel = rhs.iLevel;
             iCurLevel = rhs.iCurLevel;
             iMaxLevel = rhs.iMaxLevel;
+            iUseLevel = rhs.iUseLevel;
+            iBonusLevel = rhs.iBonusLevel;
             iQuality = rhs.iQuality;
             if (rhs.iBonus > 0)
                 iBonus = rhs.iBonus;
@@ -230,6 +234,8 @@ namespace Moras.Net
             if (Item.iLevel > 0)
                 Level = Item.iLevel;
             MaxLevel = Item.iMaxLevel;
+            UseLevel = Item.iUseLevel;
+            BonusLevel = Item.iBonusLevel;
             if (Item.iQuality > 0)
                 Quality = Item.iQuality;
             if (Item.iBonus > 0)
@@ -303,8 +309,10 @@ namespace Moras.Net
             iSlot = -1;
             eType = EItemType.Drop;	// Item-Art (Drop, Crafted, Unique)
             iLevel = 0;	// Der Ideale Level eines Benutzers
-            iCurLevel = 0;	// Der aktuelle Level eines Levelbaren Gegenstandes
-            iMaxLevel = 0;	// Der maximale Itemlevel
+            iCurLevel = 0;	// Der aktuelle Level eines levelbaren Gegenstandes
+            iMaxLevel = 0;	// Der maximale Level eines levelbaren Gegenstandes
+            iUseLevel = 0;
+            iBonusLevel = 0;
             iQuality = 99;
             iBonus = 0;
             iClass = -1;
@@ -757,6 +765,321 @@ namespace Moras.Net
             return true;
         }
 
+        static readonly Lazy<int> iPosRanged = new Lazy<int>(() => Unit.xml_config.GetSlotPosition("RANGED"), LazyThreadSafetyMode.PublicationOnly);
+        static readonly Lazy<int> iPosTwohand = new Lazy<int>(() => Unit.xml_config.GetSlotPosition("2_HAND"), LazyThreadSafetyMode.PublicationOnly);
+        static readonly Lazy<int> iPosLefthand = new Lazy<int>(() => Unit.xml_config.GetSlotPosition("L_HAND"), LazyThreadSafetyMode.PublicationOnly);
+        static readonly Lazy<int> iPosMyth = new Lazy<int>(() => Unit.xml_config.GetSlotPosition("MYTHICAL"), LazyThreadSafetyMode.PublicationOnly);
+
+        public bool LoadJson(IDictionary<string, object> item, IDictionary<string, IDictionary<int, int>> jsonIdMappings, DateTime? jsonGeneratedOn)
+        {
+            if (item == null)
+                return false;
+
+            Init();
+
+            try
+            {
+                object id;
+                if (!item.TryGetValue("id", out id))
+                    return false;
+                object name;
+                if (!item.TryGetValue("name", out name))
+                    return false;
+                if (Unit.xml_config.ItemUpdate.bFound)
+                {
+                    int idpos;
+                    if (!string.IsNullOrEmpty(Unit.xml_config.ItemUpdate.ItemURL) &&
+                        (idpos = Unit.xml_config.ItemUpdate.ItemURL.IndexOf("[id]")) != -1)
+                    {
+                        strOnlineURL = Unit.xml_config.ItemUpdate.ItemURL.Substring(0, idpos) + id.ToString();
+                        if ((idpos + "[id]".Length) < Unit.xml_config.ItemUpdate.ItemURL.Length)
+                            strOnlineURL += Unit.xml_config.ItemUpdate.ItemURL.Substring(idpos + "[id]".Length);
+                    }
+                    if (Unit.xml_config.ItemUpdate.Registry == "Broadsword_Itemdatabase")
+                        strProvider = "Broadsword Item Database"; // at the moment the only json source
+                }
+                strName = strNameOriginal = (string)name;
+
+                object realm;
+                if (!item.TryGetValue("realm", out realm))
+                    return false;
+                iRealm = jsonIdMappings["realm"][(int)realm];
+
+                object sources;
+                if (item.TryGetValue("sources", out sources) && sources is IDictionary<string, object>)
+                {
+                    var src = (IDictionary<string, object>)sources;
+                    object monsters;
+                    if (src.TryGetValue("monsters", out monsters) && monsters is IDictionary<string, object>)
+                    {
+                        var mobs = (IDictionary<string, object>)monsters;
+                        object normal_drop;
+                        IEnumerable<string> strmobs = null;
+                        if (mobs.TryGetValue("normal_drop", out normal_drop) && normal_drop is ICollection<object>)
+                            strmobs = ((ICollection<object>)normal_drop).Cast<string>();
+                        object one_time_drop;
+                        if (mobs.TryGetValue("one_time_drop", out one_time_drop) && one_time_drop is ICollection<object>)
+                            strmobs = (strmobs ?? Enumerable.Empty<string>()).Concat(((ICollection<object>)one_time_drop).Cast<string>().Select(otd => otd + " (OTD)"));
+                        strOrigin = "Monsters: " + string.Join(", ", strmobs);
+                    }
+                    object quests;
+                    if (src.TryGetValue("quests", out quests) && quests is ICollection<object>)
+                        strOrigin += (string.IsNullOrEmpty(strOrigin) ? "" : Environment.NewLine) + "Quests: " +
+                            string.Join(", ", ((ICollection<object>)quests).Cast<string>());
+                    object stores;
+                    if (src.TryGetValue("stores", out stores) && stores is ICollection<object>)
+                        strOrigin += (string.IsNullOrEmpty(strOrigin) ? "" : Environment.NewLine) + "Stores: " +
+                            string.Join(", ", ((ICollection<object>)stores).Cast<string>());
+                }
+
+                object delve_text;
+                if (item.TryGetValue("delve_text", out delve_text))
+                    strDescription = Utils.NormalizeLineEndings((string)delve_text);
+
+                object requirements;
+                if (item.TryGetValue("requirements", out requirements) && requirements is IDictionary<string, object>)
+                {
+                    var req = (IDictionary<string, object>)requirements;
+                    object level_required;
+                    if (req.TryGetValue("level_required", out level_required))
+                        iUseLevel = (int)level_required;
+                    object usable_by;
+                    if (req.TryGetValue("usable_by", out usable_by) && usable_by is ICollection<object>)
+                    {
+                        IDictionary<int, int> reqMapping;
+                        if (!jsonIdMappings.TryGetValue("requirements/usable_by", out reqMapping))
+                            throw new KeyNotFoundException("requirements/usable_by");
+                        int cres = 0;
+                        foreach (var jsonclass in (ICollection<object>)usable_by)
+                        {
+                            int classid;
+                            if (reqMapping.TryGetValue((int)jsonclass, out classid))
+                            {
+                                ClassRestriction[cres] = classid;
+                                cres++;
+                            } //else return false?
+                        }
+                    }
+
+                    //"skill_trains_required"
+                    //"champion_level_required"
+                }
+
+                object bonus_level;
+                if (item.TryGetValue("bonus_level", out bonus_level))
+                    iBonusLevel = (int)bonus_level;
+
+                object slot, category;
+                ESlotType slotType = (ESlotType)(-1);
+                if (item.TryGetValue("slot", out slot)) // no slot if its a weapon, shield, instrument or other category
+                    iPosition = jsonIdMappings["slot"][(int)slot];
+                if (item.TryGetValue("category", out category))
+                    slotType = (ESlotType)jsonIdMappings["categories"][(int)category];
+
+                object type_data;
+                if (item.TryGetValue("type_data", out type_data) && type_data is IDictionary<string, object>)
+                {
+                    IDictionary<string, object> data = (IDictionary<string, object>)type_data;
+
+                    object base_quality;
+                    if (data.TryGetValue("base_quality", out base_quality))
+                        iQuality = (int)base_quality;
+
+                    if (iPosition != -1 && Unit.xml_config.arItemSlots[iPosition].type == ESlotType.Armor)
+                    {
+                        object armor_factor;
+                        if (data.TryGetValue("armor_factor", out armor_factor))
+                            iAF = (int)armor_factor;
+                        object absorption;
+                        if (data.TryGetValue("absorption", out absorption))
+                            iClass = jsonIdMappings["absorption"][(int)absorption];
+                        else
+                            return false;
+                        if (Unit.xml_config.arItemClasses[iClass].idMaterial == Unit.xml_config.GetMaterialId("CLOTH"))
+                            iLevel = iAF;
+                        else
+                            iLevel = iAF / 2;
+
+                        // Don't be more specific on armor item classes for now.
+                        // Moras currently doesn't support unspecific searches.
+                        /*if (iRealm != 7)
+                        {
+                            //find realm specific armor class
+                            for (int i = 0; i < Unit.xml_config.nItemClasses; i++)
+                            {
+                                if ((Unit.xml_config.arItemClasses[i].SlotType == ESlotType.Armor)
+                                    && (Unit.xml_config.arItemClasses[i].iRealm == iRealm)
+                                    && Unit.xml_config.arItemClasses[i].oldid == Unit.xml_config.arItemClasses[iClass].oldid)
+                                {
+                                    iClass = i;
+                                    break;
+                                }
+                            }
+                        }*/
+                    }
+                    else if (slotType == ESlotType.Weapon)
+                    {
+                        object dps;
+                        if (data.TryGetValue("dps", out dps))
+                            iDPS = (int)((dps is decimal ? (decimal)dps : (int)dps) * 10);
+                        else
+                            return false;
+                        iLevel = (iDPS - 11) / 3;
+                        object speed;
+                        if (data.TryGetValue("speed", out speed))
+                            iSpeed = (int)((speed is decimal ? (decimal)speed : (int)speed) * 10);
+                        else
+                            return false;
+
+                        object damage_type;
+                        if (data.TryGetValue("damage_type", out damage_type) && jsonIdMappings["damage_type"].TryGetValue((int)damage_type, out iDamageType))
+                            iDamageType++; // +1 offset
+
+                        object skill_used, shield_size;
+                        if (data.TryGetValue("skill_used", out skill_used))
+                        {
+                            int attrId;
+                            if (!jsonIdMappings["type_data/skill_used"].TryGetValue((int)skill_used, out attrId))
+                            {
+                                attrId = -1; // should be only staffs
+                                if (ClassRestriction[0] == Unit.xml_config.GetClassId("FRIAR") && ClassRestriction[1] == -1)
+                                    attrId = Unit.xml_config.GetAttributeId("STAFF"); // Quarterstaffs if it's only usable by friar
+                            }
+                            object range, two_handed, left_handed;
+                            bool ranged = false, twohand = false, dualwield = false;
+                            if (data.TryGetValue("range", out range)) // TODO: differentiate from bow types or axes? or keep range in CItem?
+                                ranged = true;
+                            else if (data.TryGetValue("two_handed", out two_handed) && (int)two_handed == 1)
+                                twohand = true;
+                            else if (data.TryGetValue("left_handed", out left_handed) && (int)left_handed == 1)
+                                dualwield = true;
+                            for (int i = 0; i < Unit.xml_config.nItemClasses; i++)
+                            {
+                                if ((Unit.xml_config.arItemClasses[i].SlotType == ESlotType.Weapon)
+                                    && ((attrId != -1 && (Unit.xml_config.arItemClasses[i].iRealm & iRealm) != 0) ||
+                                    (attrId == -1 && Unit.xml_config.arItemClasses[i].iRealm == 7))
+                                    && (Unit.xml_config.arItemClasses[i].idSkill == attrId)
+                                    && (ranged == (Unit.xml_config.arItemClasses[i].bmPositions == (1 << iPosRanged.Value)))
+                                    && (twohand == (Unit.xml_config.arItemClasses[i].bmPositions == (1 << iPosTwohand.Value)))
+                                    && (dualwield == Unit.xml_config.arItemClasses[i].bDualWield))
+                                {
+                                    iClass = i;
+                                    break;
+                                }
+                            }
+                            if (iClass == -1) // there are also some bugs in db, like left hand swords/hammers in midgard or 1 hand scythe
+                                return false; // just ignore them, these are mostly useless items anyway
+                            iPosition = ranged ? iPosRanged.Value :
+                                (twohand ? iPosTwohand.Value :
+                                (dualwield ? iPosLefthand.Value :
+                                Unit.xml_config.arItemClasses[iClass].bmPositions.GetAllSetBitIndices().First()));
+                        }
+                        else if (data.TryGetValue("shield_size", out shield_size))
+                        {
+                            iClass = jsonIdMappings["shield_size"][(int)shield_size];
+                            iPosition = Unit.xml_config.arItemClasses[iClass].bmPositions.GetAllSetBitIndices().First();
+                        }
+                        else
+                        {
+                            return false; // there should be no item with type_data, which is not either armor, weapon or shield
+                        }
+                    }
+                    else
+                    {
+                        return false; // there should be no item with type_data, which has jewelry slot type
+                    }
+                }
+                else
+                {
+                    switch (slotType)
+                    {
+                        case ESlotType.Weapon:
+                            // can only be instrument, weapons and shields should have type_data
+                            if ((iRealm & 4) != 0) // no instruments for midgard and unspecified realm
+                                return false;
+                            object icon;
+                            if (item.TryGetValue("icon", out icon))
+                                iClass = jsonIdMappings[iRealm == 2 ? "instrument_hib" : "instrument_alb"][(int)icon];
+                            if (iClass == -1)
+                                return false;
+                            iPosition = (Unit.xml_config.arItemClasses[iClass].bmPositions & (1 << iPosRanged.Value)) != 0 ?
+                                iPosRanged.Value : Unit.xml_config.arItemClasses[iClass].bmPositions.GetAllSetBitIndices().First();
+                            break;
+                        case ESlotType.Jewelry:
+                            if (iPosition == -1)
+                                return false;
+                            break;
+                        case (ESlotType)(-1):
+                            if (iPosition != iPosMyth.Value)
+                                return false; //undefined and/or unsupported item type, like crafting items or quest items
+                            break;
+                        default:
+                            return false; //armor should always have type_data
+                    }
+                }
+
+                if (iPosition == -1)
+                    return false;
+
+                if (iLevel == 0)
+                    // actual item level was not written to json, so we can only guess here
+                    iLevel = Math.Max(iUseLevel, iBonusLevel);
+
+                object artifact;
+                if (item.TryGetValue("artifact", out artifact) && (bool)artifact)
+                {
+                    iMaxLevel = 10;
+                    iCurLevel = 10;
+                }
+
+                object bonuses;
+                if (item.TryGetValue("bonuses", out bonuses) && bonuses is ICollection<object>)
+                {
+                    int eff = 0;
+                    foreach (IDictionary<string, object> bonus in (ICollection<object>)bonuses)
+                    {
+                        object bonus_type;
+                        int bonuskey = 0;
+                        if (bonus.TryGetValue("type", out bonus_type))
+                            bonuskey = (int)bonus_type << 16;
+                        object bonus_id;
+                        if (bonus.TryGetValue("id", out bonus_id))
+                            bonuskey |= (int)bonus_id;
+                        object value;
+                        if (!bonus.TryGetValue("value", out value))
+                            return false;
+                        int bid;
+                        if ((!jsonIdMappings["bonus_types"].TryGetValue(bonuskey, out bid) &&
+                            !jsonIdMappings["bonus_types"].TryGetValue(unchecked(bonuskey & (int)0xFFFF0000), out bid)) || bid == -1)
+                            continue; // some epics have crafting bonuses, to have them in our db we need to skip this effect slot
+                        EffectCheck(eff);
+                        arEffects.Array[eff].BonusId = bid;
+                        arEffects.Array[eff].Value = (int)value;
+                        object level_required;
+                        if (bonus.TryGetValue("level_required", out level_required))
+                            arEffects.Array[eff].Level = (int)level_required;
+                        eff++;
+                    }
+                    if (eff == 0)
+                        return false; // items with only crafting bonuses can be refused completely
+                }
+
+                iBonus = iLevel >= 50 ? 35 : 0; // There is no info about it in json data,
+                                                // but nearly every lvl 50+ item has 35%, so just set it.
+
+                if (jsonGeneratedOn.HasValue)
+                    dtLastUpdate = jsonGeneratedOn.Value;
+            }
+            catch (Exception e)
+            {
+                Utils.DebugPrint("CItem::LoadJson = %s", e.Message);
+                TApplication.Instance.ShowException(e);
+                return false;
+            }
+            bChanged = false;
+            return true;
+        }
+
         // Liefert wahr, wenn der Item keine Daten enthält
         // das ist im Moment immer dann, wenn kein Name oder keine Effekte da sind
         public bool isEmpty()
@@ -773,7 +1096,7 @@ namespace Moras.Net
         public bool isUseable(int idClass)
         {
             if (idClassRestriction[0] >= 0)
-            {	// Es gibt eine Klassenbeschränkung
+            {   // Es gibt eine Klassenbeschränkung
                 for (int i = 0; i < idClassRestriction.Length; i++)
                 {
                     if (idClassRestriction[i] == idClass)
@@ -781,7 +1104,7 @@ namespace Moras.Net
                 }
                 return false;
             }
-            else	// Es gibt keine Beschränkung, also wahr
+            else    // Es gibt keine Beschränkung, also wahr
                 return true;
         }
 
@@ -799,7 +1122,7 @@ namespace Moras.Net
                     {
                         int bid = arEffects[i].BonusId;
                         if (bid >= 0)
-                        {	// Wenn es ein Dropitem ist, dann Effektlevel beachten
+                        {   // Wenn es ein Dropitem ist, dann Effektlevel beachten
                             if ((eType != EItemType.Drop) ||
                                 (arEffects[i].Level <= iCurLevel))
                             {
@@ -824,7 +1147,7 @@ namespace Moras.Net
             {
                 int bid = arEffects[i].BonusId;
                 if (bid >= 0)
-                {	// Wenn es ein Dropitem ist, dann Effektlevel beachten
+                {   // Wenn es ein Dropitem ist, dann Effektlevel beachten
                     if ((eType != EItemType.Drop) ||
                         (arEffects[i].Level <= iCurLevel))
                     {
@@ -891,7 +1214,7 @@ namespace Moras.Net
             String strReturn;
             strReturn = _("Letzte Änderung: ") + dtLastUpdate.ToShortDateString() + " " + dtLastUpdate.ToShortTimeString();
             strReturn += "\n" + _("Stufe:") + "\t" + (iLevel).ToString();
-            if (iMaxLevel > 0)	// Ist ein Artefakt
+            if (iMaxLevel > 0)  // Ist ein Artefakt
                 strReturn += "\t" + _("(Artefakt)");
             strReturn += "\n" + _("Qualität:") + "\t" + (iQuality).ToString();
             strReturn += "%\tBonus:\t" + (iBonus).ToString() + "%\n";
@@ -929,13 +1252,13 @@ namespace Moras.Net
             strReturn += "\n" + _("Klassen:") + "\n  ";
             if (idClassRestriction[0] == -1)
             {
-                if (iRealm == 7)	// Alle Reiche
+                if (iRealm == 7)    // Alle Reiche
                     strReturn += _("Alle Reiche");
                 else
                     strReturn += _("Alle Klassen (") + Utils.Realm2Str(iRealm) + ")";
             }
             else
-            {	// Klassen auflisten
+            {   // Klassen auflisten
                 for (int i = 0; i < idClassRestriction.Length; i++)
                 {
                     if (idClassRestriction[i] >= 0)
@@ -965,7 +1288,7 @@ namespace Moras.Net
 
             arEffects.Length++;
 
-            arEffects.Array[len].BonusId = -1;	// -1 = unbenutzt
+            arEffects.Array[len].BonusId = -1;  // -1 = unbenutzt
             arEffects.Array[len].Value = 1;
             arEffects.Array[len].GemQuality = 0;
             arEffects.Array[len].Level = 0;
@@ -983,7 +1306,7 @@ namespace Moras.Net
                 // initialisiere die neuen Einträge
                 for (int i = len; i <= number; i++)
                 {
-                    arEffects.Array[i].BonusId = -1;	// -1 = unbenutzt
+                    arEffects.Array[i].BonusId = -1;    // -1 = unbenutzt
                     arEffects.Array[i].Value = 1;
                     arEffects.Array[i].GemQuality = 0;
                     arEffects.Array[i].Level = 0;
@@ -1302,6 +1625,18 @@ namespace Moras.Net
             bChanged = true;
         }
 
+        protected void SetUseLevel(int Value)
+        {
+            iUseLevel = Value;
+            bChanged = true;
+        }
+
+        protected void SetBonusLevel(int Value)
+        {
+            iBonusLevel = Value;
+            bChanged = true;
+        }
+
         protected void SetCurLevel(int Value)
         {
             iCurLevel = Value;
@@ -1342,7 +1677,7 @@ namespace Moras.Net
                     idClassRestriction.Length = number + 1;
                 idClassRestriction[number] = idClass;
                 if ((idClass >= 0) && (idClassRestriction.Length <= number + 1))
-                {	// Ich gehe hier davon aus, das maximal um eins erweitert werden muss
+                {   // Ich gehe hier davon aus, das maximal um eins erweitert werden muss
                     Debug.Assert(idClassRestriction.Length == number + 1);
                     idClassRestriction.Length = number + 2;
                     idClassRestriction[number + 1] = -1;
@@ -1424,6 +1759,8 @@ namespace Moras.Net
         public int Level { get { return iLevel; } set { SetLevel(value); } }
         public int CurLevel { get { return iCurLevel; } set { SetCurLevel(value); } }
         public int MaxLevel { get { return iMaxLevel; } set { SetMaxLevel(value); } }
+        public int UseLevel { get { return iUseLevel; } set { SetUseLevel(value); } }
+        public int BonusLevel { get { return iBonusLevel; } set { SetBonusLevel(value); } }
         public DateTime LastUpdate { get { return dtLastUpdate; } set { SetLastUpdate(value); } }
         public int nEffects { get { return GetnEffects(); } }
         private IndexerProperty<int, int> _effect;
