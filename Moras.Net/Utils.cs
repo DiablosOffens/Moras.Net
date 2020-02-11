@@ -203,6 +203,20 @@ namespace Moras.Net
             return quote + result + quote;
         }
 
+        //HINT: This is used by string.Split() to normalize line endings. Order is crucial!
+        private static readonly string[] NewLineDelemiters = new[] { "\r\n", "\r", "\n\r", "\n" }.Where(nl => nl != Environment.NewLine).ToArray();
+
+        internal static string NormalizeLineEndings(string text)
+        {
+            return NormalizeLineEndings(text, Environment.NewLine);
+        }
+
+        internal static string NormalizeLineEndings(string text, string lineEnding)
+        {
+            string[] textlines = text.Split(NewLineDelemiters, StringSplitOptions.None);
+            return string.Join(lineEnding, textlines);
+        }
+
         // Gibt einen String in die Datei Debug.log aus
         public static void DebugPrint(string msg, params object[] ap)
         {
@@ -758,6 +772,33 @@ namespace Moras.Net
                 int textMargin = 4;
                 Padding noicons = new Padding(-(iconsWidth + (2 * iconMarginWidth) + textMargin), 0, 0, 0);
                 stylePaddingInternal.SetValue(grid.RowHeadersDefaultCellStyle, new Padding(-22, 0, 0, 0), null);
+            }
+        }
+
+        internal static void CreateConfigMappingFromJsonDictionary<TValue>(this IDictionary<string, object> jsonDictionary, IDictionary<string, IDictionary<string, TValue>> allMappings, string path, Func<object, TValue> jsonValueMapper, Func<string, bool> skipJsonId = null)
+        {
+            CreateConfigMappingFromJsonDictionary(jsonDictionary, allMappings, path, Extensions.IdentityFunction<string>.Instance, jsonValueMapper, skipJsonId);
+        }
+
+        internal static void CreateConfigMappingFromJsonDictionary<TKey, TValue>(this IDictionary<string, object> jsonDictionary, IDictionary<string, IDictionary<TKey, TValue>> allMappings, string path, Func<string, TKey> jsonIdSelector, Func<object, TValue> jsonValueMapper, Func<TKey, bool> skipJsonId = null)
+        {
+            string[] pathParts = path.Split('/');
+            for (int i = 0; i < pathParts.Length; i++)
+            {
+                object child;
+                if (!jsonDictionary.TryGetValue(pathParts[i], out child) || !(child is IDictionary<string, object>))
+                    throw new KeyNotFoundException(pathParts[i]);
+                jsonDictionary = (IDictionary<string, object>)child;
+            }
+            Dictionary<TKey, TValue> mapping = new Dictionary<TKey, TValue>();
+            allMappings.Add(path, mapping);
+            foreach (var pair in jsonDictionary)
+            {
+                TKey jsonid = jsonIdSelector(pair.Key);
+                if (skipJsonId != null && skipJsonId(jsonid))
+                    continue;
+                TValue value = jsonValueMapper(pair.Value);
+                mapping.Add(jsonid, value);
             }
         }
     }

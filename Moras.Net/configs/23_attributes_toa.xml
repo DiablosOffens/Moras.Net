@@ -55,7 +55,7 @@
 			<capadd>0</capadd>
 			<capmult>0.5</capmult>
 		</attribute>
-		<attribute id="CAP_POWER_PERCENTAGE_BONUS">
+		<attribute id="CAP_POWER_PERCENTAGE_BONUS"><toa/>
 			<cap>POWER_PERCENTAGE_BONUS</cap>
 			<capadd>0</capadd>
 			<capmult>1.0</capmult>
@@ -107,6 +107,11 @@
 		<attribute id="FATIGUE"><toa/>
 			<capadd>0</capadd>
 			<capmult>0.5</capmult>
+		</attribute>
+		<attribute id="CAP_FATIGUE"><toa/>
+			<cap>FATIGUE</cap>
+			<capadd>0</capadd>
+			<capmult>1</capmult>
 		</attribute>
 		<attribute id="AF_BONUS"><toa/>
 			<capadd>0</capadd>

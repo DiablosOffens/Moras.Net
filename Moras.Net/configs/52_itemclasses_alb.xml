@@ -1625,7 +1625,7 @@
 			<material>METAL</material>
 			<slot_type>weapon</slot_type>
 			<realm>Albion</realm>
-			<skill>FIST_WRAPS_ALB</skill>
+			<skill>FIST_WRAPS</skill>
 			<position>R_HAND</position>
 			<position>2_HAND</position>
 			<damage>CRUSH</damage>
@@ -1706,7 +1706,7 @@
 			<material>METAL</material>
 			<slot_type>weapon</slot_type>
 			<realm>Albion</realm>
-			<skill>FIST_WRAPS_ALB</skill>
+			<skill>FIST_WRAPS</skill>
 			<dualwield/>
 			<position>R_HAND</position>
 			<position>L_HAND</position>
@@ -1789,7 +1789,7 @@
 			<material>WOOD</material>
 			<slot_type>weapon</slot_type>
 			<realm>Albion</realm>
-			<skill>MAULER_STAFF_ALB</skill>
+			<skill>MAULER_STAFF</skill>
 			<position>2_HAND</position>
 			<damage>CRUSH</damage>
 			<subclass id="MAULER_STAFF_ALB">

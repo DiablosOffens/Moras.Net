@@ -37,7 +37,13 @@ namespace Moras.Net.Components
         private SolidBrush _brush;
         private SolidBrush Brush { get { return _brush ?? (_brush = new SolidBrush(Color.Empty)); } }
 
-        public override string Text { get { return base.Text; } set { SetText(value); } }
+        private bool _useShadowedTextProperty;
+        private string _shadowedTextProperty;
+        public override string Text
+        {
+            get { return _useShadowedTextProperty ? _shadowedTextProperty : base.Text; }
+            set { SetText(value); }
+        }
         [DefaultValue(false)]
         public bool Activated { get { return bActivated; } set { SetActivated(value); } }
         [DefaultValue(0)]
@@ -111,23 +117,38 @@ namespace Moras.Net.Components
             }
             else
             {	// Es gibt ein Newline. In 2 einzelnen Zeilen ausgeben
-                string oldtext = Text;
+                string text = ShadowText(); // Need to use local field for overriden Text property,
+                                            // because setting the Label.Text property directly
+                                            // would cause Invalidate to be called and that leads
+                                            // to an infinite loop here.
                 try
                 {
-                    base.Text = oldtext.Substring(nl + Environment.NewLine.Length, Math.Min(10, oldtext.Length - nl - Environment.NewLine.Length));	// maximal 10 Zeichen
+                    Text = text.Substring(nl + Environment.NewLine.Length, Math.Min(10, text.Length - nl - Environment.NewLine.Length));	// maximal 10 Zeichen
                     e.Graphics.TranslateTransform(0, 10);
                     base.OnPaint(e);
                     e.Graphics.ResetTransform();
                     e.Graphics.TranslateTransform(0, -1);
-                    base.Text = oldtext.Substring(0, nl);
+                    Text = text.Substring(0, nl);
                     base.OnPaint(e);
                 }
                 finally
                 {
                     e.Graphics.ResetTransform();
-                    base.Text = oldtext;
+                    UnshadowText();
                 }
             }
+        }
+
+        private string ShadowText()
+        {
+            _useShadowedTextProperty = true;
+            _shadowedTextProperty = base.Text;
+            return _shadowedTextProperty;
+        }
+
+        private void UnshadowText()
+        {
+            _useShadowedTextProperty = false;
         }
 
         private void SetActivated(bool Activate)
@@ -151,7 +172,9 @@ namespace Moras.Net.Components
 
         private void SetText(string Text)
         {
-            if (base.Text != Text)
+            if (_useShadowedTextProperty)
+                _shadowedTextProperty = Text;
+            else if (this.Text != Text)
             {
                 base.Text = Text;
                 Invalidate();

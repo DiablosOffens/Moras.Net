@@ -41,6 +41,7 @@
 			<id>Weste</id>
 			<id>Robe</id>
 			<id>Hemd</id>
+      <id>Torso</id>
 		</slot>
 		<slot id="7">
 			<pos_id>R_HAND</pos_id>
@@ -68,6 +69,7 @@
 			<kort_id>Neck</kort_id>
 			<id>Halskette</id>
 			<id>Halsband</id>
+      <id>Necklace</id>
 		</slot>
 		<slot id="12">
 			<pos_id>CLOAK</pos_id>
@@ -103,6 +105,7 @@
 			<kort_id>Left Wrist</kort_id>
 			<id>Armschiene</id>
 			<id>Armreif</id>
+      <id>Bracer</id>
 		</slot>
 		<slot id="18">
 			<pos_id>R_WRIST</pos_id>
@@ -113,6 +116,7 @@
 			<pos_id>MYTHICAL</pos_id>
 			<pos_class>MYTHICAL</pos_class>
 			<kort_id>Mythical</kort_id>
+      <id>Mythirian</id>
 		</slot>
 	</itemslots>
 </moras>

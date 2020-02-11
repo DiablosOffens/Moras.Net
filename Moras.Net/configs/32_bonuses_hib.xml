@@ -344,7 +344,8 @@
 				<dust>UNSEELIE_DUST</dust>
 				<liquid>FROST_FROM_A_WASTELAND</liquid>
 			</gem>
-		</bonus>
+      <effect type="VALUE">FIST_WRAPS</effect>
+    </bonus>
 		<bonus id="MAULER_STAFF_HIB">
 			<group>SKILL</group>
 			<realm>Hibernia</realm>
@@ -352,7 +353,8 @@
 				<dust>UNSEELIE_DUST</dust>
 				<liquid>DRACONIC_FIRE</liquid>
 			</gem>
-		</bonus>
+      <effect type="VALUE">MAULER_STAFF</effect>
+    </bonus>
 		<bonus id="POWER_STRIKES_HIB">
 			<group>SKILL</group>
 			<realm>Hibernia</realm>
@@ -394,8 +396,10 @@
 			<effect type="VALUE">CELTIC_SPEAR</effect>
 			<effect type="VALUE">LARGE_WEAPONRY</effect>
 			<effect type="VALUE">SCYTHE</effect>
-			<effect type="VALUE">FIST_WRAPS_HIB</effect>
+      <effect type="VALUE">FIST_WRAPS_HIB</effect>
 			<effect type="VALUE">MAULER_STAFF_HIB</effect>
+      <effect type="VALUE">FIST_WRAPS</effect>
+      <effect type="VALUE">MAULER_STAFF</effect>
 		</bonus>
 		<bonus id="HIB_MAGIC_BONUS">
 			<group>SKILL</group>
