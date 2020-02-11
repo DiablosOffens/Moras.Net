@@ -63,6 +63,11 @@
 			<capadd>0</capadd>
 			<capmult>1</capmult>
 		</attribute>
+		<attribute id="SUBTERRANEAN_FOCUS">
+			<skill>SUBTERRANEAN</skill>
+			<capadd>0</capadd>
+			<capmult>1</capmult>
+		</attribute>
 		<attribute id="SUMMONING_FOCUS">
 			<skill>SUMMONING</skill>
 			<capadd>0</capadd>

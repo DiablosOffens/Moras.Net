@@ -106,6 +106,8 @@
 		<attribute id="STEALTH"></attribute>
 		<attribute id="CRITICAL_STRIKE"></attribute>
 		<attribute id="ENVENOM"></attribute>
+    <attribute id="FIST_WRAPS"></attribute>
+    <attribute id="MAULER_STAFF"></attribute>
 
-	</attributes>
+  </attributes>
 </moras>

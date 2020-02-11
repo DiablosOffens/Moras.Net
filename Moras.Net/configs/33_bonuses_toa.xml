@@ -122,6 +122,9 @@
 		<bonus id="FATIGUE" kortid="Fatigue">
 			<group>OTHERS</group>
 		</bonus>
+		<bonus id="CAP_FATIGUE" kortid="Fatigue Cap">
+			<group>OTHERS</group>
+		</bonus>
 		<bonus id="PARRY_BONUS" kortid="Parry Bonus">
 			<group>OTHERS</group>
 			<percent/>

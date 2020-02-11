@@ -253,8 +253,8 @@
 			<race>KOBOLD</race>
 			<race>TROLL</race>
 			<race>MINOTAUR</race>
-			<skill>FIST_WRAPS_MID</skill>
-			<skill>MAULER_STAFF_MID</skill>
+			<skill>FIST_WRAPS</skill>
+			<skill>MAULER_STAFF</skill>
 			<skill>MAGNETISM_MID</skill>
 			<skill>POWER_STRIKES_MID</skill>
 			<skill>AURA_MANIPULATION_MID</skill>

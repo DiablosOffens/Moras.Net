@@ -91,7 +91,7 @@
 <attribute id="MENDING"><name>Mending</name></attribute>
 <attribute id="PACIFICATION"><name>Pacification</name></attribute>
 <attribute id="RUNECARVING"><name>Runecarving</name></attribute>
-<attribute id="SUBTERRANEAN"><name>Subterranean</name></attribute>
+<attribute id="SUBTERRANEAN"><name>Cave Magic</name></attribute>
 <attribute id="SUMMONING"><name>Summoning</name></attribute>
 <attribute id="SUPPRESSION"><name>Suppression</name></attribute>
 <attribute id="STORMCALLING"><name>Stormcalling</name></attribute>
@@ -101,6 +101,8 @@
 <attribute id="WITCHCRAFT"><name>Witchcraft</name></attribute>
 <attribute id="CURSING"><name>Cursing</name></attribute>
 <attribute id="HEXING"><name>Hexing</name></attribute>
+<attribute id="FIST_WRAPS"><name>Fist Wraps</name></attribute>
+<attribute id="MAULER_STAFF"><name>Mauler Staff</name></attribute>
 
 <attribute id="FIST_WRAPS_ALB"><name>Fist Wraps</name></attribute>
 <attribute id="MAULER_STAFF_ALB"><name>Mauler Staff</name></attribute>
@@ -146,6 +148,7 @@
 <attribute id="CURSING_FOCUS"><name>Cursing Focus</name></attribute>
 <attribute id="DARKNESS_FOCUS"><name>Darkness Focus</name></attribute>
 <attribute id="RUNECARVING_FOCUS"><name>Runecarving Focus</name></attribute>
+<attribute id="SUBTERRANEAN_FOCUS"><name>Cave Magic Focus</name></attribute>
 <attribute id="SUMMONING_FOCUS"><name>Summoning Focus</name></attribute>
 <attribute id="SUPPRESSION_FOCUS"><name>Suppression Focus</name></attribute>
 <attribute id="CAP_STRENGTH"><name>Strength Cap</name></attribute>
@@ -172,6 +175,7 @@
 <attribute id="ARCHERY_SPELL_RANGE_BONUS"><name>Archery/Spell Range Bonus(%)</name></attribute>
 <attribute id="ARCHERY_SPELL_DAMAGE_BONUS"><name>Archery/Spell Damage Bonus(%)</name></attribute>
 <attribute id="FATIGUE"><name>Fatigue</name></attribute>
+<attribute id="CAP_FATIGUE"><name>Fatigue Cap</name></attribute>
 <attribute id="AF_BONUS"><name>AF Bonus</name></attribute>
 <attribute id="PARRY_BONUS"><name>Parry Bonus(%)</name></attribute>
 <attribute id="BLOCK_BONUS"><name>Block Bonus(%)</name></attribute>
@@ -183,7 +187,7 @@
 <attribute id="PIERCE_ABLATIVE"><name>Pierce Ablative(%)</name></attribute>
 <attribute id="BLADETURN_REINFORCEMENT"><name>Bladeturn Reinforcement(%)</name></attribute>
 <attribute id="CONCENTRATION"><name>Concentration(%)</name></attribute>
-<attribute id="DEATH_EXPIERIENCE_LOSS_REDUCTION"><name>Death Expierience Loss Reduction(%)</name></attribute>
+<attribute id="DEATH_EXPIERIENCE_LOSS_REDUCTION"><name>Death Experience Loss Reduction(%)</name></attribute>
 <attribute id="SPELL_POWER_COST_REDUCTION"><name>Spell power cost reduction(%)</name></attribute>
 <attribute id="TO_HIT_BONUS"><name>To hit Bonus(%)</name></attribute>
 <attribute id="ARROW_RECOVERY"><name>Arrow Recovery-Old(%)</name></attribute>
@@ -218,16 +222,25 @@
 <attribute id="SAFE_FALL"><name>Safe Fall(%)</name></attribute>
 <attribute id="SPELL_LEVEL_INCREASE"><name>Spell Level Increase</name></attribute>
 <attribute id="SIEGE_DAMAGE_REDUCTION"><name>Siege Damage Reduction(%)</name></attribute>
+<attribute id="EXP_POINT_BONUS"><name>Experience Point Bonus(%)</name></attribute>
 <attribute id="REALM_POINT_BONUS"><name>Realm Point Bonus(%)</name></attribute>
+<attribute id="BOUNTY_POINT_BONUS"><name>Bounty Point Bonus(%)</name></attribute>
 <attribute id="CROWD_CONTROL_REDUCTION"><name>CC-Reduction(%)</name></attribute>
 <attribute id="DAMAGE_INCREASE"><name>Damage Increase(%)</name></attribute>
 <attribute id="HEALTH_REGEN"><name>Health Regen(%)</name></attribute>
 <attribute id="POWER_REGEN"><name>Mana Regen(%)</name></attribute>
 <attribute id="SIEGE_SPEED_BONUS"><name>Siege Speed Bonus(%)</name></attribute>
+<attribute id="MYTH_PARRY_BONUS"><name>Mythical Parry(%)</name></attribute>
+<attribute id="MYTH_BLOCK_BONUS"><name>Mythical Block(%)</name></attribute>
+<attribute id="MYTH_EVADE_BONUS"><name>Mythical Evade(%)</name></attribute>
+<attribute id="MYTH_COIN_BONUS"><name>Mythical Coin(%)</name></attribute>
+<attribute id="MYTH_RP_BONUS"><name>Mythical Realm Point Bonus(%)</name></attribute>
+<attribute id="RESURRECTION_SICKNESS_REDUCTION"><name>Mythical Resurrection Sickness Reduction(%)</name></attribute>
 <attribute id="WATER_BREATHING"><name>Water Breathing</name></attribute>
 <attribute id="ENDURANCE_REGEN"><name>Endurance Regen</name></attribute>
 <attribute id="PHYSICAL_DAMAGE_DECREASE"><name>Physical Damage Decrease(%)</name></attribute>
 <attribute id="DAMAGE_CONVERSION"><name>Damage Conversion(%)</name></attribute>
+<attribute id="RADIANT_AURA"><name>Radiant Aura</name></attribute>
 </attributes>
 <groups>
 <group id="UNUSED"><name>Unused</name></group>
@@ -333,27 +346,35 @@
 <gem id="MYSTIC_ESSENCE_JEWEL"><name>Mystic Essence Jewel</name></gem>
 </bonus>
 <bonus id="EARTH_FOCUS"><name>Earth Focus</name>
+<name>Earth Magic Focus</name>
 <gem id="EARTHEN_FOCUS_SIGIL"><name>Earthen Focus Sigil</name></gem>
 </bonus>
 <bonus id="COLD_FOCUS"><name>Cold Focus</name>
+<name>Cold Magic Focus</name>
 <gem id="ICY_FOCUS_SIGIL"><name>Icy Focus Sigil</name></gem>
 </bonus>
 <bonus id="WIND_FOCUS"><name>Wind Focus</name>
+<name>Wind Magic Focus</name>
 <gem id="AIRY_FOCUS_SIGIL"><name>Airy Focus Sigil</name></gem>
 </bonus>
 <bonus id="FIRE_FOCUS"><name>Fire Focus</name>
+<name>Fire Magic Focus</name>
 <gem id="FIERY_FOCUS_SIGIL"><name>Fiery Focus Sigil</name></gem>
 </bonus>
 <bonus id="BODY_FOCUS"><name>Body Focus</name>
+<name>Body Magic Focus</name>
 <gem id="HEATED_FOCUS_SIGIL"><name>Heated Focus Sigil</name></gem>
 </bonus>
 <bonus id="MATTER_FOCUS"><name>Matter Focus</name>
+<name>Matter Magic Focus</name>
 <gem id="DUSTY_FOCUS_SIGIL"><name>Dusty Focus Sigil</name></gem>
 </bonus>
 <bonus id="SPIRIT_FOCUS"><name>Spirit Focus</name>
+<name>Spirit Magic Focus</name>
 <gem id="VAPOR_FOCUS_SIGIL"><name>Vapor Focus Sigil</name></gem>
 </bonus>
 <bonus id="MIND_FOCUS"><name>Mind Focus</name>
+<name>Mind Magic Focus</name>
 <gem id="WATERY_FOCUS_SIGIL"><name>Watery Focus Sigil</name></gem>
 </bonus>
 <bonus id="DEATH_SERVANT_FOCUS"><name>Death Servant Focus</name>
@@ -378,9 +399,11 @@
 <gem id="ETHEREAL_FOCUS_STONE"><name>Ethereal Focus Stone</name></gem>
 </bonus>
 <bonus id="LIGHT_FOCUS"><name>Light Focus</name>
+<name>Light Magic Focus</name>
 <gem id="FIERY_FOCUS_STONE"><name>Fiery Focus Stone</name></gem>
 </bonus>
 <bonus id="MANA_FOCUS"><name>Mana Focus</name>
+<name>Mana Magic Focus</name>
 <gem id="WATER_FOCUS_STONE"><name>Water Focus Stone</name></gem>
 </bonus>
 <bonus id="MENTALISM_FOCUS"><name>Mentalism Focus</name>
@@ -396,6 +419,7 @@
 <gem id="MINERAL_ENCRUSTED_FOCUS_STONE"><name>Mineral Encrusted Focus Stone</name></gem>
 </bonus>
 <bonus id="VOID_FOCUS"><name>Void Focus</name>
+<name>Void Magic Focus</name>
 <gem id="ICY_FOCUS_STONE"><name>Icy Focus Stone</name></gem>
 </bonus>
 <bonus id="BONE_ARMY_FOCUS"><name>Bone Army Focus</name>
@@ -410,6 +434,9 @@
 <bonus id="RUNECARVING_FOCUS"><name>Runecarving Focus</name>
 <gem id="HEAT_RUNE"><name>Heat Rune</name></gem>
 </bonus>
+<bonus id="SUBTERRANEAN_FOCUS"><name>Cave Magic Focus</name>
+<gem id="FIERY_RUNE"><name>Fiery Rune</name></gem>
+</bonus>
 <bonus id="SUMMONING_FOCUS"><name>Summoning Focus</name>
 <gem id="VAPOR_RUNE"><name>Vapor Rune</name></gem>
 </bonus>
@@ -422,7 +449,9 @@
 <bonus id="HEXING_FOCUS"><name>Hexing Focus</name>
 <gem id="DUST_RUNE3"><name>Dust Rune</name></gem>
 </bonus>
-<bonus id="ALL_MAGIC_FOCUS"><name>All Focus Bonus</name></bonus>
+<bonus id="ALL_MAGIC_FOCUS"><name>All Focus Bonus</name>
+<name>All Casting Focus</name>
+</bonus>
 <bonus id="ALB_MAGIC_FOCUS"><name>All Focus Bonus (Alb)</name>
 <gem id="BRILLIANT_SIGIL"><name>Brilliant Sigil</name></gem>
 </bonus>
@@ -466,6 +495,7 @@
 <gem id="WATERY_FERVOR_SIGIL"><name>Watery Fervor Sigil</name></gem>
 </bonus>
 <bonus id="SMITE"><name>Smite</name>
+<name>Smiting</name>
 <gem id="FIERY_FERVOR_SIGIL"><name>Fiery Fervor Sigil</name></gem>
 </bonus>
 <bonus id="EARTH_MAGIC"><name>Earth Magic</name>
@@ -652,7 +682,7 @@
 <bonus id="RUNECARVING"><name>Runecarving</name>
 <gem id="HEATED_CHAOS_RUNE"><name>Heated Chaos Rune</name></gem>
 </bonus>
-<bonus id="SUBTERRANEAN"><name>Subterranean</name>
+<bonus id="SUBTERRANEAN"><name>Cave Magic</name>
 <gem id="FIERY_CHAOS_RUNE"><name>Fiery Chaos Rune</name></gem>
 </bonus>
 <bonus id="SUMMONING"><name>Summoning</name>
@@ -690,7 +720,9 @@
 <bonus id="MID_MELEE_BONUS"><name>All Melee Skill Bonus (Mid)</name>
 <gem id="FINESSE_WAR_RUNE"><name>Finesse War Rune</name></gem>
 </bonus>
-<bonus id="ALL_MAGIC_BONUS"><name>All Magic Skill Bonus</name></bonus>
+<bonus id="ALL_MAGIC_BONUS"><name>All Magic Skill Bonus</name>
+<name>All Casting</name>
+</bonus>
 <bonus id="ALB_MAGIC_BONUS"><name>All Magic Skill Bonus (Alb)</name>
 <gem id="FINESSE_FERVOR_SIGIL"><name>Finesse Fervor Sigil</name></gem>
 </bonus>
@@ -700,7 +732,9 @@
 <bonus id="MID_MAGIC_BONUS"><name>All Magic Skill Bonus (Mid)</name>
 <gem id="FINESSE_PRIMAL_RUNE"><name>Finesse Primal Rune</name></gem>
 </bonus>
-<bonus id="ALL_DUAL_WIELD_BONUS"><name>All Dual Wield Skill Bonus</name></bonus>
+<bonus id="ALL_DUAL_WIELD_BONUS"><name>All Dual Wield Skill Bonus</name>
+<name>All Duel</name>
+</bonus>
 <bonus id="ALL_ARCHERY_BONUS"><name>All Archery Skill Bonus</name></bonus>
 <bonus id="CAP_STRENGTH"><name>Strength Cap Increase</name></bonus>
 <bonus id="CAP_CONSTITUTION"><name>Constitution Cap Increase</name></bonus>
@@ -710,45 +744,94 @@
 <bonus id="CAP_PIETY"><name>Piety Cap Increase</name></bonus>
 <bonus id="CAP_CHARISMA"><name>Charisma Cap Increase</name></bonus>
 <bonus id="CAP_EMPATHY"><name>Empathy Cap Increase</name></bonus>
-<bonus id="CAP_HITPOINTS"><name>Hitpoint Cap Increase</name></bonus>
-<bonus id="CAP_POWER"><name>Power Cap Increase</name></bonus>
+<bonus id="CAP_HITPOINTS"><name>Hitpoint Cap Increase</name>
+<name>Toa Hit Points Cap</name>
+</bonus>
+<bonus id="CAP_POWER"><name>Power Cap Increase</name>
+<name>Toa Power Pool Cap</name>
+</bonus>
 <bonus id="CAP_ACUITY"><name>Acuity Cap Increase</name></bonus>
-<bonus id="POWER_PERCENTAGE_BONUS"><name>Power Percentage Bonus</name></bonus>
-<bonus id="DEBUFF_BONUS"><name>Debuff Bonus</name></bonus>
-<bonus id="BUFF_BONUS"><name>Buff Bonus</name></bonus>
-<bonus id="HEALING_BONUS"><name>Healing Bonus</name></bonus>
-<bonus id="SPELL_DURATION_BONUS"><name>Spell Duration Bonus</name></bonus>
+<bonus id="POWER_PERCENTAGE_BONUS"><name>Power Percentage Bonus</name>
+<name>Toa Power Pool</name>
+</bonus>
+<bonus id="DEBUFF_BONUS"><name>Debuff Bonus</name>
+<name>Toa Debuff Bonus</name>
+</bonus>
+<bonus id="BUFF_BONUS"><name>Buff Bonus</name>
+<name>Toa Buff Bonus</name>
+</bonus>
+<bonus id="HEALING_BONUS"><name>Healing Bonus</name>
+<name>Toa Heal Bonus</name>
+</bonus>
+<bonus id="SPELL_DURATION_BONUS"><name>Spell Duration Bonus</name>
+<name>Toa Spell Duration</name>
+</bonus>
 <bonus id="CASTING_SPEED_BONUS"><name>Casting Speed Bonus-Old</name></bonus>
 <bonus id="SPELL_RANGE_BONUS"><name>Spell Range Bonus-Old</name></bonus>
 <bonus id="SPELL_DAMAGE_BONUS"><name>Spell Damage Bonus-Old</name></bonus>
-<bonus id="REDUCE_MAGIC_RESISTS"><name>Magic Resistance Riercing</name></bonus>
-<bonus id="ARCHERY_DAMAGE_BONUS"><name>Archery Damage Bonus-Old</name></bonus>
-<bonus id="ARCHERY_RANGE_BONUS"><name>Archery Range Bonus-Old</name></bonus>
-<bonus id="ARCHERY_SPEED_BONUS"><name>Archery Speed Bonus-Old</name></bonus>
-<bonus id="ARCHERY_CASTING_SPEED_BONUS"><name>Archery/Casting Speed Bonus</name></bonus>
-<bonus id="ARCHERY_SPELL_RANGE_BONUS"><name>Archery/Spell Range Bonus</name></bonus>
-<bonus id="ARCHERY_SPELL_DAMAGE_BONUS"><name>Archery/Spell Damage Bonus</name></bonus>
-<bonus id="STYLE_DAMAGE_BONUS"><name>Style Damage Bonus</name></bonus>
-<bonus id="MELEE_DAMAGE_BONUS"><name>Melee Damage Bonus</name></bonus>
-<bonus id="MELEE_SPEED_BONUS"><name>Melee Speed Bonus</name></bonus>
-<bonus id="AF_BONUS"><name>AF Bonus</name></bonus>
-<bonus id="FATIGUE"><name>Fatigue</name></bonus>
-<bonus id="PARRY_BONUS"><name>Parry bonus</name></bonus>
-<bonus id="BLOCK_BONUS"><name>Block Bonus</name></bonus>
+<bonus id="REDUCE_MAGIC_RESISTS"><name>Magic Resistance Piercing</name>
+<name>Toa Resistance Piece</name>
+</bonus>
+<bonus id="ARCHERY_DAMAGE_BONUS"><name>Archery Damage Bonus-Old</name>
+<name>Toa Archery Damage</name>
+</bonus>
+<bonus id="ARCHERY_RANGE_BONUS"><name>Archery Range Bonus-Old</name>
+<name>Toa Archery Range</name>
+</bonus>
+<bonus id="ARCHERY_SPEED_BONUS"><name>Archery Speed Bonus-Old</name>
+<name>Toa Archery Speed</name>
+</bonus>
+<bonus id="ARCHERY_CASTING_SPEED_BONUS"><name>Archery/Casting Speed Bonus</name>
+<name>Toa Cast Speed</name>
+</bonus>
+<bonus id="ARCHERY_SPELL_RANGE_BONUS"><name>Archery/Spell Range Bonus</name>
+<name>Toa Spell Range</name>
+</bonus>
+<bonus id="ARCHERY_SPELL_DAMAGE_BONUS"><name>Archery/Spell Damage Bonus</name>
+<name>Toa Magic Damage</name>
+</bonus>
+<bonus id="STYLE_DAMAGE_BONUS"><name>Style Damage Bonus</name>
+<name>Toa Style Damage</name>
+</bonus>
+<bonus id="MELEE_DAMAGE_BONUS"><name>Melee Damage Bonus</name>
+<name>Toa Melee Damage</name>
+</bonus>
+<bonus id="MELEE_SPEED_BONUS"><name>Melee Speed Bonus</name>
+<name>Toa Melee Speed</name>
+</bonus>
+<bonus id="AF_BONUS"><name>AF Bonus</name>
+<name>Armor Factor (AF)</name>
+</bonus>
+<bonus id="FATIGUE"><name>Fatigue</name>
+<name>Toa Fatigue</name>
+</bonus>
+<bonus id="CAP_FATIGUE"><name>Fatigue Cap</name>
+<name>Toa Fatigue Cap</name>
+</bonus>
+<bonus id="PARRY_BONUS"><name>Parry bonus</name><name>Parry (PvE)</name></bonus>
+<bonus id="BLOCK_BONUS"><name>Block Bonus</name><name>Block (PvE)</name></bonus>
 <bonus id="DEFENSIVE_BONUS"><name>Defensive Bonus</name></bonus>
-<bonus id="EVADE_BONUS"><name>Evade Bonus</name></bonus>
+<bonus id="EVADE_BONUS"><name>Evade Bonus</name><name>Evade (PvE)</name></bonus>
 <bonus id="REACTIONARY_STYLE_DAMAGE_BONUS"><name>Reactionary Style Damage Bonus</name></bonus>
 <bonus id="STYLE_COST_REDUCTION"><name>Style cost reduction</name></bonus>
-<bonus id="NEGATIVE_EFFECT_DURATION_REDUCTION"><name>Reduce Negative Effect Duration</name></bonus>
-<bonus id="PIERCE_ABLATIVE"><name>Pierce Ablative</name></bonus>
+<bonus id="NEGATIVE_EFFECT_DURATION_REDUCTION"><name>Reduce Negative Effect Duration</name>
+<name>Negative Effect Duration Reduction (PvE)</name>
+</bonus>
+<bonus id="PIERCE_ABLATIVE"><name>Pierce Ablative</name>
+<name>Piece Ablative (PvE)</name>
+</bonus>
 <bonus id="BLADETURN_REINFORCEMENT"><name>Bladeturn Reinforcement</name></bonus>
 <bonus id="CONCENTRATION"><name>Concentration</name></bonus>
-<bonus id="DEATH_EXPIERIENCE_LOSS_REDUCTION"><name>Death Expierience Loss Reduction</name></bonus>
+<bonus id="DEATH_EXPIERIENCE_LOSS_REDUCTION"><name>Death Experience Loss Reduction</name></bonus>
 <bonus id="SPELL_POWER_COST_REDUCTION"><name>Spell power cost reduction</name></bonus>
 <bonus id="TO_HIT_BONUS"><name>To hit Bonus</name></bonus>
 <bonus id="ARROW_RECOVERY"><name>Arrow Recovery-Old</name></bonus>
 <bonus id="ARCANE_SIPHON"><name>Arcane Siphon</name></bonus>
-<bonus id="EXTRA_COINS"><name>Extra Coins(%)</name></bonus>
+<bonus id="EXTRA_COINS"><name>Extra Coins(%)</name>
+<name>Gold Bonus</name>
+</bonus>
+<bonus id="FIST_WRAPS"><name>Fist Wraps</name></bonus>
+<bonus id="MAULER_STAFF"><name>Mauler Staff</name></bonus>
 
 <bonus id="FIST_WRAPS_ALB"><name>Fist Wraps</name>
 	<gem id="GLACIER_WAR_SIGIL"><name>Glacier War Sigil</name></gem>
@@ -798,11 +881,15 @@
 	<gem id="RADIANT_PRIMAL_RUNE"><name>Radiant Primal Rune</name></gem>
 </bonus>
 
-<bonus id="OVERCAP_STRENGTH"><name>Over-CAP Strength</name></bonus>
-<bonus id="OVERCAP_CONSTITUTION"><name>Over-CAP Constitution</name></bonus>
-<bonus id="OVERCAP_DEXTERITY"><name>Over-CAP Dexterity</name></bonus>
-<bonus id="OVERCAP_QUICKNESS"><name>Over-CAP Quickness</name></bonus>
-<bonus id="OVERCAP_ACUITY"><name>Over-CAP Acuity</name></bonus>
+<bonus id="OVERCAP_STRENGTH"><name>Over-CAP Strength</name><name>Strength</name></bonus>
+<bonus id="OVERCAP_CONSTITUTION"><name>Over-CAP Constitution</name><name>Constitution</name></bonus>
+<bonus id="OVERCAP_DEXTERITY"><name>Over-CAP Dexterity</name><name>Dexterity</name></bonus>
+<bonus id="OVERCAP_QUICKNESS"><name>Over-CAP Quickness</name><name>Quickness</name></bonus>
+<bonus id="OVERCAP_INTELLIGENCE"><name>Over-CAP Intelligence</name><name>Intelligence</name></bonus>
+<bonus id="OVERCAP_PIETY"><name>Over-CAP Piety</name><name>Piety</name></bonus>
+<bonus id="OVERCAP_CHARISMA"><name>Over-CAP Charisma</name><name>Charisma</name></bonus>
+<bonus id="OVERCAP_EMPATHY"><name>Over-CAP Empathy</name><name>Empathy</name></bonus>
+<bonus id="OVERCAP_ACUITY"><name>Over-CAP Acuity</name><name>Acuity</name></bonus>
 <bonus id="OVERCAP_RES_CRUSH"><name>Over-CAP Crush Resist</name></bonus>
 <bonus id="OVERCAP_RES_SLASH"><name>Over-CAP Slash Resist</name></bonus>
 <bonus id="OVERCAP_RES_THRUST"><name>Over-CAP Thrust Resist</name></bonus>
@@ -816,6 +903,10 @@
 <bonus id="STAT_OVERCAP_CONSTITUTION"><name>Constitution + Over-CAP Constitution</name></bonus>
 <bonus id="STAT_OVERCAP_DEXTERITY"><name>Dexterity + Over-CAP Dexterity</name></bonus>
 <bonus id="STAT_OVERCAP_QUICKNESS"><name>Quickness + Over-CAP Quickness</name></bonus>
+<bonus id="STAT_OVERCAP_INTELLIGENCE"><name>Intelligence + Over-CAP Intelligence</name></bonus>
+<bonus id="STAT_OVERCAP_PIETY"><name>Piety + Over-CAP Piety</name></bonus>
+<bonus id="STAT_OVERCAP_CHARISMA"><name>Empathy + Over-CAP Empathy</name></bonus>
+<bonus id="STAT_OVERCAP_EMPATHY"><name>Charisma + Over-CAP Charisma</name></bonus>
 <bonus id="STAT_OVERCAP_ACUITY"><name>Acuity + Over-CAP Acuity</name></bonus>
 <bonus id="RESIST_OVERCAP_RES_CRUSH"><name>Crush Resist + Over-CAP Crush Resist</name></bonus>
 <bonus id="RESIST_OVERCAP_RES_SLASH"><name>Slash Resist + Over-CAP Slash Resist</name></bonus>
@@ -826,21 +917,56 @@
 <bonus id="RESIST_OVERCAP_RES_BODY"><name>Body Resist + Over-CAP Body Resist</name></bonus>
 <bonus id="RESIST_OVERCAP_RES_SPIRIT"><name>Spirit Resist + Over-CAP Spirit Resist</name></bonus>
 <bonus id="RESIST_OVERCAP_RES_ENERGY"><name>Energy Resist + Over-CAP Energy Resist</name></bonus>
-<bonus id="ENCUMBRANCE_INCREASE"><name>Encumbrance Increase</name></bonus>
-<bonus id="ESSENCE_RESIST"><name>Essence Resist(%)</name></bonus>
+<bonus id="ENCUMBRANCE_INCREASE"><name>Encumbrance Increase</name>
+<name>Mythical Encumbrance</name>
+</bonus>
+<bonus id="ESSENCE_RESIST"><name>Essence Resist(%)</name>
+<name>Mythical Essence Resist</name>
+</bonus>
 <bonus id="SAFE_FALL"><name>Safe Fall(%)</name></bonus>
-<bonus id="SPELL_LEVEL_INCREASE"><name>Spell Level Increase</name></bonus>
-<bonus id="SIEGE_DAMAGE_REDUCTION"><name>Siege Damage Reduction(%)</name></bonus>
+<bonus id="SPELL_LEVEL_INCREASE"><name>Spell Level Increase</name>
+<name>Mythical Spell Focus</name>
+</bonus>
+<bonus id="SIEGE_DAMAGE_REDUCTION"><name>Siege Damage Reduction(%)</name>
+<name>Mythical Siege Damage Ablative</name>
+</bonus>
+<bonus id="EXP_POINT_BONUS"><name>Experience Point Bonus(%)</name><name>XP Bonus</name></bonus>
 <bonus id="REALM_POINT_BONUS"><name>Realm Point Bonus(%)</name></bonus>
-<bonus id="CROWD_CONTROL_REDUCTION"><name>CC-Reduction(%)</name></bonus>
-<bonus id="DAMAGE_INCREASE"><name>Damage Increase(%)</name></bonus>
-<bonus id="HEALTH_REGEN"><name>Health Regen</name></bonus>
-<bonus id="POWER_REGEN"><name>Mana Regen</name></bonus>
-<bonus id="SIEGE_SPEED_BONUS"><name>Siege Speed Bonus(%)</name></bonus>
+<bonus id="BOUNTY_POINT_BONUS"><name>Bounty Point Bonus(%)</name></bonus>
+<bonus id="CROWD_CONTROL_REDUCTION"><name>CC-Reduction(%)</name>
+<name>Mythical Crowd Control Duration Decrease</name>
+</bonus>
+<bonus id="DAMAGE_INCREASE"><name>Damage Increase(%)</name>
+<name>Mythical DPS</name>
+</bonus>
+<bonus id="HEALTH_REGEN"><name>Health Regen</name>
+<name>Mythical Health Regen</name>
+</bonus>
+<bonus id="POWER_REGEN"><name>Mana Regen</name>
+<name>Mythical Power Regen</name>
+</bonus>
+<bonus id="SIEGE_SPEED_BONUS"><name>Siege Speed Bonus(%)</name>
+<name>Mythical Siege Speed</name>
+</bonus>
+<bonus id="MYTH_PARRY_BONUS"><name>Mythical Parry(%)</name></bonus>
+<bonus id="MYTH_BLOCK_BONUS"><name>Mythical Block(%)</name></bonus>
+<bonus id="MYTH_EVADE_BONUS"><name>Mythical Evade(%)</name></bonus>
+<bonus id="MYTH_COIN_BONUS"><name>Mythical Coin(%)</name></bonus>
+<bonus id="MYTH_RP_BONUS"><name>Mythical Realm Point Bonus(%)</name>
+<name>Mythical Realm Points</name>
+</bonus>
+<bonus id="RESURRECTION_SICKNESS_REDUCTION"><name>Mythical Resurrection Sickness Reduction(%)</name></bonus>
 <bonus id="WATER_BREATHING"><name>Water Breathing</name></bonus>
-<bonus id="ENDURANCE_REGEN"><name>Endurance Regen</name></bonus>
-<bonus id="PHYSICAL_DAMAGE_DECREASE"><name>Physical Damage Decrease(%)</name></bonus>
-<bonus id="DAMAGE_CONVERSION"><name>Damage Conversion(%)</name></bonus>
+<bonus id="ENDURANCE_REGEN"><name>Endurance Regen</name>
+<name>Mythical Endurance Regen</name>
+</bonus>
+<bonus id="PHYSICAL_DAMAGE_DECREASE"><name>Physical Damage Decrease(%)</name>
+<name>Mythical Physical Defense</name>
+</bonus>
+<bonus id="DAMAGE_CONVERSION"><name>Damage Conversion(%)</name>
+<name>Conversion</name>
+</bonus>
+<bonus id="RADIANT_AURA"><name>Radiant Aura</name></bonus>
 <bonus id="DRAGON_STRENGTH"><name>Strength</name></bonus>
 <bonus id="DRAGON_CONSTITUTION"><name>Constitution</name></bonus>
 <bonus id="DRAGON_DEXTERITY"><name>Dexterity</name></bonus>
@@ -905,9 +1031,9 @@
 <class id="WARLOCK"><name>Warlock</name></class>
 <class id="WARRIOR"><name>Warrior</name></class>
 
-<class id="MAULER_ALB"><name>Mauler</name></class>
-<class id="MAULER_HIB"><name>Mauler</name></class>
-<class id="MAULER_MID"><name>Mauler</name></class>
+<class id="MAULER_ALB"><name>Mauler (Alb)</name></class>
+<class id="MAULER_HIB"><name>Mauler (Hib)</name></class>
+<class id="MAULER_MID"><name>Mauler (Mid)</name></class>
 </classes>
 <itemslots>
 <slot id="1">
@@ -1264,6 +1390,8 @@
 	<subclass id="WAR_PICK"><name>Warpick</name></subclass>
 	<subclass id="EXCEPTIONAL_WAR_PICK"><name>exceptional Warpick</name></subclass>
 </itemclass>
+<itemclass id="PAINWORKING_TWO_HAND"><name>Painworking two handed weapons</name>
+</itemclass>
 <itemclass id="SWORD"><name>Swords</name>
 	<subclass id="DAGGER"><name>Dagger</name></subclass>
 	<subclass id="SHORT_SWORD"><name>Shortsword</name></subclass>
@@ -1349,6 +1477,8 @@
 	<subclass id="HEAVE_BLADED_CLAW_GREAVE"><name>heavy bladed Clawgreave</name></subclass>
 	<subclass id="EXCEPTIONAL_MOON_CLAW"><name>exceptional Moonclaw</name></subclass>
 	<subclass id="EXCEPTIONAL_FANG_GREAVE"><name>exceptional Fanggreave</name></subclass>
+</itemclass>
+<itemclass id="CLAWS_RIGHT"><name>Claws (right)</name>
 </itemclass>
 <itemclass id="LARGE_WEAPON"><name>Large weapons</name>
 	<subclass id="TWO_HANDED_SWORD"><name>two handed Sword</name></subclass>
@@ -1479,6 +1609,8 @@
 	<subclass id="SHOD_STAFF"><name>fortified Staff</name></subclass>
 	<subclass id="EXCEPTIONAL_MAGUS_STAFF"><name>exceptional Magusstaff</name></subclass>
 	<subclass id="HEAVY_SHOD_STAFF"><name>heavy shod Staff</name></subclass>
+</itemclass>
+<itemclass id="STAFF_1H"><name>Staffs (1H)</name>
 </itemclass>
 <itemclass id="QUARTERSTAFF"><name>Quarterstaffs</name>
 	<subclass id="QUARTERSTAFF"><name>Quarterstaff</name></subclass>

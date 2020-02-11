@@ -180,6 +180,7 @@
 			<effect type="VALUE">HEXING_FOCUS</effect>
 			<effect type="VALUE">DARKNESS_FOCUS</effect>
 			<effect type="VALUE">RUNECARVING_FOCUS</effect>
+			<effect type="VALUE">SUBTERRANEAN_FOCUS</effect>
 			<effect type="VALUE">SUMMONING_FOCUS</effect>
 			<effect type="VALUE">SUPPRESSION_FOCUS</effect>
 		</bonus>
@@ -238,7 +239,9 @@
 			<effect type="VALUE">SWORD</effect>
 			<effect type="VALUE">HAND2HAND</effect>
 			<effect type="VALUE">SPEAR</effect>
-			<effect type="VALUE">FIST_WRAPS_ALB</effect>
+      <effect type="VALUE">FIST_WRAPS</effect>
+      <effect type="VALUE">MAULER_STAFF</effect>
+      <effect type="VALUE">FIST_WRAPS_ALB</effect>
 			<effect type="VALUE">FIST_WRAPS_HIB</effect>
 			<effect type="VALUE">FIST_WRAPS_MID</effect>
 			<effect type="VALUE">MAULER_STAFF_ALB</effect>
@@ -320,5 +323,13 @@
 			<effect type="VALUE">RECURVE_BOW</effect>
 			<effect type="VALUE">COMPOSITE_BOW</effect>
 		</bonus>
-	</bonuses>
+    <bonus id="FIST_WRAPS">
+      <group>SKILL</group>
+      <effect type="VALUE">FIST_WRAPS</effect>
+    </bonus>
+    <bonus id="MAULER_STAFF">
+      <group>SKILL</group>
+      <effect type="VALUE">MAULER_STAFF</effect>
+    </bonus>
+  </bonuses>
 </moras>

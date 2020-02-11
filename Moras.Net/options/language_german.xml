@@ -101,6 +101,8 @@
 <attribute id="WITCHCRAFT"><name>Hexerei</name></attribute>
 <attribute id="CURSING"><name>Verfluchen</name></attribute>
 <attribute id="HEXING"><name>Hexenkunst</name></attribute>
+<attribute id="FIST_WRAPS"><name>Faustbandagen</name></attribute>
+<attribute id="MAULER_STAFF"><name>Malmerstäbe</name></attribute>
 
 <attribute id="FIST_WRAPS_ALB"><name>Faustbandagen</name></attribute>
 <attribute id="MAULER_STAFF_ALB"><name>Malmerstäbe</name></attribute>
@@ -146,6 +148,7 @@
 <attribute id="CURSING_FOCUS"><name>Verfluchen-Fokus</name></attribute>
 <attribute id="DARKNESS_FOCUS"><name>Dunkelheit-Fokus</name></attribute>
 <attribute id="RUNECARVING_FOCUS"><name>Runenschnitzen-Fokus</name></attribute>
+<attribute id="SUBTERRANEAN_FOCUS"><name>Höhlenmagie-Fokus</name></attribute>
 <attribute id="SUMMONING_FOCUS"><name>Beschwören-Fokus</name></attribute>
 <attribute id="SUPPRESSION_FOCUS"><name>Unterdrückung-Fokus</name></attribute>
 <attribute id="CAP_STRENGTH"><name>Stärke-Cap</name></attribute>
@@ -172,6 +175,7 @@
 <attribute id="ARCHERY_SPELL_RANGE_BONUS"><name>Bogen-/Zauberreichweite Bonus(%)</name></attribute>
 <attribute id="ARCHERY_SPELL_DAMAGE_BONUS"><name>Bogen-/Magieschaden Bonus(%)</name></attribute>
 <attribute id="FATIGUE"><name>Ausdauer Bonus</name></attribute>
+<attribute id="CAP_FATIGUE"><name>Ausdauer Bonus-Cap</name></attribute>
 <attribute id="AF_BONUS"><name>AF Bonus</name></attribute>
 <attribute id="PARRY_BONUS"><name>Parieren Bonus(%)</name></attribute>
 <attribute id="BLOCK_BONUS"><name>Blocken Bonus(%)</name></attribute>
@@ -218,16 +222,25 @@
 <attribute id="SAFE_FALL"><name>Fallschaden senken(%)</name></attribute>
 <attribute id="SPELL_LEVEL_INCREASE"><name>Zauberlevel erhöhen</name></attribute>
 <attribute id="SIEGE_DAMAGE_REDUCTION"><name>Belagerungsschaden reduzieren(%)</name></attribute>
+<attribute id="EXP_POINT_BONUS"><name>Erfahrungspunktebonus(%)</name></attribute>
 <attribute id="REALM_POINT_BONUS"><name>Reichspunktebonus(%)</name></attribute>
+<attribute id="BOUNTY_POINT_BONUS"><name>Kopfgeldpunktebonus(%)</name></attribute>
 <attribute id="CROWD_CONTROL_REDUCTION"><name>CC-Dauer senken(%)</name></attribute>
 <attribute id="DAMAGE_INCREASE"><name>Schadenserhöhung(%)</name></attribute>
 <attribute id="HEALTH_REGEN"><name>Heilung-über-Zeit(%)</name></attribute>
 <attribute id="POWER_REGEN"><name>Mana-über-Zeit(%)</name></attribute>
 <attribute id="SIEGE_SPEED_BONUS"><name>Belagerungsgeschw.(%)</name></attribute>
+<attribute id="MYTH_PARRY_BONUS"><name>mythisches Parrieren(%)</name></attribute>
+<attribute id="MYTH_BLOCK_BONUS"><name>mythisches Blocken(%)</name></attribute>
+<attribute id="MYTH_EVADE_BONUS"><name>mythisches Ausweichen(%)</name></attribute>
+<attribute id="MYTH_COIN_BONUS"><name>mythisches Geld(%)</name></attribute>
+<attribute id="MYTH_RP_BONUS"><name>mythischer Reichspunktebonus(%)</name></attribute>
+<attribute id="RESURRECTION_SICKNESS_REDUCTION"><name>Wiederbelebungskrankheit reduzieren(%)</name></attribute>
 <attribute id="WATER_BREATHING"><name>Wasseratmung</name></attribute>
 <attribute id="ENDURANCE_REGEN"><name>Ausdauer-über-Zeit</name></attribute>
 <attribute id="PHYSICAL_DAMAGE_DECREASE"><name>physische Schadensverringerung(%)</name></attribute>
 <attribute id="DAMAGE_CONVERSION"><name>Schadensumwandlung(%)</name></attribute>
+<attribute id="RADIANT_AURA"><name>strahlende Aura</name></attribute>
 </attributes>
 <groups>
 <group id="UNUSED"><name>Unbenutzt</name></group>
@@ -409,6 +422,9 @@
 </bonus>
 <bonus id="RUNECARVING_FOCUS"><name>Runenschnitzen-Fokus</name>
 <gem id="HEAT_RUNE"><name>Rune der Hitze</name></gem>
+</bonus>
+<bonus id="SUBTERRANEAN_FOCUS"><name>Höhlenmagie-Fokus</name>
+<gem id="FIERY_RUNE"><name>Rune des Feuers</name></gem>
 </bonus>
 <bonus id="SUMMONING_FOCUS"><name>Beschwören-Fokus</name>
 <gem id="VAPOR_RUNE"><name>Rune des Nebels</name></gem>
@@ -733,6 +749,7 @@
 <bonus id="MELEE_SPEED_BONUS"><name>Nahkampfgeschw.-Bonus</name><name>Nahkampfwaffengeschwindigkeit</name></bonus>
 <bonus id="AF_BONUS"><name>AF-Bonus</name><name>Rüstungsfaktor</name></bonus>
 <bonus id="FATIGUE"><name>Ausdauer</name><name>Erschöpfung</name></bonus>
+<bonus id="CAP_FATIGUE"><name>Ausdauerlimit</name><name>Erschöpfungslimit</name></bonus>
 <bonus id="PARRY_BONUS"><name>Parieren Bonus</name><name>Parieren</name></bonus>
 <bonus id="BLOCK_BONUS"><name>Blocken Bonus</name><name>Blocken</name></bonus>
 <bonus id="DEFENSIVE_BONUS"><name>Verteidigungsbonus</name></bonus>
@@ -749,6 +766,8 @@
 <bonus id="ARROW_RECOVERY"><name>Pfeilwiederherstellung-Alt</name></bonus>
 <bonus id="ARCANE_SIPHON"><name>Arkaner Siphon</name></bonus>
 <bonus id="EXTRA_COINS"><name>Extra Geld(%)</name></bonus>
+<bonus id="FIST_WRAPS"><name>Faustbandagen</name></bonus>
+<bonus id="MAULER_STAFF"><name>Malmerstäbe</name></bonus>
 
 <bonus id="FIST_WRAPS_ALB"><name>Faustbandagen</name>
 	<gem id="GLACIER_WAR_SIGIL"><name>Kriegssiegel des Gletschers</name></gem>
@@ -802,6 +821,10 @@
 <bonus id="OVERCAP_CONSTITUTION"><name>Über-CAP Konstitution</name></bonus>
 <bonus id="OVERCAP_DEXTERITY"><name>Über-CAP Geschick</name></bonus>
 <bonus id="OVERCAP_QUICKNESS"><name>Über-CAP Schnelligkeit</name></bonus>
+<bonus id="OVERCAP_INTELLIGENCE"><name>Über-CAP Intelligenz</name></bonus>
+<bonus id="OVERCAP_PIETY"><name>Über-CAP Frömmigkeit</name></bonus>
+<bonus id="OVERCAP_CHARISMA"><name>Über-CAP Charisma</name></bonus>
+<bonus id="OVERCAP_EMPATHY"><name>Über-CAP Empathie</name></bonus>
 <bonus id="OVERCAP_ACUITY"><name>Über-CAP Sinnesschärfe</name></bonus>
 <bonus id="OVERCAP_RES_CRUSH"><name>Über-CAP Schlag-Resistenz</name></bonus>
 <bonus id="OVERCAP_RES_SLASH"><name>Über-CAP Schnitt-Resistenz</name></bonus>
@@ -816,6 +839,10 @@
 <bonus id="STAT_OVERCAP_CONSTITUTION"><name>Konstitution + Über-CAP Konstitution</name></bonus>
 <bonus id="STAT_OVERCAP_DEXTERITY"><name>Geschick + Über-CAP Geschick</name></bonus>
 <bonus id="STAT_OVERCAP_QUICKNESS"><name>Schnelligkeit + Über-CAP Schnelligkeit</name></bonus>
+<bonus id="STAT_OVERCAP_INTELLIGENCE"><name>Intelligenz + Über-CAP Intelligenz</name></bonus>
+<bonus id="STAT_OVERCAP_PIETY"><name>Frömmigkeit + Über-CAP Frömmigkeit</name></bonus>
+<bonus id="STAT_OVERCAP_CHARISMA"><name>Empathie + Über-CAP Empathie</name></bonus>
+<bonus id="STAT_OVERCAP_EMPATHY"><name>Charisma + Über-CAP Charisma</name></bonus>
 <bonus id="STAT_OVERCAP_ACUITY"><name>Sinnesschärfe + Über-CAP Sinnesschärfe</name></bonus>
 <bonus id="RESIST_OVERCAP_RES_CRUSH"><name>Schlag-Resistenz + Über-CAP Schlag-Resistenz</name></bonus>
 <bonus id="RESIST_OVERCAP_RES_SLASH"><name>Schnitt-Resistenz + Über-CAP Schnitt-Resistenz</name></bonus>
@@ -831,16 +858,25 @@
 <bonus id="SAFE_FALL"><name>Fallschaden senken(%)</name></bonus>
 <bonus id="SPELL_LEVEL_INCREASE"><name>Zauberlevel erhöhen</name></bonus>
 <bonus id="SIEGE_DAMAGE_REDUCTION"><name>Belagerungsschaden reduzieren(%)</name></bonus>
+<bonus id="EXP_POINT_BONUS"><name>Erfahrungspunktebonus(%)</name></bonus>
 <bonus id="REALM_POINT_BONUS"><name>Reichspunktebonus(%)</name></bonus>
+<bonus id="BOUNTY_POINT_BONUS"><name>Kopfgeldpunktebonus(%)</name></bonus>
 <bonus id="CROWD_CONTROL_REDUCTION"><name>CC-Dauer senken(%)</name></bonus>
 <bonus id="DAMAGE_INCREASE"><name>Schadenserhöhung(%)</name></bonus>
 <bonus id="HEALTH_REGEN"><name>Heilung-über-Zeit</name></bonus>
 <bonus id="POWER_REGEN"><name>Mana-über-Zeit</name></bonus>
 <bonus id="SIEGE_SPEED_BONUS"><name>Belagerungsgeschw.(%)</name></bonus>
+<bonus id="MYTH_PARRY_BONUS"><name>mythisches Parrieren(%)</name></bonus>
+<bonus id="MYTH_BLOCK_BONUS"><name>mythisches Blocken(%)</name></bonus>
+<bonus id="MYTH_EVADE_BONUS"><name>mythisches Ausweichen(%)</name></bonus>
+<bonus id="MYTH_COIN_BONUS"><name>mythisches Geld(%)</name></bonus>
+<bonus id="MYTH_RP_BONUS"><name>mythischer Reichspunktebonus(%)</name></bonus>
+<bonus id="RESURRECTION_SICKNESS_REDUCTION"><name>Wiederbelebungskrankheit reduzieren(%)</name></bonus>
 <bonus id="WATER_BREATHING"><name>Wasseratmung</name></bonus>
 <bonus id="ENDURANCE_REGEN"><name>Ausdauer-über-Zeit</name></bonus>
 <bonus id="PHYSICAL_DAMAGE_DECREASE"><name>physische Schadensverringerung(%)</name></bonus>
 <bonus id="DAMAGE_CONVERSION"><name>Schadensumwandlung(%)</name></bonus>
+<bonus id="RADIANT_AURA"><name>strahlende Aura</name></bonus>
 <bonus id="DRAGON_STRENGTH"><name>Stärke</name></bonus>
 <bonus id="DRAGON_CONSTITUTION"><name>Konstitution</name></bonus>
 <bonus id="DRAGON_DEXTERITY"><name>Geschick</name></bonus>
@@ -905,9 +941,9 @@
 <class id="WARLOCK"><name>Hexenmeister</name></class>
 <class id="WARRIOR"><name>Krieger</name></class>
 
-<class id="MAULER_ALB"><name>Malmer</name></class>
-<class id="MAULER_HIB"><name>Malmer</name></class>
-<class id="MAULER_MID"><name>Malmer</name></class>
+<class id="MAULER_ALB"><name>Malmer (Alb)</name></class>
+<class id="MAULER_HIB"><name>Malmer (Hib)</name></class>
+<class id="MAULER_MID"><name>Malmer (Mid)</name></class>
 </classes>
 <itemslots>
 <slot id="1">
@@ -1264,6 +1300,8 @@
 	<subclass id="WAR_PICK"><name>Kriegshacke</name></subclass>
 	<subclass id="EXCEPTIONAL_WAR_PICK"><name>besondere Kriegshacke</name></subclass>
 </itemclass>
+<itemclass id="PAINWORKING_TWO_HAND"><name>Schmerzkunst-2-Handwaffen</name>
+</itemclass>
 <itemclass id="SWORD"><name>Schwert</name>
 	<subclass id="DAGGER"><name>Dolch</name></subclass>
 	<subclass id="SHORT_SWORD"><name>Kurzschwert</name></subclass>
@@ -1349,6 +1387,8 @@
 	<subclass id="HEAVE_BLADED_CLAW_GREAVE"><name>schwerer Stachelschiene</name></subclass>
 	<subclass id="EXCEPTIONAL_MOON_CLAW"><name>besondere Mondkralle</name></subclass>
 	<subclass id="EXCEPTIONAL_FANG_GREAVE"><name>besondere Reißzahnschiene</name></subclass>
+</itemclass>
+<itemclass id="CLAWS_RIGHT"><name>Faustwaffen (rechts)</name>
 </itemclass>
 <itemclass id="LARGE_WEAPON"><name>Zweihandwaffen</name>
 	<subclass id="TWO_HANDED_SWORD"><name>Zweihänderschwert</name></subclass>
@@ -1479,6 +1519,8 @@
 	<subclass id="SHOD_STAFF"><name>verstärkter Stab</name></subclass>
 	<subclass id="EXCEPTIONAL_MAGUS_STAFF"><name>besonderer Magierstab</name></subclass>
 	<subclass id="HEAVY_SHOD_STAFF"><name>schwerer verstärkter Stab</name></subclass>
+</itemclass>
+<itemclass id="STAFF_1H"><name>Stäbe (1H)</name>
 </itemclass>
 <itemclass id="QUARTERSTAFF"><name>Kampfstäbe</name>
 	<subclass id="QUARTERSTAFF"><name>Kampfstab</name></subclass>
