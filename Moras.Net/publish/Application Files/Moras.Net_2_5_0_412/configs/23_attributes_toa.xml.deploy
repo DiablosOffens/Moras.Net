@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<moras>
+	<attributes>
+		<attribute id="CAP_STRENGTH">
+			<cap>STRENGTH</cap>
+			<capadd>2</capadd>
+			<capmult>0.5</capmult>
+		</attribute>
+		<attribute id="CAP_CONSTITUTION">
+			<cap>CONSTITUTION</cap>
+			<capadd>2</capadd>
+			<capmult>0.5</capmult>
+		</attribute>
+		<attribute id="CAP_DEXTERITY">
+			<cap>DEXTERITY</cap>
+			<capadd>2</capadd>
+			<capmult>0.5</capmult>
+		</attribute>
+		<attribute id="CAP_QUICKNESS">
+			<cap>QUICKNESS</cap>
+			<capadd>2</capadd>
+			<capmult>0.5</capmult>
+		</attribute>
+		<attribute id="CAP_INTELLIGENCE">
+			<cap>INTELLIGENCE</cap>
+			<capadd>2</capadd>
+			<capmult>0.5</capmult>
+		</attribute>
+		<attribute id="CAP_PIETY">
+			<cap>PIETY</cap>
+			<capadd>2</capadd>
+			<capmult>0.5</capmult>
+		</attribute>
+		<attribute id="CAP_CHARISMA">
+			<cap>CHARISMA</cap>
+			<capadd>2</capadd>
+			<capmult>0.5</capmult>
+		</attribute>
+		<attribute id="CAP_EMPATHY">
+			<cap>EMPATHY</cap>
+			<capadd>2</capadd>
+			<capmult>0.5</capmult>
+		</attribute>
+		<attribute id="CAP_HITPOINTS">
+			<cap>HITPOINTS</cap>
+			<capadd>0</capadd>
+			<capmult>8</capmult>
+		</attribute>
+		<attribute id="CAP_POWER">
+			<cap>POWER</cap>
+			<capadd>2</capadd>
+			<capmult>0.5</capmult>
+		</attribute>
+		<attribute id="POWER_PERCENTAGE_BONUS"><toa/>
+			<capadd>0</capadd>
+			<capmult>0.5</capmult>
+		</attribute>
+		<attribute id="CAP_POWER_PERCENTAGE_BONUS"><toa/>
+			<cap>POWER_PERCENTAGE_BONUS</cap>
+			<capadd>0</capadd>
+			<capmult>1.0</capmult>
+		</attribute>
+		<attribute id="DEBUFF_BONUS"><toa/>
+			<capadd>0</capadd>
+			<capmult>0.5</capmult>
+		</attribute>
+		<attribute id="BUFF_BONUS"><toa/>
+			<capadd>0</capadd>
+			<capmult>0.5</capmult>
+		</attribute>
+		<attribute id="HEALING_BONUS"><toa/>
+			<capadd>0</capadd>
+			<capmult>0.5</capmult>
+		</attribute>
+		<attribute id="SPELL_DURATION_BONUS"><toa/>
+			<capadd>0</capadd>
+			<capmult>0.5</capmult>
+		</attribute>
+		<attribute id="REDUCE_MAGIC_RESISTS"><toa/>
+			<capadd>0</capadd>
+			<capmult>0.2</capmult>
+		</attribute>
+		<attribute id="STYLE_DAMAGE_BONUS"><toa/>
+			<capadd>0</capadd>
+			<capmult>0.2</capmult>
+		</attribute>
+		<attribute id="MELEE_DAMAGE_BONUS"><toa/>
+			<capadd>0</capadd>
+			<capmult>0.2</capmult>
+		</attribute>
+		<attribute id="MELEE_SPEED_BONUS"><toa/>
+			<capadd>0</capadd>
+			<capmult>0.2</capmult>
+		</attribute>
+		<attribute id="ARCHERY_CASTING_SPEED_BONUS"><toa/>
+			<capadd>0</capadd>
+			<capmult>0.2</capmult>
+		</attribute>
+		<attribute id="ARCHERY_SPELL_RANGE_BONUS"><toa/>
+			<capadd>0</capadd>
+			<capmult>0.2</capmult>
+		</attribute>
+		<attribute id="ARCHERY_SPELL_DAMAGE_BONUS"><toa/>
+			<capadd>0</capadd>
+			<capmult>0.2</capmult>
+		</attribute>
+		<attribute id="FATIGUE"><toa/>
+			<capadd>0</capadd>
+			<capmult>0.5</capmult>
+		</attribute>
+		<attribute id="CAP_FATIGUE"><toa/>
+			<cap>FATIGUE</cap>
+			<capadd>0</capadd>
+			<capmult>1</capmult>
+		</attribute>
+		<attribute id="AF_BONUS"><toa/>
+			<capadd>0</capadd>
+			<capmult>1</capmult>
+			<capcapadd>0</capcapadd>
+			<capcapmult>1</capcapmult>
+		</attribute>
+		<attribute id="PARRY_BONUS"><cata/><lotm/>
+			<capadd>0</capadd>
+			<capmult>0.2</capmult>
+		</attribute>
+		<attribute id="BLOCK_BONUS"><cata/><lotm/>
+			<capadd>0</capadd>
+			<capmult>0.2</capmult>
+		</attribute>
+		<attribute id="DEFENSIVE_BONUS"><cata/>
+			<capadd>0</capadd>
+			<capmult>0.2</capmult>
+		</attribute>
+		<attribute id="EVADE_BONUS"><cata/><lotm/>
+			<capadd>0</capadd>
+			<capmult>0.2</capmult>
+		</attribute>
+		<attribute id="REACTIONARY_STYLE_DAMAGE_BONUS"><cata/>
+			<capadd>0</capadd>
+			<capmult>0.2</capmult>
+		</attribute>
+		<attribute id="STYLE_COST_REDUCTION"><cata/>
+			<capadd>0</capadd>
+			<capmult>0.1</capmult>
+		</attribute>
+		<attribute id="NEGATIVE_EFFECT_DURATION_REDUCTION"><cata/>
+			<capadd>0</capadd>
+			<capmult>0.2</capmult>
+		</attribute>
+		<attribute id="PIERCE_ABLATIVE"><cata/>
+			<capadd>0</capadd>
+			<capmult>0.2</capmult>
+		</attribute>
+		<attribute id="BLADETURN_REINFORCEMENT"><cata/>
+			<capadd>0</capadd>
+			<capmult>0.2</capmult>
+		</attribute>
+		<attribute id="CONCENTRATION"><cata/>
+			<capadd>0</capadd>
+			<capmult>0.2</capmult>
+		</attribute>
+		<attribute id="DEATH_EXPIERIENCE_LOSS_REDUCTION"><cata/>
+			<capadd>0</capadd>
+			<capmult>0.8</capmult>
+		</attribute>
+		<attribute id="SPELL_POWER_COST_REDUCTION"><cata/>
+			<capadd>0</capadd>
+			<capmult>0.1</capmult>
+		</attribute>
+		<attribute id="TO_HIT_BONUS"><cata/>
+			<capadd>0</capadd>
+			<capmult>0.2</capmult>
+		</attribute>
+		<attribute id="ARROW_RECOVERY"><cata/><lotm/>
+			<capadd>0</capadd>
+			<capmult>1.4</capmult>
+		</attribute>
+		<attribute id="ARCANE_SIPHON"><toa/>
+			<capadd>0</capadd>
+			<capmult>0.5</capmult>
+		</attribute>
+		<attribute id="EXTRA_COINS"><cata/><lotm/>
+			<capadd>0</capadd>
+			<capmult>0.2</capmult>
+		</attribute>
+	</attributes>
+</moras>
