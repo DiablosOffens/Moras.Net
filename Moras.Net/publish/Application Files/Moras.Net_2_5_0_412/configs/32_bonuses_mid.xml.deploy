@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<moras>
+	<bonuses>
+		<bonus id="BONE_ARMY_FOCUS" oldid="5023" kortid="Bone Army Focus">
+			<group>FOCUS</group>
+			<realm>midgard</realm>
+			<gem id="ASHEN_RUNE">
+				<dust>GROUND_DRACONIC_SCALES</dust>
+				<liquid>UNDEAD_ASH_AND_HOLY_WATER</liquid>
+			</gem>
+		</bonus>
+		<bonus id="CURSING_FOCUS" kortid="Cursing Focus">
+			<group>FOCUS</group>
+			<realm>midgard</realm>
+			<gem id="BLIGHTED_RUNE">
+				<dust>GROUND_DRACONIC_SCALES</dust>
+				<liquid>UNDEAD_ASH_AND_HOLY_WATER</liquid>
+			</gem>
+		</bonus>
+		<bonus id="DARKNESS_FOCUS" oldid="5013" kortid="Darkness Focus">
+			<group>FOCUS</group>
+			<realm>midgard</realm>
+			<gem id="ICE_RUNE">
+				<dust>GROUND_DRACONIC_SCALES</dust>
+				<liquid>FROST_FROM_A_WASTELAND</liquid>
+			</gem>
+		</bonus>
+		<bonus id="RUNECARVING_FOCUS" oldid="5015" kortid="Runecarving Focus">
+			<group>FOCUS</group>
+			<realm>midgard</realm>
+			<gem id="HEAT_RUNE">
+				<dust>GROUND_DRACONIC_SCALES</dust>
+				<liquid>HEAT_FROM_AN_UNEARTHLY_PYRE</liquid>
+			</gem>
+		</bonus>
+		<bonus id="SUBTERRANEAN_FOCUS" kortid="Subterranean Focus">
+			<group>FOCUS</group>
+			<realm>midgard</realm>
+			<gem id="FIERY_RUNE">
+				<dust>GROUND_DRACONIC_SCALES</dust>
+				<liquid>DRACONIC_FIRE</liquid>
+			</gem>
+		</bonus>
+		<bonus id="SUMMONING_FOCUS" oldid="5016" kortid="Summoning Focus">
+			<group>FOCUS</group>
+			<realm>midgard</realm>
+			<gem id="VAPOR_RUNE">
+				<dust>GROUND_DRACONIC_SCALES</dust>
+				<liquid>SWAMP_FOG</liquid>
+			</gem>
+		</bonus>
+		<bonus id="SUPPRESSION_FOCUS" oldid="5014" kortid="Suppression Focus">
+			<group>FOCUS</group>
+			<realm>midgard</realm>
+			<gem id="DUST_RUNE">
+				<dust>GROUND_DRACONIC_SCALES</dust>
+				<liquid>UNDEAD_ASH_AND_HOLY_WATER</liquid>
+			</gem>
+		</bonus>
+		<bonus id="WITCHCRAFT_FOCUS">
+			<group>FOCUS</group>
+			<realm>midgard</realm>
+			<gem id="DUST_RUNE2">
+				<dust>GROUND_VENDO_BONE</dust>
+				<liquid>AIR_ELEMENTAL_ESSENCE</liquid>
+			</gem>
+		</bonus>
+		<bonus id="HEXING_FOCUS">
+			<group>FOCUS</group>
+			<realm>midgard</realm>
+			<gem id="DUST_RUNE3">
+				<dust>GROUND_DRACONIC_SCALES</dust>
+				<liquid>UNDEAD_ASH_AND_HOLY_WATER</liquid>
+			</gem>
+		</bonus>
+		<bonus id="MID_MAGIC_FOCUS">
+			<group>FOCUS</group>
+			<realm>midgard</realm>
+			<craftonly/>
+			<gem id="BRILLIANT_RUNE">
+				<dust>GROUND_DRACONIC_SCALES</dust>
+				<liquid>DRACONIC_FIRE</liquid>
+				<liquid>MYSTIC_ENERGY</liquid>
+				<liquid>TREANT_BLOOD</liquid>
+			</gem>
+			<gemlevel bonus="5" dust="1" liquid="2" gems="3">1</gemlevel>
+			<gemlevel bonus="10" dust="6" liquid="8" gems="3">2</gemlevel>
+			<gemlevel bonus="15" dust="11" liquid="14" gems="3">3</gemlevel>
+			<gemlevel bonus="20" dust="16" liquid="20" gems="3">4</gemlevel>
+			<gemlevel bonus="25" dust="21" liquid="26" gems="3">5</gemlevel>
+			<gemlevel bonus="30" dust="26" liquid="32" gems="3">6</gemlevel>
+			<gemlevel bonus="35" dust="31" liquid="38" gems="3">7</gemlevel>
+			<gemlevel bonus="40" dust="36" liquid="44" gems="3">8</gemlevel>
+			<gemlevel bonus="45" dust="41" liquid="52" gems="3">9</gemlevel>
+			<gemlevel bonus="50" dust="46" liquid="60" gems="3">10</gemlevel>
+			<effect type="VALUE">BONE_ARMY_FOCUS</effect>
+			<effect type="VALUE">CURSING_FOCUS</effect>
+			<effect type="VALUE">WITCHCRAFT_FOCUS</effect>
+			<effect type="VALUE">HEXING_FOCUS</effect>
+			<effect type="VALUE">DARKNESS_FOCUS</effect>
+			<effect type="VALUE">RUNECARVING_FOCUS</effect>
+			<effect type="VALUE">SUBTERRANEAN_FOCUS</effect>
+			<effect type="VALUE">SUMMONING_FOCUS</effect>
+			<effect type="VALUE">SUPPRESSION_FOCUS</effect>
+		</bonus>
+		<bonus id="AXE" oldid="6052" kortid="Axe">
+			<group>SKILL</group>
+			<realm>midgard</realm>
+			<gem id="EARTHEN_WAR_RUNE">
+				<dust>GROUND_GIANT_BONE</dust>
+				<liquid>TREANT_BLOOD</liquid>
+			</gem>
+		</bonus>
+		<bonus id="LEFT_AXE" oldid="6053" kortid="Left Axe">
+			<group>SKILL</group>
+			<realm>midgard</realm>
+			<gem id="ICY_WAR_RUNE">
+				<dust>GROUND_GIANT_BONE</dust>
+				<liquid>FROST_FROM_A_WASTELAND</liquid>
+			</gem>
+		</bonus>
+		<bonus id="HAMMER" oldid="6058" kortid="Hammer">
+			<group>SKILL</group>
+			<realm>midgard</realm>
+			<gem id="FIERY_WAR_RUNE">
+				<dust>GROUND_GIANT_BONE</dust>
+				<liquid>DRACONIC_FIRE</liquid>
+			</gem>
+		</bonus>
+		<bonus id="HAND2HAND" oldid="6073" kortid="Hand To Hand">
+			<group>SKILL</group>
+			<realm>midgard</realm>
+			<gem id="LIGHTNING_CHARGED_WAR_RUNE">
+				<dust>GROUND_GIANT_BONE</dust>
+				<liquid>LEVIATHAN_BLOOD</liquid>
+			</gem>
+		</bonus>
+		<bonus id="SWORD" oldid="6050" kortid="Sword">
+			<group>SKILL</group>
+			<realm>midgard</realm>
+			<gem id="WATERY_WAR_RUNE">
+				<dust>GROUND_GIANT_BONE</dust>
+				<liquid>LEVIATHAN_BLOOD</liquid>
+			</gem>
+		</bonus>
+		<bonus id="SPEAR" oldid="6049" kortid="Spear">
+			<group>SKILL</group>
+			<realm>midgard</realm>
+			<gem id="HEATED_WAR_RUNE">
+				<dust>GROUND_GIANT_BONE</dust>
+				<liquid>HEAT_FROM_AN_UNEARTHLY_PYRE</liquid>
+			</gem>
+		</bonus>
+		<bonus id="COMPOSITE_BOW" oldid="6048" kortid="Composite Bow">
+			<group>SKILL</group>
+			<realm>midgard</realm>
+			<gem id="AIRY_WAR_RUNE">
+				<dust>GROUND_GIANT_BONE</dust>
+				<liquid>AIR_ELEMENTAL_ESSENCE</liquid>
+			</gem>
+		</bonus>
+		<bonus id="THROWN_WEAPONS" oldid="6061" kortid="Thrown Weapons">
+			<group>SKILL</group>
+			<realm>midgard</realm>
+			<gem id="VAPOR_WAR_RUNE">
+				<dust>GROUND_GIANT_BONE</dust>
+				<liquid>SWAMP_FOG</liquid>
+			</gem>
+		</bonus>
+		<bonus id="SAVAGERY" oldid="6074">
+			<group>SKILL</group>
+			<realm>midgard</realm>
+		</bonus>
+		<bonus id="AUGMENTATION" oldid="6054" kortid="Augmentation">
+			<group>SKILL</group>
+			<realm>midgard</realm>
+			<gem id="AIRY_CHAOS_RUNE">
+				<dust>SOOT_FROM_NIFLHEIM</dust>
+				<liquid>AIR_ELEMENTAL_ESSENCE</liquid>
+			</gem>
+		</bonus>
+		<bonus id="BONE_ARMY" oldid="6072" kortid="Bone Army">
+			<group>SKILL</group>
+			<realm>midgard</realm>
+			<gem id="ASHEN_PRIMAL_RUNE">
+				<dust>GROUND_VENDO_BONE</dust>
+				<liquid>UNDEAD_ASH_AND_HOLY_WATER</liquid>
+			</gem>
+		</bonus>
+		<bonus id="DARKNESS" oldid="6044" kortid="Darkness">
+			<group>SKILL</group>
+			<realm>midgard</realm>
+			<gem id="ICY_CHAOS_RUNE">
+				<dust>SOOT_FROM_NIFLHEIM</dust>
+				<liquid>FROST_FROM_A_WASTELAND</liquid>
+			</gem>
+		</bonus>
+		<bonus id="MENDING" oldid="6055" kortid="Mending">
+			<group>SKILL</group>
+			<realm>midgard</realm>
+			<gem id="WATERY_CHAOS_RUNE">
+				<dust>SOOT_FROM_NIFLHEIM</dust>
+				<liquid>LEVIATHAN_BLOOD</liquid>
+			</gem>
+		</bonus>
+		<bonus id="PACIFICATION" oldid="6056" kortid="Pacification">
+			<group>SKILL</group>
+			<realm>midgard</realm>
+			<gem id="EARTHEN_CHAOS_RUNE">
+				<dust>SOOT_FROM_NIFLHEIM</dust>
+				<liquid>TREANT_BLOOD</liquid>
+			</gem>
+		</bonus>
+		<bonus id="RUNECARVING" oldid="6046" kortid="Runecarving">
+			<group>SKILL</group>
+			<realm>midgard</realm>
+			<gem id="HEATED_CHAOS_RUNE">
+				<dust>SOOT_FROM_NIFLHEIM</dust>
+				<liquid>HEAT_FROM_AN_UNEARTHLY_PYRE</liquid>
+			</gem>
+		</bonus>
+		<bonus id="SUBTERRANEAN" oldid="6057" kortid="Subterranean">
+			<group>SKILL</group>
+			<realm>midgard</realm>
+			<gem id="FIERY_CHAOS_RUNE">
+				<dust>SOOT_FROM_NIFLHEIM</dust>
+				<liquid>DRACONIC_FIRE</liquid>
+			</gem>
+		</bonus>
+		<bonus id="SUMMONING" oldid="6047" kortid="Summoning">
+			<group>SKILL</group>
+			<realm>midgard</realm>
+			<gem id="VAPOR_CHAOS_RUNE">
+				<dust>SOOT_FROM_NIFLHEIM</dust>
+				<liquid>SWAMP_FOG</liquid>
+			</gem>
+		</bonus>
+		<bonus id="SUPPRESSION" oldid="6045" kortid="Suppression">
+			<group>SKILL</group>
+			<realm>midgard</realm>
+			<gem id="DUSTY_CHAOS_RUNE">
+				<dust>SOOT_FROM_NIFLHEIM</dust>
+				<liquid>UNDEAD_ASH_AND_HOLY_WATER</liquid>
+			</gem>
+		</bonus>
+		<bonus id="BATTLESONGS" oldid="6059" kortid="Battlesongs">
+			<group>SKILL</group>
+			<realm>midgard</realm>
+			<gem id="AIRY_PRIMAL_RUNE">
+				<dust>GROUND_VENDO_BONE</dust>
+				<liquid>AIR_ELEMENTAL_ESSENCE</liquid>
+			</gem>
+		</bonus>
+		<bonus id="BEASTCRAFT" oldid="6051" kortid="Beastcraft">
+			<group>SKILL</group>
+			<realm>midgard</realm>
+			<gem id="EARTHEN_PRIMAL_RUNE">
+				<dust>GROUND_VENDO_BONE</dust>
+				<liquid>TREANT_BLOOD</liquid>
+			</gem>
+		</bonus>
+		<bonus id="STORMCALLING" oldid="6060" kortid="Stormcalling">
+			<group>SKILL</group>
+			<realm>midgard</realm>
+			<gem id="FIERY_PRIMAL_RUNE">
+				<dust>GROUND_VENDO_BONE</dust>
+				<liquid>DRACONIC_FIRE</liquid>
+			</gem>
+		</bonus>
+		<bonus id="ODINS_WILL">
+			<group>SKILL</group>
+			<realm>midgard</realm>
+			<gem id="VALIANT_PRIMAL_RUNE">
+				<dust>GROUND_VENDO_BONE</dust>
+				<liquid>SWAMP_FOG</liquid>
+			</gem>
+		</bonus>
+		<bonus id="WITCHCRAFT">
+			<group>SKILL</group>
+			<realm>midgard</realm>
+			<gem id="BLIGHTED_PRIMAL_RUNE2">
+				<dust>GROUND_VENDO_BONE</dust>
+				<liquid>AIR_ELEMENTAL_ESSENCE</liquid>
+			</gem>
+		</bonus>
+		<bonus id="CURSING">
+			<group>SKILL</group>
+			<realm>midgard</realm>
+			<gem id="BLIGHTED_PRIMAL_RUNE">
+				<dust>GROUND_VENDO_BONE</dust>
+				<liquid>TREANT_BLOOD</liquid>
+			</gem>
+		</bonus>
+		<bonus id="HEXING">
+			<group>SKILL</group>
+			<realm>midgard</realm>
+			<gem id="UNHOLY_PRIMAL_RUNE">
+				<dust>GROUND_VENDO_BONE</dust>
+				<liquid>AIR_ELEMENTAL_ESSENCE</liquid>
+			</gem>
+		</bonus>
+		<bonus id="FIST_WRAPS_MID">
+			<group>SKILL</group>
+			<realm>Midgard</realm>
+			<gem id="GLACIER_WAR_RUNE">
+				<dust>GROUND_GIANT_BONE</dust>
+				<liquid>FROST_FROM_A_WASTELAND</liquid>
+			</gem>
+      <effect type="VALUE">FIST_WRAPS</effect>
+    </bonus>
+		<bonus id="MAULER_STAFF_MID">
+			<group>SKILL</group>
+			<realm>Midgard</realm>
+			<gem id="CINDER_WAR_RUNE">
+				<dust>GROUND_GIANT_BONE</dust>
+				<liquid>DRACONIC_FIRE</liquid>
+			</gem>
+      <effect type="VALUE">MAULER_STAFF</effect>
+    </bonus>
+		<bonus id="POWER_STRIKES_MID">
+			<group>SKILL</group>
+			<realm>Midgard</realm>
+			<gem id="CLOUT_PRIMAL_RUNE">
+				<dust>GROUND_VENDO_BONE</dust>
+				<liquid>GIANTS_BLOOD</liquid>
+			</gem>
+		</bonus>
+		<bonus id="MAGNETISM_MID">
+			<group>SKILL</group>
+			<realm>Midgard</realm>
+			<gem id="MAGNETIC_PRIMAL_RUNE">
+				<dust>GROUND_VENDO_BONE</dust>
+				<liquid>MYSTIC_ENERGY</liquid>
+			</gem>
+		</bonus>
+		<bonus id="AURA_MANIPULATION_MID">
+			<group>SKILL</group>
+			<realm>Midgard</realm>
+			<gem id="RADIANT_PRIMAL_RUNE">
+				<dust>GROUND_VENDO_BONE</dust>
+				<liquid>SUN_LIGHT</liquid>
+			</gem>
+		</bonus>
+		<bonus id="MID_MELEE_BONUS">
+			<group>SKILL</group>
+			<realm>midgard</realm>
+			<gem id="FINESSE_WAR_RUNE">
+				<dust>GROUND_GIANT_BONE</dust>
+				<liquid>DRACONIC_FIRE</liquid>
+				<liquid>MYSTIC_ENERGY</liquid>
+				<liquid>TREANT_BLOOD</liquid>
+			</gem>
+			<gemlevel bonus="1" dust="1" liquid="2">1</gemlevel>
+			<craftonly/>
+			<effect type="VALUE">AXE</effect>
+			<effect type="VALUE">HAMMER</effect>
+			<effect type="VALUE">SWORD</effect>
+			<effect type="VALUE">HAND2HAND</effect>
+			<effect type="VALUE">SPEAR</effect>
+			<effect type="VALUE">FIST_WRAPS_MID</effect>
+			<effect type="VALUE">MAULER_STAFF_MID</effect>
+      <effect type="VALUE">FIST_WRAPS</effect>
+      <effect type="VALUE">MAULER_STAFF</effect>
+    </bonus>
+		<bonus id="MID_MAGIC_BONUS">
+			<group>SKILL</group>
+			<realm>midgard</realm>
+			<gem id="FINESSE_PRIMAL_RUNE">
+				<dust>GROUND_VENDO_BONE</dust>
+				<liquid>DRACONIC_FIRE</liquid>
+				<liquid>MYSTIC_ENERGY</liquid>
+				<liquid>TREANT_BLOOD</liquid>
+			</gem>
+			<gemlevel bonus="1" dust="1" liquid="2">1</gemlevel>
+			<craftonly/>
+			<effect type="VALUE">AUGMENTATION</effect>
+			<effect type="VALUE">BATTLESONGS</effect>
+			<effect type="VALUE">BONE_ARMY</effect>
+			<effect type="VALUE">CURSING</effect>
+			<effect type="VALUE">DARKNESS</effect>
+			<effect type="VALUE">HEXING</effect>
+			<effect type="VALUE">MENDING</effect>
+			<effect type="VALUE">ODINS_WILL</effect>
+			<effect type="VALUE">PACIFICATION</effect>
+			<effect type="VALUE">RUNECARVING</effect>
+			<effect type="VALUE">SUBTERRANEAN</effect>
+			<effect type="VALUE">SUMMONING</effect>
+			<effect type="VALUE">SUPPRESSION</effect>
+			<effect type="VALUE">STORMCALLING</effect>
+			<effect type="VALUE">WITCHCRAFT</effect>
+
+			<effect type="VALUE">MAGNETISM_MID</effect>
+			<effect type="VALUE">POWER_STRIKES_MID</effect>
+			<effect type="VALUE">AURA_MANIPULATION_MID</effect>
+		</bonus>
+	</bonuses>
+</moras>

@@ -1,3 +1,14 @@
+Version 2.5.0.412
+- Build: Update make-release.cmd script to use Visual Studio 2015 as source for the publishing task.
+- DB: Add update function for new SQL schema, which supports longer item effect strings.
+- Import: Implement Item-DB online update for Broadswords Item-DB.
+- Config: Prepare config XML files to handle new items from Broadsword Item Database (includes also corrections for old config problems).
+- UI: Fix rendering of TMItemSlot text with line breaks, which caused the control to be stuck in an infinite re-rendering loop. Also improved the performance with rendering background for TLabels by not recreating the Graphics object for every sibling control.
+- UI: Fix selection or searching of ComboBox items by its displayed label text.
+- UI: Fix rendering of invisible Controls which overlaps any TLabel.
+- IDE: Update Solution to Visual Studio 2015 to support more libraries and newer TargetFrameworkVersion. Change TargetFrameworkVersion to version 4.5.
+- Config: Correct cap for damage conversion attribute.
+
 Version 2.5.0.411
 - Build: Add scripts to the repo to automate the creation and publishing of hotfixes.
 - Core: Move CloseXml() into finally clause for stability.

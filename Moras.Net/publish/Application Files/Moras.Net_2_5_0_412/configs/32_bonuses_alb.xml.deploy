@@ -1,0 +1,438 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<moras>
+	<bonuses>
+		<bonus id="EARTH_FOCUS" oldid="5000" kortid="Earth Focus">
+			<group>FOCUS</group>
+			<realm>albion</realm>
+			<gem id="EARTHEN_FOCUS_SIGIL">
+				<dust>GROUND_DRACONIC_SCALES</dust>
+				<liquid>TREANT_BLOOD</liquid>
+			</gem>
+		</bonus>
+		<bonus id="COLD_FOCUS" oldid="5001" kortid="Ice Focus">
+			<group>FOCUS</group>
+			<realm>albion</realm>
+			<gem id="ICY_FOCUS_SIGIL">
+				<dust>GROUND_DRACONIC_SCALES</dust>
+				<liquid>FROST_FROM_A_WASTELAND</liquid>
+			</gem>
+		</bonus>
+		<bonus id="WIND_FOCUS" oldid="5002" kortid="Wind Focus">
+			<group>FOCUS</group>
+			<realm>albion</realm>
+			<gem id="AIRY_FOCUS_SIGIL">
+				<dust>GROUND_DRACONIC_SCALES</dust>
+				<liquid>AIR_ELEMENTAL_ESSENCE</liquid>
+			</gem>
+		</bonus>
+		<bonus id="FIRE_FOCUS" oldid="5003" kortid="Fire Focus">
+			<group>FOCUS</group>
+			<realm>albion</realm>
+			<gem id="FIERY_FOCUS_SIGIL">
+				<dust>GROUND_DRACONIC_SCALES</dust>
+				<liquid>DRACONIC_FIRE</liquid>
+			</gem>
+		</bonus>
+		<bonus id="BODY_FOCUS" oldid="5004" kortid="Body Focus">
+			<group>FOCUS</group>
+			<realm>albion</realm>
+			<gem id="HEATED_FOCUS_SIGIL">
+				<dust>GROUND_DRACONIC_SCALES</dust>
+				<liquid>HEAT_FROM_AN_UNEARTHLY_PYRE</liquid>
+			</gem>
+		</bonus>
+		<bonus id="MATTER_FOCUS" oldid="5005" kortid="Matter Focus">
+			<group>FOCUS</group>
+			<realm>albion</realm>
+			<gem id="DUSTY_FOCUS_SIGIL">
+				<dust>GROUND_DRACONIC_SCALES</dust>
+				<liquid>UNDEAD_ASH_AND_HOLY_WATER</liquid>
+			</gem>
+		</bonus>
+		<bonus id="SPIRIT_FOCUS" oldid="5006" kortid="Spirit Focus">
+			<group>FOCUS</group>
+			<realm>albion</realm>
+			<gem id="VAPOR_FOCUS_SIGIL">
+				<dust>GROUND_DRACONIC_SCALES</dust>
+				<liquid>SWAMP_FOG</liquid>
+			</gem>
+		</bonus>
+		<bonus id="MIND_FOCUS" oldid="5007" kortid="Mind Focus">
+			<group>FOCUS</group>
+			<realm>albion</realm>
+			<gem id="WATERY_FOCUS_SIGIL">
+				<dust>GROUND_DRACONIC_SCALES</dust>
+				<liquid>LEVIATHAN_BLOOD</liquid>
+			</gem>
+		</bonus>
+		<bonus id="DEATH_SERVANT_FOCUS" oldid="5019" kortid="Death Servant Focus">
+			<group>FOCUS</group>
+			<realm>albion</realm>
+			<gem id="ASHEN_FOCUS_SIGIL">
+				<dust>GROUND_DRACONIC_SCALES</dust>
+				<liquid>UNDEAD_ASH_AND_HOLY_WATER</liquid>
+			</gem>
+		</bonus>
+		<bonus id="DEATHSIGHT_FOCUS" oldid="5017" kortid="Deathsight Focus">
+			<group>FOCUS</group>
+			<realm>albion</realm>
+			<gem id="VACUOUS_FOCUS_SIGIL">
+				<dust>GROUND_DRACONIC_SCALES</dust>
+				<liquid>SWAMP_FOG</liquid>
+			</gem>
+		</bonus>
+		<bonus id="PAINWORKING_FOCUS" oldid="5018" kortid="Painworking Focus">
+			<group>FOCUS</group>
+			<realm>albion</realm>
+			<gem id="SALT_ENCRUSTED_FOCUS_SIGIL">
+				<dust>GROUND_DRACONIC_SCALES</dust>
+				<liquid>MYSTIC_ENERGY</liquid>
+			</gem>
+		</bonus>
+		<bonus id="ALB_MAGIC_FOCUS">
+			<group>FOCUS</group>
+			<realm>albion</realm>
+			<craftonly/>
+			<gem id="BRILLIANT_SIGIL">
+				<dust>GROUND_DRACONIC_SCALES</dust>
+				<liquid>DRACONIC_FIRE</liquid>
+				<liquid>MYSTIC_ENERGY</liquid>
+				<liquid>TREANT_BLOOD</liquid>
+			</gem>
+			<gemlevel bonus="5" dust="1" liquid="2" gems="3">1</gemlevel>
+			<gemlevel bonus="10" dust="6" liquid="8" gems="3">2</gemlevel>
+			<gemlevel bonus="15" dust="11" liquid="14" gems="3">3</gemlevel>
+			<gemlevel bonus="20" dust="16" liquid="20" gems="3">4</gemlevel>
+			<gemlevel bonus="25" dust="21" liquid="26" gems="3">5</gemlevel>
+			<gemlevel bonus="30" dust="26" liquid="32" gems="3">6</gemlevel>
+			<gemlevel bonus="35" dust="31" liquid="38" gems="3">7</gemlevel>
+			<gemlevel bonus="40" dust="36" liquid="44" gems="3">8</gemlevel>
+			<gemlevel bonus="45" dust="41" liquid="52" gems="3">9</gemlevel>
+			<gemlevel bonus="50" dust="46" liquid="60" gems="3">10</gemlevel>
+			<effect type="VALUE">EARTH_FOCUS</effect>
+			<effect type="VALUE">COLD_FOCUS</effect>
+			<effect type="VALUE">WIND_FOCUS</effect>
+			<effect type="VALUE">FIRE_FOCUS</effect>
+			<effect type="VALUE">BODY_FOCUS</effect>
+			<effect type="VALUE">MATTER_FOCUS</effect>
+			<effect type="VALUE">SPIRIT_FOCUS</effect>
+			<effect type="VALUE">MIND_FOCUS</effect>
+			<effect type="VALUE">DEATH_SERVANT_FOCUS</effect>
+			<effect type="VALUE">DEATHSIGHT_FOCUS</effect>
+			<effect type="VALUE">PAINWORKING_FOCUS</effect>
+		</bonus>
+		<bonus id="CRUSH" oldid="6001" kortid="Crush">
+			<group>SKILL</group>
+			<realm>albion</realm>
+			<gem id="FIERY_WAR_SIGIL">
+				<dust>GROUND_CAER_STONE</dust>
+				<liquid>DRACONIC_FIRE</liquid>
+			</gem>
+		</bonus>
+		<bonus id="THRUST" oldid="6002" kortid="Thrust">
+			<group>SKILL</group>
+			<realm>albion</realm>
+			<gem id="DUSTY_WAR_SIGIL">
+				<dust>GROUND_CAER_STONE</dust>
+				<liquid>UNDEAD_ASH_AND_HOLY_WATER</liquid>
+			</gem>
+		</bonus>
+		<bonus id="SLASH" oldid="6003" kortid="Slash">
+			<group>SKILL</group>
+			<realm>albion</realm>
+			<gem id="WATERY_WAR_SIGIL">
+				<dust>GROUND_CAER_STONE</dust>
+				<liquid>LEVIATHAN_BLOOD</liquid>
+			</gem>
+		</bonus>
+		<bonus id="STAFF" oldid="6004" kortid="Staff">
+			<group>SKILL</group>
+			<realm>albion</realm>
+			<gem id="EARTHEN_BATTLE_JEWEL">
+				<dust>BLOODIED_BATTLEFIELD_DIRT</dust>
+				<liquid>TREANT_BLOOD</liquid>
+			</gem>
+		</bonus>
+		<bonus id="FLEXIBLE" oldid="6065" kortid="Flexible">
+			<group>SKILL</group>
+			<realm>albion</realm>
+			<gem id="MOLTEN_MAGMA_WAR_SIGIL">
+				<dust>GROUND_CAER_STONE</dust>
+				<liquid>LEVIATHAN_BLOOD</liquid>
+			</gem>
+		</bonus>
+		<bonus id="POLEARM" oldid="6005" kortid="Polearm">
+			<group>SKILL</group>
+			<realm>albion</realm>
+			<gem id="EARTHEN_WAR_SIGIL">
+				<dust>GROUND_CAER_STONE</dust>
+				<liquid>TREANT_BLOOD</liquid>
+			</gem>
+		</bonus>
+		<bonus id="TWO_HANDED" oldid="6007" kortid="Two Handed">
+			<group>SKILL</group>
+			<realm>albion</realm>
+			<gem id="HEATED_WAR_SIGIL">
+				<dust>GROUND_CAER_STONE</dust>
+				<liquid>HEAT_FROM_AN_UNEARTHLY_PYRE</liquid>
+			</gem>
+		</bonus>
+		<bonus id="ENHANCEMENT" oldid="6008" kortid="Enhancement">
+			<group>SKILL</group>
+			<realm>albion</realm>
+			<gem id="AIRY_FERVOR_SIGIL">
+				<dust>GROUND_BLESSED_UNDEAD_BONE</dust>
+				<liquid>AIR_ELEMENTAL_ESSENCE</liquid>
+			</gem>
+		</bonus>
+		<bonus id="REJUVENATION" oldid="6009" kortid="Rejuvenation">
+			<group>SKILL</group>
+			<realm>albion</realm>
+			<gem id="WATERY_FERVOR_SIGIL">
+				<dust>GROUND_BLESSED_UNDEAD_BONE</dust>
+				<liquid>LEVIATHAN_BLOOD</liquid>
+			</gem>
+		</bonus>
+		<bonus id="SMITE" oldid="6010" kortid="Smite">
+			<group>SKILL</group>
+			<realm>albion</realm>
+			<gem id="FIERY_FERVOR_SIGIL">
+				<dust>GROUND_BLESSED_UNDEAD_BONE</dust>
+				<liquid>DRACONIC_FIRE</liquid>
+			</gem>
+		</bonus>
+		<bonus id="EARTH_MAGIC" oldid="6011" kortid="Earth">
+			<group>SKILL</group>
+			<realm>albion</realm>
+			<gem id="EARTHEN_EVOCATION_SIGIL">
+				<dust>GROUND_CAVE_CRYSTAL</dust>
+				<liquid>TREANT_BLOOD</liquid>
+			</gem>
+		</bonus>
+		<bonus id="COLD_MAGIC" oldid="6012" kortid="Ice">
+			<group>SKILL</group>
+			<realm>albion</realm>
+			<gem id="ICY_EVOCATION_SIGIL">
+				<dust>GROUND_CAVE_CRYSTAL</dust>
+				<liquid>FROST_FROM_A_WASTELAND</liquid>
+			</gem>
+		</bonus>
+		<bonus id="WIND_MAGIC" oldid="6013" kortid="Wind">
+			<group>SKILL</group>
+			<realm>albion</realm>
+			<gem id="AIRY_EVOCATION_SIGIL">
+				<dust>GROUND_CAVE_CRYSTAL</dust>
+				<liquid>AIR_ELEMENTAL_ESSENCE</liquid>
+			</gem>
+		</bonus>
+		<bonus id="FIRE_MAGIC" oldid="6014" kortid="Fire">
+			<group>SKILL</group>
+			<realm>albion</realm>
+			<gem id="FIERY_EVOCATION_SIGIL">
+				<dust>GROUND_CAVE_CRYSTAL</dust>
+				<liquid>DRACONIC_FIRE</liquid>
+			</gem>
+		</bonus>
+		<bonus id="DUAL_WIELD" oldid="6015" kortid="Dual Wield">
+			<group>SKILL</group>
+			<realm>albion</realm>
+			<gem id="ICY_WAR_SIGIL">
+				<dust>GROUND_CAER_STONE</dust>
+				<liquid>FROST_FROM_A_WASTELAND</liquid>
+			</gem>
+		</bonus>
+		<bonus id="CHANTS" oldid="6016">
+			<group>SKILL</group>
+			<realm>albion</realm>
+			<gem id="EARTHEN_FERVOR_SIGIL">
+				<dust>GROUND_BLESSED_UNDEAD_BONE</dust>
+				<liquid>TREANT_BLOOD</liquid>
+			</gem>
+		</bonus>
+		<bonus id="BODY_MAGIC" oldid="6017" kortid="Body">
+			<group>SKILL</group>
+			<realm>albion</realm>
+			<gem id="HEATED_EVOCATION_SIGIL">
+				<dust>GROUND_CAVE_CRYSTAL</dust>
+				<liquid>HEAT_FROM_AN_UNEARTHLY_PYRE</liquid>
+			</gem>
+		</bonus>
+		<bonus id="MATTER_MAGIC" oldid="6018" kortid="Matter">
+			<group>SKILL</group>
+			<realm>albion</realm>
+			<gem id="DUSTY_EVOCATION_SIGIL">
+				<dust>GROUND_CAVE_CRYSTAL</dust>
+				<liquid>UNDEAD_ASH_AND_HOLY_WATER</liquid>
+			</gem>
+		</bonus>
+		<bonus id="SPIRIT_MAGIC" oldid="6019" kortid="Spirit">
+			<group>SKILL</group>
+			<realm>albion</realm>
+			<gem id="VAPOR_EVOCATION_SIGIL">
+				<dust>GROUND_CAVE_CRYSTAL</dust>
+				<liquid>SWAMP_FOG</liquid>
+			</gem>
+		</bonus>
+		<bonus id="MIND_MAGIC" oldid="6020" kortid="Mind">
+			<group>SKILL</group>
+			<realm>albion</realm>
+			<gem id="WATERY_EVOCATION_SIGIL">
+				<dust>GROUND_CAVE_CRYSTAL</dust>
+				<liquid>LEVIATHAN_BLOOD</liquid>
+			</gem>
+		</bonus>
+		<bonus id="INSTRUMENTS" oldid="6024" kortid="Instruments">
+			<group>SKILL</group>
+			<realm>albion</realm>
+			<gem id="VAPOR_FERVOR_SIGIL">
+				<dust>GROUND_BLESSED_UNDEAD_BONE</dust>
+				<liquid>SWAMP_FOG</liquid>
+			</gem>
+		</bonus>
+		<bonus id="LONGBOW" oldid="6025" kortid="Longbow">
+			<group>SKILL</group>
+			<realm>albion</realm>
+			<gem id="AIRY_WAR_SIGIL">
+				<dust>GROUND_CAER_STONE</dust>
+				<liquid>AIR_ELEMENTAL_ESSENCE</liquid>
+			</gem>
+		</bonus>
+		<bonus id="CROSSBOW" oldid="6062" kortid="Crossbow">
+			<group>SKILL</group>
+			<realm>albion</realm>
+			<gem id="VAPOR_WAR_SIGIL">
+				<dust>GROUND_CAER_STONE</dust>
+				<liquid>SWAMP_FOG</liquid>
+			</gem>
+		</bonus>
+		<bonus id="DEATH_SERVANT" oldid="6063" kortid="Death Servant">
+			<group>SKILL</group>
+			<realm>albion</realm>
+			<gem id="ASHEN_FERVOR_SIGIL">
+				<dust>GROUND_BLESSED_UNDEAD_BONE</dust>
+				<liquid>UNDEAD_ASH_AND_HOLY_WATER</liquid>
+			</gem>
+		</bonus>
+		<bonus id="DEATHSIGHT" oldid="6064" kortid="Deathsight">
+			<group>SKILL</group>
+			<realm>albion</realm>
+			<gem id="VACUOUS_FERVOR_SIGIL">
+				<dust>GROUND_BLESSED_UNDEAD_BONE</dust>
+				<liquid>SWAMP_FOG</liquid>
+			</gem>
+		</bonus>
+		<bonus id="PAINWORKING" oldid="6066" kortid="Painworking">
+			<group>SKILL</group>
+			<realm>albion</realm>
+			<gem id="SALT_ENCRUSTED_FERVOR_SIGIL">
+				<dust>GROUND_BLESSED_UNDEAD_BONE</dust>
+				<liquid>MYSTIC_ENERGY</liquid>
+			</gem>
+		</bonus>
+		<bonus id="SOULRENDING" oldid="6067" kortid="Soulrending">
+			<group>SKILL</group>
+			<realm>albion</realm>
+			<gem id="STEAMING_FERVOR_SIGIL">
+				<dust>GROUND_BLESSED_UNDEAD_BONE</dust>
+				<liquid>HEAT_FROM_AN_UNEARTHLY_PYRE</liquid>
+			</gem>
+		</bonus>
+		<bonus id="FIST_WRAPS_ALB">
+			<group>SKILL</group>
+			<realm>Albion</realm>
+      <gem id="GLACIER_WAR_SIGIL">
+				<dust>GROUND_CAER_STONE</dust>
+				<liquid>FROST_FROM_A_WASTELAND</liquid>
+			</gem>
+      <effect type="VALUE">FIST_WRAPS</effect>
+    </bonus>
+		<bonus id="MAULER_STAFF_ALB">
+			<group>SKILL</group>
+			<realm>Albion</realm>
+      <gem id="CINDER_WAR_SIGIL">
+				<dust>GROUND_CAER_STONE</dust>
+				<liquid>DRACONIC_FIRE</liquid>
+			</gem>
+      <effect type="VALUE">MAULER_STAFF</effect>
+    </bonus>
+		<bonus id="POWER_STRIKES_ALB">
+			<group>SKILL</group>
+			<realm>Albion</realm>
+			<gem id="CLOUT_FERVOR_SIGIL">
+				<dust>GROUND_BLESSED_UNDEAD_BONE</dust>
+				<liquid>GIANTS_BLOOD</liquid>
+			</gem>
+		</bonus>
+		<bonus id="MAGNETISM_ALB">
+			<group>SKILL</group>
+			<realm>Albion</realm>
+			<gem id="MAGNETIC_FERVOR_SIGIL">
+				<dust>GROUND_BLESSED_UNDEAD_BONE</dust>
+				<liquid>MYSTIC_ENERGY</liquid>
+			</gem>
+		</bonus>
+		<bonus id="AURA_MANIPULATION_ALB">
+			<group>SKILL</group>
+			<realm>Albion</realm>
+			<gem id="RADIANT_FERVOR_SIGIL">
+				<dust>GROUND_BLESSED_UNDEAD_BONE</dust>
+				<liquid>SUN_LIGHT</liquid>
+			</gem>
+		</bonus>
+		<bonus id="ALB_MELEE_BONUS">
+			<group>SKILL</group>
+			<realm>albion</realm>
+			<gem id="FINESSE_WAR_SIGIL">
+				<dust>GROUND_CAER_STONE</dust>
+				<liquid>DRACONIC_FIRE</liquid>
+				<liquid>MYSTIC_ENERGY</liquid>
+				<liquid>TREANT_BLOOD</liquid>
+			</gem>
+			<gemlevel bonus="1" dust="1" liquid="2">1</gemlevel>
+			<craftonly/>
+			<effect type="VALUE">CRUSH</effect>
+			<effect type="VALUE">THRUST</effect>
+			<effect type="VALUE">SLASH</effect>
+			<effect type="VALUE">FLEXIBLE</effect>
+			<effect type="VALUE">TWO_HANDED</effect>
+			<effect type="VALUE">POLEARM</effect>
+			<effect type="VALUE">STAFF</effect>
+      <effect type="VALUE">FIST_WRAPS_ALB</effect>
+			<effect type="VALUE">MAULER_STAFF_ALB</effect>
+      <effect type="VALUE">FIST_WRAPS</effect>
+      <effect type="VALUE">MAULER_STAFF</effect>
+		</bonus>
+		<bonus id="ALB_MAGIC_BONUS">
+			<group>SKILL</group>
+			<realm>albion</realm>
+			<gem id="FINESSE_FERVOR_SIGIL">
+				<dust>GROUND_BLESSED_UNDEAD_BONE</dust>
+				<liquid>DRACONIC_FIRE</liquid>
+				<liquid>MYSTIC_ENERGY</liquid>
+				<liquid>TREANT_BLOOD</liquid>
+			</gem>
+			<gemlevel bonus="1" dust="1" liquid="2">1</gemlevel>
+			<craftonly/>
+			<effect type="VALUE">EARTH_MAGIC</effect>
+			<effect type="VALUE">COLD_MAGIC</effect>
+			<effect type="VALUE">WIND_MAGIC</effect>
+			<effect type="VALUE">FIRE_MAGIC</effect>
+			<effect type="VALUE">BODY_MAGIC</effect>
+			<effect type="VALUE">MATTER_MAGIC</effect>
+			<effect type="VALUE">SPIRIT_MAGIC</effect>
+			<effect type="VALUE">MIND_MAGIC</effect>
+			<effect type="VALUE">DEATH_SERVANT</effect>
+			<effect type="VALUE">DEATHSIGHT</effect>
+			<effect type="VALUE">PAINWORKING</effect>
+			<effect type="VALUE">ENHANCEMENT</effect>
+			<effect type="VALUE">REJUVENATION</effect>
+			<effect type="VALUE">SMITE</effect>
+			<effect type="VALUE">INSTRUMENTS</effect>
+			<effect type="VALUE">SOULRENDING</effect>
+
+			<effect type="VALUE">MAGNETISM_ALB</effect>
+			<effect type="VALUE">POWER_STRIKES_ALB</effect>
+			<effect type="VALUE">AURA_MANIPULATION_ALB</effect>
+		</bonus>
+	</bonuses>
+</moras>
