@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<Moras version="1.0">
+  <option group="Online-Update" noradio="true">Broadsword-Itemdatenbank - Alle Reiche</option>
+  <item_update>
+    <update_url>https://tools.camelotherald.com/files/item/database/daoc_item_database_combined.zip</update_url>
+    <item_url>https://tools.camelotherald.com/item/view/[id]</item_url>
+    <registry>Broadsword_Itemdatabase</registry>
+    <website>
+      <name>Broadsword-Itemdatenbank</name>
+      <url>https://www.darkageofcamelot.com/content/downloadable-item-database</url>
+    </website>
+  </item_update>
+</Moras>
