@@ -88,23 +88,23 @@ msgstr "Fix Windowsize"
 msgid "&Hilfe"
 msgstr "&Help"
 
-msgid "Wiki - Hauptseite"
-msgstr "Wiki - Mainpage"
+msgid "Allakhazam - Hauptseite"
+msgstr "Allakhazam - Mainpage"
 
-msgid "Wiki - Bannzauberer"
-msgstr "Wiki - Spellcrafter"
+msgid "Allakhazam - Bannzauberer"
+msgstr "Allakhazam - Spellcraft"
 
-msgid "Wiki - Besondere Rüstungen"
-msgstr "Wiki - Specialty Armor"
+msgid "Allakhazam - Artikelsuche"
+msgstr "Allakhazam - Item search"
 
 msgid "Hilfe zu Moras"
 msgstr "Help about Moras"
 
 msgid "Bannzauberer"
-msgstr "Spellcraft"
+msgstr "spellcraftcalc.html"
 
 msgid "Besondere_R%C3%BCstungen"
-msgstr "Specialty_Armor"
+msgstr "itemsearch.html"
 
 msgid "Was ist neu?"
 msgstr "What's new?"

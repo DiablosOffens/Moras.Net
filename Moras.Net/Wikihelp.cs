@@ -137,9 +137,7 @@ namespace Moras.Net.Wikihelp
 
             public string GetUrl()
             {
-                // Current wiki site doesn't support language subdomains, so remove it from URL, but keep it as comment for later use.
-                //TGnuGettextInstance.GetCurrentLanguage().Substring(0, 2) + '.' +
-                return "http://" + HelpFile("") + "/index.php";
+                return "https://" + HelpFile("") ;
             }
 
             #region ICustomHelpViewer Members
