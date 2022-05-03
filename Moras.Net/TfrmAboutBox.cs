@@ -52,6 +52,11 @@ namespace Moras.Net
                 Utils.MorasErrorMessage(_("Fehler beim Laden der Resource für das Splash-Bild!"), _("Resourcen Fehler!"));
             }
         }
+
+        private void TfrmAboutBox_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 
     static partial class Unit
