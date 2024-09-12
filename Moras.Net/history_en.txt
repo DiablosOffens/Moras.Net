@@ -1,8 +1,12 @@
+Version 2.6.0.414
+- UI : Convert help about Moras documentation to HTML 
+- UI : Translate german help about Moras documentation to english
+- Web : Put Allakhazam website in the Help menu
+
 Version 2.5.0.413
 - Build: Remove ClickOnce boot strapper package for Microsoft Visual Basic PowerPacks 10.0 and include its assembly directly in the deployment
 	* Also update the timestamp server for sigining.
-
-Version 2.5.0.412
+	 
 - Build: Update make-release.cmd script to use Visual Studio 2015 as source for the publishing task.
 - DB: Add update function for new SQL schema, which supports longer item effect strings.
 - Import: Implement Item-DB online update for Broadswords Item-DB.

@@ -3015,7 +3015,7 @@ namespace Moras.Net
         //---------------------------------------------------------------------------
         private void mnContentClick(object sender, EventArgs e)
         {
-            Extensions.ShellExecute(TApplication.Instance.Handle, "open", "moras.hlp", null, null, ProcessWindowStyle.Normal);
+            Extensions.ShellExecute(TApplication.Instance.Handle, "open", "help\\index.html", null, null, ProcessWindowStyle.Normal);
         }
         //---------------------------------------------------------------------------
 
