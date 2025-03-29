@@ -1,3 +1,16 @@
+Version 2.5.0.414
+- Build: Add VisualBasic.PowerPacks.Vs NuGet package for the Microsoft Visual Basic PowerPacks 10.0 assembly
+	* This prepares support for build automation, as not all build servers have this assembly in its GAC. Also add an assembly binding redirect for Microsoft.VisualBasic, because the PowerPacks assembly depends on an older version of an older Framework (2.0), but the new version should be compatible.
+- Build: Update finish-hotfix.cmd script to use Visual Studio 2015 as source for the publishing task.
+- Bump github-pages from 221 to 228
+	* Bumps [github-pages](https://github.com/github/pages-gem) from 221 to 228. - [Release notes](https://github.com/github/pages-gem/releases) - [Commits](https://github.com/github/pages-gem/compare/v221...v228) --- updated-dependencies: - dependency-name: github-pages  dependency-type: direct:development  update-type: version-update:semver-major ... Signed-off-by: dependabot[bot] <support@github.com>
+- Update index.html
+	* Change Image-URL of "fork me" banner to new location. (see: https://github.blog/news-insights/the-library/github-ribbons/)
+- Bump nokogiri from 1.12.5 to 1.14.3
+	* Bumps [nokogiri](https://github.com/sparklemotion/nokogiri) from 1.12.5 to 1.14.3. - [Release notes](https://github.com/sparklemotion/nokogiri/releases) - [Changelog](https://github.com/sparklemotion/nokogiri/blob/main/CHANGELOG.md) - [Commits](https://github.com/sparklemotion/nokogiri/compare/v1.12.5...v1.14.3) --- updated-dependencies: - dependency-name: nokogiri  dependency-type: indirect ... Signed-off-by: dependabot[bot] <support@github.com>
+- Bump tzinfo from 1.2.9 to 1.2.11
+	* Bumps [tzinfo](https://github.com/tzinfo/tzinfo) from 1.2.9 to 1.2.11. - [Release notes](https://github.com/tzinfo/tzinfo/releases) - [Changelog](https://github.com/tzinfo/tzinfo/blob/master/CHANGES.md) - [Commits](https://github.com/tzinfo/tzinfo/compare/v1.2.9...v1.2.11) --- updated-dependencies: - dependency-name: tzinfo  dependency-type: direct:production  update-type: version-update:semver-patch ... Signed-off-by: dependabot[bot] <support@github.com>
+
 Version 2.5.0.413
 - Build: Remove ClickOnce boot strapper package for Microsoft Visual Basic PowerPacks 10.0 and include its assembly directly in the deployment
 	* Also update the timestamp server for sigining.
