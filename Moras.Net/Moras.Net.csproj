@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Gettext.Tools.0.21.0.1\build\Gettext.Tools.props" Condition="Exists('..\packages\Gettext.Tools.0.21.0.1\build\Gettext.Tools.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
@@ -15,6 +16,8 @@
     </TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
     <IsWebBootstrapper>true</IsWebBootstrapper>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Web</InstallFrom>
@@ -32,8 +35,8 @@
     <ProductName>Moras Ausrüstungsplaner</ProductName>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>publish.htm</WebPage>
-    <ApplicationRevision>409</ApplicationRevision>
-    <ApplicationVersion>2.5.0.%2a</ApplicationVersion>
+    <ApplicationRevision>414</ApplicationRevision>
+    <ApplicationVersion>2.6.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -91,10 +94,11 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup>
-    <SignAssembly>true</SignAssembly>
+    <SignAssembly>false</SignAssembly>
   </PropertyGroup>
   <PropertyGroup>
-    <AssemblyOriginatorKeyFile>key.snk</AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationIcon>mainicon.ico</ApplicationIcon>
@@ -106,10 +110,10 @@
     <ManifestKeyFile>Moras.Net_TemporaryKey.pfx</ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
-    <GenerateManifests>true</GenerateManifests>
+    <GenerateManifests>false</GenerateManifests>
   </PropertyGroup>
   <PropertyGroup>
-    <SignManifests>true</SignManifests>
+    <SignManifests>false</SignManifests>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
@@ -125,8 +129,14 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Libs\Indy.Sockets.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.VisualBasic" />
-    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualBasic, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\VisualBasic.PowerPacks.Vs.1.0.0\lib\Microsoft.VisualBasic.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\VisualBasic.PowerPacks.Vs.1.0.0\lib\Microsoft.VisualBasic.PowerPacks.Vs.dll</HintPath>
+    </Reference>
     <Reference Include="ObjectListView, Version=2.9.2.0, Culture=neutral, PublicKeyToken=b1c5bf581481bcd4, processorArchitecture=MSIL">
       <HintPath>..\packages\ObjectListView.ClientProfile.2.9.5\lib\net40-Client\ObjectListView.dll</HintPath>
       <Private>True</Private>
@@ -339,6 +349,75 @@
       <Link>x86\sqlite3.dll</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="help\About.html" />
+    <Content Include="help\Definition_Cap.html" />
+    <Content Include="help\Definition_drop.html" />
+    <Content Include="help\Definition_manufactured_item.html" />
+    <Content Include="help\Definition_overload.html" />
+    <Content Include="help\Definition_unique_object.html" />
+    <Content Include="help\Dialog_general_settings.html" />
+    <Content Include="help\Dialog_item_list.html" />
+    <Content Include="help\Dialog_manage_database.html" />
+    <Content Include="help\Dialog_pricing_model.html" />
+    <Content Include="help\Dialog_repair.html" />
+    <Content Include="help\Dialog_report.html" />
+    <Content Include="help\Dialog_search_for_item.html" />
+    <Content Include="help\Dialog_update_database.html" />
+    <Content Include="help\Dialog_weights.html" />
+    <Content Include="help\General_rules.html" />
+    <Content Include="help\images\bm0.png" />
+    <Content Include="help\images\bm1.png" />
+    <Content Include="help\images\bm10.png" />
+    <Content Include="help\images\bm11.png" />
+    <Content Include="help\images\bm12.png" />
+    <Content Include="help\images\bm13.png" />
+    <Content Include="help\images\bm14.png" />
+    <Content Include="help\images\bm15.png" />
+    <Content Include="help\images\bm16.png" />
+    <Content Include="help\images\bm17.png" />
+    <Content Include="help\images\bm18.png" />
+    <Content Include="help\images\bm19.png" />
+    <Content Include="help\images\bm2.png" />
+    <Content Include="help\images\bm20.png" />
+    <Content Include="help\images\bm21.png" />
+    <Content Include="help\images\bm22.png" />
+    <Content Include="help\images\bm23.png" />
+    <Content Include="help\images\bm24.png" />
+    <Content Include="help\images\bm25.png" />
+    <Content Include="help\images\bm26.png" />
+    <Content Include="help\images\bm27.png" />
+    <Content Include="help\images\bm28.png" />
+    <Content Include="help\images\bm29.png" />
+    <Content Include="help\images\bm3.png" />
+    <Content Include="help\images\bm30.png" />
+    <Content Include="help\images\bm31.png" />
+    <Content Include="help\images\bm32.png" />
+    <Content Include="help\images\bm33.png" />
+    <Content Include="help\images\bm34.png" />
+    <Content Include="help\images\bm35.png" />
+    <Content Include="help\images\bm36.png" />
+    <Content Include="help\images\bm37.png" />
+    <Content Include="help\images\bm4.png" />
+    <Content Include="help\images\bm5.png" />
+    <Content Include="help\images\bm6.png" />
+    <Content Include="help\images\bm8.png" />
+    <Content Include="help\images\bm9.png" />
+    <Content Include="help\index.html" />
+    <Content Include="help\Menu_database.html" />
+    <Content Include="help\Menu_file.html" />
+    <Content Include="help\Menu_settings.html" />
+    <Content Include="help\Program_character.html" />
+    <Content Include="help\Program_dropitem_bonus.html" />
+    <Content Include="help\Program_item_bonuses.html" />
+    <Content Include="help\Program_item_general.html" />
+    <Content Include="help\Program_main_window.html" />
+    <Content Include="help\Program_object_general.html" />
+    <Content Include="help\Program_other_values.html" />
+    <Content Include="help\Program_player_data.html" />
+    <Content Include="help\Program_player_resistance.html" />
+    <Content Include="help\Program_player_skills.html" />
+    <Content Include="help\Program_status_values.html" />
+    <Content Include="help\Template_Creation.html" />
     <Content Include="history_de.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -624,12 +703,10 @@
     <None Include="app.config">
       <SubType>Designer</SubType>
     </None>
-    <None Include="key.snk" />
     <msgfmt Include="locale\en\LC_MESSAGES\default.po" />
     <Content Include="MORAS.HLP">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <None Include="Moras.Net_TemporaryKey.pfx" />
     <None Include="packages.config" />
     <None Include="Properties\app.manifest" />
     <None Include="Properties\Settings.settings">
@@ -702,14 +779,7 @@
       <Name>Moras.Net.Components</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <FileAssociation Include=".mox">
-      <Visible>False</Visible>
-      <Description>Moras Character</Description>
-      <Progid>Moras.Character</Progid>
-      <DefaultIcon>mainicon.ico</DefaultIcon>
-    </FileAssociation>
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <PublishFile Include="DelphiClasses.pdb">
       <Visible>False</Visible>
@@ -900,7 +970,7 @@
     <msgfmt>
       <Verbose>False</Verbose>
       <OutputName>$(OutDir)locale\en\LC_MESSAGES\%(Filename).mo</OutputName>
-      <CommandLineTemplate>"$(SolutionDir)packages\Gettext.Tools.0.19.8.1\tools\bin\msgfmt.exe" [AllOptions] [AdditionalOptions] [inputs]</CommandLineTemplate>
+      <CommandLineTemplate>"$(SolutionDir)packages\Gettext.Tools.0.21.0.1\tools\bin\msgfmt.exe" [AllOptions] [AdditionalOptions] [inputs]</CommandLineTemplate>
       <Outputs>%(OutputName)</Outputs>
       <ExecutionDescription>Compiling %(Filename) locale</ExecutionDescription>
     </msgfmt>
@@ -940,6 +1010,7 @@
     </PropertyGroup>
     <Error Condition="!Exists('..\packages\MSBuildTasks.1.5.0.235\build\MSBuildTasks.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\MSBuildTasks.1.5.0.235\build\MSBuildTasks.targets'))" />
     <Error Condition="!Exists('..\packages\CreatePublishWebPage.1.0.0.3\build\CreatePublishWebPage.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\CreatePublishWebPage.1.0.0.3\build\CreatePublishWebPage.targets'))" />
+    <Error Condition="!Exists('..\packages\Gettext.Tools.0.21.0.1\build\Gettext.Tools.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Gettext.Tools.0.21.0.1\build\Gettext.Tools.props'))" />
   </Target>
   <Target Name="BeforeCompile" Condition="'$(BuildingInsideVisualStudio)|$(Configuration)' == '|Release'">
     <FormatVersion Version="$(ApplicationVersion)" Revision="$(ApplicationRevision)">
@@ -950,10 +1021,11 @@
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
-  </Target>
+  </Target>-->
   <Target Name="AfterBuild">
+    <Copy SourceFiles="$(MSBuildProjectDirectory)\help\About.html;$(MSBuildProjectDirectory)\help\Definition_Cap.html;$(MSBuildProjectDirectory)\help\Definition_drop.html;$(MSBuildProjectDirectory)\help\Definition_manufactured_item.html;$(MSBuildProjectDirectory)\help\Definition_overload.html;$(MSBuildProjectDirectory)\help\Definition_unique_object.html;$(MSBuildProjectDirectory)\help\Dialog_general_settings.html;$(MSBuildProjectDirectory)\help\Dialog_item_list.html;$(MSBuildProjectDirectory)\help\Dialog_manage_database.html;$(MSBuildProjectDirectory)\help\Dialog_pricing_model.html;$(MSBuildProjectDirectory)\help\Dialog_repair.html;$(MSBuildProjectDirectory)\help\Dialog_report.html;$(MSBuildProjectDirectory)\help\Dialog_search_for_item.html;$(MSBuildProjectDirectory)\help\Dialog_update_database.html;$(MSBuildProjectDirectory)\help\Dialog_weights.html;$(MSBuildProjectDirectory)\help\General_rules.html;$(MSBuildProjectDirectory)\help\index.html;$(MSBuildProjectDirectory)\help\Menu_database.html;$(MSBuildProjectDirectory)\help\Menu_file.html;$(MSBuildProjectDirectory)\help\Menu_settings.html;$(MSBuildProjectDirectory)\help\Program_character.html;$(MSBuildProjectDirectory)\help\Program_dropitem_bonus.html;$(MSBuildProjectDirectory)\help\Program_item_bonuses.html;$(MSBuildProjectDirectory)\help\Program_item_general.html;$(MSBuildProjectDirectory)\help\Program_main_window.html;$(MSBuildProjectDirectory)\help\Program_object_general.html;$(MSBuildProjectDirectory)\help\Program_other_values.html;$(MSBuildProjectDirectory)\help\Program_player_data.html;$(MSBuildProjectDirectory)\help\Program_player_resistance.html;$(MSBuildProjectDirectory)\help\Program_player_skills.html;$(MSBuildProjectDirectory)\help\Program_status_values.html;$(MSBuildProjectDirectory)\help\Template_Creation.html" DestinationFolder="$(TargetDir)\help\" ContinueOnError="false" />
+    <Copy SourceFiles="$(MSBuildProjectDirectory)\help\images\bm0.png;$(MSBuildProjectDirectory)\help\images\bm1.png;$(MSBuildProjectDirectory)\help\images\bm10.png;$(MSBuildProjectDirectory)\help\images\bm11.png;$(MSBuildProjectDirectory)\help\images\bm12.png;$(MSBuildProjectDirectory)\help\images\bm13.png;$(MSBuildProjectDirectory)\help\images\bm14.png;$(MSBuildProjectDirectory)\help\images\bm15.png;$(MSBuildProjectDirectory)\help\images\bm16.png;$(MSBuildProjectDirectory)\help\images\bm17.png;$(MSBuildProjectDirectory)\help\images\bm18.png;$(MSBuildProjectDirectory)\help\images\bm19.png;$(MSBuildProjectDirectory)\help\images\bm2.png;$(MSBuildProjectDirectory)\help\images\bm20.png;$(MSBuildProjectDirectory)\help\images\bm21.png;$(MSBuildProjectDirectory)\help\images\bm22.png;$(MSBuildProjectDirectory)\help\images\bm23.png;$(MSBuildProjectDirectory)\help\images\bm24.png;$(MSBuildProjectDirectory)\help\images\bm25.png;$(MSBuildProjectDirectory)\help\images\bm26.png;$(MSBuildProjectDirectory)\help\images\bm27.png;$(MSBuildProjectDirectory)\help\images\bm28.png;$(MSBuildProjectDirectory)\help\images\bm29.png;$(MSBuildProjectDirectory)\help\images\bm3.png;$(MSBuildProjectDirectory)\help\images\bm30.png;$(MSBuildProjectDirectory)\help\images\bm31.png;$(MSBuildProjectDirectory)\help\images\bm32.png;$(MSBuildProjectDirectory)\help\images\bm33.png;$(MSBuildProjectDirectory)\help\images\bm34.png;$(MSBuildProjectDirectory)\help\images\bm35.png;$(MSBuildProjectDirectory)\help\images\bm36.png;$(MSBuildProjectDirectory)\help\images\bm37.png;$(MSBuildProjectDirectory)\help\images\bm4.png;$(MSBuildProjectDirectory)\help\images\bm5.png;$(MSBuildProjectDirectory)\help\images\bm6.png;$(MSBuildProjectDirectory)\help\images\bm8.png;$(MSBuildProjectDirectory)\help\images\bm9.png" DestinationFolder="$(TargetDir)\help\images\" ContinueOnError="false" />
   </Target>
-  -->
   <Target Name="AfterPublish" Condition="'$(BuildingInsideVisualStudio)|$(Configuration)' == '|Release'">
     <CreatePublishWebPage ApplicationManifestFileName="$(_DeploymentApplicationDir)$(_DeploymentTargetApplicationManifestFileName)" DeploymentManifestFileName="$(PublishDir)$(TargetDeployManifestFileName)" BootstrapperEnabled="$(BootstrapperEnabled)" BootstrapperPackages="@(BootstrapperPackage)" OutputFileName="$(PublishDir)$(WebPage)" TargetFrameworkVersion="$(TargetFrameworkVersion)" TargetFrameworkSubset="$(TargetFrameworkProfile)" VisualStudioVersion="$(VisualStudioVersion)" Condition="'$(CreateWebPageOnPublish)'=='true'" />
     <ItemGroup>

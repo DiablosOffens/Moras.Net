@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TfrmAboutBox));
             this.lbVersion = new DelphiClasses.TLabel();
             this.Panel1 = new System.Windows.Forms.Panel();
             this.Image1 = new System.Windows.Forms.PictureBox();
@@ -89,7 +88,9 @@
             this.Comments.Name = "Comments";
             this.Comments.Size = new System.Drawing.Size(631, 37);
             this.Comments.TabIndex = 2;
-            this.Comments.Text = resources.GetString("Comments.Text");
+            this.Comments.Text = "There is NO WARRANTY for Mora\'s Equipment Planner. This program is free software " +
+    "that you are allowed to redistribute under certain conditions; for details pleas" +
+    "e read the supplied file gpl_eng.html.";
             this.Comments.WordWrap = true;
             // 
             // Copyright
@@ -131,6 +132,7 @@
             this.OldCreateOrder = true;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "About";
+            this.Load += new System.EventHandler(this.TfrmAboutBox_Load);
             this.Panel1.ResumeLayout(false);
             this.Panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Image1)).EndInit();

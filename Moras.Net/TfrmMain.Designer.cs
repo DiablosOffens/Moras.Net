@@ -4797,7 +4797,7 @@
             this.TBXItem4.Margin = new System.Windows.Forms.Padding(3);
             this.TBXItem4.Name = "TBXItem4";
             this.TBXItem4.Size = new System.Drawing.Size(23, 20);
-            this.TBXItem4.Text = "Wiki - Hauptseite";
+            this.TBXItem4.Text = "Allakhazam - Hauptseite";
             // 
             // TBXItem5
             // 
@@ -4976,7 +4976,7 @@
             this.WikiHauptseite1.ImageIndex = 7;
             this.WikiHauptseite1.Name = "WikiHauptseite1";
             this.WikiHauptseite1.Size = new System.Drawing.Size(210, 22);
-            this.WikiHauptseite1.Text = "Wiki - Hauptseite";
+            this.WikiHauptseite1.Text = "Allakhazam - Hauptseite";
             // 
             // WikiBannzauberer1
             // 
@@ -4984,7 +4984,7 @@
             this.WikiBannzauberer1.ImageIndex = 7;
             this.WikiBannzauberer1.Name = "WikiBannzauberer1";
             this.WikiBannzauberer1.Size = new System.Drawing.Size(210, 22);
-            this.WikiBannzauberer1.Text = "Wiki - Bannzauberer";
+            this.WikiBannzauberer1.Text = "Allakhazam - Bannzauberer";
             // 
             // WikiBesondereRstungen1
             // 
@@ -4992,7 +4992,7 @@
             this.WikiBesondereRstungen1.ImageIndex = 7;
             this.WikiBesondereRstungen1.Name = "WikiBesondereRstungen1";
             this.WikiBesondereRstungen1.Size = new System.Drawing.Size(210, 22);
-            this.WikiBesondereRstungen1.Text = "Wiki - Besondere Rüstungen";
+            this.WikiBesondereRstungen1.Text = "Allakhazam - Artikelsuche";
             // 
             // N10
             // 
@@ -5245,7 +5245,7 @@
             // 
             // acWikiMainpage
             // 
-            this.acWikiMainpage.Caption = "Wiki - Hauptseite";
+            this.acWikiMainpage.Caption = "Wiki Allakhazam - Hauptseite";
             this.acWikiMainpage.Category = "Hilfe";
             this.acWikiMainpage.Hint = null;
             this.acWikiMainpage.ImageIndex = 7;
