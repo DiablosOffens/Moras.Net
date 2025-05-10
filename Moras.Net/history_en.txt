@@ -1,3 +1,6 @@
+Version 2.5.0.415
+- Core: Fix SetRegistry* utility functions, to work when subkey doesn't exist.
+
 Version 2.5.0.414
 - Build: Add VisualBasic.PowerPacks.Vs NuGet package for the Microsoft Visual Basic PowerPacks 10.0 assembly
 	* This prepares support for build automation, as not all build servers have this assembly in its GAC. Also add an assembly binding redirect for Microsoft.VisualBasic, because the PowerPacks assembly depends on an older version of an older Framework (2.0), but the new version should be compatible.
