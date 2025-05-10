@@ -236,7 +236,7 @@ namespace Moras.Net
             try
             {
                 RegistryKey rootKey = Registry.CurrentUser;
-                using (RegistryKey subKey = rootKey.OpenSubKey("Software\\Mora's" + Key, true))
+                using (RegistryKey subKey = rootKey.OpenSubKey("Software\\Mora's" + Key, true) ?? rootKey.CreateSubKey("Software\\Mora's" + Key))
                 {
                     subKey.SetValue(KeyName, Value, RegistryValueKind.DWord);
                 }
@@ -274,7 +274,7 @@ namespace Moras.Net
                 RegistryKey rootKey = Registry.CurrentUser;
                 if (HKLM)
                     rootKey = Registry.LocalMachine;
-                using (RegistryKey subKey = rootKey.OpenSubKey("Software\\Mora's" + Key, true))
+                using (RegistryKey subKey = rootKey.OpenSubKey("Software\\Mora's" + Key, true) ?? rootKey.CreateSubKey("Software\\Mora's" + Key))
                 {
                     subKey.SetValue(KeyName, Value, RegistryValueKind.String);
                 }
