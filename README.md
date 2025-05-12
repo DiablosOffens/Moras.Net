@@ -5,3 +5,7 @@ This Project is a C# port of Moras' original Delphi sources, which you can find 
 
 # Install as ClickOnce app
 Follow the instructions at this page: https://diablosoffens.github.io/Moras.Net/
+
+# Building
+
+See the [build instructions here](BUILD.md).
